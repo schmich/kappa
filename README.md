@@ -13,7 +13,6 @@ require 'kappa'
 twitch = Kappa::Client.new
 grubby = twitch.channel('followgrubby')
 puts grubby.streaming?
-# ...
 ```
 
 ## API
