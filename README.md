@@ -9,8 +9,10 @@ Kappa is a Ruby library for interfacing with the [Twitch.tv Kraken API](https://
 
 ```ruby
 require 'kappa'
+
 twitch = Kappa::Client.new
-stream = twitch.stream('followgrubby')
+grubby = twitch.channel('followgrubby')
+puts grubby.streaming?
 # ...
 ```
 
