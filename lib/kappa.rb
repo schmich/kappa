@@ -219,7 +219,12 @@ module Kappa
     def stream(channel_name)
       encoded_name = Addressable::URI.encode(channel_name)
       json = @conn.get("streams/#{encoded_name}")
-      Stream.new(json['stream'], @conn)
+      stream_json = json['stream']
+      if stream_json
+        Stream.new(json['stream'], @conn)
+      else
+        nil
+      end
     end
 
     def streams
