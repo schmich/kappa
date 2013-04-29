@@ -5,7 +5,7 @@ Kappa is a Ruby library for interfacing with the [Twitch.tv Kraken API](https://
 ## Getting Started
 ============
 
-`gem install kappa`
+`gem install kappa --pre`
 
 ```ruby
 require 'kappa'
