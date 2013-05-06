@@ -1,3 +1,5 @@
+require 'set'
+
 module Kappa
   class StreamBase
     include IdEquality
@@ -7,15 +9,14 @@ module Kappa
 
       case arg
         when Hash
-          @live = !(arg.nil? || arg.empty?)
+          @live = !arg.empty?
           parse(arg)
         when String
           json = @connection.get("streams/#{arg}")
-
-          stream_json = json['stream']
-          if stream_json
+          stream = json['stream']
+          if stream
             @live = true
-            parse(stream_json)
+            parse(stream)
           else
             @live = false
           end
@@ -78,8 +79,10 @@ module Kappa::V2
     # GET /streams
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md
     # :game (single, string), :channel (string array), :limit (int), :offset (int), :embeddable (bool), :hls (bool)
+    # TODO: Support Kappa::Vx::Game object for the :game param.
+    # TODO: Support Kappa::Vx::Channel object for the :channel param.
     #
-    def where(params = {})
+    def self.where(params = {})
       limit = params[:limit] || 0
 
       params = params.dup
@@ -90,10 +93,11 @@ module Kappa::V2
       streams = []
       ids = Set.new
 
-      @connection.paginated('streams', params) do |json|
+      connection = Connection.instance
+      connection.paginated('streams', params) do |json|
         current_streams = json['streams']
         current_streams.each do |stream_json|
-          stream = Stream.new(stream_json, @connection)
+          stream = Stream.new(stream_json, connection)
           if ids.add?(stream.id)
             streams << stream
             if streams.count == limit
@@ -112,18 +116,19 @@ module Kappa::V2
     # GET /streams/featured
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured
     #
-    def featured(params = {})
+    def self.featured(params = {})
       limit = params[:limit] || 0
 
       streams = []
       ids = Set.new
 
-      @connection.paginated('streams/featured', params) do |json|
+      connection = Connection.instance
+      connection.paginated('streams/featured', params) do |json|
         current_streams = json['featured']
         current_streams.each do |featured_json|
           # TODO: Capture more information from the featured_json structure (need a FeaturedStream class?)
           stream_json = featured_json['stream']
-          stream = Stream.new(stream_json, @connection)
+          stream = Stream.new(stream_json, connection)
           if ids.add?(stream.id)
             streams << stream
             if streams.count == limit

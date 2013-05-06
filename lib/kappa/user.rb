@@ -74,8 +74,7 @@ module Kappa::V2
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannelstarget
     #
     def following?(channel_name)
-      encoded_name = Addressable::URI.encode(channel_name)
-      json = @connection.get("users/#{@name}/follows/channels/#{encoded_name}")
+      json = @connection.get("users/#{@name}/follows/channels/#{channel_name}")
       status = json['status']
       return !status || (status != 404)
     end
@@ -87,6 +86,10 @@ module Kappa::V2
     attr_reader :name
     attr_reader :type
     attr_reader :updated_at
+
+    # TODO: Authenticated user attributes.
+    # attr_reader :email
+    # def partnered?
     
   private
     def parse(hash)
