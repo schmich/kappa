@@ -51,13 +51,13 @@ module Kappa::V2
       super(arg, connection)
     end
 
-    attr_accessor :id
-    attr_accessor :broadcaster
-    attr_accessor :game_name
-    attr_accessor :name
-    attr_accessor :viewer_count
-    attr_accessor :preview_url
-    attr_accessor :channel
+    attr_reader :id
+    attr_reader :broadcaster
+    attr_reader :game_name
+    attr_reader :name
+    attr_reader :viewer_count
+    attr_reader :preview_url
+    attr_reader :channel
 
   private
     def parse(hash)

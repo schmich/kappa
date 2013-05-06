@@ -105,19 +105,19 @@ module Kappa::V2
       # Support User object or username (string)
     end
 
-    attr_accessor :id
-    attr_accessor :background_url
-    attr_accessor :banner_url
-    attr_accessor :created_at
-    attr_accessor :stream_delay_sec
-    attr_accessor :display_name
-    attr_accessor :game_name
-    attr_accessor :logo_url
-    attr_accessor :name
-    attr_accessor :status
-    attr_accessor :updated_at
-    attr_accessor :url
-    attr_accessor :video_banner_url
+    attr_reader :id
+    attr_reader :background_url
+    attr_reader :banner_url
+    attr_reader :created_at
+    attr_reader :stream_delay_sec
+    attr_reader :display_name
+    attr_reader :game_name
+    attr_reader :logo_url
+    attr_reader :name
+    attr_reader :status
+    attr_reader :updated_at
+    attr_reader :url
+    attr_reader :video_banner_url
 
   private
     def parse(hash)
