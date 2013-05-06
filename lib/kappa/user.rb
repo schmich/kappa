@@ -7,6 +7,10 @@ module Kappa
       parse(arg)
     end
 
+    #
+    # GET /users/:user
+    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser
+    #
     def self.get(user_name, connection)
       json = connection.get("users/#{user_name}")
       if json['status'] == 404
@@ -19,21 +23,17 @@ module Kappa
 end
 
 module Kappa::V2
-  #
-  # GET /users/:user
-  # https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser
-  #
   class User < Kappa::UserBase
     def initialize(arg, connection = Connection.instance)
       super(arg, connection)
     end
 
-    def channel
-      # TODO
-    end
-
     def self.get(user_name, connection = Connection.instance)
       super(user_name, connection)
+    end
+
+    def channel
+      # TODO
     end
 
     #
