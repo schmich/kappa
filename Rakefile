@@ -1,5 +1,8 @@
-require 'rake/testtask'
 require 'fileutils'
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec) do |config|
+end
 
 class GemInfo
   def initialize
@@ -28,10 +31,6 @@ class GemInfo
 end
 
 $gem = GemInfo.new
-
-Rake::TestTask.new do |t|
-  t.libs << 'test'
-end
 
 desc "Start irb #{$gem.name} session"
 task :irb do
@@ -90,4 +89,4 @@ task :release => :build do
 end
 
 desc 'Run tests'
-task :default => :test
+task :default => :spec
