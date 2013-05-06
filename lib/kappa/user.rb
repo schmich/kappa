@@ -4,15 +4,15 @@ module Kappa
 
     def initialize(arg, connection)
       @connection = connection
+      parse(arg)
+    end
 
-      case arg
-        when Hash
-          parse(arg)
-        when String
-          json = @connection.get("users/#{arg}")
-          parse(json)
-        else
-          raise ArgumentError
+    def self.get(user_name, connection)
+      json = connection.get("users/#{user_name}")
+      if json['status'] == 404
+        nil
+      else
+        new(json, connection)
       end
     end
   end
@@ -26,6 +26,14 @@ module Kappa::V2
   class User < Kappa::UserBase
     def initialize(arg, connection = Connection.instance)
       super(arg, connection)
+    end
+
+    def channel
+      # TODO
+    end
+
+    def self.get(user_name, connection = Connection.instance)
+      super(user_name, connection)
     end
 
     #

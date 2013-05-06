@@ -19,12 +19,17 @@ describe Kappa::V2::User do
     u.updated_at.should < DateTime.now
   end
 
-  it 'can be created by user name' do
-    WebMocks.load('spec/fixtures/v2/web_mock.yml')
-    u = User.new('colminigun')
-  end
+  describe '.get' do
+    it 'creates a User from user name' do
+      WebMocks.load('spec/fixtures/v2/web_mock.yml')
+      u = User.get('colminigun')
+      u.should_not == nil
+    end
 
-  it 'raises error when created with invalid argument' do
-    expect { User.new(42) }.to raise_error(ArgumentError)
+    it 'returns nil when user does not exist' do
+      WebMocks.load('spec/fixtures/v2/web_mock.yml')
+      u = User.get('does_not_exist')
+      u.should == nil
+    end
   end
 end
