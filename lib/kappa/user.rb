@@ -2,9 +2,9 @@ module Kappa
   class UserBase
     include IdEquality
 
-    def initialize(arg, connection)
+    def initialize(hash, connection)
       @connection = connection
-      parse(arg)
+      parse(hash)
     end
 
     #
@@ -34,6 +34,10 @@ module Kappa::V2
 
     def channel
       # TODO
+    end
+
+    def staff?
+      @staff
     end
 
     #
@@ -92,7 +96,6 @@ module Kappa::V2
     attr_reader :display_name
     attr_reader :logo_url
     attr_reader :name
-    attr_reader :type
     attr_reader :updated_at
 
     # TODO: Authenticated user attributes.
@@ -106,7 +109,7 @@ module Kappa::V2
       @display_name = hash['display_name']
       @logo_url = hash['logo']
       @name = hash['name']
-      @type = hash['type']
+      @staff = hash['staff'] || false
       @updated_at = DateTime.parse(hash['updated_at'])
     end
   end
