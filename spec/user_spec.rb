@@ -1,17 +1,13 @@
 require 'rspec'
 require 'kappa'
-require 'web_mocks'
+require 'common'
 
 include Kappa::V2
-
-def fixture(file)
-  File.join(File.dirname(__FILE__), 'fixtures', 'v2', file)
-end
 
 describe Kappa::V2::User do
   describe '#new' do
     it 'accepts a hash' do
-      hash = YAML.load_file(fixture('user.yml'))
+      hash = yaml_load('user1.yml')
       u = User.new(hash)
       u.id.should == hash['_id']
       u.created_at.class.should == DateTime
@@ -19,23 +15,47 @@ describe Kappa::V2::User do
       u.display_name.should == hash['display_name']
       u.logo_url.should == hash['logo']
       u.name.should == hash['name']
-      u.type.should == hash['type']
+      u.staff?.should == hash['staff']
       u.updated_at.class.should == DateTime
       u.updated_at.should < DateTime.now
     end
   end
 
   describe '.get' do
-    before { WebMocks.load(fixture('web_mock.yml')) }
+    before { YamlWebMock.load(fixture('web_mock.yml')) }
 
     it 'creates a User from user name' do
       u = User.get('colminigun')
-      u.should_not == nil
+      u.should_not be_nil
     end
 
     it 'returns nil when user does not exist' do
       u = User.get('does_not_exist')
-      u.should == nil
+      u.should be_nil
     end
+  end
+
+  it 'should be equal to self' do
+    u1 = User.new(yaml_load('user1.yml'))
+    u1.should == u1
+    u1.eql?(u1).should be_true
+    (u1 == u1).should be_true
+  end
+
+  it 'should be equal by ID' do
+    u1 = User.new(yaml_load('user1.yml'))
+    u2 = User.new(yaml_load('user1.yml'))
+    u1.should == u2
+    u1.hash.should == u2.hash
+    u1.eql?(u2).should be_true
+    (u1 == u2).should be_true
+  end
+
+  it 'should be different by ID' do
+    u1 = User.new(yaml_load('user1.yml'))
+    u2 = User.new(yaml_load('user2.yml'))
+    u1.should_not == u2
+    u1.eql?(u2).should be_false
+    (u1 == u2).should be_false
   end
 end
