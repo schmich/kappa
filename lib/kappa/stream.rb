@@ -4,53 +4,30 @@ module Kappa
   class StreamBase
     include IdEquality
 
-    def initialize(arg, connection)
+    def initialize(hash, connection = self.class.default_connection)
       @connection = connection
+      parse(hash)
+    end
 
-      case arg
-        when Hash
-          @live = !arg.empty?
-          parse(arg)
-        when String
-          json = @connection.get("streams/#{arg}")
-          stream = json['stream']
-          if stream
-            @live = true
-            parse(stream)
-          else
-            @live = false
-          end
-        when NilClass
-          @live = false
-        else
-          raise ArgumentError
+    def self.get(stream_name, connection = default_connection)
+      json = connection.get("streams/#{stream_name}")
+      stream = json['stream']
+      if json['status'] == 404 || !stream
+        nil
+      else
+        new(stream, connection)
       end
     end
 
-    def live?
-      @live
-    end
-  end
-end
-
-module Kappa::V3
-  class Stream < Kappa::StreamBase
-    def initialize(arg, connection = Connection.instance)
-      super(arg, connection)
-    end
-
   private
-    def parse(hash)
+    def self.default_connection
+      self.class.module_class(:Connection).instance
     end
   end
 end
 
 module Kappa::V2
   class Stream < Kappa::StreamBase
-    def initialize(arg, connection = Connection.instance)
-      super(arg, connection)
-    end
-
     attr_reader :id
     attr_reader :broadcaster
     attr_reader :game_name
@@ -141,6 +118,18 @@ module Kappa::V2
       end
 
       streams
+    end
+  end
+end
+
+module Kappa::V3
+  class Stream < Kappa::StreamBase
+    def initialize(arg, connection = Connection.instance)
+      super(arg, connection)
+    end
+
+  private
+    def parse(hash)
     end
   end
 end
