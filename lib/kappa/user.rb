@@ -2,7 +2,7 @@ module Kappa
   class UserBase
     include IdEquality
 
-    def initialize(hash, connection)
+    def initialize(hash, connection = self.class.default_connection)
       @connection = connection
       parse(hash)
     end
@@ -11,7 +11,7 @@ module Kappa
     # GET /users/:user
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser
     #
-    def self.get(user_name, connection)
+    def self.get(user_name, connection = default_connection)
       json = connection.get("users/#{user_name}")
       if json['status'] == 404
         nil
@@ -19,19 +19,16 @@ module Kappa
         new(json, connection)
       end
     end
+
+  private
+    def self.default_connection
+      self.class.module_class(:Connection).instance
+    end
   end
 end
 
 module Kappa::V2
   class User < Kappa::UserBase
-    def initialize(arg, connection = Connection.instance)
-      super(arg, connection)
-    end
-
-    def self.get(user_name, connection = Connection.instance)
-      super(user_name, connection)
-    end
-
     def channel
       # TODO
     end
