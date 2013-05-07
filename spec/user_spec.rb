@@ -7,7 +7,7 @@ include Kappa::V2
 describe Kappa::V2::User do
   describe '#new' do
     it 'accepts a hash' do
-      hash = yaml_load('user1.yml')
+      hash = yaml_load('user_real.yml')
       u = User.new(hash)
       u.id.should == hash['_id']
       u.created_at.class.should == DateTime
@@ -36,15 +36,15 @@ describe Kappa::V2::User do
   end
 
   it 'should be equal to self' do
-    u1 = User.new(yaml_load('user1.yml'))
+    u1 = User.new(yaml_load('user_real.yml'))
     u1.should == u1
     u1.eql?(u1).should be_true
     (u1 == u1).should be_true
   end
 
   it 'should be equal by ID' do
-    u1 = User.new(yaml_load('user1.yml'))
-    u2 = User.new(yaml_load('user1.yml'))
+    u1 = User.new(yaml_load('user_real.yml'))
+    u2 = User.new(yaml_load('user_real.yml'))
     u1.should == u2
     u1.hash.should == u2.hash
     u1.eql?(u2).should be_true
@@ -52,8 +52,8 @@ describe Kappa::V2::User do
   end
 
   it 'should be different by ID' do
-    u1 = User.new(yaml_load('user1.yml'))
-    u2 = User.new(yaml_load('user2.yml'))
+    u1 = User.new(yaml_load('user_real.yml'))
+    u2 = User.new(yaml_load('user_foo.yml'))
     u1.should_not == u2
     u1.eql?(u2).should be_false
     (u1 == u2).should be_false
