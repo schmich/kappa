@@ -22,7 +22,7 @@ describe Kappa::V2::User do
   end
 
   describe '.get' do
-    before { YamlWebMock.load(fixture('web_mock.yml')) }
+    before { YamlWebMock.load(fixture('user_web_mock.yml')) }
 
     it 'creates a User from user name' do
       u = User.get('colminigun')
