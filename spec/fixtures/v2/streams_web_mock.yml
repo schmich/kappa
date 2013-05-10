@@ -28,3 +28,7 @@ mocks:
         body: $(streams_channel_offline_1.yml)
     streams?channel=leveluplive,djwheat&limit=25&offset=25:
         body: $(streams_channel_offline_2.yml)
+    streams?game=Ultimate%20Marvel%20vs.%20Capcom%203&limit=25&offset=0:
+        body: $(streams_game_duplicate_response_1.yml)
+    streams?game=Ultimate%20Marvel%20vs.%20Capcom%203&limit=25&offset=25:
+        body: $(streams_game_duplicate_response_2.yml)

@@ -60,9 +60,13 @@ module Kappa::V2
     # TODO: Support Kappa::Vx::Channel object for the :channel param.
     #
     def self.where(args)
-      raise ArgumentError if args.empty?
+      check = args.dup
+      check.delete(:limit)
+      check.delete(:offset)
+      raise ArgumentError if check.empty?
 
-      params = { :limit => 25 }
+      params = {}
+
       if args[:channel]
         params[:channel] = args[:channel].join(',')
       end
@@ -75,6 +79,7 @@ module Kappa::V2
       if limit && (limit < 25)
         params[:limit] = limit
       else
+        params[:limit] = 25
         limit = 0
       end
 
