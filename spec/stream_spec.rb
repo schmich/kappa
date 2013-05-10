@@ -9,6 +9,10 @@ describe Kappa::V2::Stream do
     WebMocks.load_dir('spec/fixtures/v2/stream')
   end
 
+  after do
+    WebMock.reset!
+  end
+
   describe '#new' do
     it 'accepts a hash' do
       hash = YAML.load_file(fixture('stream/stream_real.yml'))

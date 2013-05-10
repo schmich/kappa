@@ -9,6 +9,10 @@ describe Kappa::V2::Streams do
     WebMocks.load_dir('spec/fixtures/v2/streams')
   end
 
+  after do
+    WebMock.reset!
+  end
+
   describe '.all' do
   end
 

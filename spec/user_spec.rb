@@ -9,6 +9,10 @@ describe Kappa::V2::User do
     WebMocks.load_dir('spec/fixtures/v2/user')
   end
 
+  after do
+    WebMock.reset!
+  end
+
   describe '#new' do
     it 'accepts a hash' do
       hash = yaml_load('user/user_real.yml')

@@ -5,6 +5,14 @@ require 'kappa'
 include Kappa::V2
 
 describe Kappa::V2::Channel do
+  before do
+    WebMocks.load_dir('spec/fixtures/v2/channel')
+  end
+
+  after do
+    WebMock.reset!
+  end
+
   it 'can be created from a hash' do
     hash = yaml_load('channel/channel.yml')
     c = Channel.new(hash)
