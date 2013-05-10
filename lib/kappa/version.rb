@@ -1,1 +1,1 @@
-$version = '0.1.1.pre'
+$version = '0.1.2.pre'
