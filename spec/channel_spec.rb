@@ -6,7 +6,7 @@ include Kappa::V2
 
 describe Kappa::V2::Channel do
   it 'can be created from a hash' do
-    hash = YAML.load_file('spec/fixtures/v2/channel.yml')
+    hash = yaml_load('channel/channel.yml')
     c = Channel.new(hash)
     c.id.should == hash['_id']
     c.background_url.should == hash['background']

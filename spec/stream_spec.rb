@@ -7,7 +7,7 @@ include Kappa::V2
 describe Kappa::V2::Stream do
   describe '#new' do
     it 'accepts a hash' do
-      hash = YAML.load_file(fixture('stream_real.yml'))
+      hash = YAML.load_file(fixture('stream/stream_real.yml'))
       s = Stream.new(hash)
       s.id.should == hash['_id']
       s.broadcaster.should == hash['broadcaster']
@@ -20,7 +20,7 @@ describe Kappa::V2::Stream do
   end
 
   describe '.get' do
-    before { YamlWebMock.load(fixture('stream_web_mock.yml')) }
+    before { YamlWebMock.load(fixture('stream/stream_web_mock.yml')) }
 
     it 'creates a Stream from stream name' do
       s = Stream.get('stream_foo')
