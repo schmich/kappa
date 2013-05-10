@@ -6,7 +6,6 @@ require 'json'
 module Kappa
   class ConnectionBase
     include HTTParty
-    debug_output $stdout
 
     def initialize(base_url = DEFAULT_BASE_URL)
       @base_url = Addressable::URI.parse(base_url)
