@@ -50,6 +50,8 @@ class YamlWebMock
     base_url = Addressable::URI.parse(doc['base_url'])
     mocks = doc['mocks']
     mocks.each do |path, response|
+      uri = Addressable::URI.parse(path)
+
       status = response['status'] || 200
 
       body = response['body']
@@ -62,7 +64,8 @@ class YamlWebMock
           body.to_s
       end
 
-      stub_request(:any, base_url + path)
+      stub_request(:any, base_url + uri.path)
+        .with(:query => uri.query_values)
         .to_return(:status => status, :body => body)
     end
   end

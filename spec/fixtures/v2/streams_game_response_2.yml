@@ -1,0 +1,853 @@
+# curl -k -H "Accept: application/vnd.twitchtv.v2+json" "https://api.twitch.tv/kraken/streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=25" 
+---
+streams:
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_cprog1x-320x200.jpg
+  _id: 5628175776
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: QuanticProgX - Masters Terran playing on NA ladder! @ 1080p (w/ commentary!)
+    teams:
+    - updated_at: '2013-04-07T23:36:00Z'
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-quantic-background_image-5964552f551cc31c.jpeg
+      info: ! 'Premier North American #eSports and media production company. The people''s
+        team of pro-gaming!
+
+'
+      created_at: '2011-11-04T00:28:03Z'
+      _id: 59
+      name: quantic
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-quantic-banner_image-fae7275eefe8c3c8-640x125.jpeg
+      display_name: Quantic Gaming
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-quantic-team_logo_image-b47c76af24f01d37-300x300.png
+      _links:
+        self: https://api.twitch.tv/kraken/teams/quantic
+    updated_at: '2013-05-10T03:59:47Z'
+    background: 
+    url: http://www.twitch.tv/cprog1x
+    created_at: '2011-03-10T04:49:11Z'
+    mature: true
+    _id: 21013093
+    name: cprog1x
+    banner: 
+    display_name: cProg1x
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/cprog1x-profile_image-c35894630ab04d0c-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/cprog1x/videos
+      follows: https://api.twitch.tv/kraken/channels/cprog1x/follows
+      chat: https://api.twitch.tv/kraken/chat/cprog1x
+      editors: https://api.twitch.tv/kraken/channels/cprog1x/editors
+      commercial: https://api.twitch.tv/kraken/channels/cprog1x/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/cprog1x/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/cprog1x/stream_key
+      self: https://api.twitch.tv/kraken/channels/cprog1x
+      features: https://api.twitch.tv/kraken/channels/cprog1x/features
+  viewers: 10
+  name: live_user_cprog1x
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/cprog1x
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_burstylez-320x200.jpg
+  _id: 5627990592
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/burstylez-channel_offline_image-66f31e6d650278f6-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Master Terran laddering and stuff
+    teams: []
+    updated_at: '2013-05-10T03:25:01Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/burstylez-channel_background_image-08b63ee43c9930ce.jpeg
+    url: http://www.twitch.tv/burstylez
+    created_at: '2011-05-10T21:16:00Z'
+    mature: true
+    _id: 22338648
+    name: burstylez
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/burstylez-channel_header_image-67e0fb0466e4b1d5-640x125.jpeg
+    display_name: Burstylez
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/burstylez-profile_image-d1765474f33ff329-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/burstylez/videos
+      follows: https://api.twitch.tv/kraken/channels/burstylez/follows
+      chat: https://api.twitch.tv/kraken/chat/burstylez
+      editors: https://api.twitch.tv/kraken/channels/burstylez/editors
+      commercial: https://api.twitch.tv/kraken/channels/burstylez/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/burstylez/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/burstylez/stream_key
+      self: https://api.twitch.tv/kraken/channels/burstylez
+      features: https://api.twitch.tv/kraken/channels/burstylez/features
+  viewers: 9
+  name: live_user_burstylez
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/burstylez
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_gorylom-320x200.jpg
+  _id: 5627781344
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/gorylom-channel_offline_image-11ebc5ea7e593ca4-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: GoryLoM ΓÖÑ || StarCraft 2 ||  Laddering :D
+    teams: []
+    updated_at: '2013-05-10T02:46:40Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/gorylom-channel_background_image-a1d377661310cbdd.png
+    url: http://www.twitch.tv/gorylom
+    created_at: '2011-08-25T01:21:32Z'
+    mature: 
+    _id: 24342451
+    name: gorylom
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/gorylom-channel_header_image-60f5fe03d67f14b5-640x125.png
+    display_name: gORYLOM
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/gorylom-profile_image-a3b2aa07ecdd2d5b-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/gorylom/videos
+      follows: https://api.twitch.tv/kraken/channels/gorylom/follows
+      chat: https://api.twitch.tv/kraken/chat/gorylom
+      editors: https://api.twitch.tv/kraken/channels/gorylom/editors
+      commercial: https://api.twitch.tv/kraken/channels/gorylom/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/gorylom/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/gorylom/stream_key
+      self: https://api.twitch.tv/kraken/channels/gorylom
+      features: https://api.twitch.tv/kraken/channels/gorylom/features
+  viewers: 9
+  name: live_user_gorylom
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/gorylom
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_saharadrac-320x200.jpg
+  _id: 5627376000
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: ! "SaharaDrac - Vengeance Upon Battle.Net Edition\r\n"
+    teams: []
+    updated_at: '2013-05-10T01:37:42Z'
+    background: 
+    url: http://www.twitch.tv/saharadrac
+    created_at: '2011-02-03T02:07:28Z'
+    mature: 
+    _id: 20081978
+    name: saharadrac
+    banner: 
+    display_name: SaharaDrac
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/saharadrac-profile_image-968b9c3694d9d59b-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/saharadrac/videos
+      follows: https://api.twitch.tv/kraken/channels/saharadrac/follows
+      chat: https://api.twitch.tv/kraken/chat/saharadrac
+      editors: https://api.twitch.tv/kraken/channels/saharadrac/editors
+      commercial: https://api.twitch.tv/kraken/channels/saharadrac/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/saharadrac/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/saharadrac/stream_key
+      self: https://api.twitch.tv/kraken/channels/saharadrac
+      features: https://api.twitch.tv/kraken/channels/saharadrac/features
+  viewers: 8
+  name: live_user_saharadrac
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/saharadrac
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_thefutonalliance-320x200.jpg
+  _id: 5627808096
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: ! "FutonCast 15 Now With more SKYBRO! This actually might be 14 they goofed
+      while Cullen was gone so lets roll with it.\r\n"
+    teams: []
+    updated_at: '2013-05-10T02:51:23Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/thefutonalliance-channel_background_image-64a159ef535c9375.png
+    url: http://www.twitch.tv/thefutonalliance
+    created_at: '2012-12-04T05:47:33Z'
+    mature: false
+    _id: 38208579
+    name: thefutonalliance
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/thefutonalliance-channel_header_image-bd8fa297f84f528e-640x125.jpeg
+    display_name: TheFutonAlliance
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/thefutonalliance-profile_image-378bfa93a1ec532d-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/thefutonalliance/videos
+      follows: https://api.twitch.tv/kraken/channels/thefutonalliance/follows
+      chat: https://api.twitch.tv/kraken/chat/thefutonalliance
+      editors: https://api.twitch.tv/kraken/channels/thefutonalliance/editors
+      commercial: https://api.twitch.tv/kraken/channels/thefutonalliance/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/thefutonalliance/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/thefutonalliance/stream_key
+      self: https://api.twitch.tv/kraken/channels/thefutonalliance
+      features: https://api.twitch.tv/kraken/channels/thefutonalliance/features
+  viewers: 7
+  name: live_user_thefutonalliance
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/thefutonalliance
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_musti20045-320x200.jpg
+  _id: 5625308816
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/musti20045-channel_offline_image-e1b3ba68cade930d-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Starcraft 2 (german/turkish)  Heute ultra mustiotismon
+    teams: []
+    updated_at: '2013-05-09T19:49:07Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/musti20045-channel_background_image-0ffb9820fb75c2b3.jpeg
+    url: http://www.twitch.tv/musti20045
+    created_at: '2011-11-10T20:05:22Z'
+    mature: false
+    _id: 26043804
+    name: musti20045
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/musti20045-channel_header_image-75b2438fad4c56ab-640x125.png
+    display_name: musti20045
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/musti20045-profile_image-18e1aac25b767dd1-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/musti20045/videos
+      follows: https://api.twitch.tv/kraken/channels/musti20045/follows
+      chat: https://api.twitch.tv/kraken/chat/musti20045
+      editors: https://api.twitch.tv/kraken/channels/musti20045/editors
+      commercial: https://api.twitch.tv/kraken/channels/musti20045/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/musti20045/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/musti20045/stream_key
+      self: https://api.twitch.tv/kraken/channels/musti20045
+      features: https://api.twitch.tv/kraken/channels/musti20045/features
+  viewers: 6
+  name: live_user_musti20045
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/musti20045
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_mewby-320x200.jpg
+  _id: 5628209424
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: z
+    teams: []
+    updated_at: '2013-05-10T04:06:41Z'
+    background: 
+    url: http://www.twitch.tv/mewby
+    created_at: '2011-04-24T02:26:23Z'
+    mature: true
+    _id: 21963435
+    name: mewby
+    banner: 
+    display_name: Mewby
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/mewby-profile_image-75c783fb8d06a3b5-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/mewby/videos
+      follows: https://api.twitch.tv/kraken/channels/mewby/follows
+      chat: https://api.twitch.tv/kraken/chat/mewby
+      editors: https://api.twitch.tv/kraken/channels/mewby/editors
+      commercial: https://api.twitch.tv/kraken/channels/mewby/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/mewby/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/mewby/stream_key
+      self: https://api.twitch.tv/kraken/channels/mewby
+      features: https://api.twitch.tv/kraken/channels/mewby/features
+  viewers: 5
+  name: live_user_mewby
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/mewby
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_tyrant84-320x200.jpg
+  _id: 5628177360
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: TYRANT 1v1 Diamond Terran laddering with Jack Daniels, music and commentary
+    teams: []
+    updated_at: '2013-05-10T04:00:13Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/tyrant84-channel_background_image-31c606e061f534a3.jpeg
+    url: http://www.twitch.tv/tyrant84
+    created_at: '2011-07-22T22:59:00Z'
+    mature: true
+    _id: 23609083
+    name: tyrant84
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/tyrant84-channel_header_image-f4f12233d04e29f3-640x125.jpeg
+    display_name: Tyrant84
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/tyrant84-profile_image-50143ecf022e3bc9-300x300.png
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/tyrant84/videos
+      follows: https://api.twitch.tv/kraken/channels/tyrant84/follows
+      chat: https://api.twitch.tv/kraken/chat/tyrant84
+      editors: https://api.twitch.tv/kraken/channels/tyrant84/editors
+      commercial: https://api.twitch.tv/kraken/channels/tyrant84/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/tyrant84/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/tyrant84/stream_key
+      self: https://api.twitch.tv/kraken/channels/tyrant84
+      features: https://api.twitch.tv/kraken/channels/tyrant84/features
+  viewers: 5
+  name: live_user_tyrant84
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/tyrant84
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_lunarphysics-320x200.jpg
+  _id: 5627856240
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Zerg Bronze to diamond run on EU server :D
+    teams: []
+    updated_at: '2013-05-10T03:01:43Z'
+    background: 
+    url: http://www.twitch.tv/lunarphysics
+    created_at: '2013-03-26T03:29:06Z'
+    mature: 
+    _id: 41724275
+    name: lunarphysics
+    banner: 
+    display_name: Lunarphysics
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/lunarphysics-profile_image-b6876c9a00482086-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/lunarphysics/videos
+      follows: https://api.twitch.tv/kraken/channels/lunarphysics/follows
+      chat: https://api.twitch.tv/kraken/chat/lunarphysics
+      editors: https://api.twitch.tv/kraken/channels/lunarphysics/editors
+      commercial: https://api.twitch.tv/kraken/channels/lunarphysics/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/lunarphysics/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/lunarphysics/stream_key
+      self: https://api.twitch.tv/kraken/channels/lunarphysics
+      features: https://api.twitch.tv/kraken/channels/lunarphysics/features
+  viewers: 5
+  name: live_user_lunarphysics
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/lunarphysics
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ghosthn-320x200.jpg
+  _id: 5627583632
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ghosthn-channel_offline_image-d0e519e8f137699f-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: ! 'SXG.Spectrum, Mid Masters Zerg, 2v2 hots! '
+    teams: []
+    updated_at: '2013-05-10T02:34:43Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/ghosthn-channel_background_image-4e527bd2928161f0.png
+    url: http://www.twitch.tv/ghosthn
+    created_at: '2012-04-16T02:14:16Z'
+    mature: 
+    _id: 29822996
+    name: ghosthn
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ghosthn-channel_header_image-54419f89070545c9-640x125.jpeg
+    display_name: ghosthn
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ghosthn-profile_image-c2c1d9b8b99603ee-300x300.png
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/ghosthn/videos
+      follows: https://api.twitch.tv/kraken/channels/ghosthn/follows
+      chat: https://api.twitch.tv/kraken/chat/ghosthn
+      editors: https://api.twitch.tv/kraken/channels/ghosthn/editors
+      commercial: https://api.twitch.tv/kraken/channels/ghosthn/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/ghosthn/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/ghosthn/stream_key
+      self: https://api.twitch.tv/kraken/channels/ghosthn
+      features: https://api.twitch.tv/kraken/channels/ghosthn/features
+  viewers: 5
+  name: live_user_ghosthn
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/ghosthn
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_aremiix-320x200.jpg
+  _id: 5627529312
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Top Masters Terran, GaTech CSL Capt, come watch! Forgot webcam in Atlanta
+      πàáπàá
+    teams: []
+    updated_at: '2013-05-10T02:03:25Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/aremiix-channel_background_image-6117edc48565f449.jpeg
+    url: http://www.twitch.tv/aremiix
+    created_at: '2011-03-30T02:08:39Z'
+    mature: 
+    _id: 21415213
+    name: aremiix
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/aremiix-channel_header_image-fec1dddacd7c2921-640x125.png
+    display_name: aReMiiX
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/aremiix-profile_image-3f96190f1177a1b1-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/aremiix/videos
+      follows: https://api.twitch.tv/kraken/channels/aremiix/follows
+      chat: https://api.twitch.tv/kraken/chat/aremiix
+      editors: https://api.twitch.tv/kraken/channels/aremiix/editors
+      commercial: https://api.twitch.tv/kraken/channels/aremiix/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/aremiix/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/aremiix/stream_key
+      self: https://api.twitch.tv/kraken/channels/aremiix
+      features: https://api.twitch.tv/kraken/channels/aremiix/features
+  viewers: 5
+  name: live_user_aremiix
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/aremiix
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_xenxero-320x200.jpg
+  _id: 5627196736
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/xenxero-channel_offline_image-7fba714567cdba53-640x360.png
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Protoss LIVE from Plat League! Climbing the ladder back to Diamond!
+    teams: []
+    updated_at: '2013-05-10T01:07:27Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/xenxero-channel_background_image-3aa5b103411864ac.jpeg
+    url: http://www.twitch.tv/xenxero
+    created_at: '2011-01-19T01:09:05Z'
+    mature: 
+    _id: 19654266
+    name: xenxero
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/xenxero-channel_header_image-b541e71d3d23af5a-640x125.png
+    display_name: XenXero
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/xenxero-profile_image-9b420e76b3d8f525-300x300.png
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/xenxero/videos
+      follows: https://api.twitch.tv/kraken/channels/xenxero/follows
+      chat: https://api.twitch.tv/kraken/chat/xenxero
+      editors: https://api.twitch.tv/kraken/channels/xenxero/editors
+      commercial: https://api.twitch.tv/kraken/channels/xenxero/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/xenxero/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/xenxero/stream_key
+      self: https://api.twitch.tv/kraken/channels/xenxero
+      features: https://api.twitch.tv/kraken/channels/xenxero/features
+  viewers: 5
+  name: live_user_xenxero
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/xenxero
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ozsabra-320x200.jpg
+  _id: 5625509648
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ozsabra-channel_offline_image-ba775ff24bd612d8-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: ! "Diamond Toss laddering goal Masters  \r\n"
+    teams: []
+    updated_at: '2013-05-09T20:23:12Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/ozsabra-channel_background_image-aa56c5cbce63b0a4.jpeg
+    url: http://www.twitch.tv/ozsabra
+    created_at: '2013-01-30T16:35:52Z'
+    mature: 
+    _id: 39835700
+    name: ozsabra
+    banner: 
+    display_name: OZSabra
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ozsabra-profile_image-11c2cb0dccbb88a2-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/ozsabra/videos
+      follows: https://api.twitch.tv/kraken/channels/ozsabra/follows
+      chat: https://api.twitch.tv/kraken/chat/ozsabra
+      editors: https://api.twitch.tv/kraken/channels/ozsabra/editors
+      commercial: https://api.twitch.tv/kraken/channels/ozsabra/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/ozsabra/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/ozsabra/stream_key
+      self: https://api.twitch.tv/kraken/channels/ozsabra
+      features: https://api.twitch.tv/kraken/channels/ozsabra/features
+  viewers: 5
+  name: live_user_ozsabra
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/ozsabra
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_maximunderp-320x200.jpg
+  _id: 5628159632
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Maximum Derp!! Derpizando com a Brotherhood!!
+    teams: []
+    updated_at: '2013-05-10T03:56:34Z'
+    background: 
+    url: http://www.twitch.tv/maximunderp
+    created_at: '2013-04-02T21:09:29Z'
+    mature: 
+    _id: 42013375
+    name: maximunderp
+    banner: 
+    display_name: MaximunDerp
+    logo: 
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/maximunderp/videos
+      follows: https://api.twitch.tv/kraken/channels/maximunderp/follows
+      chat: https://api.twitch.tv/kraken/chat/maximunderp
+      editors: https://api.twitch.tv/kraken/channels/maximunderp/editors
+      commercial: https://api.twitch.tv/kraken/channels/maximunderp/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/maximunderp/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/maximunderp/stream_key
+      self: https://api.twitch.tv/kraken/channels/maximunderp
+      features: https://api.twitch.tv/kraken/channels/maximunderp/features
+  viewers: 4
+  name: live_user_maximunderp
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/maximunderp
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_puppylisk-320x200.jpg
+  _id: 5628130992
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/puppylisk-channel_offline_image-6780754f4d29b4c0-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: puppylisk - gm playing 4v4 with mouzillusion and fxojimrising
+    teams: []
+    updated_at: '2013-05-10T03:50:55Z'
+    background: 
+    url: http://www.twitch.tv/puppylisk
+    created_at: '2013-01-29T11:17:23Z'
+    mature: 
+    _id: 39801214
+    name: puppylisk
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/puppylisk-channel_header_image-bca74dcdce3a5f51-640x125.png
+    display_name: puppylisk
+    logo: 
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/puppylisk/videos
+      follows: https://api.twitch.tv/kraken/channels/puppylisk/follows
+      chat: https://api.twitch.tv/kraken/chat/puppylisk
+      editors: https://api.twitch.tv/kraken/channels/puppylisk/editors
+      commercial: https://api.twitch.tv/kraken/channels/puppylisk/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/puppylisk/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/puppylisk/stream_key
+      self: https://api.twitch.tv/kraken/channels/puppylisk
+      features: https://api.twitch.tv/kraken/channels/puppylisk/features
+  viewers: 4
+  name: live_user_puppylisk
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/puppylisk
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_maldarrien-320x200.jpg
+  _id: 5628035824
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/maldarrien-channel_offline_image-61cd4faaae66750f-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Gold Terran, back to Laddering and Learning
+    teams: []
+    updated_at: '2013-05-10T03:33:14Z'
+    background: 
+    url: http://www.twitch.tv/maldarrien
+    created_at: '2012-04-10T01:30:58Z'
+    mature: 
+    _id: 29666809
+    name: maldarrien
+    banner: 
+    display_name: MalDarrien
+    logo: 
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/maldarrien/videos
+      follows: https://api.twitch.tv/kraken/channels/maldarrien/follows
+      chat: https://api.twitch.tv/kraken/chat/maldarrien
+      editors: https://api.twitch.tv/kraken/channels/maldarrien/editors
+      commercial: https://api.twitch.tv/kraken/channels/maldarrien/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/maldarrien/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/maldarrien/stream_key
+      self: https://api.twitch.tv/kraken/channels/maldarrien
+      features: https://api.twitch.tv/kraken/channels/maldarrien/features
+  viewers: 4
+  name: live_user_maldarrien
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/maldarrien
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_finnstarcraft-320x200.jpg
+  _id: 5627982784
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Masters Protoss Hots ladder! Come hang out and learn :D
+    teams: []
+    updated_at: '2013-05-10T03:23:23Z'
+    background: 
+    url: http://www.twitch.tv/finnstarcraft
+    created_at: '2012-09-26T05:15:41Z'
+    mature: 
+    _id: 36461328
+    name: finnstarcraft
+    banner: 
+    display_name: FinnStarcraft
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/finnstarcraft-profile_image-07f41b17633d1910-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/finnstarcraft/videos
+      follows: https://api.twitch.tv/kraken/channels/finnstarcraft/follows
+      chat: https://api.twitch.tv/kraken/chat/finnstarcraft
+      editors: https://api.twitch.tv/kraken/channels/finnstarcraft/editors
+      commercial: https://api.twitch.tv/kraken/channels/finnstarcraft/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/finnstarcraft/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/finnstarcraft/stream_key
+      self: https://api.twitch.tv/kraken/channels/finnstarcraft
+      features: https://api.twitch.tv/kraken/channels/finnstarcraft/features
+  viewers: 4
+  name: live_user_finnstarcraft
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/finnstarcraft
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_meltzington-320x200.jpg
+  _id: 5627923088
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/meltzington-channel_offline_image-c89dc3037d79d0a6-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: 2s with nate and then 1v1 for a while :D
+    teams: []
+    updated_at: '2013-05-10T03:12:36Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/meltzington-channel_background_image-4a958fe768a8f32c.jpeg
+    url: http://www.twitch.tv/meltzington
+    created_at: '2011-03-02T06:58:37Z'
+    mature: 
+    _id: 20837475
+    name: meltzington
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/meltzington-channel_header_image-b6e45219c816e7c1-640x125.jpeg
+    display_name: Meltzington
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/meltzington-profile_image-a8acfdaac72bae40-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/meltzington/videos
+      follows: https://api.twitch.tv/kraken/channels/meltzington/follows
+      chat: https://api.twitch.tv/kraken/chat/meltzington
+      editors: https://api.twitch.tv/kraken/channels/meltzington/editors
+      commercial: https://api.twitch.tv/kraken/channels/meltzington/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/meltzington/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/meltzington/stream_key
+      self: https://api.twitch.tv/kraken/channels/meltzington
+      features: https://api.twitch.tv/kraken/channels/meltzington/features
+  viewers: 4
+  name: live_user_meltzington
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/meltzington
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_xyelz-320x200.jpg
+  _id: 5627901472
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: ! '[720p - 60fps] Zerg: xyeLz - Learning! Come watch/learn/teach! :D'
+    teams: []
+    updated_at: '2013-05-10T03:09:40Z'
+    background: 
+    url: http://www.twitch.tv/xyelz
+    created_at: '2011-02-11T07:19:30Z'
+    mature: false
+    _id: 20340110
+    name: xyelz
+    banner: 
+    display_name: xyeLz
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/xyelz-profile_image-4c8409a5fb5d36a7-300x300.png
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/xyelz/videos
+      follows: https://api.twitch.tv/kraken/channels/xyelz/follows
+      chat: https://api.twitch.tv/kraken/chat/xyelz
+      editors: https://api.twitch.tv/kraken/channels/xyelz/editors
+      commercial: https://api.twitch.tv/kraken/channels/xyelz/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/xyelz/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/xyelz/stream_key
+      self: https://api.twitch.tv/kraken/channels/xyelz
+      features: https://api.twitch.tv/kraken/channels/xyelz/features
+  viewers: 4
+  name: live_user_xyelz
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/xyelz
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_theonom-320x200.jpg
+  _id: 5627115424
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/theonom-channel_offline_image-1feb004fbb195e6c-640x360.png
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: ! 'OnomTV: I Suck at Starcraft 2! ARCADE GAMES!!'
+    teams: []
+    updated_at: '2013-05-10T02:37:49Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/theonom-channel_background_image-70d980977a07280d.png
+    url: http://www.twitch.tv/theonom
+    created_at: '2012-01-14T09:44:30Z'
+    mature: false
+    _id: 27421188
+    name: theonom
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/theonom-channel_header_image-05ce81e0ca4af73b-640x125.png
+    display_name: TheOnom
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/theonom-profile_image-752b0a7f46477c3d-300x300.png
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/theonom/videos
+      follows: https://api.twitch.tv/kraken/channels/theonom/follows
+      chat: https://api.twitch.tv/kraken/chat/theonom
+      editors: https://api.twitch.tv/kraken/channels/theonom/editors
+      commercial: https://api.twitch.tv/kraken/channels/theonom/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/theonom/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/theonom/stream_key
+      self: https://api.twitch.tv/kraken/channels/theonom
+      features: https://api.twitch.tv/kraken/channels/theonom/features
+  viewers: 4
+  name: live_user_theonom
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/theonom
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_xspherexsol-320x200.jpg
+  _id: 5627058128
+  channel:
+    video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/xspherexsol-channel_offline_image-5260e41a30af636c-640x360.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: HOTS - Diamond Terran! Playing 1v1 and DJing :D
+    teams: []
+    updated_at: '2013-05-10T00:45:13Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/xspherexsol-channel_background_image-6dc2d4cd5ddcb398.jpeg
+    url: http://www.twitch.tv/xspherexsol
+    created_at: '2013-03-22T01:54:30Z'
+    mature: 
+    _id: 41575639
+    name: xspherexsol
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/xspherexsol-channel_header_image-21b267d982eb4c6e-640x125.jpeg
+    display_name: xSPHERExSOL
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/xspherexsol-profile_image-cf5acfba3c600f3a-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/xspherexsol/videos
+      follows: https://api.twitch.tv/kraken/channels/xspherexsol/follows
+      chat: https://api.twitch.tv/kraken/chat/xspherexsol
+      editors: https://api.twitch.tv/kraken/channels/xspherexsol/editors
+      commercial: https://api.twitch.tv/kraken/channels/xspherexsol/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/xspherexsol/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/xspherexsol/stream_key
+      self: https://api.twitch.tv/kraken/channels/xspherexsol
+      features: https://api.twitch.tv/kraken/channels/xspherexsol/features
+  viewers: 4
+  name: live_user_xspherexsol
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/xspherexsol
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_bluedog654321-320x200.jpg
+  _id: 5628207104
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Masters Terran/Protoss 1080p w/ commentary and replay analysis.
+    teams: []
+    updated_at: '2013-05-10T04:06:10Z'
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/bluedog654321-channel_background_image-432f2bbd5d1c6e3f.jpeg
+    url: http://www.twitch.tv/bluedog654321
+    created_at: '2011-05-10T20:24:23Z'
+    mature: 
+    _id: 22337804
+    name: bluedog654321
+    banner: 
+    display_name: Bluedog654321
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/bluedog654321-profile_image-2daaa5577cd78d2a-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/bluedog654321/videos
+      follows: https://api.twitch.tv/kraken/channels/bluedog654321/follows
+      chat: https://api.twitch.tv/kraken/chat/bluedog654321
+      editors: https://api.twitch.tv/kraken/channels/bluedog654321/editors
+      commercial: https://api.twitch.tv/kraken/channels/bluedog654321/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/bluedog654321/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/bluedog654321/stream_key
+      self: https://api.twitch.tv/kraken/channels/bluedog654321
+      features: https://api.twitch.tv/kraken/channels/bluedog654321/features
+  viewers: 3
+  name: live_user_bluedog654321
+  broadcaster: unknown_rtmp
+  _links:
+    self: https://api.twitch.tv/kraken/streams/bluedog654321
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_eradinceremore-320x200.jpg
+  _id: 5628137664
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: SC2:HotS -- Master Protoss laddering
+    teams: []
+    updated_at: '2013-05-10T03:52:16Z'
+    background: 
+    url: http://www.twitch.tv/eradinceremore
+    created_at: '2011-04-23T05:33:09Z'
+    mature: 
+    _id: 21941363
+    name: eradinceremore
+    banner: 
+    display_name: EradinCeremore
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/eradinceremore-profile_image-47348ab890dcfc32-300x300.png
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/eradinceremore/videos
+      follows: https://api.twitch.tv/kraken/channels/eradinceremore/follows
+      chat: https://api.twitch.tv/kraken/chat/eradinceremore
+      editors: https://api.twitch.tv/kraken/channels/eradinceremore/editors
+      commercial: https://api.twitch.tv/kraken/channels/eradinceremore/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/eradinceremore/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/eradinceremore/stream_key
+      self: https://api.twitch.tv/kraken/channels/eradinceremore
+      features: https://api.twitch.tv/kraken/channels/eradinceremore/features
+  viewers: 3
+  name: live_user_eradinceremore
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/eradinceremore
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_shadow3291-320x200.jpg
+  _id: 5628093616
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: ! 'practice games
+
+'
+    teams: []
+    updated_at: '2013-05-10T03:47:41Z'
+    background: 
+    url: http://www.twitch.tv/shadow3291
+    created_at: '2011-05-08T08:54:19Z'
+    mature: true
+    _id: 22290599
+    name: shadow3291
+    banner: 
+    display_name: Shadow3291
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/shadow3291-profile_image-7b45284a1c1ddc68-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/shadow3291/videos
+      follows: https://api.twitch.tv/kraken/channels/shadow3291/follows
+      chat: https://api.twitch.tv/kraken/chat/shadow3291
+      editors: https://api.twitch.tv/kraken/channels/shadow3291/editors
+      commercial: https://api.twitch.tv/kraken/channels/shadow3291/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/shadow3291/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/shadow3291/stream_key
+      self: https://api.twitch.tv/kraken/channels/shadow3291
+      features: https://api.twitch.tv/kraken/channels/shadow3291/features
+  viewers: 3
+  name: live_user_shadow3291
+  broadcaster: obs
+  _links:
+    self: https://api.twitch.tv/kraken/streams/shadow3291
+- game: ! 'StarCraft II: Heart of the Swarm'
+  preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_chansen005-320x200.jpg
+  _id: 5628065168
+  channel:
+    video_banner: 
+    game: ! 'StarCraft II: Heart of the Swarm'
+    status: Starcraft 2 Hots Master terran
+    teams: []
+    updated_at: '2013-05-10T03:38:35Z'
+    background: 
+    url: http://www.twitch.tv/chansen005
+    created_at: '2010-10-05T02:19:36Z'
+    mature: true
+    _id: 16315821
+    name: chansen005
+    banner: 
+    display_name: Chansen005
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/chansen005-profile_image-ba50b6afb4daedc6-300x300.jpeg
+    _links:
+      videos: https://api.twitch.tv/kraken/channels/chansen005/videos
+      follows: https://api.twitch.tv/kraken/channels/chansen005/follows
+      chat: https://api.twitch.tv/kraken/chat/chansen005
+      editors: https://api.twitch.tv/kraken/channels/chansen005/editors
+      commercial: https://api.twitch.tv/kraken/channels/chansen005/commercial
+      subscriptions: https://api.twitch.tv/kraken/channels/chansen005/subscriptions
+      stream_key: https://api.twitch.tv/kraken/channels/chansen005/stream_key
+      self: https://api.twitch.tv/kraken/channels/chansen005
+      features: https://api.twitch.tv/kraken/channels/chansen005/features
+  viewers: 3
+  name: live_user_chansen005
+  broadcaster: xsplit
+  _links:
+    self: https://api.twitch.tv/kraken/streams/chansen005
+_links:
+  summary: https://api.twitch.tv/kraken/streams/summary
+  next: https://api.twitch.tv/kraken/streams?game=StarCraft+II%3A+Heart+of+the+Swarm&limit=25&offset=50
+  followed: https://api.twitch.tv/kraken/streams/followed
+  featured: https://api.twitch.tv/kraken/streams/featured
+  self: https://api.twitch.tv/kraken/streams?game=StarCraft+II%3A+Heart+of+the+Swarm&limit=25&offset=25
+  prev: https://api.twitch.tv/kraken/streams?game=StarCraft+II%3A+Heart+of+the+Swarm&limit=25&offset=0

@@ -1,0 +1,30 @@
+base_url: 'https://api.twitch.tv/kraken/'
+mocks:
+    streams?channel=mlgsc2,rootcatz,crs_saintvicious,phantoml0rd&limit=25&offset=0:
+        body: $(streams_channel_response_1.yml)
+    streams?channel=mlgsc2,rootcatz,crs_saintvicious,phantoml0rd&limit=25&offset=25:
+        body: $(streams_channel_response_2.yml)
+    streams?game=League%20of%20Legends&limit=10&offset=0:
+        body: $(streams_game_limit_response.yml)
+    streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=0:
+        body: $(streams_game_response_1.yml)
+    streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=25:
+        body: $(streams_game_response_2.yml)
+    streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=50:
+        body: $(streams_game_response_3.yml)
+    streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=75:
+        body: $(streams_game_response_4.yml)
+    streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=100:
+        body: $(streams_game_response_5.yml)
+    streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=125:
+        body: $(streams_game_response_6.yml)
+    streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=150:
+        body: $(streams_game_response_7.yml)
+    streams?channel=quantichyun,sc2sage&game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=0:
+        body: $(streams_game_channel_response_1.yml)
+    streams?channel=quantichyun,sc2sage&game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=25:
+        body: $(streams_game_channel_response_2.yml)
+    streams?channel=leveluplive,djwheat&limit=25&offset=0:
+        body: $(streams_channel_offline_1.yml)
+    streams?channel=leveluplive,djwheat&limit=25&offset=25:
+        body: $(streams_channel_offline_2.yml)

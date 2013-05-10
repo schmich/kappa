@@ -59,12 +59,23 @@ module Kappa::V2
     # TODO: Support Kappa::Vx::Game object for the :game param.
     # TODO: Support Kappa::Vx::Channel object for the :channel param.
     #
-    def self.where(params = {})
-      limit = params[:limit] || 0
+    def self.where(args)
+      raise ArgumentError if args.empty?
 
-      params = params.dup
-      if params[:channel]
-        params[:channel] = params[:channel].join(',')
+      params = { :limit => 25 }
+      if args[:channel]
+        params[:channel] = args[:channel].join(',')
+      end
+
+      if args[:game]
+        params[:game] = args[:game]
+      end
+
+      limit = args[:limit]
+      if limit && (limit < 25)
+        params[:limit] = limit
+      else
+        limit = 0
       end
 
       streams = []
