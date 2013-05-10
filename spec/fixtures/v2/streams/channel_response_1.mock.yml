@@ -1,0 +1,293 @@
+# curl -k -H "Accept: application/vnd.twitchtv.v2+json" "https://api.twitch.tv/kraken/streams?channel=mlgsc2,rootcatz,crs_saintvicious,phantoml0rd&limit=25&offset=0" 
+---
+https://api.twitch.tv/kraken/streams?channel=mlgsc2,rootcatz,crs_saintvicious,phantoml0rd&limit=25&offset=0:
+  _links:
+    summary: https://api.twitch.tv/kraken/streams/summary
+    next: https://api.twitch.tv/kraken/streams?channel%5B%5D=mlgsc2&channel%5B%5D=rootcatz&channel%5B%5D=crs_saintvicious&channel%5B%5D=phantoml0rd&limit=25&offset=25
+    followed: https://api.twitch.tv/kraken/streams/followed
+    self: https://api.twitch.tv/kraken/streams?channel%5B%5D=mlgsc2&channel%5B%5D=rootcatz&channel%5B%5D=crs_saintvicious&channel%5B%5D=phantoml0rd&limit=25&offset=0
+    featured: https://api.twitch.tv/kraken/streams/featured
+  streams:
+  - channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/crs_saintvicious-profile_image-b52f8e50b134cbf7-300x300.jpeg
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/crs_saintvicious-channel_offline_image-676505f9698a1878-640x360.jpeg
+      status: Crs Saintvicious- Solo Que
+      game: League of Legends
+      display_name: Crs_saintvicious
+      _links:
+        features: https://api.twitch.tv/kraken/channels/crs_saintvicious/features
+        videos: https://api.twitch.tv/kraken/channels/crs_saintvicious/videos
+        editors: https://api.twitch.tv/kraken/channels/crs_saintvicious/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/crs_saintvicious/subscriptions
+        follows: https://api.twitch.tv/kraken/channels/crs_saintvicious/follows
+        chat: https://api.twitch.tv/kraken/chat/crs_saintvicious
+        commercial: https://api.twitch.tv/kraken/channels/crs_saintvicious/commercial
+        stream_key: https://api.twitch.tv/kraken/channels/crs_saintvicious/stream_key
+        self: https://api.twitch.tv/kraken/channels/crs_saintvicious
+      teams:
+      - logo: 
+        display_name: Curse
+        _links:
+          self: https://api.twitch.tv/kraken/teams/teamcurse
+        background: 
+        updated_at: '2013-01-28T19:25:32Z'
+        created_at: '2013-01-28T19:25:24Z'
+        info: ! '
+
+'
+        banner: 
+        name: teamcurse
+        _id: 554
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/crs_saintvicious-channel_background_image-955f082478ece1a7.jpeg
+      updated_at: '2013-05-10T03:21:52Z'
+      created_at: '2012-05-19T20:27:29Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/crs_saintvicious-channel_header_image-87279aab08f893ee-640x125.jpeg
+      name: crs_saintvicious
+      mature: 
+      url: http://www.twitch.tv/crs_saintvicious
+      _id: 30661033
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/crs_saintvicious
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_crs_saintvicious-320x200.jpg
+    name: live_user_crs_saintvicious
+    viewers: 3848
+    _id: 5627973184
+    broadcaster: xsplit
+  - channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/phantoml0rd-profile_image-67fc4a82fcf62b56-300x300.png
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/phantoml0rd-channel_offline_image-6d666f34cfab7773-640x360.png
+      status: PhantomL0rd @ Dyrus' fan meet
+      game: League of Legends
+      display_name: PhantomL0rd
+      _links:
+        features: https://api.twitch.tv/kraken/channels/phantoml0rd/features
+        videos: https://api.twitch.tv/kraken/channels/phantoml0rd/videos
+        editors: https://api.twitch.tv/kraken/channels/phantoml0rd/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/phantoml0rd/subscriptions
+        follows: https://api.twitch.tv/kraken/channels/phantoml0rd/follows
+        chat: https://api.twitch.tv/kraken/chat/phantoml0rd
+        commercial: https://api.twitch.tv/kraken/channels/phantoml0rd/commercial
+        stream_key: https://api.twitch.tv/kraken/channels/phantoml0rd/stream_key
+        self: https://api.twitch.tv/kraken/channels/phantoml0rd
+      teams: []
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/phantoml0rd-channel_background_image-eea9711906faf9d4.jpeg
+      updated_at: '2013-05-10T00:15:48Z'
+      created_at: '2012-11-15T00:48:58Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/phantoml0rd-channel_header_image-10736d3a38cb0eaa-640x125.png
+      name: phantoml0rd
+      mature: false
+      url: http://www.twitch.tv/phantoml0rd
+      _id: 37701508
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/phantoml0rd
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_phantoml0rd-320x200.jpg
+    name: live_user_phantoml0rd
+    viewers: 2630
+    _id: 5626879824
+    broadcaster: obs
+  - channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/mlgsc2-profile_image-da6d84e5f0ca2be6-300x300.jpeg
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/mlgsc2-channel_offline_image-64f97369959ff961-640x360.jpeg
+      status: MLG Winter Season Showdowns! Entire Rebroadcast!
+      teams:
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-mlg-team_logo_image-80c3c33a5987fde7-300x300.png
+        _links:
+          self: https://api.twitch.tv/kraken/teams/mlg
+        display_name: Major League Gaming
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-mlg-background_image-9681efe18c9fea01.jpeg
+        banner: 
+        info: ! '<br /><br /><center>
+
+          <strong><b>WATCH MLG LIVE DAILY AT:</b></strong><br /><a rel="nofollow" href="http://twitch.tv/team/mlg"
+          target="_blank">www.twitch.tv/team/mlg</a><br /><br /><strong><b>FULL LIVE
+          SCHEDULE HERE:</b></strong><br /><a rel="nofollow" href="http://majorleaguegaming.com/schedule"
+          target="_blank">www.majorleaguegaming.com/schedule</a><br /><br /><strong><b>MLG
+          HOMEPAGE:</b></strong><br /><a rel="nofollow" href="http://majorleaguegaming.com"
+          target="_blank">www.majorleaguegaming.com</a><br /><br /><strong><b>MORE MLG
+          CALL OF DUTY:</b></strong><br /><a rel="nofollow" href="http://twitch.tv/mlgcod"
+          target="_blank">Twitch Channel</a><br /><a rel="nofollow" href="http://www.youtube.com/subscription_center?add_user=OfficialMLGCOD"
+          target="_blank">YouTube Channel</a><br /><br /><strong><b>MORE MLG LEAGUE
+          OF LEGENDS:</b></strong><br /><a rel="nofollow" href="http://twitch.tv/mlglol"
+          target="_blank">Twitch Channel</a><br /><a rel="nofollow" href="http://www.youtube.com/subscription_center?add_user=OfficialMLGLOL"
+          target="_blank">YouTube Channel</a><br /><br /><strong><b>MORE MLG STARCRAFT
+          II:</b></strong><br /><a rel="nofollow" href="http://twitch.tv/mlgsc2" target="_blank">Twitch
+          Channel</a><br /><a rel="nofollow" href="http://www.youtube.com/subscription_center?add_user=OfficialMLGSC2"
+          target="_blank">YouTube Channel</a><br /><br /><br /></center>
+
+
+
+          <br /><b>Premium Upgrade</b><br />
+
+          To get the ultimate viewing experience, you can subscribe to MLG on Twitch.tv.
+          For 9.99, you get a one month subscription that unlocks ad-free access to
+          the MLG Winter Championship live streams, MLG daily content and archives in
+          full 1080p HD. You will also receive premium chat features including a custom
+          badge and a huge selection of subscriber-only emoticons.
+
+          <br /><br />This upgrade is a monthly subscription, meaning you get all these
+          perks for 30 days from the time of purchase. After the Winter Championship,
+          you can enjoy multiple shows per week for League of Legends, Call of Duty:
+          Black Ops II, StarCraft II: Heart of the Swam, and other MLG exclusives, all
+          streamed in 1080p, as well as 24/7 rebroadcasts.
+
+
+
+
+          <br /><br />MLG Twitch.tv subscriber-only Chat Emoticons:  <a rel="nofollow"
+          href="http://mlg.to/ZKCF5u" target="_blank">http://mlg.to/ZKCF5u</a>
+
+
+
+'
+        created_at: '2011-11-10T17:37:55Z'
+        updated_at: '2013-03-27T21:33:47Z'
+        name: mlg
+        _id: 83
+      - logo: 
+        _links:
+          self: https://api.twitch.tv/kraken/teams/mlgsubscription
+        display_name: MLG Monthly Subscription
+        background: 
+        banner: 
+        info: ! '
+
+'
+        created_at: '2013-02-26T04:08:47Z'
+        updated_at: '2013-03-12T18:57:48Z'
+        name: mlgsubscription
+        _id: 621
+      display_name: MLGSC2
+      game: ! 'StarCraft II: Heart of the Swarm'
+      _links:
+        features: https://api.twitch.tv/kraken/channels/mlgsc2/features
+        videos: https://api.twitch.tv/kraken/channels/mlgsc2/videos
+        follows: https://api.twitch.tv/kraken/channels/mlgsc2/follows
+        subscriptions: https://api.twitch.tv/kraken/channels/mlgsc2/subscriptions
+        editors: https://api.twitch.tv/kraken/channels/mlgsc2/editors
+        chat: https://api.twitch.tv/kraken/chat/mlgsc2
+        commercial: https://api.twitch.tv/kraken/channels/mlgsc2/commercial
+        self: https://api.twitch.tv/kraken/channels/mlgsc2
+        stream_key: https://api.twitch.tv/kraken/channels/mlgsc2/stream_key
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/mlgsc2-channel_background_image-60fac714f49cd7c1.jpeg
+      banner: 
+      created_at: '2011-06-02T16:44:31Z'
+      updated_at: '2013-05-08T19:54:23Z'
+      url: http://www.twitch.tv/mlgsc2
+      mature: 
+      name: mlgsc2
+      _id: 22744684
+    game: ! 'StarCraft II: Heart of the Swarm'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/mlgsc2
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_mlgsc2-320x200.jpg
+    name: live_user_mlgsc2
+    viewers: 1739
+    _id: 5616894880
+    broadcaster: unknown_rtmp
+  - channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/rootcatz-profile_image-364f26660ea6d286-300x300.png
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/rootcatz-channel_offline_image-d926382debd53370-640x360.jpeg
+      status: O_O~~! streaming for a bit
+      game: ! 'StarCraft II: Heart of the Swarm'
+      display_name: ROOTCatZ
+      _links:
+        features: https://api.twitch.tv/kraken/channels/rootcatz/features
+        videos: https://api.twitch.tv/kraken/channels/rootcatz/videos
+        editors: https://api.twitch.tv/kraken/channels/rootcatz/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/rootcatz/subscriptions
+        follows: https://api.twitch.tv/kraken/channels/rootcatz/follows
+        chat: https://api.twitch.tv/kraken/chat/rootcatz
+        commercial: https://api.twitch.tv/kraken/channels/rootcatz/commercial
+        stream_key: https://api.twitch.tv/kraken/channels/rootcatz/stream_key
+        self: https://api.twitch.tv/kraken/channels/rootcatz
+      teams:
+      - logo: 
+        display_name: ROOT
+        _links:
+          self: https://api.twitch.tv/kraken/teams/root
+        background: 
+        updated_at: '2012-10-03T01:48:27Z'
+        created_at: '2012-05-16T03:16:04Z'
+        info: ! 'RootGaming
+
+
+
+'
+        banner: 
+        name: root
+        _id: 300
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thegamestation-team_logo_image-502b888f342ae698-300x300.png
+        display_name: The Game Station
+        _links:
+          self: https://api.twitch.tv/kraken/teams/thegamestation
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thegamestation-background_image-334a7d5262839aaa.png
+        updated_at: '2012-10-03T20:32:26Z'
+        created_at: '2012-08-01T05:25:06Z'
+        info: ! 'Welcome to The Game Station! We are a group of gamers who have come
+          together to create something new and exciting, representing a diverse and
+          passionate community of gaming enthusiasts all over the world. <br /><br />
+
+
+          Find us on <a rel="nofollow" href="http://bit.ly/TheGameStation" target="_blank">YouTube</a>.
+
+
+
+
+'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thegamestation-banner_image-d8bb2135bf50b3a9-640x125.png
+        name: thegamestation
+        _id: 368
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-dreamhack-team_logo_image-554e4b6ccc20f582-300x300.jpeg
+        display_name: DreamHack Open Stockholm
+        _links:
+          self: https://api.twitch.tv/kraken/teams/dreamhack
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-dreamhack-background_image-717ce342dbb32ced.jpeg
+        updated_at: '2013-04-25T20:44:45Z'
+        created_at: '2011-11-21T20:25:06Z'
+        info: ! "Your portal to <b>DreamHack Open Stockholm</b>! \n<br /><br />Watch
+          as the world's top talent clashes in StarCraft 2 to earn <a rel=\"nofollow\"
+          href=\"http://open.dreamhack.se/news/98-wcs-points.html\" target=\"_blank\"><b>Blizzard
+          WCS Ranking points</b></a> and their share of the <a rel=\"nofollow\" href=\"http://open.dreamhack.se/page/stockholm/\"
+          target=\"_blank\"><b>175,000 SEK prize pool</b></a>!\n<br /><br /><a rel=\"nofollow\"
+          href=\"http://open.dreamhack.se/\" target=\"_blank\"><img src=\"http://s.jtvnw.net/jtv_user_pictures/hosted_images/DHOpen.jpg\"
+          alt=\"DH Open Stockholm\" /></a>\n<br /><br /><b>Information</b>\n<br /><a
+          rel=\"nofollow\" href=\"http://open.dreamhack.se/page/competitor-list/\" target=\"_blank\"><b>Player
+          lineup</b></a>\n<br /><a rel=\"nofollow\" href=\"http://open.dreamhack.se/news/94-mapsschedule.html\"
+          target=\"_blank\"><b>Map pool</b></a>\n<br /><a rel=\"nofollow\" href=\"http://open.dreamhack.se/news/100-the-groups.html\"
+          target=\"_blank\"><b>Groups</b></a>\n<br /><br /><b>Groups / Bracket / Results</b>\n<br
+          /><a rel=\"nofollow\" href=\"http://dhopen.binarybeast.com/2013/stockholm\"
+          target=\"_blank\"><b>All results</b></a>\n<br /><br /><b>Schedule</b>\n<br
+          /><b>Day 1 - Friday 26th of April</b>\n<br />10.45 Stream starts\n<br />11.00
+          Groupstage #1 - Round 1\n<br />12.00 Groupstage #1 - Round 2\n<br />13.00
+          Groupstage #1 - Round 3\n<br />15.30 Groupstage #2 - Round 1\n<br />16.30
+          Groupstage #2 - Round 2\n<br />17.30 Groupstage #2 - Round 3\n<br />20.00
+          Groupstage #3 - Round 1\n<br />21.00 Groupstage #3 - Round 2\n<br />22.00
+          Groupstage #3 - Round 3\n\n<br /><br /><b>Day 2 - Saturday 27th of April</b>\n<br
+          />10.15 Stream starts\n<br />10.30 Playoffs - Round of 16\n<br />11.30 Playoffs
+          - Round of 16\n<br />12.30 Playoffs - Round of 16\n<br />13.30 Playoffs -
+          Round of 16\n\n<br /><br /><b>The DreamHack Final 8 Show</b>\n<br />15.40
+          Show starts\n<br />16.00 Playoffs - Round of 8\n<br />17.00 Playoffs - Round
+          of 8\n<br />18.00 Playoffs - Round of 8\n<br />19.00 Playoffs - Round of 8\n<br
+          />20.00 Playoffs - Semifinal #1\n<br />21.00 Playoffs - Semifinal #2\n<br
+          />22.30 Playoffs - Grand Final\n\n<br /><br />All times above is CET\n\n"
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-dreamhack-banner_image-666b5db7771450df-640x125.png
+        name: dreamhack
+        _id: 89
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/rootcatz-channel_background_image-5437680692c6634d.jpeg
+      updated_at: '2013-05-10T01:53:20Z'
+      created_at: '2010-11-17T07:31:11Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/rootcatz-channel_header_image-ab359419ce132f41-640x125.jpeg
+      name: rootcatz
+      mature: 
+      url: http://www.twitch.tv/rootcatz
+      _id: 17901901
+    game: ! 'StarCraft II: Heart of the Swarm'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/rootcatz
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_rootcatz-320x200.jpg
+    name: live_user_rootcatz
+    viewers: 1031
+    _id: 5627467568
+    broadcaster: obs

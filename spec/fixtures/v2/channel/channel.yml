@@ -12,24 +12,24 @@ name: colminigun
 mature: false
 display_name: Colminigun
 _links:
-    subscriptions: 'https://api.twitch.tv/kraken/channels/colminigun/subscriptions'
-    videos: 'https://api.twitch.tv/kraken/channels/colminigun/videos'
-    editors: 'https://api.twitch.tv/kraken/channels/colminigun/editors'
-    stream_key: 'https://api.twitch.tv/kraken/channels/colminigun/stream_key'
-    commercial: 'https://api.twitch.tv/kraken/channels/colminigun/commercial'
-    follows:  'https://api.twitch.tv/kraken/channels/colminigun/follows'
-    chat: 'https://api.twitch.tv/kraken/chat/colminigun'
-    features: 'https://api.twitch.tv/kraken/channels/colminigun/features'
-    self: 'https://api.twitch.tv/kraken/channels/colminigun'
+  subscriptions: 'https://api.twitch.tv/kraken/channels/colminigun/subscriptions'
+  videos: 'https://api.twitch.tv/kraken/channels/colminigun/videos'
+  editors: 'https://api.twitch.tv/kraken/channels/colminigun/editors'
+  stream_key: 'https://api.twitch.tv/kraken/channels/colminigun/stream_key'
+  commercial: 'https://api.twitch.tv/kraken/channels/colminigun/commercial'
+  follows:  'https://api.twitch.tv/kraken/channels/colminigun/follows'
+  chat: 'https://api.twitch.tv/kraken/chat/colminigun'
+  features: 'https://api.twitch.tv/kraken/channels/colminigun/features'
+  self: 'https://api.twitch.tv/kraken/channels/colminigun'
 teams:
-    background: null
-    _id: 300
-    created_at: '2012-05-16T03:16:04Z'
-    updated_at: '2012-10-03T01:48:27Z'
-    info: "RootGaming\n\n\n"
-    logo: null
-    banner: null
-    name: root
-    display_name: ROOT
-    _links:
-        self: 'https://api.twitch.tv/kraken/teams/root'
+  background: null
+  _id: 300
+  created_at: '2012-05-16T03:16:04Z'
+  updated_at: '2012-10-03T01:48:27Z'
+  info: "RootGaming\n\n\n"
+  logo: null
+  banner: null
+  name: root
+  display_name: ROOT
+  _links:
+    self: 'https://api.twitch.tv/kraken/teams/root'

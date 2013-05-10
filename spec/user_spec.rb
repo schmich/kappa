@@ -5,6 +5,10 @@ require 'common'
 include Kappa::V2
 
 describe Kappa::V2::User do
+  before do
+    WebMocks.load_dir('spec/fixtures/v2/user')
+  end
+
   describe '#new' do
     it 'accepts a hash' do
       hash = yaml_load('user/user_real.yml')
@@ -22,8 +26,6 @@ describe Kappa::V2::User do
   end
 
   describe '.get' do
-    before { YamlWebMock.load(fixture('user/user_web_mock.yml')) }
-
     it 'creates a User from user name' do
       u = User.get('colminigun')
       u.should_not be_nil

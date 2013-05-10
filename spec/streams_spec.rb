@@ -6,7 +6,7 @@ include Kappa::V2
 
 describe Kappa::V2::Streams do
   before do
-    YamlWebMock.load(fixture('streams/streams_web_mock.yml'))
+    WebMocks.load_dir('spec/fixtures/v2/streams')
   end
 
   describe '.all' do

@@ -5,6 +5,10 @@ require 'common'
 include Kappa::V2
 
 describe Kappa::V2::Stream do
+  before do
+    WebMocks.load_dir('spec/fixtures/v2/stream')
+  end
+
   describe '#new' do
     it 'accepts a hash' do
       hash = YAML.load_file(fixture('stream/stream_real.yml'))
@@ -20,8 +24,6 @@ describe Kappa::V2::Stream do
   end
 
   describe '.get' do
-    before { YamlWebMock.load(fixture('stream/stream_web_mock.yml')) }
-
     it 'creates a Stream from stream name' do
       s = Stream.get('stream_foo')
       s.should_not be_nil

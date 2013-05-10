@@ -11,10 +11,6 @@ def yaml_load(file)
   YAML.load_file(fixture(file))
 end
 
-include WebMock::API
-
-require 'yaml'
-
 module YAML
   def self.load_expand(file)
     expand(YAML.load_file(file), file)
@@ -44,27 +40,32 @@ private
   end
 end
 
-class YamlWebMock
+include WebMock::API
+
+class WebMocks
+  def self.load_dir(dir)
+    pattern = File.join(dir, '*.mock.yml')
+    Dir[pattern].each do |file|
+      WebMocks.load(file)
+    end
+  end
+
   def self.load(file_name)
     doc = YAML.load_expand(file_name)
-    base_url = Addressable::URI.parse(doc['base_url'])
-    mocks = doc['mocks']
-    mocks.each do |path, response|
-      uri = Addressable::URI.parse(path)
-
-      status = response['status'] || 200
+    doc.each do |url, response|
+      uri = Addressable::URI.parse(url)
 
       body = response['body']
-      body = case body
-        when Hash
-          body.to_json
-        when String
-          body
-        else
-          body.to_s
+      status = response['status']
+
+      if body && status
+        body = body.is_a?(Hash) ? body.to_json : body.to_s
+      else
+        status = 200
+        body = response.is_a?(Hash) ? response.to_json : response.to_s
       end
 
-      stub_request(:any, base_url + uri.path)
+      stub_request(:any, uri.omit(:query))
         .with(:query => uri.query_values)
         .to_return(:status => status, :body => body)
     end

@@ -1,0 +1,411 @@
+---
+https://api.twitch.tv/kraken/streams?game=League%20of%20Legends&limit=10&offset=0:
+  _links:
+    summary: https://api.twitch.tv/kraken/streams/summary
+    next: https://api.twitch.tv/kraken/streams?game=League+of+Legends&limit=10&offset=10
+    followed: https://api.twitch.tv/kraken/streams/followed
+    featured: https://api.twitch.tv/kraken/streams/featured
+    self: https://api.twitch.tv/kraken/streams?game=League+of+Legends&limit=10&offset=0
+  streams:
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_tsm_wildturtle-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/tsm_wildturtle
+    _id: 5626776608
+    channel:
+      teams:
+      - background: 
+        updated_at: '2012-10-03T01:48:26Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/solomid
+        info: ! '
+
+'
+        _id: 272
+        created_at: '2012-04-28T23:02:22Z'
+        banner: 
+        name: solomid
+        display_name: SoloMid
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-solomid-team_logo_image-2c7087c64d6c6f51-300x300.jpeg
+      status: TSM SNAPDRAGON WILDTURTLE MASTER OF SOLO QUEUE
+      game: League of Legends
+      background: 
+      updated_at: '2013-05-09T23:59:34Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/tsm_wildturtle/videos
+        follows: https://api.twitch.tv/kraken/channels/tsm_wildturtle/follows
+        chat: https://api.twitch.tv/kraken/chat/tsm_wildturtle
+        commercial: https://api.twitch.tv/kraken/channels/tsm_wildturtle/commercial
+        editors: https://api.twitch.tv/kraken/channels/tsm_wildturtle/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/tsm_wildturtle/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/tsm_wildturtle/stream_key
+        self: https://api.twitch.tv/kraken/channels/tsm_wildturtle
+        features: https://api.twitch.tv/kraken/channels/tsm_wildturtle/features
+      video_banner: 
+      url: http://www.twitch.tv/tsm_wildturtle
+      _id: 41972342
+      mature: 
+      created_at: '2013-04-01T20:39:33Z'
+      banner: 
+      name: tsm_wildturtle
+      display_name: TSM_WildTurtle
+      logo: 
+    viewers: 16361
+    name: live_user_tsm_wildturtle
+    broadcaster: obs
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_crs_saintvicious-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/crs_saintvicious
+    _id: 5627973184
+    channel:
+      teams:
+      - background: 
+        updated_at: '2013-01-28T19:25:32Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/teamcurse
+        info: ! '
+
+'
+        _id: 554
+        created_at: '2013-01-28T19:25:24Z'
+        banner: 
+        name: teamcurse
+        display_name: Curse
+        logo: 
+      status: Crs Saintvicious- Solo Que
+      game: League of Legends
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/crs_saintvicious-channel_background_image-955f082478ece1a7.jpeg
+      updated_at: '2013-05-10T03:21:52Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/crs_saintvicious/videos
+        follows: https://api.twitch.tv/kraken/channels/crs_saintvicious/follows
+        chat: https://api.twitch.tv/kraken/chat/crs_saintvicious
+        commercial: https://api.twitch.tv/kraken/channels/crs_saintvicious/commercial
+        editors: https://api.twitch.tv/kraken/channels/crs_saintvicious/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/crs_saintvicious/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/crs_saintvicious/stream_key
+        self: https://api.twitch.tv/kraken/channels/crs_saintvicious
+        features: https://api.twitch.tv/kraken/channels/crs_saintvicious/features
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/crs_saintvicious-channel_offline_image-676505f9698a1878-640x360.jpeg
+      url: http://www.twitch.tv/crs_saintvicious
+      _id: 30661033
+      mature: 
+      created_at: '2012-05-19T20:27:29Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/crs_saintvicious-channel_header_image-87279aab08f893ee-640x125.jpeg
+      name: crs_saintvicious
+      display_name: Crs_saintvicious
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/crs_saintvicious-profile_image-b52f8e50b134cbf7-300x300.jpeg
+    viewers: 4580
+    name: live_user_crs_saintvicious
+    broadcaster: xsplit
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_phantoml0rd-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/phantoml0rd
+    _id: 5626879824
+    channel:
+      teams: []
+      status: PhantomL0rd @ Dyrus' fan meet
+      game: League of Legends
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/phantoml0rd-channel_background_image-eea9711906faf9d4.jpeg
+      updated_at: '2013-05-10T00:15:48Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/phantoml0rd/videos
+        follows: https://api.twitch.tv/kraken/channels/phantoml0rd/follows
+        chat: https://api.twitch.tv/kraken/chat/phantoml0rd
+        commercial: https://api.twitch.tv/kraken/channels/phantoml0rd/commercial
+        editors: https://api.twitch.tv/kraken/channels/phantoml0rd/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/phantoml0rd/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/phantoml0rd/stream_key
+        self: https://api.twitch.tv/kraken/channels/phantoml0rd
+        features: https://api.twitch.tv/kraken/channels/phantoml0rd/features
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/phantoml0rd-channel_offline_image-6d666f34cfab7773-640x360.png
+      url: http://www.twitch.tv/phantoml0rd
+      _id: 37701508
+      mature: false
+      created_at: '2012-11-15T00:48:58Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/phantoml0rd-channel_header_image-10736d3a38cb0eaa-640x125.png
+      name: phantoml0rd
+      display_name: PhantomL0rd
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/phantoml0rd-profile_image-67fc4a82fcf62b56-300x300.png
+    viewers: 3229
+    name: live_user_phantoml0rd
+    broadcaster: obs
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_qwqw951qwqw-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/qwqw951qwqw
+    _id: 5627796832
+    channel:
+      teams: []
+      status: πÇÄahq GreenTeaπÇÅΦ╝öσè⌐Σ╣ïΦ╖»πÇéτóÄσ┐╡σÅ░
+      game: League of Legends
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/qwqw951qwqw-channel_background_image-de25d2e4fb4a6e25.png
+      updated_at: '2013-05-10T02:49:37Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/qwqw951qwqw/videos
+        follows: https://api.twitch.tv/kraken/channels/qwqw951qwqw/follows
+        chat: https://api.twitch.tv/kraken/chat/qwqw951qwqw
+        commercial: https://api.twitch.tv/kraken/channels/qwqw951qwqw/commercial
+        editors: https://api.twitch.tv/kraken/channels/qwqw951qwqw/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/qwqw951qwqw/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/qwqw951qwqw/stream_key
+        self: https://api.twitch.tv/kraken/channels/qwqw951qwqw
+        features: https://api.twitch.tv/kraken/channels/qwqw951qwqw/features
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/qwqw951qwqw-channel_offline_image-82b66f6652253d1e-640x360.jpeg
+      url: http://www.twitch.tv/qwqw951qwqw
+      _id: 29528480
+      mature: 
+      created_at: '2012-04-05T14:10:49Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/qwqw951qwqw-channel_header_image-fad9a5ac12b4c96e-640x125.jpeg
+      name: qwqw951qwqw
+      display_name: qwqw951qwqw
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/qwqw951qwqw-profile_image-c3941f970d61ccf1-300x300.png
+    viewers: 2108
+    name: live_user_qwqw951qwqw
+    broadcaster: obs
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_xj9lol-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/xj9lol
+    _id: 5627324384
+    channel:
+      teams: []
+      status: XJ9 2800 ELO - Be a Better Player - THE BEST
+      game: League of Legends
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/xj9lol-channel_background_image-6a991e38f86ad351.png
+      updated_at: '2013-05-10T02:03:37Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/xj9lol/videos
+        follows: https://api.twitch.tv/kraken/channels/xj9lol/follows
+        chat: https://api.twitch.tv/kraken/chat/xj9lol
+        commercial: https://api.twitch.tv/kraken/channels/xj9lol/commercial
+        editors: https://api.twitch.tv/kraken/channels/xj9lol/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/xj9lol/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/xj9lol/stream_key
+        self: https://api.twitch.tv/kraken/channels/xj9lol
+        features: https://api.twitch.tv/kraken/channels/xj9lol/features
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/xj9lol-channel_offline_image-46d0b38612ca6064-640x360.jpeg
+      url: http://www.twitch.tv/xj9lol
+      _id: 37850407
+      mature: 
+      created_at: '2012-11-20T22:52:09Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/xj9lol-channel_header_image-212eab523601e973-640x125.png
+      name: xj9lol
+      display_name: XJ9LoL
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/xj9lol-profile_image-eb1eef250ad14869-300x300.png
+    viewers: 1647
+    name: live_user_xj9lol
+    broadcaster: xsplit
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_bischulol-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/bischulol
+    _id: 5628023728
+    channel:
+      teams:
+      - background: 
+        updated_at: '2012-10-03T01:48:26Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/solomid
+        info: ! '
+
+'
+        _id: 272
+        created_at: '2012-04-28T23:02:22Z'
+        banner: 
+        name: solomid
+        display_name: SoloMid
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-solomid-team_logo_image-2c7087c64d6c6f51-300x300.jpeg
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-fxopen-background_image-a7b60c810efe309a.png
+        updated_at: '2012-11-26T14:00:57Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/fxopen
+        info: ! 'Welcome to the FXOpen e-Sports streaming page!
+
+
+
+
+
+
+'
+        _id: 185
+        created_at: '2012-02-14T09:59:30Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-fxopen-banner_image-1517d7c399ea3bdd-640x125.png
+        name: fxopen
+        display_name: FXOpen
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-fxopen-team_logo_image-cd041bd48eba56f0-300x300.png
+      status: ! 'Bischu/δ╣ä∞èê NA Diamond 1 BISCHU. Dat smurf solo queue tho.  Playing
+        as: Nidalee'
+      game: League of Legends
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/bischulol-channel_background_image-d5dc7a91d2752850.jpeg
+      updated_at: '2013-05-10T03:42:32Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/bischulol/videos
+        follows: https://api.twitch.tv/kraken/channels/bischulol/follows
+        chat: https://api.twitch.tv/kraken/chat/bischulol
+        commercial: https://api.twitch.tv/kraken/channels/bischulol/commercial
+        editors: https://api.twitch.tv/kraken/channels/bischulol/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/bischulol/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/bischulol/stream_key
+        self: https://api.twitch.tv/kraken/channels/bischulol
+        features: https://api.twitch.tv/kraken/channels/bischulol/features
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/bischulol-channel_offline_image-ba655a22ebbe543f-640x360.jpeg
+      url: http://www.twitch.tv/bischulol
+      _id: 35671232
+      mature: 
+      created_at: '2012-08-24T13:18:31Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/bischulol-channel_header_image-69e782044696216d-640x125.jpeg
+      name: bischulol
+      display_name: Bischulol
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/bischulol-profile_image-11b3b0deaa4dcc90-300x300.png
+    viewers: 1257
+    name: live_user_bischulol
+    broadcaster: obs
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_tixinhadois-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/tixinhadois
+    _id: 5627754720
+    channel:
+      teams: []
+      status: Tixinha feat Mel├úo13 - BEST THRESH IN DA WORLD - RC ID 1990
+      game: League of Legends
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/tixinhadois-channel_background_image-7ee64d3f5690bfeb.png
+      updated_at: '2013-05-10T02:41:58Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/tixinhadois/videos
+        follows: https://api.twitch.tv/kraken/channels/tixinhadois/follows
+        chat: https://api.twitch.tv/kraken/chat/tixinhadois
+        commercial: https://api.twitch.tv/kraken/channels/tixinhadois/commercial
+        editors: https://api.twitch.tv/kraken/channels/tixinhadois/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/tixinhadois/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/tixinhadois/stream_key
+        self: https://api.twitch.tv/kraken/channels/tixinhadois
+        features: https://api.twitch.tv/kraken/channels/tixinhadois/features
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/tixinhadois-channel_offline_image-68ea5e328133c367-640x360.png
+      url: http://www.twitch.tv/tixinhadois
+      _id: 32115632
+      mature: 
+      created_at: '2012-07-14T05:30:01Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/tixinhadois-channel_header_image-5224b1a27251d315-640x125.png
+      name: tixinhadois
+      display_name: Tixinhadois
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/tixinhadois-profile_image-d9fcdd8ecb830726-300x300.png
+    viewers: 978
+    name: live_user_tixinhadois
+    broadcaster: xsplit
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_themittanidotcom-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/themittanidotcom
+    _id: 5626992656
+    channel:
+      game: League of Legends
+      status: Bronze I with Alekseyev Karrde
+      teams: []
+      updated_at: '2013-05-10T04:09:36Z'
+      background: 
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/themittanidotcom-channel_offline_image-a722f6546b40a15b-640x360.png
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/themittanidotcom/videos
+        follows: https://api.twitch.tv/kraken/channels/themittanidotcom/follows
+        chat: https://api.twitch.tv/kraken/chat/themittanidotcom
+        editors: https://api.twitch.tv/kraken/channels/themittanidotcom/editors
+        commercial: https://api.twitch.tv/kraken/channels/themittanidotcom/commercial
+        subscriptions: https://api.twitch.tv/kraken/channels/themittanidotcom/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/themittanidotcom/stream_key
+        self: https://api.twitch.tv/kraken/channels/themittanidotcom
+        features: https://api.twitch.tv/kraken/channels/themittanidotcom/features
+      url: http://www.twitch.tv/themittanidotcom
+      created_at: '2013-02-07T19:23:19Z'
+      mature: 
+      _id: 40113225
+      name: themittanidotcom
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/themittanidotcom-channel_header_image-26894bc49653e651-640x125.png
+      display_name: TheMittaniDotCom
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/themittanidotcom-profile_image-4a207477b1bf67d1-300x300.png
+    viewers: 770
+    name: live_user_themittanidotcom
+    broadcaster: obs
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_rflegendary-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/rflegendary
+    _id: 5626075600
+    channel:
+      teams: []
+      status: Best Nidalee NA  Challenger RF Legendary Teamless Toplane, Back to streaming
+        everyday.
+      game: League of Legends
+      background: 
+      updated_at: '2013-05-09T21:58:41Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/rflegendary/videos
+        follows: https://api.twitch.tv/kraken/channels/rflegendary/follows
+        chat: https://api.twitch.tv/kraken/chat/rflegendary
+        commercial: https://api.twitch.tv/kraken/channels/rflegendary/commercial
+        editors: https://api.twitch.tv/kraken/channels/rflegendary/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/rflegendary/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/rflegendary/stream_key
+        self: https://api.twitch.tv/kraken/channels/rflegendary
+        features: https://api.twitch.tv/kraken/channels/rflegendary/features
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/rflegendary-channel_offline_image-dc8a86452f53dd2f-640x360.jpeg
+      url: http://www.twitch.tv/rflegendary
+      _id: 37292693
+      mature: 
+      created_at: '2012-10-30T03:42:52Z'
+      banner: 
+      name: rflegendary
+      display_name: RFLegendary
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/rflegendary-profile_image-06377cbf96554b70-300x300.jpeg
+    viewers: 618
+    name: live_user_rflegendary
+    broadcaster: obs
+  - game: League of Legends
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_kaostv-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/kaostv
+    _id: 5626067376
+    channel:
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-kaostv-background_image-94b2079ee69b3950.png
+        updated_at: '2012-10-15T19:32:44Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/kaostv
+        info: ! '
+
+'
+        _id: 81
+        created_at: '2011-11-09T23:11:28Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-kaostv-banner_image-dfc00bd059c9b86f-640x125.png
+        name: kaostv
+        display_name: KaosTV
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-kaostv-team_logo_image-d38aa225b93ccfd6-300x300.png
+      status: ! 'EUW Challenger Series #3 FINAL - Hosted by KaosTV - Brackets: http://bit.ly/YwwSAw'
+      game: League of Legends
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/kaostv-channel_background_image-0b18d203051934dc.jpeg
+      updated_at: '2013-05-09T21:57:08Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/kaostv/videos
+        follows: https://api.twitch.tv/kraken/channels/kaostv/follows
+        chat: https://api.twitch.tv/kraken/chat/kaostv
+        commercial: https://api.twitch.tv/kraken/channels/kaostv/commercial
+        editors: https://api.twitch.tv/kraken/channels/kaostv/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/kaostv/subscriptions
+        stream_key: https://api.twitch.tv/kraken/channels/kaostv/stream_key
+        self: https://api.twitch.tv/kraken/channels/kaostv
+        features: https://api.twitch.tv/kraken/channels/kaostv/features
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/kaostv-channel_offline_image-48de6de312427832-640x360.jpeg
+      url: http://www.twitch.tv/kaostv
+      _id: 297189
+      mature: 
+      created_at: '2008-02-27T06:59:00Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/kaostv-channel_header_image-5b640e7d2f39ee4c-640x125.png
+      name: kaostv
+      display_name: Kaostv
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/kaostv-profile_image-f7e665cccd4be94c-300x300.jpeg
+    viewers: 588
+    name: live_user_kaostv
+    broadcaster: xsplit

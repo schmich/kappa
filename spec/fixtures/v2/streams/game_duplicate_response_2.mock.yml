@@ -1,0 +1,11 @@
+# curl -k -H "Accept: application/vnd.twitchtv.v2+json" "https://api.twitch.tv/kraken/streams?game=Ultimate%20Marvel%20vs.%20Capcom%203&limit=25&offset=25"
+---
+https://api.twitch.tv/kraken/streams?game=Ultimate%20Marvel%20vs.%20Capcom%203&limit=25&offset=25:
+  _links:
+    summary: https://api.twitch.tv/kraken/streams/summary
+    prev: https://api.twitch.tv/kraken/streams?game=Ultimate+Marvel+vs.+Capcom+3&limit=25&offset=0
+    featured: https://api.twitch.tv/kraken/streams/featured
+    next: https://api.twitch.tv/kraken/streams?game=Ultimate+Marvel+vs.+Capcom+3&limit=25&offset=50
+    self: https://api.twitch.tv/kraken/streams?game=Ultimate+Marvel+vs.+Capcom+3&limit=25&offset=25
+    followed: https://api.twitch.tv/kraken/streams/followed
+  streams: []

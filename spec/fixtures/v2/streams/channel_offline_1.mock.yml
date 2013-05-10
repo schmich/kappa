@@ -1,0 +1,195 @@
+# curl -k -H "Accept: application/vnd.twitchtv.v2+json" "https://api.twitch.tv/kraken/streams?channel=leveluplive,djwheat&limit=25&offset=0"
+---
+https://api.twitch.tv/kraken/streams?channel=leveluplive,djwheat&limit=25&offset=0:
+  _links:
+    summary: https://api.twitch.tv/kraken/streams/summary
+    next: https://api.twitch.tv/kraken/streams?channel%5B%5D=leveluplive&channel%5B%5D=djwheat&limit=25&offset=25
+    followed: https://api.twitch.tv/kraken/streams/followed
+    self: https://api.twitch.tv/kraken/streams?channel%5B%5D=leveluplive&channel%5B%5D=djwheat&limit=25&offset=0
+    featured: https://api.twitch.tv/kraken/streams/featured
+  streams:
+  - game: Ultimate Marvel vs. Capcom 3
+    _links:
+      self: https://api.twitch.tv/kraken/streams/leveluplive
+    channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/leveluplive-profile_image-c7daea88e66fbe44-300x300.png
+      video_banner: 
+      status: ! 'The RunBack 2.6 Feat: UMvC3, KoFXIII & P4A - levelup.challonge.com
+        #TRB'
+      game: Ultimate Marvel vs. Capcom 3
+      display_name: leveluplive
+      _links:
+        features: https://api.twitch.tv/kraken/channels/leveluplive/features
+        videos: https://api.twitch.tv/kraken/channels/leveluplive/videos
+        editors: https://api.twitch.tv/kraken/channels/leveluplive/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/leveluplive/subscriptions
+        follows: https://api.twitch.tv/kraken/channels/leveluplive/follows
+        chat: https://api.twitch.tv/kraken/chat/leveluplive
+        commercial: https://api.twitch.tv/kraken/channels/leveluplive/commercial
+        stream_key: https://api.twitch.tv/kraken/channels/leveluplive/stream_key
+        self: https://api.twitch.tv/kraken/channels/leveluplive
+      teams:
+      - logo: 
+        display_name: Level|Up Series
+        _links:
+          self: https://api.twitch.tv/kraken/teams/levelup
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-levelup-background_image-3d364e32a44f21d0.png
+        updated_at: '2012-10-03T01:48:25Z'
+        created_at: '2011-11-22T22:38:41Z'
+        info: ! "<center>\r\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td
+          width=\"400\" height=\"55\" colspan=\"5\"><div style=\"text-align:center;\">Level|Up
+          Series - The home of Wednesday Night Fights, Specialists, Special Events and
+          other premier tournaments.</div></td>\r\n</tr><tr><td width=\"80\" height=\"100\"><div
+          style=\"text-align:center;\"><a rel=\"nofollow\" href=\"http://www.levelup-series.com\"
+          target=\"_blank\"><img src=\"http://i56.tinypic.com/332788l.png\" border=\"0\"
+          alt=\"Image and video hosting by TinyPic\" /></a></div></td>\r\n\t<td width=\"80\"
+          height=\"100\"><div style=\"text-align:center;\"><a rel=\"nofollow\" href=\"http://www.facebook.com/levelupseries\"
+          target=\"_blank\"><img src=\"http://i55.tinypic.com/2e16u4p.png\" border=\"0\"
+          alt=\"Image and video hosting by TinyPic\" /></a></div></td>\r\n\t<td width=\"80\"
+          height=\"100\"><div style=\"text-align:center;\"><a rel=\"nofollow\" href=\"http://www.twitter.com/levelupseries\"
+          target=\"_blank\"><img src=\"http://i56.tinypic.com/2yvqil3.png\" border=\"0\"
+          alt=\"Image and video hosting by TinyPic\" /></a></div></td>\r\n\t<td width=\"80\"
+          height=\"100\"><div style=\"text-align:center;\"><a rel=\"nofollow\" href=\"http://www.youtube.com/levelupseries\"
+          target=\"_blank\"><img src=\"http://i54.tinypic.com/11111tt.png\" border=\"0\"
+          alt=\"Image and video hosting by TinyPic\" /></a></div></td>\r\n\t<td width=\"80\"
+          height=\"100\"><div style=\"text-align:center;\"><a rel=\"nofollow\" href=\"http://www.flickr.com/photos/levelupseries\"
+          target=\"_blank\"><img src=\"http://i51.tinypic.com/2hz26mo.png\" border=\"0\"
+          alt=\"Image and video hosting by TinyPic\" /></a></div></td>\r\n</tr><tr><td
+          width=\"400\" height=\"55\" colspan=\"5\"><div style=\"text-align:center;\">Interested
+          in streaming your next event? Contact us at: <a rel=\"nofollow\" href=\"mailto:events@levelup-series.com\"
+          target=\"_blank\">EVENTS@LEVELUP-SERIES.COM</a></div></td>\r\n</tr><tr><td
+          width=\"400\" height=\"40\" colspan=\"5\"><div style=\"text-align:center;\">Like
+          what you see? Help us keep it going with a contribution.</div></td>\r\n</tr><tr><td
+          width=\"400\" height=\"40\" colspan=\"5\"><div style=\"text-align:center;\">paypal@levelup-series.com</div>\r\n</td>\r\n</tr></tbody></table></center>\r\n\r\n\r\n<center><div
+          style=\"text-align:center;margin:0px;padding:0px;width:300px;\"><object data=\"http://rh.revolvermaps.com/f/f.swf\"
+          type=\"application/x-shockwave-flash\" width=\"300\" height=\"150\"><param
+          name=\"enablejsurls\" value=\"false\" /><param name=\"enablehref\" value=\"false\"
+          /><param name=\"allownetworking\" value=\"all\" /><param name=\"allowscriptaccess\"
+          value=\"never\" /><param name=\"enablejsurls\" value=\"false\" /><param name=\"enablehref\"
+          value=\"false\" /><param name=\"allownetworking\" value=\"all\" /><param name=\"allowscriptaccess\"
+          value=\"never\" /><param name=\"enablejsurls\" value=\"false\" /><param name=\"enablehref\"
+          value=\"false\" /><param name=\"allownetworking\" value=\"all\" /><param name=\"allowscriptaccess\"
+          value=\"never\" /><param name=\"enablejsurls\" value=\"false\" /><param name=\"enablehref\"
+          value=\"false\" /><param name=\"allownetworking\" value=\"all\" /><param name=\"allowscriptaccess\"
+          value=\"never\" /><param name=\"enablejsurls\" value=\"false\" /><param name=\"enablehref\"
+          value=\"false\" /><param name=\"allownetworking\" value=\"all\" /><param name=\"allowscriptaccess\"
+          value=\"never\" /><param name=\"enablejsurls\" value=\"false\" /><param name=\"enablehref\"
+          value=\"false\" /><param name=\"allownetworking\" value=\"all\" /><param name=\"allowscriptaccess\"
+          value=\"never\" /><param name=\"allowNetworking\" value=\"all\" /><param name=\"allowScriptAccess\"
+          value=\"never\" /><param name=\"wmode\" value=\"transparent\" /><param name=\"flashvars\"
+          value=\"m=5&amp;i=7lyr3arg4pl&amp;r=30&amp;c=ffc000\" /></object><br /><img
+          src=\"http://jh.revolvermaps.com/c/7lyr3arg4pl.gif\" width=\"1\" height=\"1\"
+          alt=\"\" /><a rel=\"nofollow\" href=\"http://www.revolvermaps.com/?target=enlarge&amp;i=7lyr3arg4pl&amp;color=ffc000&amp;m=5\"
+          target=\"_blank\">Large Visitor Map</a></div></center>\r\n\r\n<a rel=\"nofollow\"
+          title=\"blogspot stats\" href=\"http://www.statcounter.com/blogger/\" target=\"_blank\"><img
+          src=\"http://c.statcounter.com/5641402/0/8384c99b/1/\" alt=\"blogspot stats\"
+          border=\"0\" /></a>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-levelup-banner_image-299b62622a2812e5-640x125.png
+        name: levelup
+        _id: 91
+      - logo: 
+        display_name: Level Up | Series
+        _links:
+          self: https://api.twitch.tv/kraken/teams/levelupseries
+        background: 
+        updated_at: '2012-10-03T01:48:25Z'
+        created_at: '2011-12-17T19:21:53Z'
+        info: ! 'ΓÇ£Level up,ΓÇ¥ a phrase often used to designate the ongoing improvement
+          of a video game character and the motto which spearheads the many goals of
+          the Level|Up Group.
+
+
+'
+        banner: 
+        name: levelupseries
+        _id: 127
+      - logo: 
+        display_name: Fighting Game Community Streams
+        _links:
+          self: https://api.twitch.tv/kraken/teams/fgcpros
+        background: 
+        updated_at: '2013-02-22T10:22:15Z'
+        created_at: '2011-12-05T20:29:49Z'
+        info: ! 'FGC Pro-players, 24/7 streams, and events.
+
+
+          Team is administered by <a rel="nofollow" href="http://www.twitch.tv/armshouse"
+          target="_blank">ARMSHOUSE</a>.
+
+'
+        banner: 
+        name: fgcpros
+        _id: 98
+      - logo: 
+        display_name: Youmacon Battle Opera
+        _links:
+          self: https://api.twitch.tv/kraken/teams/youmacon
+        background: 
+        updated_at: '2012-10-31T00:41:15Z'
+        created_at: '2012-10-31T00:40:58Z'
+        info: ! '
+
+'
+        banner: 
+        name: youmacon
+        _id: 462
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thegamestation-team_logo_image-502b888f342ae698-300x300.png
+        display_name: The Game Station
+        _links:
+          self: https://api.twitch.tv/kraken/teams/thegamestation
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thegamestation-background_image-334a7d5262839aaa.png
+        updated_at: '2012-10-03T20:32:26Z'
+        created_at: '2012-08-01T05:25:06Z'
+        info: ! 'Welcome to The Game Station! We are a group of gamers who have come
+          together to create something new and exciting, representing a diverse and
+          passionate community of gaming enthusiasts all over the world. <br /><br />
+
+
+          Find us on <a rel="nofollow" href="http://bit.ly/TheGameStation" target="_blank">YouTube</a>.
+
+
+
+
+'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thegamestation-banner_image-d8bb2135bf50b3a9-640x125.png
+        name: thegamestation
+        _id: 368
+      - logo: 
+        display_name: SoCal Regionals 2013
+        _links:
+          self: https://api.twitch.tv/kraken/teams/scr2013
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-scr2013-background_image-92e56b5b170acf4d.png
+        updated_at: '2013-01-17T00:23:31Z'
+        created_at: '2013-01-07T21:38:41Z'
+        info: ! '
+
+'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-scr2013-banner_image-161c8bdfb67545c7-640x125.png
+        name: scr2013
+        _id: 522
+      - logo: 
+        display_name: ''
+        _links:
+          self: https://api.twitch.tv/kraken/teams/levelupsub
+        background: 
+        updated_at: '2013-01-15T21:43:25Z'
+        created_at: '2013-01-15T21:43:25Z'
+        info: ! '
+
+'
+        banner: 
+        name: levelupsub
+        _id: 531
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/leveluplive-channel_background_image-cce3c200f211593c.png
+      updated_at: '2013-05-10T03:23:47Z'
+      created_at: '2010-02-02T08:25:55Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/leveluplive-channel_header_image-4a3729fcff8b8ef1-640x125.png
+      name: leveluplive
+      mature: 
+      url: http://www.twitch.tv/leveluplive
+      _id: 10332629
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_leveluplive-320x200.jpg
+    name: live_user_leveluplive
+    viewers: 3425
+    _id: 5627984752
+    broadcaster: xsplit
