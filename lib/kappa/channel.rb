@@ -112,6 +112,7 @@ module Kappa::V2
     attr_reader :updated_at
     attr_reader :url
     attr_reader :video_banner_url
+    attr_reader :teams
 
   private
     def parse(hash)
@@ -129,6 +130,12 @@ module Kappa::V2
       @updated_at = DateTime.parse(hash['updated_at'])
       @url = hash['url']
       @video_banner_url = hash['video_banner']
+
+      @teams = []
+      teams = hash['teams']
+      teams.each do |team_json|
+        @teams << Team.new(team_json)
+      end
     end
   end
 end

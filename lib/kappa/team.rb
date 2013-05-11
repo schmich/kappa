@@ -2,30 +2,25 @@ module Kappa
   class TeamBase
     include IdEquality
 
-    def initialize(arg, connection)
-      @connection = connection
+    def initialize(hash)
+      parse(hash)
+    end
 
-      case arg
-        when Hash
-          parse(arg)
-        when String
-          json = @connection.get("teams/#{arg}")
-        else
-          raise ArgumentError
-      end
+    def self.get(team_name)
+      json = connection.get("teams/#{team_name}")
+      new(json)
     end
   end
 end
 
 module Kappa::V2
   class Team < Kappa::TeamBase
+    include Connection
+
     #
     # GET /teams/:team
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam
     #
-    def intialize(arg, connection = Connection.instance)
-      super(arg, connection)
-    end
 
     attr_reader :id
     attr_reader :info
@@ -62,10 +57,10 @@ module Kappa::V2
       teams = []
       ids = Set.new
 
-      @conn.paginated('teams', params) do |json|
+      connection.paginated('teams', params) do |json|
         teams_json = json['teams']
         teams_json.each do |team_json|
-          team = Team.new(team_json, @conn)
+          team = Team.new(team_json)
           if ids.add?(team.id)
             teams << team
             if teams.count == limit

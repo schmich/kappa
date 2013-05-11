@@ -34,6 +34,12 @@ describe Kappa::V2::Channel do
       c.video_banner_url.should == hash['video_banner']
       c.mature?.should == hash['mature']
     end
+
+    it 'has associated teams' do
+      hash = yaml_load('channel/channel_minigun.yml')
+      c = Channel.new(hash)
+      c.teams.should_not be_empty
+    end
   end
   
   describe '.get' do
