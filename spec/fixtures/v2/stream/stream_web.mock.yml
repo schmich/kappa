@@ -1,11 +1,16 @@
-https://api.twitch.tv/kraken/streams/stream_foo:
+https://api.twitch.tv/kraken/streams/riotgames:
   _links:
-    channel: 'https://api.twitch.tv/kraken/channels/stream_foo'
-    self: 'https://api.twitch.tv/kraken/streams/stream_foo'
-  stream: $(stream_real.yml)
+    channel: 'https://api.twitch.tv/kraken/channels/riotgames'
+    self: 'https://api.twitch.tv/kraken/streams/riotgames'
+  stream: $(stream_riotgames.yml)
 https://api.twitch.tv/kraken/streams/does_not_exist:
   status: 404
   body:
     status: 404
     message: Channel 'does_not_exist' does not exist
     error: Not Found
+https://api.twitch.tv/kraken/streams/offline_stream:
+  stream:
+  _links:
+    self: https://api.twitch.tv/kraken/streams/offline_stream
+    channel: https://api.twitch.tv/kraken/channels/offline_stream

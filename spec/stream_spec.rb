@@ -15,7 +15,7 @@ describe Kappa::V2::Stream do
 
   describe '#new' do
     it 'accepts a hash' do
-      hash = YAML.load_file(fixture('stream/stream_real.yml'))
+      hash = yaml_load('stream/stream_riotgames.yml')
       s = Stream.new(hash)
       s.id.should == hash['_id']
       s.broadcaster.should == hash['broadcaster']
@@ -25,16 +25,28 @@ describe Kappa::V2::Stream do
       s.preview_url.should == hash['preview']
       # TODO: s.channel assert
     end
+
+    it 'has an associated channel' do
+      hash = yaml_load('stream/stream_riotgames.yml')
+      s = Stream.new(hash)
+      c = s.channel
+      c.should_not be_nil
+    end
   end
 
   describe '.get' do
     it 'creates a Stream from stream name' do
-      s = Stream.get('stream_foo')
+      s = Stream.get('riotgames')
       s.should_not be_nil
     end
 
-    it 'returns nil when stream is not live' do
+    it 'returns nil when stream does not exist' do
       s = Stream.get('does_not_exist')
+      s.should be_nil
+    end
+
+    it 'returns nil when stream is offline' do
+      s = Stream.get('offline_stream')
       s.should be_nil
     end
   end
