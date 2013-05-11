@@ -50,28 +50,22 @@ module Kappa::V2
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels
     #
     def following(params = {})
-      limit = params[:limit] || 0
-
-      channels = []
-      ids = Set.new
-
-      connection.paginated("users/#{@name}/follows/channels", params) do |json|
-        current_channels = json['follows']
-        current_channels.each do |follow_json|
-          channel_json = follow_json['channel']
-          channel = Channel.new(channel_json)
-          if ids.add?(channel.id)
-            channels << channel
-            if channels.count == limit
-              return channels
-            end
-          end
-        end
-
-        !current_channels.empty?
+      limit = args[:limit]
+      if limit && (limit < 25)
+        params[:limit] = limit
+      else
+        params[:limit] = 25
+        limit = 0
       end
 
-      channels
+      return connection.accumulate(
+        :path => "users/#{@name}/follows/channels",
+        :params => params,
+        :json => 'follows',
+        :sub_json => 'channel',
+        :class => Channel,
+        :limit => limit
+      )
     end
 
     #

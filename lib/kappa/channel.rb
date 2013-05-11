@@ -61,29 +61,23 @@ module Kappa::V2
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschannelfollows
     # TODO: Warning: this set can be very large, this can run for very long time, recommend using :limit/:offset.
     #
-    def followers(params = {})
-      limit = params[:limit] || 0
-
-      followers = []
-      ids = Set.new
-
-      connection.paginated("channels/#{@name}/follows", params) do |json|
-        current_followers = json['follows']
-        current_followers.each do |follow_json|
-          user_json = follow_json['user']
-          user = User.new(user_json)
-          if ids.add?(user.id)
-            followers << user
-            if followers.count == limit
-              return followers
-            end
-          end
-        end
-
-        !current_followers.empty?
+    def followers(args = {})
+      limit = args[:limit]
+      if limit && (limit < 25)
+        params[:limit] = limit
+      else
+        params[:limit] = 25
+        limit = 0
       end
 
-      followers
+      return connection.accumulate(
+        :path => "channels/#{@name}/follows",
+        :params => params,
+        :json => 'follows',
+        :sub_json => 'user',
+        :class => User,
+        :limit => limit
+      )
     end
 
     # TODO: Requires authentication.

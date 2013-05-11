@@ -3,6 +3,7 @@ require 'addressable/uri'
 require 'securerandom'
 require 'json'
 require 'singleton'
+require 'set'
 
 module Kappa
   class ConnectionBase
@@ -35,6 +36,36 @@ module Kappa
 
       json = response.body
       return JSON.parse(json)
+    end
+
+    def accumulate(args)
+      path = args[:path]
+      params = args[:params]
+      json = args[:json]
+      sub_json = args[:sub_json]
+      klass = args[:class]
+      limit = args[:limit]
+
+      objects = []
+      ids = Set.new
+
+      paginated(path, params) do |response_json|
+        current_objects = response_json[json]
+        current_objects.each do |object_json|
+          object_json = object_json[sub_json] if sub_json
+          object = klass.new(object_json)
+          if ids.add?(object.id)
+            objects << object
+            if objects.count == limit
+              return objects
+            end
+          end
+        end
+
+        !current_objects.empty?
+      end
+
+      return objects
     end
 
     def paginated(path, params = {})
@@ -119,7 +150,4 @@ module Kappa::V2
       end
     end
   end
-end
-
-module Kappa::V3
 end

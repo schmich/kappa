@@ -4,10 +4,6 @@ module Kappa
   class StreamBase
     include IdEquality
 
-    def initialize(hash)
-      parse(hash)
-    end
-
     def self.get(stream_name)
       json = connection.get("streams/#{stream_name}")
       stream = json['stream']
@@ -24,16 +20,7 @@ module Kappa::V2
   class Stream < Kappa::StreamBase
     include Connection
 
-    attr_reader :id
-    attr_reader :broadcaster
-    attr_reader :game_name
-    attr_reader :name
-    attr_reader :viewer_count
-    attr_reader :preview_url
-    attr_reader :channel
-
-  private
-    def parse(hash)
+    def initialize(hash)
       @id = hash['_id']
       @broadcaster = hash['broadcaster']
       @game_name = hash['game']
@@ -42,6 +29,14 @@ module Kappa::V2
       @preview_url = hash['preview']
       @channel = Channel.new(hash['channel'])
     end
+
+    attr_reader :id
+    attr_reader :broadcaster
+    attr_reader :game_name
+    attr_reader :name
+    attr_reader :viewer_count
+    attr_reader :preview_url
+    attr_reader :channel
   end
 
   class Streams
@@ -81,55 +76,36 @@ module Kappa::V2
         limit = 0
       end
 
-      streams = []
-      ids = Set.new
-
-      connection.paginated('streams', params) do |json|
-        current_streams = json['streams']
-        current_streams.each do |stream_json|
-          stream = Stream.new(stream_json)
-          if ids.add?(stream.id)
-            streams << stream
-            if streams.count == limit
-              return streams
-            end
-          end
-        end
-
-        !current_streams.empty?
-      end
-
-      streams
+      return connection.accumulate(
+        :path => 'streams',
+        :params => params,
+        :json => 'streams',
+        :class => Stream,
+        :limit => limit
+      )
     end
 
     #
     # GET /streams/featured
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured
     #
-    def self.featured(params = {})
-      limit = params[:limit] || 0
-
-      streams = []
-      ids = Set.new
-
-      connection.paginated('streams/featured', params) do |json|
-        current_streams = json['featured']
-        current_streams.each do |featured_json|
-          # TODO: Capture more information from the featured_json structure (need a FeaturedStream class?)
-          stream_json = featured_json['stream']
-          stream = Stream.new(stream_json)
-          if ids.add?(stream.id)
-            streams << stream
-            if streams.count == limit
-              return streams
-            end
-          end
-        end
-
-        !current_streams.empty?
+    def self.featured(args = {})
+      limit = args[:limit]
+      if limit && (limit < 25)
+        params[:limit] = limit
+      else
+        params[:limit] = 25
+        limit = 0
       end
 
-      streams
+      return connection.accumulate(
+        :path => 'streams/featured',
+        :params => params,
+        :json => 'featured',
+        :sub_json => 'stream',
+        :class => Stream,
+        :limit => limit
+      )
     end
   end
 end

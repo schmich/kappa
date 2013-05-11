@@ -55,28 +55,22 @@ module Kappa::V2
     # GET /teams
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams
     #
-    def all(params = {})
-      limit = params[:limit] || 0
-
-      teams = []
-      ids = Set.new
-
-      connection.paginated('teams', params) do |json|
-        teams_json = json['teams']
-        teams_json.each do |team_json|
-          team = Team.new(team_json)
-          if ids.add?(team.id)
-            teams << team
-            if teams.count == limit
-              return teams
-            end
-          end
-        end
-
-        !teams_json.empty?
+    def all(args = {})
+      limit = args[:limit]
+      if limit && (limit < 25)
+        params[:limit] = limit
+      else
+        params[:limit] = 25
+        limit = 0
       end
 
-      teams
+      return connection.accumulate(
+        :path => 'teams',
+        :params => params,
+        :json => 'teams',
+        :class => Team,
+        :limit => limit
+      )
     end
   end
 end
