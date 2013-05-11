@@ -4,30 +4,26 @@ module Kappa
   class StreamBase
     include IdEquality
 
-    def initialize(hash, connection = self.class.default_connection)
-      @connection = connection
+    def initialize(hash)
       parse(hash)
     end
 
-    def self.get(stream_name, connection = default_connection)
+    def self.get(stream_name)
       json = connection.get("streams/#{stream_name}")
       stream = json['stream']
       if json['status'] == 404 || !stream
         nil
       else
-        new(stream, connection)
+        new(stream)
       end
-    end
-
-  private
-    def self.default_connection
-      self.class.module_class(:Connection).instance
     end
   end
 end
 
 module Kappa::V2
   class Stream < Kappa::StreamBase
+    include Connection
+
     attr_reader :id
     attr_reader :broadcaster
     attr_reader :game_name
@@ -44,11 +40,13 @@ module Kappa::V2
       @name = hash['name']
       @viewer_count = hash['viewers']
       @preview_url = hash['preview']
-      @channel = Channel.new(hash['channel'], @connection)
+      @channel = Channel.new(hash['channel'])
     end
   end
 
   class Streams
+    include Connection
+
     def self.all
     end
 
@@ -86,11 +84,10 @@ module Kappa::V2
       streams = []
       ids = Set.new
 
-      connection = Connection.instance
       connection.paginated('streams', params) do |json|
         current_streams = json['streams']
         current_streams.each do |stream_json|
-          stream = Stream.new(stream_json, connection)
+          stream = Stream.new(stream_json)
           if ids.add?(stream.id)
             streams << stream
             if streams.count == limit
@@ -115,13 +112,12 @@ module Kappa::V2
       streams = []
       ids = Set.new
 
-      connection = Connection.instance
       connection.paginated('streams/featured', params) do |json|
         current_streams = json['featured']
         current_streams.each do |featured_json|
           # TODO: Capture more information from the featured_json structure (need a FeaturedStream class?)
           stream_json = featured_json['stream']
-          stream = Stream.new(stream_json, connection)
+          stream = Stream.new(stream_json)
           if ids.add?(stream.id)
             streams << stream
             if streams.count == limit
@@ -139,13 +135,4 @@ module Kappa::V2
 end
 
 module Kappa::V3
-  class Stream < Kappa::StreamBase
-    def initialize(arg, connection = Connection.instance)
-      super(arg, connection)
-    end
-
-  private
-    def parse(hash)
-    end
-  end
 end

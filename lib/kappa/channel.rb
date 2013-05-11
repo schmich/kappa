@@ -2,14 +2,12 @@ module Kappa
   class ChannelBase
     include IdEquality
 
-    def initialize(arg, connection)
-      @connection = connection
-
+    def initialize(arg)
       case arg
         when Hash
           parse(arg)
         when String
-          json = @connection.get("channels/#{arg}")
+          json = connection.get("channels/#{arg}")
           parse(json)
         else
           raise ArgumentError
@@ -26,9 +24,7 @@ module Kappa::V2
   # c.foo = 'bar' ; c.save!
   # Current user's channel
   class Channel < Kappa::ChannelBase
-    def initialize(arg, connection = Connection.instance)
-      super(arg, connection)
-    end
+    include Connection
 
     def mature?
       @mature
@@ -37,9 +33,9 @@ module Kappa::V2
     # TODO: Move these into derived classes?
     def stream
       # TODO: Use _links instead of hard-coding.
-      json = @connection.get("streams/#{@name}")
+      json = connection.get("streams/#{@name}")
       stream_json = json['stream']
-      Stream.new(stream_json, @connection)
+      Stream.new(stream_json)
     end
 
     def streaming?
@@ -73,11 +69,11 @@ module Kappa::V2
       followers = []
       ids = Set.new
 
-      @connection.paginated("channels/#{@name}/follows", params) do |json|
+      connection.paginated("channels/#{@name}/follows", params) do |json|
         current_followers = json['follows']
         current_followers.each do |follow_json|
           user_json = follow_json['user']
-          user = User.new(user_json, @connection)
+          user = User.new(user_json)
           if ids.add?(user.id)
             followers << user
             if followers.count == limit

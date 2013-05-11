@@ -2,8 +2,7 @@ module Kappa
   class UserBase
     include IdEquality
 
-    def initialize(hash, connection = self.class.default_connection)
-      @connection = connection
+    def initialize(hash)
       parse(hash)
     end
 
@@ -11,24 +10,21 @@ module Kappa
     # GET /users/:user
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser
     #
-    def self.get(user_name, connection = default_connection)
+    def self.get(user_name)
       json = connection.get("users/#{user_name}")
       if json['status'] == 404
         nil
       else
-        new(json, connection)
+        new(json)
       end
-    end
-
-  private
-    def self.default_connection
-      self.class.module_class(:Connection).instance
     end
   end
 end
 
 module Kappa::V2
   class User < Kappa::UserBase
+    include Connection
+
     def channel
       # TODO
     end
@@ -59,11 +55,11 @@ module Kappa::V2
       channels = []
       ids = Set.new
 
-      @connection.paginated("users/#{@name}/follows/channels", params) do |json|
+      connection.paginated("users/#{@name}/follows/channels", params) do |json|
         current_channels = json['follows']
         current_channels.each do |follow_json|
           channel_json = follow_json['channel']
-          channel = Channel.new(channel_json, @connection)
+          channel = Channel.new(channel_json)
           if ids.add?(channel.id)
             channels << channel
             if channels.count == limit
@@ -83,7 +79,7 @@ module Kappa::V2
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannelstarget
     #
     def following?(channel_name)
-      json = @connection.get("users/#{@name}/follows/channels/#{channel_name}")
+      json = connection.get("users/#{@name}/follows/channels/#{channel_name}")
       status = json['status']
       return !status || (status != 404)
     end

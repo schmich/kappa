@@ -2,6 +2,7 @@ require 'httparty'
 require 'addressable/uri'
 require 'securerandom'
 require 'json'
+require 'singleton'
 
 module Kappa
   class ConnectionBase
@@ -15,12 +16,6 @@ module Kappa
       @client_id = "Kappa-v1-#{uuid}"
 
       @last_request_time = Time.now - RATE_LIMIT_SEC
-    end
-
-    def self.instance
-      @connection ||= self.class_eval do
-        self.new
-      end
     end
 
     def get(path, query = nil)
@@ -100,19 +95,31 @@ module Kappa
 end
 
 module Kappa::V2
-  class Connection < Kappa::ConnectionBase
-  private
-    def custom_headers
-      { 'Accept' => 'application/vnd.twitchtv.v2+json' }
+  module Connection
+    class Impl < Kappa::ConnectionBase
+      include Singleton
+
+    private
+      def custom_headers
+        { 'Accept' => 'application/vnd.twitchtv.v2+json' }
+      end
+    end
+
+    def self.included(base)
+      base.extend(ClassMethods)
+    end
+
+    def connection
+      Impl.instance
+    end
+
+    module ClassMethods
+      def connection
+        Impl.instance
+      end
     end
   end
 end
 
 module Kappa::V3
-  class Connection < Kappa::ConnectionBase
-  private
-    def custom_headers
-      { 'Accept' => 'application/vnd.twitchtv.v3+json' }
-    end
-  end
 end
