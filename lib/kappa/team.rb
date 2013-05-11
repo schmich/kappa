@@ -8,7 +8,11 @@ module Kappa
 
     def self.get(team_name)
       json = connection.get("teams/#{team_name}")
-      new(json)
+      if json['status'] == 404
+        nil
+      else
+        new(json)
+      end
     end
   end
 end

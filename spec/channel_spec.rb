@@ -48,6 +48,4 @@ describe Kappa::V2::Channel do
       c.should_not be_nil
     end
   end
-
-  # TODO: Test creating via name: Channel.new('colminigun')
 end
