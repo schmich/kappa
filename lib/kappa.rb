@@ -8,7 +8,6 @@ require 'kappa/team'
 require 'kappa/user'
 require 'kappa/images'
 require 'kappa/twitch'
-require 'kappa/base'
 require 'kappa/version'
 
 # TODO
