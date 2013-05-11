@@ -2,30 +2,23 @@ module Kappa
   class VideoBase
     include IdEquality
 
-    def initialize(arg, connection)
-      @connection = connection
+    def initialize(hash)
+      parse(hash)
+    end
 
-      case arg
-        when Hash
-          parse(arg)
-        when String
-          json = @connection.get("videos/#{arg}")
-          parse(json)
-        else
-          raise ArgumentError
-      end
+    def self.get(id)
+      json = connection.get("videos/#{id}")
+      new(json)
     end
   end
 end
 
 module Kappa::V2
   class Video < Kappa::VideoBase
-    def initialize(arg)
-      super(arg, Connection.instance)
-    end
+    include Connection
 
     def channel
-      Channel.new(@conn.get("channels/#{@channel_name}"), @conn)
+      Channel.new(connection.get("channels/#{@channel_name}"))
     end
 
     attr_reader :id
@@ -43,8 +36,6 @@ module Kappa::V2
 
   private
     def parse(hash)
-      @conn = conn
-
       @id = hash['id']
       @title = hash['title']
       @recorded_at = DateTime.parse(hash['recorded_at'])
