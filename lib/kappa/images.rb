@@ -1,12 +1,7 @@
 module Kappa
   class ImagesBase
-    def initialize(arg)
-      case arg
-        when Hash
-          parse(arg)
-        else
-          raise ArgumentError
-      end
+    def initialize(hash)
+      parse(hash)
     end
   end
 end
