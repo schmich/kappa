@@ -1,0 +1,42 @@
+---
+https://api.twitch.tv/kraken/channels/colminigun:
+  updated_at: '2013-05-07T08:04:39Z'
+  created_at: '2010-12-09T03:25:15Z'
+  video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/colminigun-channel_offline_image-99e70fe8afe61304-640x360.png
+  status: ! "New 60 fps 720+ stream with commentating, check it out!\r\n\r\nTop 5 gm
+    HOTS\r\n\r\nJoin me on raidcall! ID : 5755125"
+  url: http://www.twitch.tv/colminigun
+  _id: 18585465
+  mature: false
+  logo: http://static-cdn.jtvnw.net/jtv_user_pictures/colminigun-profile_image-42ededb0697146f9-300x300.png
+  banner: http://static-cdn.jtvnw.net/jtv_user_pictures/colminigun-channel_header_image-da202e1bb694110d-640x125.jpeg
+  name: colminigun
+  display_name: Colminigun
+  _links:
+    chat: https://api.twitch.tv/kraken/chat/colminigun
+    stream_key: https://api.twitch.tv/kraken/channels/colminigun/stream_key
+    commercial: https://api.twitch.tv/kraken/channels/colminigun/commercial
+    features: https://api.twitch.tv/kraken/channels/colminigun/features
+    self: https://api.twitch.tv/kraken/channels/colminigun
+    videos: https://api.twitch.tv/kraken/channels/colminigun/videos
+    editors: https://api.twitch.tv/kraken/channels/colminigun/editors
+    subscriptions: https://api.twitch.tv/kraken/channels/colminigun/subscriptions
+    follows: https://api.twitch.tv/kraken/channels/colminigun/follows
+  background: http://static-cdn.jtvnw.net/jtv_user_pictures/colminigun-channel_background_image-7913e517ff8b78a2.jpeg
+  game: ! 'StarCraft II: Heart of the Swarm'
+  teams:
+  - updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-05-16T03:16:04Z'
+    _id: 300
+    info: ! 'RootGaming
+
+
+
+'
+    logo: 
+    banner: 
+    display_name: ROOT
+    name: root
+    _links:
+      self: https://api.twitch.tv/kraken/teams/root
+    background: 

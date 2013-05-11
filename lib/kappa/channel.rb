@@ -2,16 +2,14 @@ module Kappa
   class ChannelBase
     include IdEquality
 
-    def initialize(arg)
-      case arg
-        when Hash
-          parse(arg)
-        when String
-          json = connection.get("channels/#{arg}")
-          parse(json)
-        else
-          raise ArgumentError
-      end
+    def initialize(hash)
+      parse(hash)
+    end
+
+    def self.get(channel_name)
+      json = connection.get("channels/#{channel_name}")
+      # TODO: Handle errors.
+      new(json)
     end
   end
 end

@@ -13,7 +13,7 @@ describe Kappa::V2::Stream do
     WebMock.reset!
   end
 
-  describe '#new' do
+  describe '.new' do
     it 'accepts a hash' do
       hash = yaml_load('stream/stream_riotgames.yml')
       s = Stream.new(hash)
