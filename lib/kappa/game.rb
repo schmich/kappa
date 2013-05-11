@@ -2,26 +2,16 @@ module Kappa
   class GameBase
     include IdEquality
 
-    def initialize(arg)
-      case arg
-        when Hash
-          parse(arg)
-        else
-          raise ArgumentError
-      end
+    def initialize(hash)
+      parse(hash)
     end
   end
 
   class GameSuggestionBase
     include IdEquality
 
-    def initialize(arg)
-      case arg
-        when Hash
-          parse(arg)
-        else
-          raise ArgumentError
-      end
+    def initialize(hash)
+      parse(hash)
     end
   end
 end
@@ -80,7 +70,7 @@ module Kappa::V2
       games = []
       ids = Set.new
 
-      @conn.paginated('games/top', params) do |json|
+      connection.paginated('games/top', params) do |json|
         current_games = json['top']
         current_games.each do |game_json|
           game = Game.new(game_json)
@@ -107,7 +97,7 @@ module Kappa::V2
       games = []
       ids = Set.new
 
-      json = @conn.get('search/games', :query => name, :type => 'suggest', :live => live)
+      json = connection.get('search/games', :query => name, :type => 'suggest', :live => live)
       all_games = json['games']
       all_games.each do |game_json|
         game = GameSuggestion.new(game_json)
