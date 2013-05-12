@@ -99,6 +99,27 @@ t.updated_at    # => #<DateTime: 2013-04-27T16:58:55+00:00>
 
 Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#streams) and [channels](#channels). Games can be searched for by query.
 
+See also [`Kappa::V2::Game`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Game), [`Kappa::V2::Games`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Games), and [`Kappa::V2::GameSuggestion`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/GameSuggestion) documentation.
+
+```ruby
+top = Games.top(:limit => 3)
+top.map(&:name)  # => ["League of Legends", "Dota 2", "StarCraft II: Heart of the Swarm"]
+```
+
+```ruby
+g = Games.top(:limit => 1).first
+g.name                   # => "League of Legends"
+g.channel_count          # => 906
+g.viewer_count           # => 79223
+g.box_images.medium_url  # =>"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-272x380.jpg"
+```
+
+```ruby
+s = Games.search(:name => 'mega man', :live => true)
+s.map(&:name)        # => ["Mega Man X", "Mega Man 4"]
+s.map(&:popularity)  # => [3, 1]
+```
+
 ## Documentation
 
 Detailed API documentation is avaiable at [http://rdoc.info/github/schmich/kappa/master/frames](http://rdoc.info/github/schmich/kappa/master/frames).
