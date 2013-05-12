@@ -1,4 +1,3 @@
----
 https://api.twitch.tv/kraken/streams?game=League%20of%20Legends&limit=10&offset=0:
   _links:
     summary: https://api.twitch.tv/kraken/streams/summary

@@ -36,7 +36,7 @@ describe Kappa::V2::Streams do
 
     it 'can query streams by game name' do
       s = Streams.where(:game => 'StarCraft II: Heart of the Swarm')
-      s.length.should == 127
+      s.length.should == 156
     end
 
     it 'can query streams by game name with limit' do

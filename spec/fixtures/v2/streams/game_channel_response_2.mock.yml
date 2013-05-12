@@ -1,10 +1,9 @@
----
-https://api.twitch.tv/kraken/streams?channel=quantichyun,sc2sage&game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=25&offset=25:
+https://api.twitch.tv/kraken/streams?channel=quantichyun,sc2sage&game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=100&offset=100:
   _links:
     summary: https://api.twitch.tv/kraken/streams/summary
-    next: https://api.twitch.tv/kraken/streams?channel%5B%5D=quantichyun&channel%5B%5D=sc2sage&game=StarCraft+II%3A+Heart+of+the+Swarm&limit=25&offset=50
+    next: https://api.twitch.tv/kraken/streams?channel%5B%5D=quantichyun&channel%5B%5D=sc2sage&game=StarCraft+II%3A+Heart+of+the+Swarm&limit=100&offset=200
     followed: https://api.twitch.tv/kraken/streams/followed
     featured: https://api.twitch.tv/kraken/streams/featured
-    self: https://api.twitch.tv/kraken/streams?channel%5B%5D=quantichyun&channel%5B%5D=sc2sage&game=StarCraft+II%3A+Heart+of+the+Swarm&limit=25&offset=25
-    prev: https://api.twitch.tv/kraken/streams?channel%5B%5D=quantichyun&channel%5B%5D=sc2sage&game=StarCraft+II%3A+Heart+of+the+Swarm&limit=25&offset=0
+    self: https://api.twitch.tv/kraken/streams?channel%5B%5D=quantichyun&channel%5B%5D=sc2sage&game=StarCraft+II%3A+Heart+of+the+Swarm&limit=100&offset=100
+    prev: https://api.twitch.tv/kraken/streams?channel%5B%5D=quantichyun&channel%5B%5D=sc2sage&game=StarCraft+II%3A+Heart+of+the+Swarm&limit=100&offset=0
   streams: []
