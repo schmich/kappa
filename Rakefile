@@ -2,6 +2,10 @@ require 'fileutils'
 require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec) do |config|
+  config.ruby_opts = '-I./spec/v2'
+end
+
+RSpec::Core::RakeTask.new(:coverage) do |config|
   config.ruby_opts = '-r ./spec/spec_helper.rb -I./spec/v2'
 end
 

@@ -1,3 +1,4 @@
 language: ruby
+script: rake coverage
 rvm:
   - 1.9.3
