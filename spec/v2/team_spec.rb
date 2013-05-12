@@ -42,5 +42,7 @@ describe Kappa::V2::Team do
       t = Team.get('does_not_exist')
       t.should be_nil
     end
+
+    # TODO: Handles team name with URL characters.
   end
 end

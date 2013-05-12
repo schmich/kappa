@@ -7,8 +7,11 @@ module Kappa
     def self.get(channel_name)
       encoded_name = CGI.escape(channel_name)
       json = connection.get("channels/#{encoded_name}")
-      # TODO: Handle errors.
-      new(json)
+      if !json || json['status'] == 404
+        nil
+      else
+        new(json)
+      end
     end
   end
 end

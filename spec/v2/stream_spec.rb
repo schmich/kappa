@@ -49,6 +49,8 @@ describe Kappa::V2::Stream do
       s = Stream.get('offline_stream')
       s.should be_nil
     end
+
+    # TODO: Handles stream name with URL characters.
   end
 
   it 'should be equal to self' do

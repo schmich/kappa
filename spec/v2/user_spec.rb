@@ -39,6 +39,8 @@ describe Kappa::V2::User do
       u = User.get('does_not_exist')
       u.should be_nil
     end
+
+    # TODO: Handles user name with URL characters.
   end
 
   describe '#eql?' do

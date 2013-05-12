@@ -80,3 +80,9 @@ https://api.twitch.tv/kraken/channels/foo%2Fbar:
     _links:
       self: https://api.twitch.tv/kraken/teams/root
     background: 
+https://api.twitch.tv/kraken/channels/does_not_exist:
+  status: 404
+  body:
+    status: 404
+    message: Channel 'does_not_exist' does not exist
+    error: Not Found

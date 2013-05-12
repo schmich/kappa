@@ -50,9 +50,14 @@ describe Kappa::V2::Channel do
       c.should_not be_nil
     end
 
-    it 'handles channel names with URL characters' do
+    it 'handles channel name with URL characters' do
       c = Channel.get('foo/bar')
       c.should_not be_nil
+    end
+
+    it 'returns nil when channel does not exist' do
+      c = Channel.get('does_not_exist')
+      c.should be_nil
     end
   end
 
