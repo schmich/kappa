@@ -6,7 +6,7 @@ RSpec::Core::RakeTask.new(:spec) do |config|
 end
 
 RSpec::Core::RakeTask.new(:coverage) do |config|
-  config.ruby_opts = '-r ./spec/spec_helper.rb -I./spec/v2'
+  config.ruby_opts = '-r ./spec/coverage.rb -I./spec/v2'
 end
 
 class GemInfo
