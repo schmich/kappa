@@ -9,6 +9,7 @@
 *.sublime-project
 *.sublime-workspace
 .config
+.coveralls.yml
 coverage
 InstalledFiles
 lib/bundler/man
