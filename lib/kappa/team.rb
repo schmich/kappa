@@ -51,11 +51,15 @@ module Kappa::V2
   end
 
   class Teams
+    include Connection
+
     #
     # GET /teams
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams
     #
-    def all(args = {})
+    def self.all(args = {})
+      params = {}
+
       limit = args[:limit]
       if limit && (limit < 25)
         params[:limit] = limit

@@ -59,6 +59,8 @@ module Kappa::V2
     # TODO: Warning: this set can be very large, this can run for very long time, recommend using :limit/:offset.
     #
     def followers(args = {})
+      params = {}
+
       limit = args[:limit]
       if limit && (limit < 25)
         params[:limit] = limit

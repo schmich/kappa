@@ -1,5 +1,3 @@
-require 'set'
-
 module Kappa
   class StreamBase
     include IdEquality
@@ -90,6 +88,8 @@ module Kappa::V2
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured
     #
     def self.featured(args = {})
+      params = {}
+
       limit = args[:limit]
       if limit && (limit < 25)
         params[:limit] = limit
@@ -108,7 +108,4 @@ module Kappa::V2
       )
     end
   end
-end
-
-module Kappa::V3
 end
