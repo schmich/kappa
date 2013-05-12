@@ -4,7 +4,7 @@ require 'json'
 require 'yaml'
 
 def fixture(file)
-  File.join(File.dirname(__FILE__), 'fixtures', 'v2', file)
+  File.join(File.dirname(__FILE__), 'fixtures', file)
 end
 
 def yaml_load(file)

@@ -6,7 +6,7 @@ include Kappa::V2
 
 describe Kappa::V2::User do
   before do
-    WebMocks.load_dir('spec/fixtures/v2/user')
+    WebMocks.load_dir('spec/v2/fixtures/user')
   end
 
   after do

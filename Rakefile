@@ -2,6 +2,7 @@ require 'fileutils'
 require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec) do |config|
+  config.ruby_opts = '-I./spec/v2'
 end
 
 class GemInfo

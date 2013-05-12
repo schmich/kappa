@@ -7,7 +7,7 @@ include Kappa::V2
 
 describe Kappa::V2::Channel do
   before do
-    WebMocks.load_dir('spec/fixtures/v2/channel')
+    WebMocks.load_dir('spec/v2/fixtures/channel')
   end
 
   after do
