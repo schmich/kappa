@@ -84,14 +84,11 @@ module Kappa
       params.delete(:limit)
       params.delete(:offset)
 
+      json = get(request_url, params)
+
       # TODO: Hande request retry.
       loop do
-        json = get(request_url, params)
-
-        if json['error'] && (json['status'] == 503)
-          break
-        end
-
+        break if json['error'] && (json['status'] == 503)
         break if !yield(json)
 
         links = json['_links']
@@ -104,6 +101,7 @@ module Kappa
         break if total && (offset > total)
 
         request_url = next_url
+        json = get(request_url)
       end
     end
 

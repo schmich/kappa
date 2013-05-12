@@ -71,4 +71,7 @@ describe Kappa::V2::Streams do
   end
 
   # TODO: Streams.all
+
+  # TODO: Test Streams.where with > 100 channels (force pagination).
+  # See sc2daily for example.
 end
