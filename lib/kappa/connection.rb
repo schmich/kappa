@@ -23,10 +23,6 @@ module Kappa
     def get(path, query = nil)
       request_url = @base_url + path
 
-      # Handle non-JSON response
-      # Handle invalid JSON
-      # Handle non-200 codes
-
       headers = {
         'Client-ID' => @client_id,
       }.merge(custom_headers)
@@ -34,6 +30,10 @@ module Kappa
       response = rate_limit do
         self.class.get(request_url, :headers => headers, :query => query)
       end
+
+      # TODO: Handle non-JSON response
+      # TODO: Handle invalid JSON
+      # TODO: Handle non-200 codes
 
       json = response.body
       return JSON.parse(json)
