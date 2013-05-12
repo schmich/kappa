@@ -56,7 +56,7 @@ module Kappa::V2
       params = {}
 
       limit = args[:limit]
-      if limit && (limit < 25)
+      if limit && (limit < 100)
         params[:limit] = limit
       else
         params[:limit] = 100

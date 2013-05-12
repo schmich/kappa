@@ -68,7 +68,7 @@ module Kappa::V2
       end
 
       limit = args[:limit]
-      if limit && (limit < 25)
+      if limit && (limit < 100)
         params[:limit] = limit
       else
         params[:limit] = 100
@@ -92,10 +92,10 @@ module Kappa::V2
       params = {}
 
       limit = args[:limit]
-      if limit && (limit < 25)
+      if limit && (limit < 100)
         params[:limit] = limit
       else
-        params[:limit] = 25
+        params[:limit] = 100
         limit = 0
       end
 
