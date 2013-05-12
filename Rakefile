@@ -60,6 +60,11 @@ task :build do
   FileUtils.mv $gem.gem_filename, 'gem'
 end
 
+desc 'Run YARD server to view docs'
+task :yard do
+  system('yard server --reload')
+end
+
 desc "Release #{$gem.name} v#{$gem.version} and tag in git"
 task :release => :build do
   if (`git` rescue nil).nil?
