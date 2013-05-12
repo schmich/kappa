@@ -66,4 +66,7 @@ describe Kappa::V2::User do
       (u1 == u2).should be_false
     end
   end
+
+  # TODO: User#following
+  # TODO: User#following?
 end

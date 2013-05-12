@@ -1,0 +1,1989 @@
+https://api.twitch.tv/kraken/teams?limit=100&offset=200:
+  teams:
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thecrew-team_logo_image-6164c7ba6b1ffee1-300x300.png
+    display_name: The Crew
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thecrew-background_image-25f51c617cd8a3a8.jpeg
+    updated_at: '2012-11-08T00:38:20Z'
+    created_at: '2011-11-03T19:14:47Z'
+    info: ! 'The Crew is an awesome alternative to e-sports and competative gaming,
+      featuring some of the best casual gamers on the interwebs.
+
+
+      <a rel="nofollow" href="http://crewlounge.org" target="_blank"><img src="http://crewlounge.org/badge/crewBadge.png"
+      border="0" alt="The Crew Lounge" /></a>
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thecrew-banner_image-22b56101c5ab13ac-640x125.png
+    name: thecrew
+    _id: 21
+    _links:
+      self: https://api.twitch.tv/kraken/teams/thecrew
+  - logo: 
+    display_name: eSports Vision
+    background: 
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2012-01-10T00:56:23Z'
+    info: ! '
+
+'
+    banner: 
+    name: esvision
+    _id: 152
+    _links:
+      self: https://api.twitch.tv/kraken/teams/esvision
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-hilvlgaming-team_logo_image-3d426ec7608054f3-300x300.png
+    display_name: HILVL Gaming
+    background: 
+    updated_at: '2013-04-25T10:47:19Z'
+    created_at: '2012-11-09T19:57:44Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-hilvlgaming-banner_image-649c67a29c7dc1a0-640x125.png
+    name: hilvlgaming
+    _id: 475
+    _links:
+      self: https://api.twitch.tv/kraken/teams/hilvlgaming
+  - logo: 
+    display_name: ''
+    background: 
+    updated_at: '2013-01-17T01:14:16Z'
+    created_at: '2013-01-17T01:12:58Z'
+    info: ! '
+
+'
+    banner: 
+    name: toughcookie
+    _id: 536
+    _links:
+      self: https://api.twitch.tv/kraken/teams/toughcookie
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ld50gaming-team_logo_image-67b5021e311407a5-300x300.png
+    display_name: LD50 Gaming
+    background: 
+    updated_at: '2013-02-01T07:40:11Z'
+    created_at: '2013-01-31T18:28:20Z'
+    info: ! 'Welcome to the LD50 Gaming team page!
+
+      LD50 Gaming is an international multi-gaming organization. One of our biggest
+      goals is to develop and promote eSports in Japan.
+
+      <br />
+
+      Here are our links:
+
+      <br />
+
+      www.facebook.com/LD50Gaming
+
+      <br />
+
+      www.twitter.com/LD50Gaming
+
+      <br />
+
+      http://wiki.teamliquid.net/starcraft2/LD50_Gaming
+
+
+'
+    banner: 
+    name: ld50gaming
+    _id: 570
+    _links:
+      self: https://api.twitch.tv/kraken/teams/ld50gaming
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lngworkshop-team_logo_image-e75c7386a3ecc7ba-300x300.png
+    display_name: LNG WorkShop
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lngworkshop-background_image-69aff06b4beb4240.png
+    updated_at: '2013-04-06T22:08:18Z'
+    created_at: '2012-09-12T16:32:13Z'
+    info: ! '<div class="separator" style="clear:both;text-align:center;">
+
+      <a rel="nofollow" href="http://1.bp.blogspot.com/-L9Rnjo9AbRg/UFDT5UxnxYI/AAAAAAAACuA/VR0RY6VFi5A/s1600/LNGworkshopver3small.png"
+      style="clear:left;float:left;margin-bottom:1em;margin-right:1em;" target="_blank"><img
+      border="0" height="180" src="http://1.bp.blogspot.com/-L9Rnjo9AbRg/UFDT5UxnxYI/AAAAAAAACuA/VR0RY6VFi5A/s320/LNGworkshopver3small.png"
+      width="320" alt="LNGworkshopver3small.png" /></a></div>
+
+
+
+      LNG WorkShop Streamer Page
+
+      σà¡Θ│Ñµ¡îσ╖ÑΣ╜£σ¥è σ»ªµ│üΦÇàΘáüΘ¥ó
+
+
+      µ¡íΦ┐Äσñºσ«╢σê⌐τö¿µ¡ñΘáüΘ¥óΘù£µ│¿
+
+      ΘûïσÅ░τÜäLNG σ»ªµ│üΣ╕╗σÇæ
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lngworkshop-banner_image-645cc3f701cc4fef-640x125.png
+    name: lngworkshop
+    _id: 401
+    _links:
+      self: https://api.twitch.tv/kraken/teams/lngworkshop
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-betagamers-team_logo_image-0dd971652eab2f69-300x300.png
+    display_name: BETAgamers
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-betagamers-background_image-f9e4b3590e76f8dc.png
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-10-25T23:28:33Z'
+    info: ! "<img src=\"http://i.imgur.com/O19hf.png\" />\r\n\r\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-betagamers-banner_image-88ba1fa47e65ba78-640x125.png
+    name: betagamers
+    _id: 5
+    _links:
+      self: https://api.twitch.tv/kraken/teams/betagamers
+  - logo: 
+    display_name: Riot Games
+    background: 
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-05-02T07:37:19Z'
+    info: ! 'Streaming employees of Riot Games!
+
+'
+    banner: 
+    name: riot
+    _id: 281
+    _links:
+      self: https://api.twitch.tv/kraken/teams/riot
+  - logo: 
+    display_name: Youmacon Battle Opera
+    background: 
+    updated_at: '2012-10-31T00:41:15Z'
+    created_at: '2012-10-31T00:40:58Z'
+    info: ! '
+
+'
+    banner: 
+    name: youmacon
+    _id: 462
+    _links:
+      self: https://api.twitch.tv/kraken/teams/youmacon
+  - logo: 
+    display_name: Team Green Forrest
+    background: 
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-05-17T00:06:19Z'
+    info: ! '
+
+'
+    banner: 
+    name: teamgreenforrest
+    _id: 301
+    _links:
+      self: https://api.twitch.tv/kraken/teams/teamgreenforrest
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-deluxgaming-team_logo_image-cc07bebe44c562d6-300x300.png
+    display_name: Delux Gaming Crew
+    background: 
+    updated_at: '2012-11-22T07:48:53Z'
+    created_at: '2012-10-30T00:23:50Z'
+    info: ! 'Welcome to the DeluxNowΓäó Gaming Crew official Team Page on Twitch.tv.
+      You will see some amazing gameplay come from the members of the Delux Gaming Crew.
+      Check back often to watch future LANs and giveaways as well.
+
+
+'
+    banner: 
+    name: deluxgaming
+    _id: 461
+    _links:
+      self: https://api.twitch.tv/kraken/teams/deluxgaming
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-team_logo_image-86ae62cac99f0d5c-300x300.jpeg
+    display_name: LAMG
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-background_image-a5fad4523a64de21.jpeg
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-02-10T01:21:52Z'
+    info: ! "<a rel=\"nofollow\" href=\"http://twitter.com/LookAtMyGaming\" target=\"_blank\">
+      \n<img src=\"http://portcityplayhouse.org/images/PCP_2011_2012/twitterLogoANimated.gif\"
+      border=\"1\" alt=\"twitterLogoANimated.gif\" /></a>\n\n\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-banner_image-44b35bd8b404a240-640x125.png
+    name: lookatmygaming
+    _id: 181
+    _links:
+      self: https://api.twitch.tv/kraken/teams/lookatmygaming
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-welovecs-team_logo_image-9edd673d59907f7a-300x300.jpeg
+    display_name: CSPromod
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-welovecs-background_image-89be02520021d41a.jpeg
+    updated_at: '2012-12-10T03:25:21Z'
+    created_at: '2012-12-09T22:13:32Z'
+    info: ! 'Source Engine Modification.
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-welovecs-banner_image-f8096fc5f01285fe-640x125.jpeg
+    name: welovecs
+    _id: 499
+    _links:
+      self: https://api.twitch.tv/kraken/teams/welovecs
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-guildwars2live-team_logo_image-74f35f25d08beec5-300x300.png
+    display_name: Guild Wars 2 Live
+    background: 
+    updated_at: '2012-10-07T05:01:30Z'
+    created_at: '2012-06-28T00:36:29Z'
+    info: ! 'This team page is a collection of streamers who regularly play Guild Wars
+      2. We have redefined the purpose of this page to enable GW2 Twitch streamers to
+      help promote each other''s channel and the one game we all love.
+
+      <br /><br />
+
+      You may be familiar with GuildWars2Live.com an unofficial fan site that covers
+      ArenaNet events (including game conventions) and community events. We especially
+      love promoting charity events. We do not ask any channels linked to this team
+      page to promote our name or our logo, but if you do, thank you!
+
+      <br /><br />
+
+      If you would like your channel to appear on this page, please reach Peter on Twitter
+      at http://twitter.com/peter_chan (recommended) or message ''GuildWars2Live'' right
+      here on Twitch.
+
+
+'
+    banner: 
+    name: guildwars2live
+    _id: 340
+    _links:
+      self: https://api.twitch.tv/kraken/teams/guildwars2live
+  - logo: 
+    display_name: AT Gaming
+    background: 
+    updated_at: '2013-02-12T12:44:22Z'
+    created_at: '2013-02-12T12:43:50Z'
+    info: ! 'http://www.atgaming.nl/
+
+
+
+'
+    banner: 
+    name: atgaming
+    _id: 593
+    _links:
+      self: https://api.twitch.tv/kraken/teams/atgaming
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-liftsquad-team_logo_image-632426c2a462ff92-300x300.jpeg
+    display_name: Lift Squad
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-liftsquad-background_image-cf1393a7ae7585a7.jpeg
+    updated_at: '2013-02-10T13:41:21Z'
+    created_at: '2012-12-08T01:31:51Z'
+    info: ! '<br />&quot;Do you even lift, bro?&quot;
+
+      <br /><br />
+
+      Welcome to the home page of the infamous Lift Squad where we bench 500lbs on the
+      daily and most importantly, do so completely nude on our front patio so that all
+      of the women can see us working that bowflex and going ham like a beast.
+
+      Oh and by the way... this is DatModz!<br /><center><img src="http://i.imgur.com/7HCbq9K.png"
+      alt="7HCbq9K.png" /></center>
+
+
+
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-liftsquad-banner_image-19d9ecf1b89af8ab-640x125.png
+    name: liftsquad
+    _id: 498
+    _links:
+      self: https://api.twitch.tv/kraken/teams/liftsquad
+  - logo: 
+    display_name: NASL Season 3
+    background: 
+    updated_at: '2013-01-11T21:24:42Z'
+    created_at: '2012-08-01T01:23:56Z'
+    info: ! '
+
+'
+    banner: 
+    name: nasls3
+    _id: 367
+    _links:
+      self: https://api.twitch.tv/kraken/teams/nasls3
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-weplay-team_logo_image-528443ebe227f924-300x300.jpeg
+    display_name: WePlay.TV
+    background: 
+    updated_at: '2013-04-18T19:09:36Z'
+    created_at: '2013-04-16T15:39:05Z'
+    info: ! 'WePlay.TV - new e-sports project, created to hold different tournaments
+      for gamers.
+
+'
+    banner: 
+    name: weplay
+    _id: 661
+    _links:
+      self: https://api.twitch.tv/kraken/teams/weplay
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teampr0perty-team_logo_image-1fe8d59062c2750d-300x300.jpeg
+    display_name: Team prOperty
+    background: 
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-08-29T19:50:53Z'
+    info: ! "Team prOperty is a swedish professional SC2-Team. \n\nwww.teamproperty.net
+      \n\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teampr0perty-banner_image-84b2b0cbabd9207e-640x125.png
+    name: teampr0perty
+    _id: 392
+    _links:
+      self: https://api.twitch.tv/kraken/teams/teampr0perty
+  - logo: 
+    display_name: League of Legends Championship Series
+    background: 
+    updated_at: '2013-02-20T01:57:20Z'
+    created_at: '2013-02-20T01:57:04Z'
+    info: ! '
+
+'
+    banner: 
+    name: lcs
+    _id: 609
+    _links:
+      self: https://api.twitch.tv/kraken/teams/lcs
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-bemyfrag-team_logo_image-e7d7e8625117e65d-300x300.png
+    display_name: bemyfRAG e-Sports Club
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-bemyfrag-background_image-5b46dc3d9591069a.png
+    updated_at: '2012-10-11T20:46:16Z'
+    created_at: '2012-10-11T18:41:13Z'
+    info: ! 'Welcome to the Official Live Streaming channel of bemyfRAG. Suscribe for
+      not miss any LiveStreaming of our clan.
+
+      <a rel="nofollow" href="http://www.youtube.com/user/bemyfraggaming" target="_blank"><img
+      src="http://i.imgur.com/d11Hg.png" alt="d11Hg.png" /></a>
+
+
+
+      <a rel="nofollow" href="https://twitter.com/bemyfRAGGaming" target="_blank"><img
+      src="http://i.imgur.com/rt2Yn.png" alt="d11Hg.png" /></a>
+
+
+
+      <a rel="nofollow" href="http://www.bemyfrag.eu" target="_blank"><img src="http://i.imgur.com/euxyg.png"
+      alt="euxyg.png" /></a>
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-bemyfrag-banner_image-f2fa6806d2a63fa2-640x125.png
+    name: bemyfrag
+    _id: 429
+    _links:
+      self: https://api.twitch.tv/kraken/teams/bemyfrag
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-streamersunite-team_logo_image-6e5f99847a238e04-300x300.jpeg
+    display_name: Streamers Unite
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-streamersunite-background_image-35f3926d1d9872fe.jpeg
+    updated_at: '2013-01-23T03:51:19Z'
+    created_at: '2013-01-03T20:00:48Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-streamersunite-banner_image-9d7e7da99e8ac775-640x125.jpeg
+    name: streamersunite
+    _id: 519
+    _links:
+      self: https://api.twitch.tv/kraken/teams/streamersunite
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-chargercon-team_logo_image-3a219b4cc7756f0f-300x300.jpeg
+    display_name: ChargerCon
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-chargercon-background_image-671e90ab19a5ea4d.png
+    updated_at: '2013-02-26T05:47:01Z'
+    created_at: '2012-10-12T22:17:21Z'
+    info: ! 'All of the main stage action!
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-chargercon-banner_image-7f2261e76a290aae-640x125.png
+    name: chargercon
+    _id: 432
+    _links:
+      self: https://api.twitch.tv/kraken/teams/chargercon
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-pantherstv-team_logo_image-82f022e1ae181ff7-300x300.png
+    display_name: PanthersTV
+    background: 
+    updated_at: '2013-05-08T14:12:50Z'
+    created_at: '2013-05-07T20:51:29Z'
+    info: ! 'PanthersTV
+
+
+'
+    banner: 
+    name: pantherstv
+    _id: 673
+    _links:
+      self: https://api.twitch.tv/kraken/teams/pantherstv
+  - logo: 
+    display_name: Classical Gaming Network
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-classicalgamingnetwork-background_image-10b02b0b0c7de4cd.jpeg
+    updated_at: '2013-04-25T14:56:45Z'
+    created_at: '2012-04-17T18:14:20Z'
+    info: ! '
+
+
+
+
+      Bringing you the best of classical gaming around the world.CGN''s own channel
+      coming soon July/August keep in touch with me for more info.CGN(Classical Gaming
+      Network)makes one year April 30th.9.5 days(228+ hours)  Marathon coming soon!(18
+      casters). End of April  until first week of May.CGN''s Co founder''s are Valon22,FuzzyPandaGirl,Bloodbath102,
+      Anaisss17,and Lambiase200.
+
+
+
+      <center><a rel="nofollow" href="http://crewlounge.org" target="_blank"><img src="http://crewlounge.org/badge/crewBadge.png"
+      border="0" alt="The Crew Lounge" /></a></center>
+
+
+      <br /><br /><a rel="nofollow" href="http://www.twitch.tv/theebstream" target="_blank"><img
+      src="http://img259.imageshack.us/img259/1928/00theebstreamchatdmayhb.jpg" width="620"
+      height="120" alt="00theebstreamchatdmayhb.jpg" /></a><br />
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-classicalgamingnetwork-banner_image-630aa1125d80823d-640x125.png
+    name: classicalgamingnetwork
+    _id: 254
+    _links:
+      self: https://api.twitch.tv/kraken/teams/classicalgamingnetwork
+  - logo: 
+    display_name: Stream Monsters
+    background: 
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-12-10T17:53:05Z'
+    info: ''
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-streammonsters-banner_image-84675fab82f2d230-640x125.jpeg
+    name: streammonsters
+    _id: 112
+    _links:
+      self: https://api.twitch.tv/kraken/teams/streammonsters
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-outerheaven-team_logo_image-42e115ee5aecc1ae-300x300.png
+    display_name: Outer Heaven Network
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-outerheaven-background_image-1786c88d0293b19d.jpeg
+    updated_at: '2013-04-27T17:23:19Z'
+    created_at: '2013-04-05T19:41:47Z'
+    info: ! 'In its current form Outer Heaven is composed of, and co-founded by, Twitchs
+      most well known Metal Gear broadcasters and their shared channel. In the future,
+      we may begin accepting other Twitch broadcasters onto the team. Whether we will
+      invite Metal Gear broadcasters only, or encompass a broader focus, is still undecided.
+      Check back here for future updates,
+
+
+      <br /><br /><center><a rel="nofollow" href="http://www.metal-gear.net" target="_blank"><img
+      src="http://i47.tinypic.com/2mmfexk.jpg" border="0" alt="Image and video hosting
+      by TinyPic" /></a></center>
+
+      <center>MGN is our official web-site news source for ALL things Metal Gear. Up
+      to date and extensive news about upcoming Metal Gear releases and more. Check
+      it out!</center>
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-outerheaven-banner_image-2840babd6734cfc6-640x125.png
+    name: outerheaven
+    _id: 656
+    _links:
+      self: https://api.twitch.tv/kraken/teams/outerheaven
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-cleancom-team_logo_image-29b11d9b04f68931-300x300.png
+    display_name: CleanCommunity
+    background: 
+    updated_at: '2013-02-28T22:51:44Z'
+    created_at: '2013-02-28T21:19:22Z'
+    info: ! "\n\t\t<div>\n\t\t\tHi and Welcome to CleanCom - Livestreaming community!</div>\n\t\t<div>\n\t\t\t<img
+      alt=\"\" src=\"http://img818.imageshack.us/img818/413/600xphoto.png\" style=\"height:100px;width:100px;\"
+      /></div>\n\t\t<div>\n\t\t\t┬á</div>\n\t\t<div>\n\t\t\tCleanCom is a community
+      team on Twitch.tv with the purpose to grow and help channels get better average
+      viewers and followers.┬á</div>\n\t\t<div>\n\t\t\t┬á</div>\n\t\t<div>\n\t\t\tBefore
+      we continue, Twitch.tv has NOTHING to do with our livestreaming team!</div>\n\t\t<div>\n\t\t\t________________________________________</div>\n\t\t<div>\n\t\t\tYou
+      will get some feutures on your channel:</div>\n\t\t<div>\n\t\t\t1.┬á<img alt=\"\"
+      src=\"http://img832.imageshack.us/img832/2360/cleanq.jpg\" />┬á(It will says,
+      *ChannelName* playing *Game* on CleanCommunity)</div>\n\t\t<div>\n\t\t\t2. Have
+      your name on our team channel: <a rel=\"nofollow\" href=\"http://www.twitch.tv/team/CleanCom\"
+      target=\"_blank\">http://www.twitch.tv/team/CleanCom</a></div>\n\t\t<div>\n\t\t\t3.
+      Opportunity to give the ADMIN of CleanCom team acces to your stats (viewers) and
+      revenue (money per month) like this</div>\n\t\t<div>\n\t\t\t┬á<img alt=\"\" src=\"http://img542.imageshack.us/img542/8901/cleancom.jpg\"
+      /></div>\n\t\t<div>\n\t\t\t________________________________________</div>\n\t\t<div>\n\t\t\t-
+      We are looking for livestreamers that are broadcasting on schedule!</div>\n\t\t<div>\n\t\t\t-
+      Average viewership of 50 people</div>\n\t\t<div>\n\t\t\t- Followers doesn't matter
+      at least you got the average viewership!</div>\n\t\t<div>\n\t\t\t┬á</div>\n\t\t<div>\n\t\t\tNOTE:
+      Exceptions can and will be made!┬á</div>\n\t\t<div>\n\t\t\t________________________________________</div>\n\t\t<div>\n\t\t\tSend
+      &quot;FreppyCTRLtv&quot; a message here on Twitch.tv that contains,</div>\n\t\t<div>\n\t\t\t┬á</div>\n\t\t<div>\n\t\t\t-
+      How many viewers did you have the latest month?</div>\n\t\t<div>\n\t\t\t- How
+      many followers?</div>\n\t\t<div>\n\t\t\t- Tell a bit about your self:</div>\n\t\t<div>\n\t\t\t________________________________________</div>\n\t\t<div>\n\t\t\tHigh
+      resolution on our team logo (white): <a rel=\"nofollow\" href=\"http://img594.imageshack.us/img594/5521/cc4k.png\"
+      target=\"_blank\">http://img594.imageshack.us/img594/5521/cc4k.png</a></div>\n\t\n"
+    banner: 
+    name: cleancom
+    _id: 625
+    _links:
+      self: https://api.twitch.tv/kraken/teams/cleancom
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-cod-team_logo_image-de543f5d7f9bc92e-300x300.jpeg
+    display_name: ''
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-cod-background_image-0f1a2f244125470b.png
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-12-02T05:59:14Z'
+    info: ''
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-cod-banner_image-27ba232c20b21b24-640x125.png
+    name: cod
+    _id: 96
+    _links:
+      self: https://api.twitch.tv/kraken/teams/cod
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-kishtargaming-team_logo_image-6c12aaa9b753b9e4-300x300.jpeg
+    display_name: Kishtar Gaming
+    background: 
+    updated_at: '2013-04-02T08:41:20Z'
+    created_at: '2013-02-05T19:59:05Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-kishtargaming-banner_image-e92689da387217dc-640x125.png
+    name: kishtargaming
+    _id: 581
+    _links:
+      self: https://api.twitch.tv/kraken/teams/kishtargaming
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lotd-team_logo_image-f43c570ec1705342-300x300.png
+    display_name: Lords of the Dead
+    background: 
+    updated_at: '2013-04-12T15:32:51Z'
+    created_at: '2012-09-01T22:43:18Z'
+    info: ! 'Lords of the Dead is a premier PvP community of 17 years. We know what
+      it takes to be successful and dominate a game.
+
+      Lotd.org
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lotd-banner_image-6c3e03ec272f7b4c-640x125.png
+    name: lotd
+    _id: 396
+    _links:
+      self: https://api.twitch.tv/kraken/teams/lotd
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-team_crash-team_logo_image-50ca50b0f0e599a7-300x300.jpeg
+    display_name: Team Crash
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-team_crash-background_image-b0c898940b95ccdc.jpeg
+    updated_at: '2012-10-28T12:49:51Z'
+    created_at: '2011-12-09T10:34:53Z'
+    info: ! "<table width=\"619\" border=\"1\" align=\"center\" cellpadding=\"1\" cellspacing=\"0\"><tr
+      valign=\"top\"><td width=\"612\"><div align=\"center\"><img src=\"http://pic50.picturetrail.com/VOL490/587075/23587214/404265479.jpg\"
+      width=\"615\" height=\"67\" alt=\"401058479.jpg\" /></div></td>\n  </tr><tr valign=\"top\"><td><table
+      width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"10\"><tr><td> <p align=\"justify\"><font
+      size=\"2\"><em><font color=\"#000000\" face=\"Verdana, Arial, Helvetica, sans-serif\">Welcome
+      \n              to Team Crash and thank you for watching any one of our streamers
+      \n              do what they like best, game, rage, drink and act insane. We stream
+      \n              from all platforms everything from PC, Xbox 360, PS3, to Intelivision,
+      \n              Atari 2600 and Nintendo 64. You will find all genre's of games
+      played \n              on all platforms from a few different team members at one
+      time, \n              check them all out.</font></em></font></p>\n            <p
+      align=\"justify\"><font size=\"2\"><em><font color=\"#000000\" face=\"Verdana,
+      Arial, Helvetica, sans-serif\">Why \n              the name &quot;Team Crash&quot;
+      ? Because when a few of us got together \n              and started Team Crash,
+      Twitch was still rather new, only a few \n              months old, and they were
+      still working on their own platform. So \n              at times our channels
+      would crash multiple times a night, hence...TEAM \n              CRASH.</font></em></font></p></td>\n
+      \       </tr></table></td>\n  </tr><tr valign=\"top\"><td><img src=\"http://pic50.picturetrail.com/VOL490/587075/23587214/404265481.jpg\"
+      width=\"615\" height=\"36\" alt=\"401058466.jpg\" /></td>\n  </tr><tr valign=\"top\"><td><table
+      width=\"100%\" border=\"0\" cellpadding=\"0\"><tr><td><div align=\"center\"></div></td>\n
+      \         <td><div align=\"center\"></div></td>\n          <td><div align=\"center\"></div></td>\n
+      \         <td><div align=\"center\"><a rel=\"nofollow\" href=\"http://www.facebook.com/team.crash.1\"
+      target=\"_blank\"><img src=\"http://pic50.picturetrail.com/VOL490/587075/23587214/401058524.jpg\"
+      width=\"78\" height=\"80\" border=\"0\" alt=\"401058524.jpg\" /></a></div></td>\n
+      \         <td><div align=\"center\"></div></td>\n          <td><div align=\"center\"></div></td>\n
+      \         <td><div align=\"center\"></div></td>\n        </tr></table></td>\n
+      \ </tr><tr valign=\"top\"><td><img src=\"http://pic50.picturetrail.com/VOL490/587075/23587214/404265480.jpg\"
+      width=\"615\" height=\"36\" alt=\"401058461.jpg\" /></td>\n  </tr><tr valign=\"top\"><td><table
+      width=\"100%\" border=\"0\" cellspacing=\"10\" cellpadding=\"0\"><tr><td valign=\"top\">
+      <ol><li><font size=\"2\"><em><font color=\"#000000\" face=\"Verdana, Arial, Helvetica,
+      sans-serif\">Don't \n                be an A-hole, troll or all around D-bag,
+      do we really need to \n                explain this?</font></em></font></li>\n
+      \             <li><font size=\"2\"><em><font color=\"#000000\" face=\"Verdana,
+      Arial, Helvetica, sans-serif\">It's \n                not advised to ask to be
+      a moderator, but each channel owner sets \n                his/her own rules.
+      So dont be discouraged if they ask you not \n                to ask, or do not
+      make you a moderator.</font></em></font></li>\n              <li><font size=\"2\"><em><font
+      color=\"#000000\" face=\"Verdana, Arial, Helvetica, sans-serif\">Do \n                not
+      post links without permission from a channel owner or moderator, \n                you
+      will be kicked/banned or timed out.</font></em></font></li>\n              <li><font
+      size=\"2\"><em><font color=\"#000000\" face=\"Verdana, Arial, Helvetica, sans-serif\">If
+      \n                you want to post a link, ask permission from channel owner or
+      \n                a mod first. If you have an issue with this rule, see rule 3.</font></em></font></li>\n
+      \             <li><font size=\"2\"><em><font color=\"#000000\" face=\"Verdana,
+      Arial, Helvetica, sans-serif\">Feel \n                free to express your opionions,
+      but do not cross the line.</font></em></font></li>\n              <li><font size=\"2\"><em><font
+      color=\"#000000\" face=\"Verdana, Arial, Helvetica, sans-serif\">If \n                you
+      don't like the stream, or its contents, please, feel free \n                to
+      view other channels. The cast team does not really care that \n                you
+      do not like the channel or what we stream, we are here to \n                cast
+      what we like to play, and to bring good quality entertainment \n                the
+      best we can.</font></em></font></li>\n              <li><font size=\"2\"><em><font
+      color=\"#000000\" face=\"Verdana, Arial, Helvetica, sans-serif\">Ultimately, \n
+      \               the channel owner makes the final say and sets their own rules.
+      \n                Please read and follow their rules as they have set them to
+      make \n                their stream more enjoyable and thus the mods can keep
+      things \n                under control in case of a large view audience. </font></em></font></li>\n
+      \           </ol></td>\n        </tr></table></td>\n  </tr></table>\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-team_crash-banner_image-1b762e72ecde0ff7-640x125.jpeg
+    name: team_crash
+    _id: 107
+    _links:
+      self: https://api.twitch.tv/kraken/teams/team_crash
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-geeklounge-team_logo_image-589e7f7ea65aa8a1-300x300.png
+    display_name: Geek Lounge
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-geeklounge-background_image-fbf8e551472abfcc.jpeg
+    updated_at: '2012-12-11T04:51:34Z'
+    created_at: '2012-12-05T01:22:37Z'
+    info: ! 'Informacion de cronograma en: http://geeklounge.com.ar/tlg2012/crono.php
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-geeklounge-banner_image-14ef1f75f84f62ac-640x125.jpeg
+    name: geeklounge
+    _id: 493
+    _links:
+      self: https://api.twitch.tv/kraken/teams/geeklounge
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-raidcallemsone-team_logo_image-7dffc03390b53d25-300x300.jpeg
+    display_name: RaidCall EMS One
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-raidcallemsone-background_image-d9fb23a2d64d31fb.jpeg
+    updated_at: '2013-02-26T11:47:42Z'
+    created_at: '2013-02-12T23:08:39Z'
+    info: ! '
+
+'
+    banner: 
+    name: raidcallemsone
+    _id: 600
+    _links:
+      self: https://api.twitch.tv/kraken/teams/raidcallemsone
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-25centplay-team_logo_image-67b87c3ae9818a4e-300x300.png
+    display_name: 25 Cent Play
+    background: 
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-06-04T03:48:15Z'
+    info: ! '
+
+'
+    banner: 
+    name: 25centplay
+    _id: 319
+    _links:
+      self: https://api.twitch.tv/kraken/teams/25centplay
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-slothloveschunk-team_logo_image-01153b059856c981-300x300.jpeg
+    display_name: The Goonies
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-slothloveschunk-background_image-4139cc72901211fe.jpeg
+    updated_at: '2013-01-15T03:18:56Z'
+    created_at: '2013-01-15T00:13:46Z'
+    info: ! 'Just some misfits who like to hang out, play videogames, and go on the
+      occasional adventure to save our hometowns. Join us as we journey into a multitude
+      of games ranging from Rhythym to MOBA and also meet some cool people along the
+      way. But you must remember one thing, Goonies Never Say Die!
+
+
+'
+    banner: 
+    name: slothloveschunk
+    _id: 530
+    _links:
+      self: https://api.twitch.tv/kraken/teams/slothloveschunk
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-codhu-team_logo_image-c2fdb6106b52b0c7-300x300.png
+    display_name: Call of Duty Hungary
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-codhu-background_image-292b0f62ee64d72a.jpeg
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2012-03-20T19:29:35Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-codhu-banner_image-e6d6b35100c4a9f0-640x125.png
+    name: codhu
+    _id: 221
+    _links:
+      self: https://api.twitch.tv/kraken/teams/codhu
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-vtigaming-team_logo_image-9132cb0253a28f6c-300x300.png
+    display_name: vTI Gaming
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-vtigaming-background_image-9f4b4e6613bf01ea.png
+    updated_at: '2012-10-17T04:04:43Z'
+    created_at: '2012-10-16T20:53:33Z'
+    info: ! 'Time multi competitivo de e-sports brasileiro.
+
+      <br /><a rel="nofollow" href="http://facebook.com/vtigaming" target="_blank">Facebook</a><br
+      /><a rel="nofollow" href="http://twitter.com/vTiGaming" target="_blank">Twitter</a><a
+      rel="nofollow" target="_blank"></a>
+
+
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-vtigaming-banner_image-46ca1cff2508d771-640x125.png
+    name: vtigaming
+    _id: 435
+    _links:
+      self: https://api.twitch.tv/kraken/teams/vtigaming
+  - logo: 
+    display_name: not public
+    background: 
+    updated_at: '2013-04-04T21:44:32Z'
+    created_at: '2013-04-04T21:44:32Z'
+    info: ! '
+
+'
+    banner: 
+    name: codtest
+    _id: 654
+    _links:
+      self: https://api.twitch.tv/kraken/teams/codtest
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-flashesports-team_logo_image-c6163dfed0e785ae-300x300.png
+    display_name: Flash eSports
+    background: 
+    updated_at: '2013-02-15T09:46:34Z'
+    created_at: '2013-02-04T04:53:09Z'
+    info: ! '<div align="center"><table cellpadding="0" width="156" cellspacing="0"><tr><td><a
+      rel="nofollow" href="http://www.facebook.com/flashesports" target="_blank"><img
+      src="http://api.ning.com/files/yK4NcMrBlofWleqeABbNHR-JwhBMxMRlC7NRM0KCYhLk4i-pqoO0AYXzAp3bKHf0IYIP3Qjn0GVzm5V1Gv56dUqaq68hdmSW/facebooks1_60.png"
+      alt="Join Our Facebook Fan Page" width="48" height="48" border="0" /></a></td><td><a
+      rel="nofollow" href="http://twitter.com/flash_esports" target="_blank"><img src="http://api.ning.com/files/vwYvIcXARnCDb7rmTyv-ajyO2kvmHyKJ813N8CvFCImegtIaEvi9NeRhZ1RWCqojSEvAqmOzVNsoWX4HPus6Zwt-nMYOBXWU/twitters1_60.png"
+      alt="Follow Us On Twitter" width="48" height="48" border="0" /></a></td>
+
+      </tr></table></div>
+
+
+      Flash eSports is a Singaporean organisation consisting of gamers from a few different
+      games : CS:GO, StarCraft II, DotA2, FIFA.<br />
+
+      We also hold LAN and Online competitions/events which we stream on our channel
+      /flashesports <br />
+
+      Drop by <a rel="nofollow" href="http://www.flash-esports.com" target="_blank">http://www.flash-esports.com</a>
+      or <a rel="nofollow" href="https://www.facebook.com/FlasheSports" target="_blank">https://www.facebook.com/FlasheSports</a>
+      to find out more! <br />
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-flashesports-banner_image-c8429ec2916f88e0-640x125.png
+    name: flashesports
+    _id: 576
+    _links:
+      self: https://api.twitch.tv/kraken/teams/flashesports
+  - logo: 
+    display_name: The Hero Experience
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-heroexperience-background_image-4e85cfe948b10084.jpeg
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-04-19T19:14:00Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-heroexperience-banner_image-291fd94ff793b01d-640x125.jpeg
+    name: heroexperience
+    _id: 258
+    _links:
+      self: https://api.twitch.tv/kraken/teams/heroexperience
+  - logo: 
+    display_name: MOBACAST
+    background: 
+    updated_at: '2012-10-03T01:48:24Z'
+    created_at: '2011-11-03T18:20:52Z'
+    info: http://mobacast.com
+    banner: 
+    name: mobacast
+    _id: 19
+    _links:
+      self: https://api.twitch.tv/kraken/teams/mobacast
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-esahara-team_logo_image-ff67c8a5304af5fb-300x300.jpeg
+    display_name: Electronic Sahara
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-esahara-background_image-cfad275c742ab666.jpeg
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-12-09T20:12:49Z'
+    info: ''
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-esahara-banner_image-ba6844c944278ded-640x125.jpeg
+    name: esahara
+    _id: 108
+    _links:
+      self: https://api.twitch.tv/kraken/teams/esahara
+  - logo: 
+    display_name: Impulse eSports
+    background: 
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-09-05T18:35:11Z'
+    info: ! '
+
+'
+    banner: 
+    name: impulseesports
+    _id: 398
+    _links:
+      self: https://api.twitch.tv/kraken/teams/impulseesports
+  - logo: 
+    display_name: HWA Gaming TV
+    background: 
+    updated_at: '2013-02-11T19:27:36Z'
+    created_at: '2013-02-11T19:24:51Z'
+    info: ! '
+
+'
+    banner: 
+    name: hwagaming
+    _id: 589
+    _links:
+      self: https://api.twitch.tv/kraken/teams/hwagaming
+  - logo: 
+    display_name: MineHack Team
+    background: 
+    updated_at: '2013-03-19T16:41:53Z'
+    created_at: '2013-03-19T16:41:42Z'
+    info: ! '
+
+'
+    banner: 
+    name: minehack
+    _id: 643
+    _links:
+      self: https://api.twitch.tv/kraken/teams/minehack
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-weplaygames-team_logo_image-696a63d7ae5ec71b-300x300.jpeg
+    display_name: We Play Games
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-weplaygames-background_image-d0d154fdf1367970.jpeg
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-03-13T18:41:56Z'
+    info: ! 'A group of like-minded casters and friends who just simply play games for
+      fun.  Click on the follow button at the top to follow all of these great casters!
+
+'
+    banner: 
+    name: weplaygames
+    _id: 215
+    _links:
+      self: https://api.twitch.tv/kraken/teams/weplaygames
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-learntopvp-team_logo_image-4b1dfc5026d85da7-300x300.png
+    display_name: Dara Mactire
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-learntopvp-background_image-9d3384be9e06ef31.jpeg
+    updated_at: '2012-10-08T18:36:37Z'
+    created_at: '2011-11-08T03:00:56Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-learntopvp-banner_image-4157455815d1f2c3-640x125.png
+    name: learntopvp
+    _id: 65
+    _links:
+      self: https://api.twitch.tv/kraken/teams/learntopvp
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-matchless-team_logo_image-468b12d383587756-300x300.jpeg
+    display_name: Matchless Gaming
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-matchless-background_image-e73b058a14ebe220.png
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-07-31T18:46:40Z'
+    info: ! 'Webpage:
+
+      <p><a rel="nofollow" href="http://www.matchlessgaming.net" target="_blank"><img
+      src="http://i.imgur.com/R5TJp.png" alt="R5TJp.png" /></a></p>
+
+      <p><a rel="nofollow" href="http://www.matchlessgaming.net" target="_blank">http://www.matchlessgaming.net</a></p>
+
+      <br /><br /><br /><br /><p>Youtube: </p><p><a rel="nofollow" href="http://www.youtube.com/matchlessgw2"
+      target="_blank"><img src="http://i.imgur.com/0ktOv.jpg" alt="0ktOv.jpg" /></a></p>
+
+      <p><a rel="nofollow" href="http://www.youtube.com/matchlessgw2" target="_blank">http://www.youtube.com/matchlessgw2</a></p>
+
+
+      <br /><br /><br /><br /><p>Twitter: </p>
+
+      <p><a rel="nofollow" href="http://www.twitter.com/#!/matchlessgaming" target="_blank"><img
+      src="http://tips4php.net/wp-content/uploads/2010/03/twitter.png" alt="twitter.png"
+      /></a></p>
+
+      <p><a rel="nofollow" href="http://www.twitter.com/#!/matchlessgaming" target="_blank">http://www.twitter.com/#!/matchlessgaming</a></p>
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-matchless-banner_image-74d783ada80c28ff-640x125.png
+    name: matchless
+    _id: 366
+    _links:
+      self: https://api.twitch.tv/kraken/teams/matchless
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-temptest-team_logo_image-9e48c4f8ed44f0e4-300x300.png
+    display_name: ''
+    background: 
+    updated_at: '2013-03-20T01:51:27Z'
+    created_at: '2013-03-12T22:22:06Z'
+    info: ! '
+
+'
+    banner: 
+    name: temptest
+    _id: 635
+    _links:
+      self: https://api.twitch.tv/kraken/teams/temptest
+  - logo: 
+    display_name: _______
+    background: 
+    updated_at: '2012-10-17T23:40:32Z'
+    created_at: '2012-10-17T23:40:32Z'
+    info: ! '
+
+'
+    banner: 
+    name: iplsubscriptions
+    _id: 440
+    _links:
+      self: https://api.twitch.tv/kraken/teams/iplsubscriptions
+  - logo: 
+    display_name: Cyber Nation
+    background: 
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-11-11T00:56:50Z'
+    info: Cyber Nation is a french StarCraft 2 team and an e-sports organization at
+      large.
+    banner: 
+    name: cybernation
+    _id: 85
+    _links:
+      self: https://api.twitch.tv/kraken/teams/cybernation
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-qf_gaming-team_logo_image-20a7e6c905dc0a59-300x300.png
+    display_name: QF_Gaming
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-qf_gaming-background_image-7b41a85133ad81a2.jpeg
+    updated_at: '2013-01-01T23:20:50Z'
+    created_at: '2012-10-02T23:41:21Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-qf_gaming-banner_image-eb921da0d3d31dad-640x125.png
+    name: qf_gaming
+    _id: 421
+    _links:
+      self: https://api.twitch.tv/kraken/teams/qf_gaming
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-antenadota-team_logo_image-af0b8fe8a81a6e96-300x300.jpeg
+    display_name: AntenaDota
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-antenadota-background_image-a267b7f58554308b.jpeg
+    updated_at: '2013-01-23T20:17:47Z'
+    created_at: '2013-01-23T20:10:00Z'
+    info: ! 'First Channel Professional Stream Dota 2 in Spanish.
+
+
+      Having the exclusive coverage of the most important tournaments worldwide Dota
+      2.
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-antenadota-banner_image-1a4d3ff616dd28c2-640x125.jpeg
+    name: antenadota
+    _id: 546
+    _links:
+      self: https://api.twitch.tv/kraken/teams/antenadota
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-gaming-team_logo_image-9cb7eb5811bc0904-300x300.png
+    display_name: 24/7 Gaming
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-gaming-background_image-45534888233101fe.png
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-07-23T19:41:58Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-gaming-banner_image-742b5accf4c62a07-640x125.png
+    name: gaming
+    _id: 358
+    _links:
+      self: https://api.twitch.tv/kraken/teams/gaming
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamcci-team_logo_image-25c05405306291f3-300x300.png
+    display_name: TEAM CCI
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamcci-background_image-f65a95f43e0c143d.jpeg
+    updated_at: '2012-10-03T06:24:07Z'
+    created_at: '2012-01-20T21:34:52Z'
+    info: ! 'Welcome to Team CCI''s team page. WE CAN''T CONTROL IT!
+
+
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamcci-banner_image-6d92675fe9f4ed61-640x125.jpeg
+    name: teamcci
+    _id: 164
+    _links:
+      self: https://api.twitch.tv/kraken/teams/teamcci
+  - logo: 
+    display_name: GIGABYTE ESPORTS LAN
+    background: 
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-06-16T19:03:06Z'
+    info: ! 'GIGABYTE ESPORTS LAN - featuring top StarCraft 2 and League of Legends
+      action.
+
+'
+    banner: 
+    name: gesl
+    _id: 326
+    _links:
+      self: https://api.twitch.tv/kraken/teams/gesl
+  - logo: 
+    display_name: Team Wreckless
+    background: 
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-11-09T00:55:55Z'
+    info: ! "New team on the scene. We're a bunch of gaming veterans that want to bring
+      you all the most enjoyable streams possible. We'll stream any game and any genre
+      that we can. If it's fun, it's for us.\n\nSo give us a follow if you enjoy us.\n\nWe
+      appreciate your support. \nThanks!\n\n"
+    banner: 
+    name: teamwreckless
+    _id: 78
+    _links:
+      self: https://api.twitch.tv/kraken/teams/teamwreckless
+  - logo: 
+    display_name: E-Sports and Gaming Network
+    background: 
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-04-30T23:29:50Z'
+    info: ! '
+
+'
+    banner: 
+    name: esgnaus
+    _id: 278
+    _links:
+      self: https://api.twitch.tv/kraken/teams/esgnaus
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-blockville-team_logo_image-479e8d97f38e8656-300x300.png
+    display_name: Blockville
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-blockville-background_image-e022826ef164ee6a.png
+    updated_at: '2013-02-13T04:04:55Z'
+    created_at: '2013-02-13T03:33:15Z'
+    info: ! "Hey! This is a group for all the members of Blockville! \n\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-blockville-banner_image-d30f2329cb1ecc59-640x125.png
+    name: blockville
+    _id: 603
+    _links:
+      self: https://api.twitch.tv/kraken/teams/blockville
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-20id-team_logo_image-92eba5c0487d238a-300x300.jpeg
+    display_name: Team 20ID
+    background: 
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-12-23T00:23:03Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-20id-banner_image-35b934e8a85b6d13-640x125.jpeg
+    name: 20id
+    _id: 133
+    _links:
+      self: https://api.twitch.tv/kraken/teams/20id
+  - logo: 
+    display_name: SocialScape
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-socialscape-background_image-967b5910d17faf0f.jpeg
+    updated_at: '2013-04-10T18:01:52Z'
+    created_at: '2013-03-13T20:26:21Z'
+    info: ! 'SocialScape is an active group for RuneScape 2007, with top quality streams,
+      streaming everyday and have our own public Teamspeak server.
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-socialscape-banner_image-3e43271e9572df55-640x125.png
+    name: socialscape
+    _id: 637
+    _links:
+      self: https://api.twitch.tv/kraken/teams/socialscape
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ecal-team_logo_image-f2feb18a49bf6950-300x300.png
+    display_name: Elite Cyber Athlete League
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ecal-background_image-f472ea392e396cb8.jpeg
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-05-11T01:22:00Z'
+    info: ! "<center><a rel=\"nofollow\" href=\"http://ecal.tv\" target=\"_blank\">\n\t<img
+      src=\"http://img405.imageshack.us/img405/1010/23682189.png\" alt=\"ECAL website\"
+      /></a>\n</center><br /><font size=\"3\">Elite Cyber Athlete League is an organization
+      dedicated to providing exciting and competitive matches, pitting\nthe top teams
+      all over the world against each other with high stakes. We strive to provide the
+      best possible experience for\nboth the teams and viewers. Follow us by clicking
+      the links below!!</font><br /><a rel=\"nofollow\" href=\"https://www.facebook.com/ecaltv\"
+      target=\"_blank\"><img src=\"https://8893421b68-custmedia.vresp.com/library/1273862516/48edb0f071/facebook%20100x100.jpg\"
+      alt=\"facebook%20100x100.jpg\" /></a>\n  <a rel=\"nofollow\" href=\"http://twitter.com/ECALTV\"
+      target=\"_blank\"><img src=\"http://www.careeningsegue.com/wp-content/uploads/2011/01/twitter-100x100.png\"
+      alt=\"twitter-100x100.png\" /></a>\n  <a rel=\"nofollow\" href=\"http://www.youtube.com/user/ECALDOTA\"
+      target=\"_blank\"><img src=\"https://8893421b68-custmedia.vresp.com/library/1273862516/70a2d094ff/youtube%20100x100.jpg\"
+      alt=\"youtube%20100x100.jpg\" /></a><br /><br />\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ecal-banner_image-7f51aa20dcfdf3e9-640x125.png
+    name: ecal
+    _id: 289
+    _links:
+      self: https://api.twitch.tv/kraken/teams/ecal
+  - logo: 
+    display_name: Team Project
+    background: 
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-05-01T19:37:46Z'
+    info: ! '
+
+'
+    banner: 
+    name: teamproject
+    _id: 279
+    _links:
+      self: https://api.twitch.tv/kraken/teams/teamproject
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-mousesports-team_logo_image-3f89bb3fd518cf34-300x300.png
+    display_name: mousesports
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-mousesports-background_image-d3285f7413ed472b.png
+    updated_at: '2013-04-19T12:46:37Z'
+    created_at: '2011-12-05T23:57:28Z'
+    info: ! "<h1 style=\"padding-top:20px;text-align:center;color:#be1238;\">mousesports</h1>\n<div
+      style=\"text-align:center;font-size:.9em;\"><a rel=\"nofollow\" href=\"http://www.mousesports.com/\"
+      target=\"_blank\">WWW.MOUSESPORTS.COM</a></div>\n<h3 style=\"padding-top:20px;text-align:center;color:#be1238;\">Sponsors</h3>\n<div
+      style=\"padding-top:20px;padding-bottom:20px;border-bottom:solid 1px #bebebe;margin-bottom:20px;\">\n
+      \ <img src=\"http://gfx.mousesports.com/partners/3.png\" style=\"float:left;margin-right:20px;width:150px;\"
+      alt=\"3.png\" /><p>BenQ is a leading innovator of digital lifestyle devices dedicated
+      to Bringing Enjoyment 'N' Quality to Life. BenQ is a world-renowned pioneer in
+      today's digital convergence era, set apart by a unique philosophy of &quot;Enjoyment
+      Matters&quot;. This spirit infuses every industry-first technology and every award-winning
+      product we engineer. It underlies our product development, business model, partnerships,
+      and corporate culture. It inspires our dedicated employees and directs us in global
+      citizenry.</p>\n</div>\n<div style=\"padding-bottom:20px;border-bottom:solid 1px
+      #bebebe;margin-bottom:20px;\">\n\t<img src=\"http://gfx.mousesports.com/partners/5.jpg\"
+      style=\"float:left;margin-right:20px;width:150px;\" alt=\"5.jpg\" /><p>GeIL -
+      Golden Emperor Int'l Ltd. - is the worlds' leading IT (memory module &amp; CE)
+      manufacturer that concentrates in designing the most innovative product for consumers
+      in a wide variety of market segments. Our culture is based on a long-lasting commitment
+      to customer satisfaction. GeIL is determined to produce the most advanced product
+      with absolutely the lowest rate of return for every GeIL customer to receive the
+      quality, performance and dependability they deserve.</p>\n</div>\n<div style=\"padding-bottom:20px;border-bottom:solid
+      1px #bebebe;margin-bottom:20px;\">\n  <img src=\"http://gfx.mousesports.com/partners/13.png\"
+      style=\"float:left;margin-right:20px;width:150px;\" alt=\"13.png\" /><p>Razer
+      collaborates with gamers to develop, manufacture and market cutting-edge gaming
+      peripherals utilizing proprietary technologies that give gamers the competitive
+      edge. We reinvented the computer gaming industry by bringing this competitive
+      edge to gamers when professional computer gaming was in its infancy. In the mid
+      90s, with the advent of networked gaming and competitive first-person-shooter
+      (FPS) games, gamers found that their legacy peripherals were inhibiting rather
+      than enhancing their gameplay.</p>\n</div>\n<div style=\"padding-bottom:20px;\">\n\t<img
+      src=\"http://gfx.mousesports.com/partners/19.png\" style=\"float:left;margin-right:20px;width:150px;\"
+      alt=\"19.png\" /><p>If Thor is the God of Power, then Thortech should be considered
+      the God of Power Supplies. Thortech is determined to bring to the market only
+      the best blend of performance, efficiency, technology and value of Power Supply
+      brand and products. Thortech Power's R&amp;D team has experience in designing
+      innovative industrial level power supplies for over 15 years, such experience
+      will be transferred to make first grade consumer level power supplies with high
+      yield rate of 80Plus Gold level or higher efficiency performance.</p>\n</div>\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-mousesports-banner_image-83e50bc01bc7698e-640x125.png
+    name: mousesports
+    _id: 100
+    _links:
+      self: https://api.twitch.tv/kraken/teams/mousesports
+  - logo: 
+    display_name: Extra Life 2012
+    background: 
+    updated_at: '2012-10-19T17:26:39Z'
+    created_at: '2012-10-19T17:26:16Z'
+    info: ! '<a rel="nofollow" href="http://extra-life.org" target="_blank">Help out
+      here!</a>
+
+
+'
+    banner: 
+    name: extralife
+    _id: 443
+    _links:
+      self: https://api.twitch.tv/kraken/teams/extralife
+  - logo: 
+    display_name: Pink Lancers Fight Cancer
+    background: 
+    updated_at: '2012-10-12T17:04:26Z'
+    created_at: '2012-09-28T19:26:05Z'
+    info: ! 'These are the streamers for the Pink Lancers Fight Cancer Marathon!
+
+      <a rel="nofollow" href="http://stayclassy.org/pinklancers2" target="_blank">CLICK
+      HERE TO DONATE TO THE NBCF</a>
+
+
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-pinklancers-banner_image-32541d9f004fbb9f-640x125.png
+    name: pinklancers
+    _id: 416
+    _links:
+      self: https://api.twitch.tv/kraken/teams/pinklancers
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ucg-team_logo_image-639c658349da6145-300x300.jpeg
+    display_name: Unified Competitive Gaming
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ucg-background_image-6880ea3bbcc03fa6.jpeg
+    updated_at: '2013-05-08T22:08:47Z'
+    created_at: '2012-12-03T21:54:06Z'
+    info: ! '<div style="color:#FFFFFF;background-color:#000000;"><center>
+
+      <a rel="nofollow" href="http://www.unifiedcompgaming.org" target="_blank"> Unified
+      Competitive Gaming </a><br /><a rel="nofollow" href="http://youtube.com/unifiedcompgaming"
+      target="_blank"> <img src="http://i.imgur.com/meMla.png" alt="meMla.png" /></a>
+
+      <a rel="nofollow" href="http://twitter.com/ucgofficial" target="_blank"> <img
+      src="http://i.imgur.com/lAJDz.png/" alt="&gt;&lt;img src=" /></a>
+
+      <a rel="nofollow" href="http://facebook.com/unifiedcompgaming" target="_blank">
+      <img src="http://i.imgur.com/n2x7z.png" alt="n2x7z.png" /></a>
+
+      </center> <br /><h3>About Unified Competitive Gaming</h3>
+
+      <p>Unified Competitive Gaming (UCG) is an organization with the intent of creating
+      an online community for gamers in many different genres of multiplayer gaming,
+      as well providing a venue for those games to be played competitively. UCG also
+      believes it is important for the gaming community to represent itself as an intelligent
+      and respectful group, and helps proliferate this idea by hosting fundraising tournaments,
+      as well as extending its resources to partners and members of their community.  </p><br
+      /></div>
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ucg-banner_image-9e5475088ba2cadf-640x125.jpeg
+    name: ucg
+    _id: 492
+    _links:
+      self: https://api.twitch.tv/kraken/teams/ucg
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wolves-team_logo_image-4b92b871ebceb994-300x300.png
+    display_name: Copenhagen Wolves
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wolves-background_image-c0c1ba52d8b5f554.png
+    updated_at: '2013-04-17T11:28:35Z'
+    created_at: '2013-03-14T23:25:06Z'
+    info: ! "\n\n<table width=\"617\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td>\n\t\t\t<a
+      rel=\"nofollow\" href=\"http://www.copenhagenwolves.dk/\" target=\"_blank\">\n<img
+      src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_01.jpg?w=AAA2b77j-C3UgD6_ut6SbuP0KIguRlVIlizKk-WvGbDvmQ\"
+      width=\"223\" height=\"236\" alt=\"\" /></a></td>\n\t\t<td colspan=\"6\">\n\t\t\t<img
+      src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_02.png?w=AADT_m1tCT_vW1L6PKIAK3CrdjT-tuSLV4XeW3AUjjPdOQ\"
+      width=\"394\" height=\"236\" alt=\"\" /></td>\n\t</tr><tr><td>\n\t\t\t<a rel=\"nofollow\"
+      href=\"http://www.komplett.dk/\" target=\"_blank\"><img src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_03.png?w=AAD79qnzDNwfaKOoyOdn61gWg6mUGK0uCN9orFRKphOL-g\"
+      width=\"223\" height=\"48\" alt=\"\" /></a></td>\n\t\t<td colspan=\"5\">\n\t\t\t<a
+      rel=\"nofollow\" href=\"http://www.steelseries.com/\" target=\"_blank\"><img src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_04.png?w=AAAPAiEzBJkHpA1fdD5goJA2dKN4jMhjI0eTaICfTLKolA\"
+      width=\"210\" height=\"48\" alt=\"\" /></a></td>\n\t\t<td>\n\t\t\t<a rel=\"nofollow\"
+      href=\"http://www.adidas.dk/\" target=\"_blank\"><img src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_05.png?w=AABnyDYee1AnvINW3wYSSbgXfAhoLB24cUzJn1YdqkbIOQ\"
+      width=\"184\" height=\"48\" alt=\"\" /></a></td>\n\t</tr><tr><td colspan=\"7\">\n\t\t\t<img
+      src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_06.png?w=AAAeqQZ4IpPxNNzEkeMVlgKGJKOVxXfR022Cah6Zh31_bQ\"
+      width=\"617\" height=\"17\" alt=\"\" /></td>\n\t</tr><tr><td colspan=\"2\" rowspan=\"2\">\n\t\t\t<img
+      src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_07.png?w=AADgYK510V7PxqfNi4czgV5ZDgGXHhMMXW1fWrgt6gLT8A\"
+      width=\"248\" height=\"589\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<a rel=\"nofollow\"
+      href=\"http://www.facebook.com/CopenhagenWolves\" target=\"_blank\"><img src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_08.png?w=AACBr_Bqxtdpi-kdx41HQMuTu_V_bGt2-cvWxczFSeaKbA\"
+      width=\"70\" height=\"65\" alt=\"\" /></a></td>\n\t\t<td rowspan=\"2\">\n\t\t\t<img
+      src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_09.png?w=AAAqUyYSBQhcZ0Cgfcy3SKrUg6hEseWzu89JKpGUT1JC3A\"
+      width=\"15\" height=\"589\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<a rel=\"nofollow\"
+      href=\"http://www.twitter.com/CPHWolves\" target=\"_blank\"><img src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_10.png?w=AADoUPz9MObM-HKS0Js5Epu9hvnIRwbApIzFpKhqYpzsjA\"
+      width=\"72\" height=\"65\" alt=\"\" /></a></td>\n\t\t<td colspan=\"2\" rowspan=\"2\">\n\t\t\t<img
+      src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_11.png?w=AAB5FG8mhgLAO_Q0MPgoJssdwXu9wdY_vfW4fyMnbZWYkw\"
+      width=\"212\" height=\"589\" alt=\"\" /></td>\n\t</tr><tr><td>\n\t\t\t<img src=\"https://photos-1.dropbox.com/t/0/AAD3t1QaW_EX4ZwOnGRw4okKweao9y0SNvoLdo13bk31Kw/12/157421804/png/32x32/3/_/1/2/twitch_info_12.png/w9R-qxtuY6XCqe8vqXRTBL1W9bhcfVem8u2yymUcCRI?size=1600x1200\"
+      width=\"70\" height=\"524\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<img src=\"https://dl-web.dropbox.com/get/Copenhagen%20Wolves/Media%20%28FB%2C%20Twitter%2C%20Twitch%29/Twitch_info/images/twitch_info_13.png?w=AADV0wTJ4jaPutWi1wTzT-7XDWKksPj1v6e9i5Czq1BCDA\"
+      width=\"72\" height=\"524\" alt=\"\" /></td>\n\t</tr><tr><td>\n\t\t\t<img src=\"images/spacer.gif\"
+      width=\"223\" height=\"1\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<img src=\"images/spacer.gif\"
+      width=\"25\" height=\"1\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<img src=\"images/spacer.gif\"
+      width=\"70\" height=\"1\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<img src=\"images/spacer.gif\"
+      width=\"15\" height=\"1\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<img src=\"images/spacer.gif\"
+      width=\"72\" height=\"1\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<img src=\"images/spacer.gif\"
+      width=\"28\" height=\"1\" alt=\"\" /></td>\n\t\t<td>\n\t\t\t<img src=\"images/spacer.gif\"
+      width=\"184\" height=\"1\" alt=\"\" /></td>\n\t</tr></table>\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wolves-banner_image-ae78bb51b046c0a9-640x125.png
+    name: wolves
+    _id: 638
+    _links:
+      self: https://api.twitch.tv/kraken/teams/wolves
+  - logo: 
+    display_name: ! 'Starcraft: Brood War'
+    background: 
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-03-27T22:02:25Z'
+    info: ! '
+
+'
+    banner: 
+    name: scbw
+    _id: 232
+    _links:
+      self: https://api.twitch.tv/kraken/teams/scbw
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-urgentfurylive-team_logo_image-f7793cc51b4d4a46-300x300.jpeg
+    display_name: Urgent Fury Live
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-urgentfurylive-background_image-eb7a3de035e469a0.jpeg
+    updated_at: '2012-12-05T01:24:33Z'
+    created_at: '2012-10-09T17:51:46Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-urgentfurylive-banner_image-c685acf114104163-640x125.png
+    name: urgentfurylive
+    _id: 427
+    _links:
+      self: https://api.twitch.tv/kraken/teams/urgentfurylive
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-omgtv-team_logo_image-9e400bef45ccb191-300x300.png
+    display_name: OneMoreGame.TV Crew
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-omgtv-background_image-fcd3992cd0294280.jpeg
+    updated_at: '2013-04-21T04:35:47Z'
+    created_at: '2012-01-15T19:41:46Z'
+    info: ! 'This is the listing page for all the streams of the amazing people involved
+      with OneMoreGame.TV!  From our show hosts to our production and site staff, check
+      out their personal streams if you dare!
+
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-omgtv-banner_image-63324444323bb5f8-640x125.png
+    name: omgtv
+    _id: 158
+    _links:
+      self: https://api.twitch.tv/kraken/teams/omgtv
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-leveluptv-team_logo_image-d961d25e898698df-300x300.png
+    display_name: Level Up TV
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-leveluptv-background_image-16e2728b33441bdb.png
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2011-12-11T11:34:17Z'
+    info: ! 'Your portal to Level Up TV''s coverage of various games.
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-leveluptv-banner_image-62de5f631ea7fa0d-640x125.png
+    name: leveluptv
+    _id: 113
+    _links:
+      self: https://api.twitch.tv/kraken/teams/leveluptv
+  - logo: 
+    display_name: Blood Legion Gaming
+    background: 
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2012-01-30T20:03:55Z'
+    info: ! 'Blood Legion Gaming
+
+
+'
+    banner: 
+    name: blgamingnet
+    _id: 172
+    _links:
+      self: https://api.twitch.tv/kraken/teams/blgamingnet
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-gengame-team_logo_image-0952acac2a9043ff-300x300.png
+    display_name: GenGAME
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-gengame-background_image-8147edc165028744.png
+    updated_at: '2013-01-05T20:27:04Z'
+    created_at: '2012-02-13T14:57:59Z'
+    info: ! '<img src="http://rigsware.org/livepic/3point5/SpecialThanks.png" alt="SpecialThanks.png"
+      /><br /><br /><ol><li>Stormshear</li>
+
+      </ol><br /><img src="http://rigsware.org/livepic/3point5/About.png" alt="About.png"
+      /><br /><br /><p align="center">
+
+      <a rel="nofollow" href="http://gengame.net" target="_blank"><img src="http://gengame.net/livepic/gamingnews.png"
+      alt="Gaming News" /></a>
+
+      <a rel="nofollow" href="http://gengame.net/forum" target="_blank"><img src="http://gengame.net/livepic/forums.png"
+      alt="GenGAME Forums" /></a>
+
+      <br /><br /><a rel="nofollow" href="http://youtube.com/gengamenet" target="_blank"><img
+      src="http://rigsware.org/livepic/3point5/youtubebutton.png" height="64" width="64"
+      alt="ytIcon.png" /></a>
+
+      <a rel="nofollow" href="http://twitter.com/gengame" target="_blank"><img src="http://rigsware.org/livepic/3point5/twitter-button.png"
+      height="64" width="64" alt="twitterIcon.png" /></a>
+
+      <a rel="nofollow" href="http://facebook.com/gengame" target="_blank"><img src="http://rigsware.org/livepic/3point5/facebook-button.png"
+      height="64" width="64" alt="fbIcon.png" /></a>
+
+      <a rel="nofollow" href="http://itunes.apple.com/us/podcast/gengamecast-the-gengame-net/id386101583"
+      target="_blank"><img src="http://rigsware.org/livepic/3point5/itunes_button.png"
+      height="64" width="64" alt="podcastIcon.png" /></a>
+
+      <br /><br /></p>
+
+      All of our amazing music is rebroadcast with permission from <a rel="nofollow"
+      href="http://radiohyrule.com" target="_blank">RadioHyrule.com</a> or was made
+      specifically for us by the awesome <a rel="nofollow" href="http://briandidomenico.com/"
+      target="_blank">Brian DiDomenico</a>.
+
+
+      <br /><br /><img src="http://rigsware.org/livepic/3point5/Rules.png" alt="twitchrules.png"
+      /><br /><br /><ol><li>No Spam of any kind.</li>
+
+      <li>No Hating on anyone.</li>
+
+      <li>Links are only allowed <strong>AFTER</strong> clearing it with a Host/Mod.</li>
+
+      <li>Always /invite your friends.</li>
+
+      <li>It''s a secret to everybody.</li>
+
+      <li>Don''t be a jerk.</li>
+
+      <li>Make an effort to keep the chat Family Friendly. (Except during After Hours).</li>
+
+      <li>rigs is awesome.</li>
+
+      </ol><br /><br /><img src="http://rigsware.org/livepic/3point5/Equipment.png"
+      alt="twitchequip.png" /><br /><br /><table><tr bgcolor="#cccccc"><td>Trevor:</td><td>EVGA
+      Z68 SLI, Core i7 2600K @ 3.4GHz, GTX 460 1GB, 8gb 1600MHz DDR3.</td></tr><tr bgcolor="#ccbbff"><td>rigs:</td><td>Sabertooth
+      X58, Core i7 960 OC''d to 4GHz, GTX 460 2GB, 6GB 1600MHz DDR3.</td></tr><tr bgcolor="#cccccc"><td>Denise:</td><td>Asus
+      P8P67 Pro, Core i7 2600k OC''d to 4GHz, GTX 560 1GB, 16GB 1600MHz DDR3.</td></tr><tr
+      bgcolor="#ccbbff"><td>Benny:</td><td>Gigabyte GA-X58A-UD3R, Core i7 950 @ 3.06GHz,
+      GTX 465 1GB, 4GB 1333MHz DDR3.</td></tr><tr bgcolor="#cccccc"><td>George:</td><td>Alienware
+      X58, Core i7 960 @ 2.67 GHz, GTX 560 TI 448core 2GB, 8GB 1600MHz DDR3.</td></tr><tr
+      bgcolor="#ccbbff"><td>Lex:</td><td>ASUS Crosshair V, AMD FX 8120 @ 3.42 GHz, Radeon
+      HD7700 1GB, 16GB 1600MHz DDR3.</td></tr><tr bgcolor="#cccccc"><td>Kevin:</td><td>EVGA
+      P55 SLI, Core i7 870 @ 2.93 GHz, 550Ti, 4GB 1600MHz DDR3.</td></tr><tr bgcolor="#ccbbff"><td>Lightz:</td><td>MSI
+      P67A-GD65, Core i7-2600K @ 3.4GHz, GTX 590 3GB, 16GB 1600MHz DDR3.</td></tr></table>
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-gengame-banner_image-f28d1d022c18d08e-640x125.png
+    name: gengame
+    _id: 184
+    _links:
+      self: https://api.twitch.tv/kraken/teams/gengame
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-reignsc2-team_logo_image-d28eb3665f176903-300x300.png
+    display_name: Team ReIGN
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-reignsc2-background_image-197a6c8fa4c8c018.jpeg
+    updated_at: '2012-10-03T01:48:24Z'
+    created_at: '2011-11-03T22:52:25Z'
+    info: ! "StarCraft 2 Team ReIGN |\r\nwww.reignsc2.com |\r\nwww.twitter.com/reignsc2
+      |\r\nwww.facebook.com/reignsc2"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-reignsc2-banner_image-a80d471565d1b634-640x125.png
+    name: reignsc2
+    _id: 24
+    _links:
+      self: https://api.twitch.tv/kraken/teams/reignsc2
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-kombatnetwork-team_logo_image-0e1c918f86495815-300x300.jpeg
+    display_name: Kombat Network
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-kombatnetwork-background_image-559277d7af947673.jpeg
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2012-01-28T18:09:49Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-kombatnetwork-banner_image-dc026147de5d7fdc-640x125.png
+    name: kombatnetwork
+    _id: 170
+    _links:
+      self: https://api.twitch.tv/kraken/teams/kombatnetwork
+  - logo: 
+    display_name: Supermassive
+    background: 
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-09-14T22:27:51Z'
+    info: ! '
+
+'
+    banner: 
+    name: supermassive
+    _id: 403
+    _links:
+      self: https://api.twitch.tv/kraken/teams/supermassive
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-bigcrits-team_logo_image-1967cd9a7437217c-300x300.png
+    display_name: Big Crits
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-bigcrits-background_image-f96dbe54a6f3e382.jpeg
+    updated_at: '2013-05-05T00:10:07Z'
+    created_at: '2011-11-08T03:34:42Z'
+    info: ! "Big Crits is a web-based reality show about World of Warcraft end-game
+      raiders. The channel will stream our raids and the featured player interviews,
+      as well as some rated battlegrounds. \n"
+    banner: 
+    name: bigcrits
+    _id: 68
+    _links:
+      self: https://api.twitch.tv/kraken/teams/bigcrits
+  - logo: 
+    display_name: Ingest
+    background: 
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-08-03T21:29:34Z'
+    info: ! '
+
+'
+    banner: 
+    name: special_ingest_beta
+    _id: 374
+    _links:
+      self: https://api.twitch.tv/kraken/teams/special_ingest_beta
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-1337loungelive-team_logo_image-7c90a108b075f4d6-300x300.jpeg
+    display_name: 1337LoungeLive
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-1337loungelive-background_image-dacc3892dac95f85.jpeg
+    updated_at: '2013-05-04T05:41:28Z'
+    created_at: '2013-04-03T23:17:56Z'
+    info: ! '<b>Jace HallΓÇÖs 1337LoungeLive is the internetΓÇÖs premiere interactive
+      gathering place for gamers, and home to THE ULTIMATE GAME MACHINE, featuring <i>every
+      game ever.</i></b> From 5 PM PST - MidnightΓÇöMon. thru Sat.ΓÇöthe Lounge brings
+      you premium live programming as we host celebrity guests from the video game industry,
+      Hollywood and the web. TheyΓÇÖre here to game and chat with you in real-time.<br
+      /><br />
+
+
+      When weΓÇÖre not streaming, The Lounge becomes your multi-camera gamer hangout
+      thatΓÇÖs open 24/7.<br /><br />
+
+
+      DonΓÇÖt miss a second of the excitement. <b><a rel="nofollow" href="http://www.1337LoungeLive.com"
+      target="_blank">See this weekΓÇÖs full broadcast schedule</a></b><br /><br /><b>ONLY
+      WATCHING ONE CAMERA?</b><br /><i>1337LoungeLive is an epic multi-camera game lounge.
+      </i>So if you only see one camera, youΓÇÖre only getting 1/9 of the awesome sauce.
+      <br /><br />
+
+
+      Please visit our team page to experience 1337LoungeLive from multiple angles.
+      YouΓÇÖre in control of which camera you want to maximize; simply click on name
+      of the camera in the left menu.<br /><br /><b><a rel="nofollow" href="http://www.facebook.com/1337LoungeLive"
+      target="_blank">LIKE US on Facebook for updates on upcoming guests.</a></b><br
+      /><b><a rel="nofollow" href="http://www.twitter.com/1337LoungeLive" target="_blank">FOLLOW
+      us on Twitter</a></b>
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-1337loungelive-banner_image-83386ce8a1da29eb-640x125.jpeg
+    name: 1337loungelive
+    _id: 652
+    _links:
+      self: https://api.twitch.tv/kraken/teams/1337loungelive
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-rizeupgaming-team_logo_image-1ecc1abe38622607-300x300.png
+    display_name: Rize Up Gaming
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-rizeupgaming-background_image-a4feee7fbbec1cdb.jpeg
+    updated_at: '2013-04-07T06:31:24Z'
+    created_at: '2013-01-16T23:36:04Z'
+    info: ! 'Organization dedicated to helping clean up toxicity in the gaming community.
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-rizeupgaming-banner_image-c50cddbf8b7d02cf-640x125.png
+    name: rizeupgaming
+    _id: 535
+    _links:
+      self: https://api.twitch.tv/kraken/teams/rizeupgaming
+  - logo: 
+    display_name: Katy "BunnyXablaze" Boyd 12 Hour Donation Stream
+    background: 
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-04-10T23:03:46Z'
+    info: ! 'Katy Boyd
+
+
+'
+    banner: 
+    name: katy
+    _id: 244
+    _links:
+      self: https://api.twitch.tv/kraken/teams/katy
+  - logo: 
+    display_name: CurseTV
+    background: 
+    updated_at: '2013-01-30T23:37:45Z'
+    created_at: '2013-01-30T23:37:35Z'
+    info: ! '
+
+'
+    banner: 
+    name: cursetv
+    _id: 565
+    _links:
+      self: https://api.twitch.tv/kraken/teams/cursetv
+  - logo: 
+    display_name: Affinity Gaming
+    background: 
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-12-18T21:59:42Z'
+    info: ! '
+
+'
+    banner: 
+    name: ag
+    _id: 128
+    _links:
+      self: https://api.twitch.tv/kraken/teams/ag
+  - logo: 
+    display_name: Latest and Greatest Gaming
+    background: 
+    updated_at: '2012-10-25T02:47:37Z'
+    created_at: '2012-10-24T05:20:42Z'
+    info: ! 'Latest and Greatest Professional Gaming Team
+
+'
+    banner: 
+    name: laggaming
+    _id: 456
+    _links:
+      self: https://api.twitch.tv/kraken/teams/laggaming
+  - logo: 
+    display_name: ROOT
+    background: 
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-05-16T03:16:04Z'
+    info: ! 'RootGaming
+
+
+
+'
+    banner: 
+    name: root
+    _id: 300
+    _links:
+      self: https://api.twitch.tv/kraken/teams/root
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-nasl-team_logo_image-393d8a169122e7d1-300x300.jpeg
+    display_name: North American Star League
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-nasl-background_image-608a8edfa02386ed.jpeg
+    updated_at: '2013-03-21T21:49:37Z'
+    created_at: '2012-07-10T23:19:32Z'
+    info: ! "<table width=\"620\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td
+      colspan=\"3\"><img src=\"http://www.nasl.tv/content/uploads/twitch/nasltv_twitch_subheader_welcome.jpg\"
+      alt=\"nasltv_twitch_subheader_welcome.jpg\" /></td>\n  </tr><tr><td height=\"8\"
+      colspan=\"3\"></td>\n  </tr><tr><td width=\"10\">┬á</td>\n    <td><table width=\"600\"
+      border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td width=\"392\"><strong><font
+      color=\"#006699\" size=\"2\">Get #thePULSE on eSports!</font></strong><br />\n
+      \         The North American Star League kicks off another exciting year of eSports
+      with a new live show #thePULSE. Anchored by the entire NASL cast, our team will
+      report (and argue) on the latest topics, news, and upsets in eSports.<br /></td>\n
+      \       <td width=\"18\">┬á</td>\n        <td width=\"190\" valign=\"top\"><strong><font
+      color=\"#006699\" size=\"2\">We are back!</font></strong><br />\nWe missed you.
+      So, while we prepare for <a rel=\"nofollow\" href=\"http://www.twitch.tv/nasls5\"
+      target=\"_blank\">NASL Season 5</a>, we will be going live here  with new content
+      for you!</td>\n      </tr></table></td>\n    <td width=\"10\">┬á</td>\n  </tr><tr><td
+      height=\"12\" colspan=\"3\"></td>\n  </tr><tr><td colspan=\"3\"><img src=\"http://www.nasl.tv/content/uploads/nasls4/gf/s4gf_twitch_subheader_links.jpg\"
+      alt=\"\" /></td>\n  </tr><tr><td height=\"8\" colspan=\"3\"></td>\n  </tr><tr><td
+      width=\"10\">┬á</td>\n    <td><table width=\"600\" border=\"0\" cellspacing=\"0\"
+      cellpadding=\"0\"><tr><td width=\"150\" valign=\"top\"><strong><font color=\"#006699\"
+      size=\"2\">Upcoming</font></strong><br /><a rel=\"nofollow\" href=\"http://www.twitch.tv/nasls5\"
+      target=\"_blank\">NASL Season 5 </a><br />        \n        Get the Newsletter<br
+      /><br /><br /><br /></td>\n        <td width=\"150\" valign=\"top\"><strong><font
+      color=\"#006699\" size=\"2\">Previous Seasons</font></strong><br /><a rel=\"nofollow\"
+      href=\"http://www.twitch.tv/nasls4\" target=\"_blank\">NASL Season 4</a><br /><a
+      rel=\"nofollow\" href=\"http://www.twitch.tv/nasls3\" target=\"_blank\">NASL Season
+      3</a><br /><a rel=\"nofollow\" href=\"http://www.twitch.tv/naslseasontwo\" target=\"_blank\">NASL
+      Season 2 </a><br /><a rel=\"nofollow\" href=\"http://www.twitch.tv/naslseasonone\"
+      target=\"_blank\">NASL Season 1</a></td>\n        <td width=\"150\" valign=\"top\"><font
+      size=\"2\" color=\"#006699\"><strong>More NASL</strong></font><br /><a rel=\"nofollow\"
+      href=\"http://www.nasl.tv/\" target=\"_blank\">NASL.tv</a><br /><a rel=\"nofollow\"
+      href=\"http://www.twitter.com/NASLTV\" target=\"_blank\">NASL on Twitter</a><br
+      /><a rel=\"nofollow\" href=\"http://www.facebook.com/NASLTV\" target=\"_blank\">NASL
+      on Facebook</a><br /><a rel=\"nofollow\" href=\"www.gamespot.com/nasls4\" target=\"_blank\">NASL
+      on GameSpot</a><br /></td>\n        <td width=\"150\" valign=\"top\"><font size=\"2\"
+      color=\"#006699\"><strong>NASL on Twitter</strong></font><br /><a rel=\"nofollow\"
+      href=\"http://www.twitter.com/nasltv\" target=\"_blank\">@NASLTV</a><br /><a rel=\"nofollow\"
+      href=\"http://www.twitter.com/nasl_videos\" target=\"_blank\">@NASL_Videos</a><br
+      /><a rel=\"nofollow\" href=\"http://www.twitter.com/nasl_chance\" target=\"_blank\">@NASL_Chance</a><br
+      /><a rel=\"nofollow\" href=\"http://www.twitter.com/nasl_max\" target=\"_blank\">@NASL_Max</a></td>\n
+      \     </tr></table></td>\n    <td width=\"10\">┬á</td>\n  </tr><tr><td height=\"12\"
+      colspan=\"3\"></td>\n  </tr><tr><td colspan=\"3\"><img src=\"http://www.nasl.tv/content/uploads/nasls4/gf/s4gf_twitch_subheader_schedule.jpg\"
+      alt=\"\" /></td>\n  </tr><tr><td height=\"8\" colspan=\"3\"></td>\n  </tr><tr><td
+      width=\"10\"><br /></td>\n    <td><table width=\"600\" border=\"0\" cellspacing=\"0\"
+      cellpadding=\"0\"><tr><td height=\"30\"><strong><font color=\"#006699\" size=\"2\">Show</font></strong></td>\n
+      \       <td width=\"10\" height=\"30\">┬á</td>\n        <td height=\"30\" colspan=\"3\"><strong><font
+      color=\"#006699\" size=\"2\">Broadcast</font></strong></td>\n        <td width=\"10\"
+      height=\"30\">┬á</td>\n        <td height=\"30\" colspan=\"3\"><strong><font color=\"#006699\"
+      size=\"2\">Rebroadcast</font></strong></td>\n        </tr><tr><td height=\"3\"
+      colspan=\"9\" bgcolor=\"#333333\"></td>\n        </tr><tr><td height=\"6\" colspan=\"9\"></td>\n
+      \       </tr><tr><td height=\"25\">#thePULSE Episode 8 - League of Legends</td>\n
+      \       <td width=\"10\" height=\"25\">┬á</td>\n        <td height=\"25\">6pm
+      PST</td>\n        <td width=\"5\" height=\"25\">┬á</td>\n        <td height=\"25\">3/20/2013</td>\n
+      \       <td width=\"10\" height=\"25\">┬á</td>\n        <td height=\"25\">10am
+      PST</td>\n        <td width=\"5\" height=\"25\">┬á</td>\n        <td height=\"25\">3/21/2013</td>\n
+      \     </tr><tr><td height=\"25\" bgcolor=\"#CEE6FF\">HotS Build Order Breakdown
+      with Gretorp - ZvP</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n
+      \       <td height=\"25\" bgcolor=\"#CEE6FF\">3pm PST</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">3/22/2013</td>\n
+      \       <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">10am PST</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n
+      \       <td height=\"25\" bgcolor=\"#CEE6FF\">3/23/2013</td>\n      </tr><tr><td
+      height=\"25\">HotS Build Order Breakdown with RotterdaM - PvP</td>\n        <td
+      height=\"25\">┬á</td>\n        <td height=\"25\">4pm PST</td>\n        <td height=\"25\">┬á</td>\n
+      \       <td height=\"25\">3/22/2013</td>\n        <td height=\"25\">┬á</td>\n
+      \       <td height=\"25\">11am PST</td>\n        <td height=\"25\">┬á</td>\n        <td
+      height=\"25\">3/23/2013</td>\n      </tr><tr><td height=\"25\" bgcolor=\"#CEE6FF\">#thePULSE
+      Episode 9 - StarCraft II</td>\n        <td width=\"10\" height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n
+      \       <td height=\"25\" bgcolor=\"#CEE6FF\">11am PST</td>\n        <td width=\"5\"
+      height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">3/24/2013</td>\n
+      \       <td width=\"10\" height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td
+      height=\"25\" bgcolor=\"#CEE6FF\">7pm PST</td>\n        <td width=\"5\" height=\"25\"
+      bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">3/24/2013</td>\n
+      \     </tr><tr><td height=\"25\">ZvZ with MrBitter</td>\n        <td height=\"25\">┬á</td>\n
+      \       <td height=\"25\">6pm PST</td>\n        <td height=\"25\">┬á</td>\n        <td
+      height=\"25\">3/27/2013</td>\n        <td height=\"25\">┬á</td>\n        <td height=\"25\">10am
+      PST</td>\n        <td height=\"25\">┬á</td>\n        <td height=\"25\">3/28/2013</td>\n
+      \     </tr><tr><td height=\"25\" bgcolor=\"#CEE6FF\">PvT with RotterdaM</td>\n
+      \       <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">6pm PST</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n
+      \       <td height=\"25\" bgcolor=\"#CEE6FF\">3/28/2013</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">10am
+      PST</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">3/29/2013</td>\n      </tr><tr><td height=\"23\">Newbie Friday
+      - StarCraft with Lauren Elise</td>\n        <td height=\"23\">┬á</td>\n        <td
+      height=\"23\">6pm PST</td>\n        <td height=\"23\">┬á</td>\n        <td height=\"23\">3/29/2013</td>\n
+      \       <td height=\"23\">┬á</td>\n        <td height=\"23\">10am PST</td>\n        <td
+      height=\"23\">┬á</td>\n        <td height=\"23\">3/30/2013</td>\n      </tr><tr><td
+      height=\"25\" bgcolor=\"#CEE6FF\">Newbie Friday - Dota 2 with Gretorp</td>\n        <td
+      height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">8pm
+      PST</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">3/29/2013</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n
+      \       <td height=\"25\" bgcolor=\"#CEE6FF\">12pm PST</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">3/30/2013</td>\n
+      \     </tr><tr><td height=\"25\">Up to Speed with Clutch - World of Tanks Special</td>\n
+      \       <td height=\"25\">┬á</td>\n        <td height=\"25\">6pm PST</td>\n        <td
+      height=\"25\">┬á</td>\n        <td height=\"25\">3/30/2013</td>\n        <td height=\"25\">┬á</td>\n
+      \       <td height=\"25\">10am PST</td>\n        <td height=\"25\">┬á</td>\n        <td
+      height=\"25\">3/31/2013</td>\n      </tr><tr><td height=\"25\" bgcolor=\"#CEE6FF\">Frodan
+      #NoFilter</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td
+      height=\"25\" bgcolor=\"#CEE6FF\">6pm PST</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n
+      \       <td height=\"25\" bgcolor=\"#CEE6FF\">3/31/2013</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">10am
+      PST</td>\n        <td height=\"25\" bgcolor=\"#CEE6FF\">┬á</td>\n        <td height=\"25\"
+      bgcolor=\"#CEE6FF\">4/01/2013</td>\n      </tr><tr><td height=\"25\">Up to Speed
+      Special - SC2 HotS Lore with Clutch</td>\n        <td height=\"25\">┬á</td>\n
+      \       <td height=\"25\">11am PST</td>\n        <td height=\"25\">┬á</td>\n        <td
+      height=\"25\">4/13/2013</td>\n        <td height=\"25\">┬á</td>\n        <td height=\"25\">7pm
+      PST</td>\n        <td height=\"25\">┬á</td>\n        <td height=\"25\">4/13/2013</td>\n
+      \     </tr></table></td>\n    <td width=\"10\">┬á</td>\n  </tr><tr><td height=\"12\"
+      colspan=\"3\"></td>\n  </tr><tr><td height=\"12\" colspan=\"3\"></td>\n  </tr><tr><td
+      colspan=\"3\"><img src=\"http://www.nasl.tv/content/uploads/nasls4/gf/s4gf_twitch_subheader_faq.jpg\"
+      alt=\"FAQ\" /></td>\n  </tr><tr><td height=\"8\" colspan=\"3\"></td>\n  </tr><tr><td
+      width=\"10\">┬á</td>\n    <td width=\"600\"><font size=\"2\" color=\"#006699\"><strong>Can
+      I watch for free?</strong></font><br />\n    Yes, you can! Our NASLTV off-season
+      content is available for free while we prepare for <a rel=\"nofollow\" href=\"http://www.twitch.tv/NASLS5\"
+      target=\"_blank\">NASL Season 5</a>. NASL Season 5 broadcasts will be available
+      for free in 360p and 480p. For access to VODs, chat, and 720p, 1080p, and 1080p+,
+      \ you'll need to <a rel=\"nofollow\" href=\"https://secure.twitch.tv/nasls5/subscribe/277\"
+      target=\"_blank\">get an HD Pass</a>.<br /><br /><font size=\"2\" color=\"#006699\"><strong>Where
+      are the VODs?</strong></font><br />\n    VODs are available under the video tab
+      and at <a rel=\"nofollow\" href=\"http://www.nasl.tv\" target=\"_blank\">www.NASL.tv</a>!
+      VODs of the complete broadcast will be available shortly after each broadcast
+      via Twitch. VODs broken up by game will be available shortly thereafter. Please
+      follow <a rel=\"nofollow\" href=\"http://www.twitter.com/nasl_videos\" target=\"_blank\">@NASL_Videos</a>
+      and <a rel=\"nofollow\" href=\"http://www.twitter.com/nasltv\" target=\"_blank\">@NASLTV</a>
+      for updates on VODs availability.<br /><br /><font size=\"2\" color=\"#006699\"><strong>What's
+      NASL?</strong></font><br />\n    Hello! We are the <a rel=\"nofollow\" href=\"http://www.NASL.tv\"
+      target=\"_blank\">North American Star League</a>. If you're here for your love
+      of eSports, then we have a lot in common. Located in Southern California, we are
+      dedicated to promoting the prominence of eSports in North America and are constantly
+      striving to deliver you unforgettable games in crystal clear 1080p (because that's
+      how games should be seen!).  So, please sit back, relax, enjoy the games, and
+      stay a while. <br /></td>\n    <td width=\"10\">┬á</td>\n  </tr><tr><td height=\"12\"
+      colspan=\"3\"></td>\n  </tr><tr><td colspan=\"3\"><img src=\"http://www.nasl.tv/content/uploads/nasls4/gf/s4gf_twitch_footer.jpg\"
+      alt=\"\" width=\"620\" /></td>\n  </tr></table>\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-nasl-banner_image-ce67a4bc59c9324d-640x125.jpeg
+    name: nasl
+    _id: 353
+    _links:
+      self: https://api.twitch.tv/kraken/teams/nasl
+  - logo: 
+    display_name: SCG Streams
+    background: 
+    updated_at: '2012-10-03T01:48:26Z'
+    created_at: '2012-04-19T00:23:10Z'
+    info: ! '
+
+'
+    banner: 
+    name: scg
+    _id: 256
+    _links:
+      self: https://api.twitch.tv/kraken/teams/scg
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ewin-team_logo_image-c367cda19e99e499-300x300.png
+    display_name: eWin
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ewin-background_image-f0e528a4d749579a.jpeg
+    updated_at: '2013-02-09T12:52:12Z'
+    created_at: '2012-03-13T20:41:58Z'
+    info: ! '<br /><a rel="nofollow" href="http://tinypic.com?ref=2me5m5l" target="_blank"><img
+      src="http://i50.tinypic.com/2me5m5l.png" border="0" alt="Image and video hosting
+      by TinyPic" /></a>
+
+      <br /><br /><br /><a rel="nofollow" href="http://tinypic.com?ref=2cfsi2b" target="_blank"><img
+      src="http://i49.tinypic.com/2cfsi2b.png" border="0" alt="Image and video hosting
+      by TinyPic" /></a>
+
+      <br /><br />
+
+      ┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á┬á<a rel="nofollow" href="https://twitter.com/Project_eWin"
+      target="_blank"><img src="http://i50.tinypic.com/r8rmzq.png" border="0" alt="Image
+      and video hosting by TinyPic" /></a>┬á┬á┬á┬á┬á┬á<a rel="nofollow" href="http://www.facebook.com/pages/eWin/142599702456989"
+      target="_blank"><img src="http://i48.tinypic.com/2coj15i.png" border="0" alt="Image
+      and video hosting by TinyPic" /></a>┬á┬á┬á┬á┬á┬á<a rel="nofollow" href="http://www.youtube.com/eWinMedia"
+      target="_blank"><img src="http://i47.tinypic.com/262my42.png" border="0" alt="Image
+      and video hosting by TinyPic" /></a>
+
+      <br /><br /><br /><a rel="nofollow" href="http://tinypic.com?ref=24bmdme" target="_blank"><img
+      src="http://i50.tinypic.com/24bmdme.png" border="0" alt="Image and video hosting
+      by TinyPic" /></a>
+
+
+      ┬á┬áReflex GT - February 16th - 17th in Amsterdam
+
+      <br />
+
+      ┬á┬áMLG Winter Championships - March 15th - 17th in Dallas
+
+      ┬á
+
+
+
+
+
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ewin-banner_image-6279e03d5fa79428-640x125.jpeg
+    name: ewin
+    _id: 216
+    _links:
+      self: https://api.twitch.tv/kraken/teams/ewin
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-redbulllan-team_logo_image-7c17ab3f2e4e8014-300x300.jpeg
+    display_name: RedBull LAN
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-redbulllan-background_image-014837399fe8ca9d.jpeg
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2012-02-21T19:04:37Z'
+    info: ! 'Go to <a rel="nofollow" href="http://www.redbullusa.com/LAN" target="_blank">RedBullUSA.com/LAN</a>
+      for live event updates and results, and join the conversation on Twitter <a rel="nofollow"
+      href="http://www.twitter.com/redbullGAMING" target="_blank">@redbullGAMING</a>
+      #Battlegrounds
+
+      <br /><br />
+
+      Stay tuned for an update on the rest of the 2012 schedule ;-)
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-redbulllan-banner_image-f54efe72f8ec0a45-640x125.jpeg
+    name: redbulllan
+    _id: 202
+    _links:
+      self: https://api.twitch.tv/kraken/teams/redbulllan
+  - logo: 
+    display_name: Dungeon Realms Streamers
+    background: 
+    updated_at: '2013-03-22T23:35:57Z'
+    created_at: '2013-03-22T23:35:05Z'
+    info: ! '
+
+'
+    banner: 
+    name: dungeonrealmsstreamers
+    _id: 646
+    _links:
+      self: https://api.twitch.tv/kraken/teams/dungeonrealmsstreamers
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-escn-team_logo_image-8e11c47dce3f78f4-300x300.png
+    display_name: eSports Collective Network
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-escn-background_image-eb786373a945fe48.png
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-12-18T23:01:32Z'
+    info: ! 'A Collection of the finest eSports Broadcasting teams in the world, the
+      eSports Collective Network brings complete coverage of both North American and
+      European competitive gaming.
+
+
+
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-escn-banner_image-feed76a2b0cadafd-640x125.png
+    name: escn
+    _id: 129
+    _links:
+      self: https://api.twitch.tv/kraken/teams/escn
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamalt-team_logo_image-49042e89a599bbfe-300x300.png
+    display_name: Team ALT - Altstarcraft.com
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamalt-background_image-c87f4b7d93e790eb.png
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-02-17T05:01:16Z'
+    info: ! "<a rel=\"nofollow\" href=\"http://imageshack.us/photo/my-images/268/altlogooooimage.png/\"
+      target=\"_blank\"><img src=\"http://img268.imageshack.us/img268/5097/altlogooooimage.png\"
+      border=\"0\" alt=\"altlogooooimage.png\" /></a> <br /><br /><b>About Us:</b>  <br
+      /><br />\nTeam ALT is founded by Altstarcraft.com and is an under construction
+      e-sports team. <br /> \nInformation will be updated as time goes on.  Check us
+      out and Follow us! <br />\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamalt-banner_image-0702db40c0ad383c-640x125.jpeg
+    name: teamalt
+    _id: 195
+    _links:
+      self: https://api.twitch.tv/kraken/teams/teamalt
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-boundbyhonor-team_logo_image-5ec520281a5fe6e1-300x300.png
+    display_name: Bound by Honor
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-boundbyhonor-background_image-387ed140242da61c.jpeg
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-10-25T23:34:14Z'
+    info: http://www.bbhgaming.com
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-boundbyhonor-banner_image-5ee2cd2fac212614-640x125.jpeg
+    name: boundbyhonor
+    _id: 8
+    _links:
+      self: https://api.twitch.tv/kraken/teams/boundbyhonor
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-highcorporation-team_logo_image-588ce92449887f6e-300x300.png
+    display_name: Xtreme Gamers ┬«
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-highcorporation-background_image-abca1efa571f3c66.png
+    updated_at: '2013-02-11T00:28:40Z'
+    created_at: '2012-11-18T01:08:15Z'
+    info: ! "\n\n\n<div>\n<div style=\"width:620px;margin-bottom:25px;\">\n<div style=\"width:95%;margin-bottom:0px;padding-top:0px;\">\n\t\t<div><img
+      src=\"http://conkerbunker.webs.com/maineventfinal.png\" width=\"280\" height=\"38\"
+      alt=\"maineventfinal.png\" /></div>\n        <ul style=\"padding:0;margin:10px
+      0px 0px 20px;color:#000;\"><li style=\"list-style:none;margin-bottom:5px;font-size:13px;font-weight:bold;\">None
+      at the moment.</li>\n        </ul></div>\n\n<div style=\"font-size:12px;font-family:Helvetica,
+      Arial, sans-serif;font-weight:bold;color:#333;background:url(http://conkerbunker.webs.com/bginfo.gif);margin-top:10px;width:620px;\">\n
+      \ <div style=\"height:90px;width:100%;margin-bottom:5px;\">\n    \t\t<div style=\"float:right;\">\n\t\t\t<p><img
+      src=\"http://conkerbunker.webs.com/HCinfobanner2.gif\" width=\"620\" height=\"58\"
+      alt=\"HCinfobanner2.gif\" /></p>\n</div>\n    <div style=\"width:98%;margin-bottom:20px;padding-top:70px;padding-bottom:5px;\">\n\t
+      \ <p style=\"color:#FFF;margin:5px 0px 20px 20px;padding:0;\"> Xtreme Gamers is
+      a community from all over the world and we are passionate about gaming and streaming.
+      From console to PC and\n      action to sports, Xtreme Gamers are here for your
+      entertainment. Enjoy the channels and thank you for checking us out. </p>\n\t
+      \ <p style=\"color:#FFF;margin:5px 0px 20px 20px;\"> - Luis (CEO of High Corporation)</p>\n
+      \     </div>\n</div>\n\n<div style=\"width:98%;margin-bottom:30px;padding-top:90px;padding-bottom:5px;\">\n\t
+      \ <div><img src=\"http://conkerbunker.webs.com/TMXG.png\" alt=\"TMXG.png\" /></div>\n\t
+      \n\t\t<ul style=\"padding:0;margin:10px 0px 0px 20px;color:#ffffff;\"><li style=\"list-style:none;margin-bottom:5px;\">If
+      you are going to be on our team please have our name on your channel.</li>\n            <li
+      style=\"list-style:none;margin-bottom:5px;\">Please no racism at all or being
+      rude to team members.</li>\n            <li style=\"list-style:none;margin-bottom:5px;\">After
+      you are done streaming, please send your viewers to the team page.</li>\n\t\t\t<li
+      style=\"list-style:none;margin-bottom:5px;\">If a team member needs help setting
+      up his/her cast, please try to help if not busy. </li>\n\t\t\t<li style=\"list-style:none;margin-bottom:5px;\"></li>\n
+      \           <li style=\"list-style:none;margin-bottom:5px;\"></li>\n      </ul><ul
+      style=\"padding:0;margin:10px 0px 0px 20px;color:#CCC;\"><li style=\"list-style:none;margin-bottom:5px;\"></li></ul><div
+      style=\"width:95%;height:185px;margin-bottom:0px;padding-top:20px;\">\n\t\t<div><img
+      src=\"http://conkerbunker.webs.com/eventXG.png\" alt=\"eventXG.png\" /></div>\n
+      \       <ul style=\"padding:0;margin:10px 0px 0px 20px;color:#FFF;\"><li style=\"list-style:none;margin-bottom:5px;\">If
+      you are going to have an event let us know a week ahead so we can put the channel
+      on the front of the team page.</li>\n\t\t\t<li style=\"list-style:none;margin-bottom:5px;\">Do
+      you need a background for the event? Let Conkerbunker or Highgaming know a week
+      ahead so they can make you a background.</li>\n\t\t\t<li style=\"list-style:none;margin-bottom:5px;\">Send
+      a message with the title &quot;Team Event&quot; and let us know what you need
+      and what time it's starting.</li>\n\t    </ul></div>\n  \n<div style=\"width:95%;height:210px;margin-bottom:0px;padding-top:0px;\">\n\t\t<div><img
+      src=\"http://conkerbunker.webs.com/joinXG.png\" alt=\"joinXG.png\" /></div>\n
+      \       <ul style=\"padding:0;margin:10px 0px 0px 20px;color:#FFF;\"><li style=\"list-style:none;margin-bottom:5px;\">You
+      must have a smooth cast with no lag.</li>\n\t\t\t<li style=\"list-style:none;margin-bottom:5px;\">30fps
+      to 60fps and 360p to 1080p.</li>\n\t\t\t<li style=\"list-style:none;margin-bottom:5px;\">Must
+      be friendly and have a good time casting.</li>\n\t\t\t<li style=\"list-style:none;margin-bottom:5px;\">Only
+      send a message to 1 Team Manager from the list.</li>\n            <li style=\"list-style:none;margin-bottom:5px;\"><a
+      rel=\"nofollow\" href=\"http://www.twitch.tv/message/compose?to=bloodburger\"
+      target=\"_blank\"> Bloodburger</a> - \n                                                           <a
+      rel=\"nofollow\" href=\"http://www.twitch.tv/message/compose?to=conkerbunker\"
+      target=\"_blank\"> Conkerbunker</a> - \n                                                           <a
+      rel=\"nofollow\" href=\"http://www.twitch.tv/message/compose?to=heyitsbbg\" target=\"_blank\">
+      HeyitsBBG</a> - \n                                                           <a
+      rel=\"nofollow\" href=\"http://www.twitch.tv/message/compose?to=victor149\" target=\"_blank\">
+      Victor149</a></li>\n            <li style=\"list-style:none;margin-bottom:5px;\">We
+      will get back to you shortly as we can.</li>\n            \n      </ul></div>\n
+      \ \n  <div><center><a rel=\"nofollow\" href=\"http://steamcommunity.com/groups/XtremeGamersHighCorp#\"
+      target=\"_blank\"><img src=\"http://conkerbunker.webs.com/XGsteamheader.png\"
+      alt=\"XGsteamheader.png\" /></a></center></div>\n\t\n    <div style=\"float:left;\"></div>\n\t\n\t<div
+      style=\"float:right;\"></div>\n\n </div>\n\n\n\n\n\n\n\n\n\n\n</div></div></div>\n\n\n\n\n\n\n\n\n\n\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-highcorporation-banner_image-e7c1349f85622025-640x125.png
+    name: highcorporation
+    _id: 483
+    _links:
+      self: https://api.twitch.tv/kraken/teams/highcorporation
+  - logo: 
+    display_name: CrosseyedArena
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-crosseyed_arena-background_image-3b47eadfb3cde9c1.jpeg
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-05-22T19:09:06Z'
+    info: ! '
+
+'
+    banner: 
+    name: crosseyed_arena
+    _id: 305
+    _links:
+      self: https://api.twitch.tv/kraken/teams/crosseyed_arena
+  - logo: 
+    display_name: KaosTV
+    background: 
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-11-09T23:10:48Z'
+    info: ''
+    banner: 
+    name: kaostv3
+    _id: 80
+    _links:
+      self: https://api.twitch.tv/kraken/teams/kaostv3
+  - logo: 
+    display_name: Jolly ol' Streamers
+    background: 
+    updated_at: '2013-01-26T00:59:57Z'
+    created_at: '2013-01-26T00:59:50Z'
+    info: ! '
+
+'
+    banner: 
+    name: jollyolstreamers
+    _id: 551
+    _links:
+      self: https://api.twitch.tv/kraken/teams/jollyolstreamers
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-tthon-team_logo_image-27a46cacaa8d8a65-300x300.png
+    display_name: Tt eSPORTS HoN
+    background: 
+    updated_at: '2012-10-03T01:48:27Z'
+    created_at: '2012-06-04T02:20:07Z'
+    info: ! '
+
+'
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-tthon-banner_image-53cb125c3487eefc-640x125.png
+    name: tthon
+    _id: 318
+    _links:
+      self: https://api.twitch.tv/kraken/teams/tthon
+  _links:
+    prev: https://api.twitch.tv/kraken/teams?limit=100&offset=100
+    next: https://api.twitch.tv/kraken/teams?limit=100&offset=300
+    self: https://api.twitch.tv/kraken/teams?limit=100&offset=200

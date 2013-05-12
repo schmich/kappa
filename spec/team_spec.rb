@@ -1,6 +1,7 @@
 require 'rspec'
 require 'yaml'
 require 'kappa'
+require 'common'
 
 include Kappa::V2
 
@@ -43,4 +44,3 @@ describe Kappa::V2::Team do
     end
   end
 end
-

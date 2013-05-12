@@ -64,6 +64,9 @@ describe Kappa::V2::Streams do
     end
   end
 
+  # TODO: Streams.featured
   describe '.featured' do
   end
+
+  # TODO: Streams.all
 end

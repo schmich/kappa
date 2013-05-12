@@ -66,4 +66,7 @@ describe Kappa::V2::Channel do
       c.stream.should be_nil
     end
   end
+
+  # TODO: Channel#followers
+  # TODO: Channel#videos
 end
