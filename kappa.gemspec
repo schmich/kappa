@@ -2,9 +2,9 @@ Gem::Specification.new do |s|
   s.name = 'kappa'
   s.version = eval(File.read('lib/kappa/version.rb'))
   s.date = Time.now.strftime('%Y-%m-%d')
-  s.summary = 'Ruby library for interfacing with the Twitch.tv Kraken API.'
+  s.summary = 'Ruby library for interfacing with the Twitch.tv API.'
   s.description = <<-END
-    A Ruby library for interfacing with the Twitch.tv Kraken API
+    A Ruby library for interfacing with the Twitch.tv API
     including users, channels, streams, and followers.
   END
   s.authors = ['Chris Schmich']
