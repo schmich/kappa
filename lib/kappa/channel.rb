@@ -30,14 +30,11 @@ module Kappa::V2
 
     # TODO: Move these into derived classes?
     def stream
-      # TODO: Use _links instead of hard-coding.
-      json = connection.get("streams/#{@name}")
-      stream_json = json['stream']
-      Stream.new(stream_json)
+      Stream.get(@name)
     end
 
     def streaming?
-      stream.live?
+      !stream.nil?
     end
 
     #

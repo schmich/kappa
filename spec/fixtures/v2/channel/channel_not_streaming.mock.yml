@@ -1,0 +1,30 @@
+https://api.twitch.tv/kraken/channels/lagtvmaximusblack:
+  game: ! 'StarCraft II: Heart of the Swarm'
+  status: MaximusBlack & The FellowShip Of The Bouses Chat In Raid Call ID# 5717541
+  teams: []
+  updated_at: '2013-05-11T17:28:59Z'
+  background: http://static-cdn.jtvnw.net/jtv_user_pictures/lagtvmaximusblack-channel_background_image-2ca7ff742cac4d2a.png
+  url: http://www.twitch.tv/lagtvmaximusblack
+  _links:
+    videos: https://api.twitch.tv/kraken/channels/lagtvmaximusblack/videos
+    follows: https://api.twitch.tv/kraken/channels/lagtvmaximusblack/follows
+    chat: https://api.twitch.tv/kraken/chat/lagtvmaximusblack
+    editors: https://api.twitch.tv/kraken/channels/lagtvmaximusblack/editors
+    commercial: https://api.twitch.tv/kraken/channels/lagtvmaximusblack/commercial
+    subscriptions: https://api.twitch.tv/kraken/channels/lagtvmaximusblack/subscriptions
+    stream_key: https://api.twitch.tv/kraken/channels/lagtvmaximusblack/stream_key
+    self: https://api.twitch.tv/kraken/channels/lagtvmaximusblack
+    features: https://api.twitch.tv/kraken/channels/lagtvmaximusblack/features
+  created_at: '2011-08-08T21:03:44Z'
+  mature: true
+  _id: 23945610
+  name: lagtvmaximusblack
+  banner: http://static-cdn.jtvnw.net/jtv_user_pictures/lagtvmaximusblack-channel_header_image-a75bf794bf1cfd85-640x125.png
+  display_name: LAGTVMaximusBlack
+  logo: http://static-cdn.jtvnw.net/jtv_user_pictures/lagtvmaximusblack-profile_image-4b77a2305f5d85c8-300x300.png
+  video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/lagtvmaximusblack-channel_offline_image-c43d2ebd42493c47-640x360.png
+https://api.twitch.tv/kraken/streams/lagtvmaximusblack:
+  stream: 
+  _links:
+    self: https://api.twitch.tv/kraken/streams/lagtvmaximusblack
+    channel: https://api.twitch.tv/kraken/channels/lagtvmaximusblack

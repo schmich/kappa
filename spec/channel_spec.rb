@@ -1,6 +1,7 @@
 require 'rspec'
 require 'yaml'
 require 'kappa'
+require 'common'
 
 include Kappa::V2
 
@@ -15,7 +16,7 @@ describe Kappa::V2::Channel do
 
   describe '.new' do
     it 'can be created from a hash' do
-      hash = yaml_load('channel/channel_minigun.yml')
+      hash = yaml_load('channel/colminigun.yml')
       c = Channel.new(hash)
       c.id.should == hash['_id']
       c.background_url.should == hash['background']
@@ -36,16 +37,33 @@ describe Kappa::V2::Channel do
     end
 
     it 'has associated teams' do
-      hash = yaml_load('channel/channel_minigun.yml')
+      hash = yaml_load('channel/colminigun.yml')
       c = Channel.new(hash)
+      c.teams.should_not be_nil
       c.teams.should_not be_empty
     end
   end
-  
+ 
   describe '.get' do
     it 'creates a Channel from channel name' do
       c = Channel.get('colminigun')
       c.should_not be_nil
+    end
+  end
+
+  describe '.streaming?' do
+    it 'returns true when a channel has a live stream' do
+      c = Channel.get('incontroltv')
+      c.should_not be_nil
+      c.streaming?.should be_true
+      c.stream.should_not be_nil
+    end
+
+    it 'returns false when a channel does not have a live stream' do
+      c = Channel.get('lagtvmaximusblack')
+      c.should_not be_nil
+      c.streaming?.should be_false
+      c.stream.should be_nil
     end
   end
 end
