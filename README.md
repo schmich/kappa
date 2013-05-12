@@ -27,39 +27,32 @@ puts grubby.streaming?
 
 Channels serve as the home location for a [user's](#users) content. Channels have a [stream](#streams), can run commercials, store [videos](#videos), display information and status, and have a customized page including banners and backgrounds.
 
+See also [`Kappa::V2::Channel`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Channel) documentation.
+
 ```ruby
 c = Channel.get('destiny')
-```
-
-```ruby
-c.nil?                # Does the requested channel not exist? (ex: false)
-c.name                # Unique Twitch name (ex: "destiny")
-c.display_name        # Display name, e.g. name used for page title (ex: "Destiny")
-c.stream              # The currently live stream for this channel (ex: #<Kappa::V2::Stream> object)
-c.url                 # The URL for the channel's main page (ex: "http://www.twitch.tv/destiny")
-c.status              # Current status (ex: "Destiny - Diamond I ADC  - Number 1 Draven player in the entire Omaha (NE) metro area -watch from http://www.destiny.gg")
-c.streaming?          # Is the channel currently streaming? (ex: true)
-c.game_name           # Name of the primary game for this channel (ex: "League of Legends")
-c.mature?             # Does the channel have mature content? (ex: true)
-c.id                  # Unique Twitch ID (ex: 18074328)
-c.created_at          # When the channel was created (ex: #<DateTime: 2010-11-22T04:14:56+00:00 ((2455523j,15296s,0n),+0s,2299161j)>)
-c.updated_at          # When the channel was last updated, e.g. last stream time (ex: #<DateTime: 2013-05-11T19:57:29+00:00 ((2456424j,71849s,0n),+0s,2299161j)>)
-c.background_url      # URL for background image (ex: "http://static-cdn.jtvnw.net/jtv_user_pictures/destiny-channel_background_image-ab706db77853e079.jpeg")
-c.banner_url          # URL for banner image (ex: "http://static-cdn.jtvnw.net/jtv_user_pictures/destiny-channel_header_image-d2b9b2452f67ec00-640x125.jpeg")
-c.logo_url            # URL for logo image (ex: "http://static-cdn.jtvnw.net/jtv_user_pictures/destiny-profile_image-168e66661c484c5e-300x300.jpeg")
-c.video_banner_url    # URL for the image shown when the stream is offline (ex: "http://static-cdn.jtvnw.net/jtv_user_pictures/destiny-channel_offline_image-7a21fd1bd88c4ac3-640x360.jpeg")
-
-c.videos
-c.teams
-c.subscribers
-c.editors
-c.followers
-c.has_subscriber?
+c.nil?        # => false (channel exists)
+c.stream      # => #<Kappa::V2::Stream> (current live stream)
+c.url         # => "http://www.twitch.tv/destiny"
+c.status      # => "Destiny - Diamond I ADC  - Number 1 Draven player..."
+c.teams       # => []      
+c.videos      # => []
+c.followers   # => []
 ```
 
 ### Streams
 
 Streams are video broadcasts that are currently live. They have a [broadcaster](#users) and are part of a [channel](#channels).
+
+See also [`Kappa::V2::Stream`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Stream) and [`Kappa::V2::Streams`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Streams) documentation.
+
+```ruby
+s = Stream.get('idrajit')
+s.nil?          # => false (currently live)
+s.game_name     # => "StarCraft II: Heart of the Swarm"
+s.viewer_count  # => 7267
+s.channel.url   # => http://www.twitch.tv/idrajit
+```
 
 ### Users
 
