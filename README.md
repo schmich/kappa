@@ -5,6 +5,7 @@ Kappa is a Ruby library for interfacing with the [Twitch.tv API](https://github.
 [![Gem Version](https://badge.fury.io/rb/kappa.png)](https://badge.fury.io/rb/kappa.png)
 [![Build Status](https://secure.travis-ci.org/schmich/tome.png)](http://travis-ci.org/schmich/tome)
 [![Dependency Status](https://gemnasium.com/schmich/kappa.png)](https://gemnasium.com/schmich/kappa)
+[![Code Climate](https://codeclimate.com/github/schmich/kappa.png)](https://codeclimate.com/github/schmich/kappa)
 
 ## Getting Started
 
