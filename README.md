@@ -51,12 +51,21 @@ s = Stream.get('idrajit')
 s.nil?          # => false (currently live)
 s.game_name     # => "StarCraft II: Heart of the Swarm"
 s.viewer_count  # => 7267
-s.channel.url   # => http://www.twitch.tv/idrajit
+s.channel.url   # => "http://www.twitch.tv/idrajit"
 ```
 
 ### Users
 
 These are members of the Twitch community who have a Twitch account. If broadcasting, they can own a [stream](#streams) that they can broadcast on their [channel](#channels). If mainly viewing, they might follow or subscribe to channels.
+
+See also [`Kappa::V2::User`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/User) documentation.
+
+```ruby
+u = User.get('snoopeh')
+u.nil?                    # => false (user exists)
+u.channel                 # => #<Kappa::V2::Channel>
+u.following.map(&:name)   # => ["national_esl1", "dreamhacklol", "riotgames"]
+```
 
 ### Videos
 
