@@ -2,10 +2,6 @@ module Kappa
   class VideoBase
     include IdEquality
 
-    def initialize(hash)
-      parse(hash)
-    end
-
     def self.get(id)
       json = connection.get("videos/#{id}")
       new(json)
@@ -16,6 +12,20 @@ end
 module Kappa::V2
   class Video < Kappa::VideoBase
     include Connection
+
+    def initialize(hash)
+      @id = hash['id']
+      @title = hash['title']
+      @recorded_at = DateTime.parse(hash['recorded_at'])
+      @url = hash['url']
+      @view_count = hash['views']
+      @description = hash['description']
+      @length_sec = hash['length']
+      @game_name = hash['game']
+      @preview_url = hash['preview']
+      @channel_name = hash['channel']['name']
+      # @channel_display_name = json['channel']['display_name']
+    end
 
     def channel
       Channel.new(connection.get("channels/#{@channel_name}"))
@@ -33,21 +43,6 @@ module Kappa::V2
     attr_reader :preview_url
     # TODO: Move this under "v.channel.name" and force the query if other attributes are requested.
     attr_reader :channel_name
-
-  private
-    def parse(hash)
-      @id = hash['id']
-      @title = hash['title']
-      @recorded_at = DateTime.parse(hash['recorded_at'])
-      @url = hash['url']
-      @view_count = hash['views']
-      @description = hash['description']
-      @length_sec = hash['length']
-      @game_name = hash['game']
-      @preview_url = hash['preview']
-      @channel_name = hash['channel']['name']
-      # @channel_display_name = json['channel']['display_name']
-    end
   end
 
   class Videos
