@@ -5,6 +5,7 @@ module Kappa
 
     def self.get(id)
       json = connection.get("videos/#{id}")
+      # TODO: Handle case where video ID is invalid.
       new(json)
     end
   end
