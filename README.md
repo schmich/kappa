@@ -71,6 +71,17 @@ u.following.map(&:name)   # => ["national_esl1", "dreamhacklol", "riotgames"]
 
 Videos are broadcasts or highlights owned by a [channel](#channels). Broadcasts are unedited videos that are saved after a streaming session. Highlights are videos edited from broadcasts by the channel's owner.
 
+See also [`Kappa::V2::Video`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Video) and [`Kappa::V2::Videos`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Videos) documentation.
+
+```ruby
+v = Video.get('a395995729')
+v.nil?          # => false (video exists)
+v.title         # => "DreamHack Open Stockholm 26-27 April"
+v.game_name     # => "StarCraft II: Heart of the Swarm"
+v.recorded_at   # => #<DateTime: 2013-04-26T18:33:48+00:00>
+v.view_count    # => 12506
+```
+
 ### Teams
 
 Teams are an organization of [channels](#channels).
