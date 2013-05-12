@@ -6,6 +6,7 @@ require 'singleton'
 require 'set'
 
 module Kappa
+  # @private
   class ConnectionBase
     include HTTParty
 
@@ -126,6 +127,7 @@ module Kappa
 end
 
 module Kappa::V2
+  # @private
   module Connection
     class Impl < Kappa::ConnectionBase
       include Singleton

@@ -1,0 +1,6 @@
+--no-private
+--embed-mixin ClassMethods
+--markup markdown
+-
+README.md
+LICENSE

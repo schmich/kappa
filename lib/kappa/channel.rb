@@ -1,6 +1,7 @@
 require 'cgi'
 
 module Kappa
+  # @private
   class ChannelBase
     include IdEquality
 
@@ -17,13 +18,13 @@ module Kappa
 end
 
 module Kappa::V2
-  # TODO:
-  # c.subscriptions
-  # c.start_commercial
-  # c.reset_stream_key
-  # c.foo = 'bar' ; c.save!
-  # Current user's channel
   class Channel < Kappa::ChannelBase
+    # TODO:
+    # c.subscriptions
+    # c.start_commercial
+    # c.reset_stream_key
+    # c.foo = 'bar' ; c.save!
+    # Current user's channel
     include Connection
 
     def initialize(hash)
@@ -48,15 +49,23 @@ module Kappa::V2
       end
     end
 
+    # This flag is specified by the owner of the channel.
+    # @return [Boolean] `true` if the channel has mature content, `false` otherwise.
     def mature?
       @mature
     end
 
-    # TODO: Move these into derived classes?
+    # Get the live stream associated with this channel.
+    # @return [Stream] Live stream object for this channel, or `nil` if the channel is not currently streaming.
+    # @see #streaming?
     def stream
       Stream.get(@name)
     end
 
+    # This makes a separate request to get the channel's stream. If you want to actually use
+    # the stream object, you should call `#stream` instead.
+    # @return [Boolean] `true` if the channel currently has a live stream, `false` otherwise.
+    # @see #stream
     def streaming?
       !stream.nil?
     end
@@ -116,18 +125,42 @@ module Kappa::V2
       # Support User object or username (string)
     end
 
+    # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
+
+    # @return [String] URL for background image.
     attr_reader :background_url
+
+    # @return [String] URL for banner image.
     attr_reader :banner_url
+
+    # @return [DateTime] When the channel was created.
     attr_reader :created_at
+
+    # @return [String] Display name, e.g. name used for page title.
     attr_reader :display_name
+
+    # @return [String] Name of the primary game for this channel.
     attr_reader :game_name
+
+    # @return [String] URL for the logo image.
     attr_reader :logo_url
+
+    # @return [String] Unique Twitch name.
     attr_reader :name
+
+    # @return [String] Current status.
     attr_reader :status
+
+    # @return [DateTime] When the channel was last updated, e.g. last stream time.
     attr_reader :updated_at
+
+    # @return [String] The URL for the channel's main page.
     attr_reader :url
+
+    # @return [String] URL for the image shown when the stream is offline.
     attr_reader :video_banner_url
+
     attr_reader :teams
   end
 end

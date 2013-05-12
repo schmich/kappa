@@ -1,4 +1,5 @@
 module Kappa
+  # @private
   class VideoBase
     include IdEquality
 

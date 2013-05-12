@@ -1,8 +1,10 @@
 module Kappa
+  # @private
   class GameBase
     include IdEquality
   end
 
+  # @private
   class GameSuggestionBase
     include IdEquality
   end

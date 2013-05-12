@@ -1,4 +1,5 @@
 module Kappa
+  # @private
   module IdEquality
     def hash
       @id.hash
