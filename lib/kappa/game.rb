@@ -1,33 +1,16 @@
 module Kappa
   class GameBase
     include IdEquality
-
-    def initialize(hash)
-      parse(hash)
-    end
   end
 
   class GameSuggestionBase
     include IdEquality
-
-    def initialize(hash)
-      parse(hash)
-    end
   end
 end
 
 module Kappa::V2
   class Game < Kappa::GameBase
-    attr_reader :id
-    attr_reader :name
-    attr_reader :giantbomb_id
-    attr_reader :box_images
-    attr_reader :logo_images
-    attr_reader :channel_count
-    attr_reader :viewer_count
-
-  private
-    def parse(hash)
+    def initialize(hash)
       @channel_count = hash['channels']
       @viewer_count = hash['viewers']
 
@@ -38,18 +21,18 @@ module Kappa::V2
       @box_images = Images.new(game['box'])
       @logo_images = Images.new(game['logo'])
     end
-  end
 
-  class GameSuggestion < Kappa::GameSuggestionBase
     attr_reader :id
     attr_reader :name
     attr_reader :giantbomb_id
-    attr_reader :popularity
     attr_reader :box_images
     attr_reader :logo_images
+    attr_reader :channel_count
+    attr_reader :viewer_count
+  end
 
-  private
-    def parse(hash)
+  class GameSuggestion < Kappa::GameSuggestionBase
+    def initialize(hash)
       @id = hash['_id']
       @name = hash['name']
       @giantbomb_id = hash['giantbomb_id']
@@ -57,14 +40,25 @@ module Kappa::V2
       @box_images = Images.new(hash['box'])
       @logo_images = Images.new(hash['logo'])
     end
+
+    attr_reader :id
+    attr_reader :name
+    attr_reader :giantbomb_id
+    attr_reader :popularity
+    attr_reader :box_images
+    attr_reader :logo_images
   end
 
   class Games
+    include Connection
+
     #
     # GET /games/top
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop
     #
-    def top(args = {})
+    def self.top(args = {})
+      params = {}
+
       limit = args[:limit]
       if limit && (limit < 25)
         params[:limit] = limit
@@ -86,7 +80,7 @@ module Kappa::V2
     # GET /search/games
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames
     #
-    def search(params = {})
+    def self.search(params = {})
       live = params[:live] || false
       name = params[:name]
 

@@ -2,10 +2,6 @@ module Kappa
   class UserBase
     include IdEquality
 
-    def initialize(hash)
-      parse(hash)
-    end
-
     #
     # GET /users/:user
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser
@@ -24,6 +20,16 @@ end
 module Kappa::V2
   class User < Kappa::UserBase
     include Connection
+
+    def initialize(hash)
+      @id = hash['_id']
+      @created_at = DateTime.parse(hash['created_at'])
+      @display_name = hash['display_name']
+      @logo_url = hash['logo']
+      @name = hash['name']
+      @staff = hash['staff'] || false
+      @updated_at = DateTime.parse(hash['updated_at'])
+    end
 
     def channel
       # TODO
@@ -50,6 +56,8 @@ module Kappa::V2
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels
     #
     def following(params = {})
+      params = {}
+
       limit = args[:limit]
       if limit && (limit < 25)
         params[:limit] = limit
@@ -88,16 +96,5 @@ module Kappa::V2
     # TODO: Authenticated user attributes.
     # attr_reader :email
     # def partnered?
-    
-  private
-    def parse(hash)
-      @id = hash['_id']
-      @created_at = DateTime.parse(hash['created_at'])
-      @display_name = hash['display_name']
-      @logo_url = hash['logo']
-      @name = hash['name']
-      @staff = hash['staff'] || false
-      @updated_at = DateTime.parse(hash['updated_at'])
-    end
   end
 end
