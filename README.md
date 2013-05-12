@@ -86,6 +86,15 @@ v.view_count    # => 12506
 
 Teams are an organization of [channels](#channels).
 
+See also [`Kappa::V2::Team`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Team) documentation.
+
+```ruby
+t = Team.get('teamliquid')
+t.display_name  # => "TeamLiquid"
+t.info          # => "TeamLiquid is awesome. and esports. video games. \n\n"
+t.updated_at    # => #<DateTime: 2013-04-27T16:58:55+00:00>
+```
+
 ### Games
 
 Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#streams) and [channels](#channels). Games can be searched for by query.
