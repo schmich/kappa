@@ -77,18 +77,25 @@ task :release => :build do
     exit!
   end
 
-  unless (`git branch --no-color`.strip rescue '') =~ /\A*\s+master\z/
+  unless `git branch --no-color`.strip =~ /^\*\s+master$/
     puts 'You must release from the master branch.'
     exit!
   end
 
   version = $gem.version
+  tag = "v#{version}"
+
+  if `git tag`.strip =~ /^#{tag}$/
+    puts "Tag #{tag} already exists, you must bump version."
+    exit!
+  end
+
   puts "Releasing version #{version}."
 
   sh "git commit --allow-empty -a -m \"Release #{version}.\""
-  sh "git tag v#{version}"
+  sh "git tag #{tag}"
   sh 'git push origin master'
-  sh "git push origin v#{version}"
+  sh "git push origin #{tag}"
   sh "gem push gem/#{$gem.gem_filename}"
 
   puts 'Fin.'
