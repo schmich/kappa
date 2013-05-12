@@ -3,8 +3,8 @@ require 'addressable/uri'
 require 'json'
 require 'yaml'
 
-def fixture(file)
-  File.join(File.dirname(__FILE__), 'fixtures', file)
+def fixture(path)
+  File.join(File.dirname(__FILE__), 'fixtures', path)
 end
 
 def yaml_load(file)

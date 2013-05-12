@@ -7,7 +7,7 @@ include Kappa::V2
 
 describe Kappa::V2::Team do
   before do
-    WebMocks.load_dir('spec/v2/fixtures/teams')
+    WebMocks.load_dir(fixture('teams'))
   end
 
   after do

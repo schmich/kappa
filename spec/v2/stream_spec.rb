@@ -6,7 +6,7 @@ include Kappa::V2
 
 describe Kappa::V2::Stream do
   before do
-    WebMocks.load_dir('spec/v2/fixtures/stream')
+    WebMocks.load_dir(fixture('stream'))
   end
 
   after do
