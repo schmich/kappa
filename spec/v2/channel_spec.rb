@@ -23,7 +23,6 @@ describe Kappa::V2::Channel do
       c.banner_url.should == hash['banner']
       c.created_at.class.should == DateTime
       c.created_at.should < DateTime.now
-      c.stream_delay_sec.should == hash['delay']
       c.display_name.should == hash['display_name']
       c.game_name.should == hash['game']
       c.logo_url.should == hash['logo']

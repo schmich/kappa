@@ -31,7 +31,6 @@ module Kappa::V2
       @background_url = hash['background']
       @banner_url = hash['banner']
       @created_at = DateTime.parse(hash['created_at'])
-      @stream_delay_sec = hash['delay']
       @display_name = hash['display_name']
       @game_name = hash['game']
       @logo_url = hash['logo']
@@ -121,7 +120,6 @@ module Kappa::V2
     attr_reader :background_url
     attr_reader :banner_url
     attr_reader :created_at
-    attr_reader :stream_delay_sec
     attr_reader :display_name
     attr_reader :game_name
     attr_reader :logo_url
