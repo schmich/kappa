@@ -2,10 +2,10 @@ module Kappa
   class TeamBase
     include IdEquality
 
-    def initialize(hash)
-      parse(hash)
-    end
-
+    #
+    # GET /teams/:team
+    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam
+    #
     def self.get(team_name)
       json = connection.get("teams/#{team_name}")
       if json['status'] == 404
@@ -20,24 +20,8 @@ end
 module Kappa::V2
   class Team < Kappa::TeamBase
     include Connection
-
-    #
-    # GET /teams/:team
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam
-    #
-
-    attr_reader :id
-    attr_reader :info
-    attr_reader :background_url
-    attr_reader :banner_url
-    attr_reader :logo_url
-    attr_reader :name
-    attr_reader :display_name
-    attr_reader :updated_at
-    attr_reader :created_at
     
-  private
-    def parse(hash)
+    def initialize(hash)
       @id = hash['_id']
       @info = hash['info']
       @background_url = hash['background']
@@ -48,6 +32,16 @@ module Kappa::V2
       @updated_at = DateTime.parse(hash['updated_at'])
       @created_at = DateTime.parse(hash['created_at'])
     end
+
+    attr_reader :id
+    attr_reader :info
+    attr_reader :background_url
+    attr_reader :banner_url
+    attr_reader :logo_url
+    attr_reader :name
+    attr_reader :display_name
+    attr_reader :updated_at
+    attr_reader :created_at
   end
 
   class Teams
