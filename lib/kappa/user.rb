@@ -56,7 +56,7 @@ module Kappa::V2
     # GET /users/:user/follows/channels
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels
     #
-    def following(params = {})
+    def following(args = {})
       params = {}
 
       limit = args[:limit]
