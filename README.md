@@ -115,9 +115,9 @@ g.box_images.medium_url  # =>"http://static-cdn.jtvnw.net/ttv-boxart/League%20of
 ```
 
 ```ruby
-s = Games.search(:name => 'mega man', :live => true)
-s.map(&:name)        # => ["Mega Man X", "Mega Man 4"]
-s.map(&:popularity)  # => [3, 1]
+s = Games.search(:name => 'diablo', :live => true)
+s.map(&:name)        # => ["Diablo III", "Diablo II", "Diablo", "Diablo II: Lord of Destruction"]
+s.map(&:popularity)  # => [120, 4, 1, 1]
 ```
 
 ## Documentation
