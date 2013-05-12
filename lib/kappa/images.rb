@@ -8,7 +8,7 @@ module Kappa::V2
     end
 
     def url(width, height)
-      @template_url.gsub('{width}', width.to_s, '{height}', height.to_s)
+      @template_url.gsub('{width}', width.to_s).gsub('{height}', height.to_s)
     end
 
     attr_reader :large_url
