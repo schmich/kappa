@@ -81,4 +81,4 @@ Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#strea
 
 Copyright &copy; 2013 Chris Schmich
 <br />
-MIT License, see LICENSE for details.
+MIT License, See [LICENSE](LICENSE) for details.
