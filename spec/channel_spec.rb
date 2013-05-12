@@ -49,6 +49,11 @@ describe Kappa::V2::Channel do
       c = Channel.get('colminigun')
       c.should_not be_nil
     end
+
+    it 'handles channel names with URL characters' do
+      c = Channel.get('foo/bar')
+      c.should_not be_nil
+    end
   end
 
   describe '.streaming?' do

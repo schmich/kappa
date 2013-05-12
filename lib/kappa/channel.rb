@@ -1,13 +1,12 @@
+require 'cgi'
+
 module Kappa
   class ChannelBase
     include IdEquality
 
-    def initialize(hash)
-      parse(hash)
-    end
-
     def self.get(channel_name)
-      json = connection.get("channels/#{channel_name}")
+      encoded_name = CGI.escape(channel_name)
+      json = connection.get("channels/#{encoded_name}")
       # TODO: Handle errors.
       new(json)
     end
@@ -23,6 +22,29 @@ module Kappa::V2
   # Current user's channel
   class Channel < Kappa::ChannelBase
     include Connection
+
+    def initialize(hash)
+      @id = hash['_id']
+      @background_url = hash['background']
+      @banner_url = hash['banner']
+      @created_at = DateTime.parse(hash['created_at'])
+      @stream_delay_sec = hash['delay']
+      @display_name = hash['display_name']
+      @game_name = hash['game']
+      @logo_url = hash['logo']
+      @mature = hash['mature'] || false
+      @name = hash['name']
+      @status = hash['status']
+      @updated_at = DateTime.parse(hash['updated_at'])
+      @url = hash['url']
+      @video_banner_url = hash['video_banner']
+
+      @teams = []
+      teams = hash['teams']
+      teams.each do |team_json|
+        @teams << Team.new(team_json)
+      end
+    end
 
     def mature?
       @mature
@@ -106,29 +128,5 @@ module Kappa::V2
     attr_reader :url
     attr_reader :video_banner_url
     attr_reader :teams
-
-  private
-    def parse(hash)
-      @id = hash['_id']
-      @background_url = hash['background']
-      @banner_url = hash['banner']
-      @created_at = DateTime.parse(hash['created_at'])
-      @stream_delay_sec = hash['delay']
-      @display_name = hash['display_name']
-      @game_name = hash['game']
-      @logo_url = hash['logo']
-      @mature = hash['mature'] || false
-      @name = hash['name']
-      @status = hash['status']
-      @updated_at = DateTime.parse(hash['updated_at'])
-      @url = hash['url']
-      @video_banner_url = hash['video_banner']
-
-      @teams = []
-      teams = hash['teams']
-      teams.each do |team_json|
-        @teams << Team.new(team_json)
-      end
-    end
   end
 end
