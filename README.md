@@ -1,6 +1,6 @@
 # <img src="https://raw.github.com/schmich/kappa/master/assets/kappa.png" /> Kappa
 
-Kappa is a Ruby library for interfacing with the [Twitch.tv API](https://github.com/justintv/Twitch-API).
+Kappa is the Ruby library for interfacing with the [Twitch.tv API](https://github.com/justintv/Twitch-API).
 
 [![Gem Version](https://badge.fury.io/rb/kappa.png)](http://rubygems.org/gems/kappa)
 [![Build Status](https://secure.travis-ci.org/schmich/kappa.png)](http://travis-ci.org/schmich/kappa)
@@ -29,7 +29,9 @@ Channels serve as the home location for a [user's](#users) content. Channels hav
 
 ```ruby
 c = Channel.get('destiny')
+```
 
+```ruby
 c.nil?                # Does the requested channel not exist? (ex: false)
 c.name                # Unique Twitch name (ex: "destiny")
 c.display_name        # Display name, e.g. name used for page title (ex: "Destiny")
@@ -75,7 +77,21 @@ Teams are an organization of [channels](#channels).
 
 Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#streams) and [channels](#channels). Games can be searched for by query.
 
+## Documentation
+
+Detailed API documentation is avaiable at [http://rdoc.info/github/schmich/kappa/master/frames](http://rdoc.info/github/schmich/kappa/master/frames).
+
 ## Contributing
+
+- [Fork and clone the repo.](http://help.github.com/fork-a-repo/)
+- [Create a branch for your changes.](http://learn.github.com/p/branching.html)
+- Run `bundle install` to install development requirements.
+- Implement your feature or bug fix.
+- Add specs under the `spec` folder to prevent regressions or to test new code.
+- Add YARD documentation for new features.
+- Run `rake` to run specs. Everything must pass.
+- Commit and push your changes.
+- [Submit a pull request.](http://help.github.com/send-pull-requests/)
 
 ## License
 
