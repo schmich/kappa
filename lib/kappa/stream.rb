@@ -21,6 +21,14 @@ module Kappa::V2
     end
 
     # Get a live stream by name.
+    # @example
+    #   s = Stream.get('lagtvmaximusblack')
+    #   s.nil?          # => false (stream is live)
+    #   s.game_name     # => "StarCraft II: Heart of the Swarm"
+    #   s.viewer_count  # => 2403
+    # @example
+    #   s = Strearm.get('destiny')
+    #   s.nil?          # => true (stream is offline)
     # @param stream_name [String] The name of the stream to get. This is the same as the channel or user name.
     # @return [Stream] A valid `Stream` object if the stream exists and is currently live, `nil` otherwise.
     def self.get(stream_name)
