@@ -1,25 +1,15 @@
-module Kappa
-  # @private
-  class VideoBase
-    include IdEquality
-
-    # TODO: Include in documentation.
-    def self.get(id)
-      json = connection.get("videos/#{id}")
-      # TODO: Handle case where video ID is invalid.
-      new(json)
-    end
-  end
-end
+require 'cgi'
 
 module Kappa::V2
   # Videos are broadcasts or highlights owned by a channel. Broadcasts are unedited
   # videos that are saved after a streaming session. Highlights are videos edited from
   # broadcasts by the channel's owner.
+  # @see .get Video.get
   # @see Videos
   # @see Channel
-  class Video < Kappa::VideoBase
+  class Video
     include Connection
+    include Kappa::IdEquality
 
     # @private
     def initialize(hash)
@@ -34,6 +24,25 @@ module Kappa::V2
       @preview_url = hash['preview']
       @channel_name = hash['channel']['name']
       # @channel_display_name = json['channel']['display_name']
+    end
+
+    # Get a video by ID.
+    # @example
+    #   v = Video.get('a396294648')
+    #   v.title # => "DreamHack Open Stockholm 26-27 April"
+    # @param id [String] The ID of the video to get.
+    # @raise [ArgumentError] If `id` is `nil` or blank.
+    # @return [Video] A valid `Video` object if the video exists, `nil` otherwise.
+    def self.get(id)
+      raise ArgumentError if !id || id.strip.empty?
+
+      encoded_id = CGI.escape(id)
+      json = connection.get("videos/#{encoded_id}")
+      if !json || json['status'] == 404
+        nil
+      else
+        new(json)
+      end
     end
 
     # @note This does incur an additional web request.

@@ -1,28 +1,13 @@
 require 'cgi'
 
-module Kappa
-  # @private
-  class ChannelBase
-    include IdEquality
-
-    # TODO: Include in documentation.
-    def self.get(channel_name)
-      encoded_name = CGI.escape(channel_name)
-      json = connection.get("channels/#{encoded_name}")
-      if !json || json['status'] == 404
-        nil
-      else
-        new(json)
-      end
-    end
-  end
-end
-
 module Kappa::V2
   # Channels serve as the home location for a user's content. Channels have a stream, can run
   # commercials, store videos, display information and status, and have a customized page including
   # banners and backgrounds.
-  class Channel < Kappa::ChannelBase
+  # @see .get Channel.get
+  # @see Stream
+  # @see User
+  class Channel
     # TODO:
     # c.subscriptions
     # c.start_commercial
@@ -30,6 +15,7 @@ module Kappa::V2
     # c.foo = 'bar' ; c.save!
     # Current user's channel
     include Connection
+    include Kappa::IdEquality
 
     # @private
     def initialize(hash)
@@ -51,6 +37,19 @@ module Kappa::V2
       teams = hash['teams']
       teams.each do |team_json|
         @teams << Team.new(team_json)
+      end
+    end
+
+    # Get a channel by name.
+    # @param channel_name [String] The name of the channel to get. This is the same as the stream or user name.
+    # @return [Channel] A valid `Channel` object if the channel exists, `nil` otherwise.
+    def self.get(channel_name)
+      encoded_name = CGI.escape(channel_name)
+      json = connection.get("channels/#{encoded_name}")
+      if !json || json['status'] == 404
+        nil
+      else
+        new(json)
       end
     end
 

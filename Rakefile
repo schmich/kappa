@@ -67,7 +67,7 @@ end
 
 desc 'Run YARD server to view docs'
 task :yard do
-  Launchy.open('http://localhost:8808')
+  Launchy.open('http://localhost:8808/docs/frames')
   system('yard server --reload')
 end
 

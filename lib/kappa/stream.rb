@@ -1,27 +1,13 @@
-module Kappa
-  # @private
-  class StreamBase
-    include IdEquality
-
-    # TODO: Include in documentation.
-    def self.get(stream_name)
-      json = connection.get("streams/#{stream_name}")
-      stream = json['stream']
-      if json['status'] == 404 || !stream
-        nil
-      else
-        new(stream)
-      end
-    end
-  end
-end
+require 'cgi'
 
 module Kappa::V2
   # Streams are video broadcasts that are currently live. They have a broadcaster and are part of a channel.
+  # @see .get Stream.get
   # @see Streams
   # @see Channel
-  class Stream < Kappa::StreamBase
+  class Stream
     include Connection
+    include Kappa::IdEquality
 
     # @private
     def initialize(hash)
@@ -32,6 +18,20 @@ module Kappa::V2
       @viewer_count = hash['viewers']
       @preview_url = hash['preview']
       @channel = Channel.new(hash['channel'])
+    end
+
+    # Get a live stream by name.
+    # @param stream_name [String] The name of the stream to get. This is the same as the channel or user name.
+    # @return [Stream] A valid `Stream` object if the stream exists and is currently live, `nil` otherwise.
+    def self.get(stream_name)
+      encoded_name = CGI.escape(stream_name)
+      json = connection.get("streams/#{encoded_name}")
+      stream = json['stream']
+      if json['status'] == 404 || !stream
+        nil
+      else
+        new(stream)
+      end
     end
 
     # @return [Fixnum] Unique Twitch ID.
@@ -54,7 +54,7 @@ module Kappa::V2
     # @return [String] URL of a preview screenshot taken from the video stream.
     attr_reader :preview_url
 
-    # @note This does not incur another web request.
+    # @note This does not incur any web requests.
     # @return [Channel] The `Channel` associated with this stream.
     attr_reader :channel
   end
@@ -77,14 +77,16 @@ module Kappa::V2
     #   Streams.find(:channel => ['fgtvlive', 'incontroltv', 'destiny'])
     # @example
     #   Streams.find(:game => 'Diablo III', :channel => ['nl_kripp', 'protech'])
-    # @param :game [String, Game] Only return streams currently streaming the specified game.
-    # @param :channel [Array<String>, Array<Channel>] Only return streams for these channels. If a channel is not currently streaming, it is omitted.
+    # @param :game [String/Game] Only return streams currently streaming the specified game.
+    # @param :channel [Array<String/Channel>] Only return streams for these channels.
+    #   If a channel is not currently streaming, it is omitted. You must specify an array of channels
+    #   or channel names. If you want to find the stream for a single channel, see {Kappa::V2::Stream#name}.
     # @param :embeddable [Boolean] TODO
     # @param :hls [Boolean] TODO
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
     # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
-    # @raise [ArgumentError] Raised if `args` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
+    # @raise [ArgumentError] If `args` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
     # @return [Array<Stream>] List of streams matching the specified criteria.
     def self.find(args)
       check = args.dup
@@ -124,6 +126,8 @@ module Kappa::V2
 
     # Get the list of currently featured (promoted) streams. This includes the list of streams shown on the Twitch homepage.
     # @note There is no guarantee of how many streams are featured at any given time.
+    # @example
+    #   Streams.featured
     # @example
     #   Streams.featured(:limit => 5)
     # @param :hls [Boolean] (optional) TODO

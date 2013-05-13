@@ -1,29 +1,15 @@
 require 'cgi'
 
-module Kappa
-  # @private
-  class UserBase
-    include IdEquality
-
-    #
-    # GET /users/:user
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser
-    #
-    # TODO: Include in documentation.
-    def self.get(user_name)
-      json = connection.get("users/#{user_name}")
-      if json['status'] == 404
-        nil
-      else
-        new(json)
-      end
-    end
-  end
-end
-
 module Kappa::V2
-  class User < Kappa::UserBase
+  # These are members of the Twitch community who have a Twitch account. If broadcasting,
+  # they can own a stream that they can broadcast on their channel. If mainly viewing,
+  # they might follow or subscribe to channels.
+  # @see .get User.get
+  # @see Channel
+  # @see Stream
+  class User
     include Connection
+    include Kappa::IdEquality
 
     # @private
     def initialize(hash)
@@ -36,7 +22,23 @@ module Kappa::V2
       @updated_at = DateTime.parse(hash['updated_at'])
     end
 
+    # Get a user by name.
+    # @param user_name [String] The name of the user to get. This is the same as the channel or stream name.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser GET /users/:user
+    # @return [User] A valid `User` object if the user exists, `nil` otherwise.
+    def self.get(user_name)
+      encoded_name = CGI.escape(user_name)
+      json = connection.get("users/#{encoded_name}")
+      if !json || json['status'] == 404
+        nil
+      else
+        new(json)
+      end
+    end
+
     # @return [Channel] The `Channel` associated with this user account.
+    # @private
+    # Private until implemented.
     def channel
       # TODO
     end
