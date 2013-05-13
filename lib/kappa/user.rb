@@ -61,7 +61,7 @@ module Kappa::V2
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels
     #
 
-    # @param :limit [Fixnum] (optional) Limit on the number of results returned. If omitted, all results are returned.
+    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
     # @see #following?
     # @return [[Channel]] List of channels the user is currently following.
     def following(args = {})

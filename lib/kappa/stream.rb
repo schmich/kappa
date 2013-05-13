@@ -18,8 +18,8 @@ end
 
 module Kappa::V2
   # Streams are video broadcasts that are currently live. They have a broadcaster and are part of a channel.
+  # @see Streams
   # @see Channel
-  # @see Video
   class Stream < Kappa::StreamBase
     include Connection
 
@@ -37,7 +37,8 @@ module Kappa::V2
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
-    # @example "fme", "xsplit", "obs"
+    # @example
+    #   "fme", "xsplit", "obs"
     # @return [String] The broadcasting software used for this stream.
     attr_reader :broadcaster
     
@@ -58,24 +59,41 @@ module Kappa::V2
     attr_reader :channel
   end
 
+  # Query class used for finding featured streams or streams meeting certain criteria.
+  # @see Stream
   class Streams
     include Connection
 
+    # @private
+    # Private until implemented
     def self.all
+      # TODO
     end
 
-    #
-    # GET /streams
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md
-    # :game (single, string), :channel (string array), :limit (int), :offset (int), :embeddable (bool), :hls (bool)
-    # TODO: Support Kappa::Vx::Game object for the :game param.
-    # TODO: Support Kappa::Vx::Channel object for the :channel param.
-    #
-    def self.where(args)
+    # Get a list of streams for a specific game, for a set of channels, or by other criteria.
+    # @example
+    #   Streams.find(:game => 'League of Legends', :limit => 50)
+    # @example
+    #   Streams.find(:channel => ['fgtvlive', 'incontroltv', 'destiny'])
+    # @example
+    #   Streams.find(:game => 'Diablo III', :channel => ['nl_kripp', 'protech'])
+    # @param :game [String, Game] Only return streams currently streaming the specified game.
+    # @param :channel [[String], [Channel]] Only return streams for these channels. If a channel is not currently streaming, it is omitted.
+    # @param :embeddable [Boolean] TODO
+    # @param :hls [Boolean] TODO
+    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
+    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: 0.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
+    # @raise [ArgumentError] Raised if `args` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
+    # @return [[Stream]] List of streams matching the specified criteria.
+    def self.find(args)
       check = args.dup
       check.delete(:limit)
       check.delete(:offset)
       raise ArgumentError if check.empty?
+
+      # TODO: Support Kappa::Vx::Game object for the :game param.
+      # TODO: Support Kappa::Vx::Channel object for the :channel param.
 
       params = {}
 
@@ -104,12 +122,20 @@ module Kappa::V2
       )
     end
 
-    #
-    # GET /streams/featured
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured
-    #
+    # Get the list of currently featured (promoted) streams. This includes the list of streams shown on the Twitch.tv homepage.
+    # @note There is no guarantee of how many streams are featured at any given time.
+    # @example
+    #   Streams.featured(:limit => 5)
+    # @param :hls [Boolean] (optional) TODO
+    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
+    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: 0.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured GET /streams/featured
+    # @return [[Stream]] List of currently featured streams.
     def self.featured(args = {})
       params = {}
+
+      # TODO: Support :offset param
+      # TODO: Support :hls param
 
       limit = args[:limit]
       if limit && (limit < 100)

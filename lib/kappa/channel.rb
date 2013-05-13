@@ -119,8 +119,8 @@ module Kappa::V2
 
     # Get the users following this channel.
     # @note The number of followers is potentially very large, so it's recommended that you specify a `:limit`.
-    # @param :limit [Fixnum] (optional) Limit on the number of results returned. If omitted, all results are returned.
-    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration.
+    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
+    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: 0.
     # @return [[User]] List of users following this channel.
     def followers(args = {})
       params = {}
