@@ -33,6 +33,8 @@ module Kappa::V2
     attr_reader :viewer_count
   end
 
+  # A game suggestion returned by Twitch when searching for games via `Games#search`.
+  # @see Games.search
   class GameSuggestion < Kappa::GameSuggestionBase
     def initialize(hash)
       @id = hash['_id']
@@ -43,11 +45,22 @@ module Kappa::V2
       @logo_images = Images.new(hash['logo'])
     end
 
+    # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
+
+    # @return [String] Game name.
     attr_reader :name
+
+    # @return [Fixnum] Unique game ID for GiantBomb.com. 
     attr_reader :giantbomb_id
+
+    # @return [Fixnum] Relative popularity metric. Higher number means more popular.
     attr_reader :popularity
+
+    # @return [Images] Set of images for the game's box art.
     attr_reader :box_images
+
+    # @return [Images] Set of images for the game's logo.
     attr_reader :logo_images
   end
 
@@ -83,6 +96,8 @@ module Kappa::V2
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames
     #
     def self.search(params = {})
+      # TODO: Enforce :name/:live parameters
+
       live = params[:live] || false
       name = params[:name]
 

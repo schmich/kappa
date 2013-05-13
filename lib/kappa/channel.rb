@@ -137,7 +137,7 @@ module Kappa::V2
     # @return [DateTime] When the channel was created.
     attr_reader :created_at
 
-    # @return [String] Display name, e.g. name used for page title.
+    # @return [String] User-friendly display name, e.g. name used for page title.
     attr_reader :display_name
 
     # @return [String] Name of the primary game for this channel.
