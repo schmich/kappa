@@ -124,6 +124,11 @@ s.map(&:popularity)  # => [120, 4, 1, 1]
 
 Detailed API documentation is avaiable at [http://rdoc.info/github/schmich/kappa/master/frames](http://rdoc.info/github/schmich/kappa/master/frames).
 
+## Versioning
+
+- TODO: Semantic versioning
+- TODO: Twitch API versions
+
 ## Contributing
 
 - [Fork and clone the repo.](http://help.github.com/fork-a-repo/)
