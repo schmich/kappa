@@ -33,8 +33,8 @@ module Kappa::V2
     attr_reader :viewer_count
   end
 
-  # A game suggestion returned by Twitch when searching for games via `Games#search`.
-  # @see Games.search
+  # A game suggestion returned by Twitch when searching for games via `Games#find`.
+  # @see Games.find
   class GameSuggestion < Kappa::GameSuggestionBase
     def initialize(hash)
       @id = hash['_id']
@@ -95,7 +95,7 @@ module Kappa::V2
     # GET /search/games
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames
     #
-    def self.search(params = {})
+    def self.find(params = {})
       # TODO: Enforce :name/:live parameters
 
       live = params[:live] || false
