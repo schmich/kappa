@@ -83,15 +83,28 @@ module Kappa::V2
     attr_reader :logo_images
   end
 
+  # Query class used for finding top games or finding games by name.
+  # @see Game
+  # @see GameSuggestion
   class Games
     include Connection
 
-    #
-    # GET /games/top
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop
-    #
+    # Get a list of games with the highest number of current viewers on Twitch.
+    # @example
+    #   Games.top
+    # @example
+    #   Games.top(:limit => 10)
+    # @param :hls [Boolean] TODO
+    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
+    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
+    # @see Game
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop GET /games/top
+    # @return [[Game]] List of games sorted by number of current viewers on Twitch, most popular first.
     def self.top(args = {})
       params = {}
+
+      # TODO: Support :offset.
+      # TODO: Support :hls.
 
       limit = args[:limit]
       if limit && (limit < 100)
@@ -110,15 +123,21 @@ module Kappa::V2
       )
     end
     
-    #
-    # GET /search/games
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames
-    #
-    def self.find(params = {})
+    # Get a list of games with names similar to the specified name.
+    # @example
+    #   Games.find(:name => 'diablo')
+    # @example
+    #   Games.find(:name => 'starcraft', :live => true)
+    # @param :name [String] Game name search term. This can be a partial name, e.g. 'league'.
+    # @param :live [Boolean] (Optional) If `true`, only returns games that are currently live on at least one channel. Default: `false`.
+    # @see GameSuggestion
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
+    # @return [[GameSuggestion]] List of games matching the criteria.
+    def self.find(args = {})
       # TODO: Enforce :name/:live parameters
 
-      live = params[:live] || false
-      name = params[:name]
+      live = args[:live] || false
+      name = args[:name]
 
       games = []
       ids = Set.new

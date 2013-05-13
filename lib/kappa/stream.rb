@@ -82,7 +82,7 @@ module Kappa::V2
     # @param :embeddable [Boolean] TODO
     # @param :hls [Boolean] TODO
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
-    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: 0.
+    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
     # @raise [ArgumentError] Raised if `args` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
     # @return [[Stream]] List of streams matching the specified criteria.
@@ -128,7 +128,7 @@ module Kappa::V2
     #   Streams.featured(:limit => 5)
     # @param :hls [Boolean] (optional) TODO
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
-    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: 0.
+    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured GET /streams/featured
     # @return [[Stream]] List of currently featured streams.
     def self.featured(args = {})
