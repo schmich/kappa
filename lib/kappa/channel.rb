@@ -121,7 +121,7 @@ module Kappa::V2
     # @note The number of followers is potentially very large, so it's recommended that you specify a `:limit`.
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
     # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
-    # @return [[User]] List of users following this channel.
+    # @return [Array<User>] List of users following this channel.
     def followers(args = {})
       params = {}
 
@@ -179,7 +179,7 @@ module Kappa::V2
     # @return [String] URL for the image shown when the stream is offline.
     attr_reader :video_banner_url
 
-    # @return [[Team]] The list of teams that this channel is associated with. Not all channels have associated teams.
+    # @return [Array<Team>] The list of teams that this channel is associated with. Not all channels have associated teams.
     attr_reader :teams
   end
 end

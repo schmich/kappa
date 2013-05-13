@@ -13,8 +13,7 @@ end
 module Kappa::V2
   # Games are categories (e.g. League of Legends, Diablo 3) used by streams and channels.
   # Games can be searched for by query.
-  # @see Games.find
-  # @see Games.top
+  # @see Games
   class Game < Kappa::GameBase
     # @private
     def initialize(hash)
@@ -99,7 +98,7 @@ module Kappa::V2
     # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
     # @see Game
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop GET /games/top
-    # @return [[Game]] List of games sorted by number of current viewers on Twitch, most popular first.
+    # @return [Array<Game>] List of games sorted by number of current viewers on Twitch, most popular first.
     def self.top(args = {})
       params = {}
 
@@ -132,7 +131,7 @@ module Kappa::V2
     # @param :live [Boolean] (Optional) If `true`, only returns games that are currently live on at least one channel. Default: `false`.
     # @see GameSuggestion
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
-    # @return [[GameSuggestion]] List of games matching the criteria.
+    # @return [Array<GameSuggestion>] List of games matching the criteria.
     def self.find(args = {})
       # TODO: Enforce :name/:live parameters
 

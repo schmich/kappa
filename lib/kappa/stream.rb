@@ -78,14 +78,14 @@ module Kappa::V2
     # @example
     #   Streams.find(:game => 'Diablo III', :channel => ['nl_kripp', 'protech'])
     # @param :game [String, Game] Only return streams currently streaming the specified game.
-    # @param :channel [[String], [Channel]] Only return streams for these channels. If a channel is not currently streaming, it is omitted.
+    # @param :channel [Array<String>, Array<Channel>] Only return streams for these channels. If a channel is not currently streaming, it is omitted.
     # @param :embeddable [Boolean] TODO
     # @param :hls [Boolean] TODO
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
     # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
     # @raise [ArgumentError] Raised if `args` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
-    # @return [[Stream]] List of streams matching the specified criteria.
+    # @return [Array<Stream>] List of streams matching the specified criteria.
     def self.find(args)
       check = args.dup
       check.delete(:limit)
@@ -122,7 +122,7 @@ module Kappa::V2
       )
     end
 
-    # Get the list of currently featured (promoted) streams. This includes the list of streams shown on the Twitch.tv homepage.
+    # Get the list of currently featured (promoted) streams. This includes the list of streams shown on the Twitch homepage.
     # @note There is no guarantee of how many streams are featured at any given time.
     # @example
     #   Streams.featured(:limit => 5)
@@ -130,7 +130,7 @@ module Kappa::V2
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
     # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured GET /streams/featured
-    # @return [[Stream]] List of currently featured streams.
+    # @return [Array<Stream>] List of currently featured streams.
     def self.featured(args = {})
       params = {}
 

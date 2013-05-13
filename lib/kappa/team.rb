@@ -79,7 +79,7 @@ module Kappa::V2
     #   Teams.all(:limit => 10)
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams GET /teams
-    # @return [[Team]] List of all active teams.
+    # @return [Array<Team>] List of all active teams.
     def self.all(args = {})
       params = {}
 

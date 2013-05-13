@@ -63,7 +63,7 @@ module Kappa::V2
 
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
     # @see #following?
-    # @return [[Channel]] List of channels the user is currently following.
+    # @return [Array<Channel>] List of channels the user is currently following.
     def following(args = {})
       params = {}
 
