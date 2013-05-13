@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'launchy'
 require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec) do |config|
@@ -66,6 +67,7 @@ end
 
 desc 'Run YARD server to view docs'
 task :yard do
+  Launchy.open('http://localhost:8808')
   system('yard server --reload')
 end
 
