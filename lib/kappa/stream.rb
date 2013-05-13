@@ -17,6 +17,9 @@ module Kappa
 end
 
 module Kappa::V2
+  # Streams are video broadcasts that are currently live. They have a broadcaster and are part of a channel.
+  # @see Channel
+  # @see Video
   class Stream < Kappa::StreamBase
     include Connection
 
@@ -31,12 +34,27 @@ module Kappa::V2
       @channel = Channel.new(hash['channel'])
     end
 
+    # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
+
+    # @example "fme", "xsplit", "obs"
+    # @return [String] The broadcasting software used for this stream.
     attr_reader :broadcaster
+    
+    # @return [String] The name of the game currently being streamed.
     attr_reader :game_name
+
+    # @return [String] The unique Twitch name for this stream.
     attr_reader :name
+
+    # @return [Fixnum] The number of viewers currently watching the stream.
     attr_reader :viewer_count
+
+    # @return [String] URL of a preview screenshot taken from the video stream.
     attr_reader :preview_url
+
+    # @note This does not incur another web request.
+    # @return [Channel] The `Channel` associated with this stream.
     attr_reader :channel
   end
 
