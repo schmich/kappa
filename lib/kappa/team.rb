@@ -20,6 +20,9 @@ module Kappa
 end
 
 module Kappa::V2
+  # Teams are an organization of channels.
+  # @see Teams
+  # @see Channel
   class Team < Kappa::TeamBase
     include Connection
     
@@ -36,24 +39,47 @@ module Kappa::V2
       @created_at = DateTime.parse(hash['created_at'])
     end
 
+    # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
+
+    # @return [String] Info about the team. This is displayed on the team's page and can contain HTML.
     attr_reader :info
+
+    # @return [String] URL for background image.
     attr_reader :background_url
+
+    # @return [String] URL for banner image.
     attr_reader :banner_url
+
+    # @return [String] URL for the logo image.
     attr_reader :logo_url
+
+    # @return [String] Unique Twitch name.
     attr_reader :name
+
+    # @return [String] User-friendly display name. This name is used for the team's page title.
     attr_reader :display_name
+
+    # @return [DateTime] When the team was last updated.
     attr_reader :updated_at
+
+    # @return [DateTime] When the team was created.
     attr_reader :created_at
   end
 
+  # Query class used for finding all active teams.
+  # @see Team
   class Teams
     include Connection
 
-    #
-    # GET /teams
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams
-    #
+    # Get the list of all active teams.
+    # @example
+    #   Teams.all
+    # @example
+    #   Teams.all(:limit => 10)
+    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams GET /teams
+    # @return [[Team]] List of all active teams.
     def self.all(args = {})
       params = {}
 
