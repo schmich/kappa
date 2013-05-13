@@ -11,7 +11,13 @@ module Kappa
 end
 
 module Kappa::V2
+  # Games are categories (e.g. League of Legends, Diablo 3) used by streams and channels.
+  # Games can be searched for by query.
+  # @see Games.find
+  # @see Games.top
   class Game < Kappa::GameBase
+    # Create a new `Game` from a hash containing the game's properties.
+    # @param hash [Hash] Hash containing the game's properties.
     def initialize(hash)
       @channel_count = hash['channels']
       @viewer_count = hash['viewers']
@@ -24,12 +30,25 @@ module Kappa::V2
       @logo_images = Images.new(game['logo'])
     end
 
+    # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
+
+    # @return [String] User-friendly game name.
     attr_reader :name
+
+    # @return [Fixnum] Unique game ID for GiantBomb.com. 
     attr_reader :giantbomb_id
+
+    # @return [Images] Set of images for the game's box art.
     attr_reader :box_images
+
+    # @return [Images] Set of images for the game's logo.
     attr_reader :logo_images
+
+    # @return [Fixnum] Total number of channels currently streaming this game on Twitch.
     attr_reader :channel_count
+
+    # @return [Fixnum] Total number of viewers across all channels currently watching this game on Twitch.
     attr_reader :viewer_count
   end
 
