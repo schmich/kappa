@@ -3,6 +3,7 @@ module Kappa
   class VideoBase
     include IdEquality
 
+    # TODO: Include in documentation.
     def self.get(id)
       json = connection.get("videos/#{id}")
       # TODO: Handle case where video ID is invalid.
@@ -15,6 +16,7 @@ module Kappa::V2
   class Video < Kappa::VideoBase
     include Connection
 
+    # @private
     def initialize(hash)
       @id = hash['id']
       @title = hash['title']

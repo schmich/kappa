@@ -7,6 +7,7 @@ module Kappa
     # GET /teams/:team
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam
     #
+    # TODO: Include in documentation.
     def self.get(team_name)
       json = connection.get("teams/#{team_name}")
       if json['status'] == 404
@@ -22,6 +23,7 @@ module Kappa::V2
   class Team < Kappa::TeamBase
     include Connection
     
+    # @private
     def initialize(hash)
       @id = hash['_id']
       @info = hash['info']

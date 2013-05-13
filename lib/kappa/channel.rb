@@ -5,6 +5,7 @@ module Kappa
   class ChannelBase
     include IdEquality
 
+    # TODO: Include in documentation.
     def self.get(channel_name)
       encoded_name = CGI.escape(channel_name)
       json = connection.get("channels/#{encoded_name}")
@@ -30,8 +31,7 @@ module Kappa::V2
     # Current user's channel
     include Connection
 
-    # Create a new `Channel` from a hash containing the channel's properties.
-    # @param hash [Hash] Hash containing the channel's properties.
+    # @private
     def initialize(hash)
       @id = hash['_id']
       @background_url = hash['background']

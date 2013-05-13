@@ -1,8 +1,7 @@
 module Kappa::V2
   # A group of URLs pointing to variously-sized versions of the same image.
   class Images
-    # Create a new `Images` object from a hash containing the various image URLs.
-    # @param hash [Hash] Hash containing the various image URLs.
+    # @private
     def initialize(hash)
       @large_url = hash['large']
       @medium_url = hash['medium']

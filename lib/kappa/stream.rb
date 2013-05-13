@@ -3,6 +3,7 @@ module Kappa
   class StreamBase
     include IdEquality
 
+    # TODO: Include in documentation.
     def self.get(stream_name)
       json = connection.get("streams/#{stream_name}")
       stream = json['stream']
@@ -19,6 +20,7 @@ module Kappa::V2
   class Stream < Kappa::StreamBase
     include Connection
 
+    # @private
     def initialize(hash)
       @id = hash['_id']
       @broadcaster = hash['broadcaster']

@@ -16,8 +16,7 @@ module Kappa::V2
   # @see Games.find
   # @see Games.top
   class Game < Kappa::GameBase
-    # Create a new `Game` from a hash containing the game's properties.
-    # @param hash [Hash] Hash containing the game's properties.
+    # @private
     def initialize(hash)
       @channel_count = hash['channels']
       @viewer_count = hash['viewers']
@@ -55,6 +54,7 @@ module Kappa::V2
   # A game suggestion returned by Twitch when searching for games via `Games#find`.
   # @see Games.find
   class GameSuggestion < Kappa::GameSuggestionBase
+    # @private
     def initialize(hash)
       @id = hash['_id']
       @name = hash['name']

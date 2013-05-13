@@ -9,6 +9,7 @@ module Kappa
     # GET /users/:user
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser
     #
+    # TODO: Include in documentation.
     def self.get(user_name)
       json = connection.get("users/#{user_name}")
       if json['status'] == 404
@@ -24,7 +25,7 @@ module Kappa::V2
   class User < Kappa::UserBase
     include Connection
 
-    # @param hash [Hash]
+    # @private
     def initialize(hash)
       @id = hash['_id']
       @created_at = DateTime.parse(hash['created_at'])
