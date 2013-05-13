@@ -18,6 +18,9 @@ module Kappa
 end
 
 module Kappa::V2
+  # Channels serve as the home location for a user's content. Channels have a stream, can run
+  # commercials, store videos, display information and status, and have a customized page including
+  # banners and backgrounds.
   class Channel < Kappa::ChannelBase
     # TODO:
     # c.subscriptions
@@ -27,6 +30,8 @@ module Kappa::V2
     # Current user's channel
     include Connection
 
+    # Create a new `Channel` from a hash containing the channel's properties.
+    # @param hash [Hash] Hash containing the channel's properties.
     def initialize(hash)
       @id = hash['_id']
       @background_url = hash['background']
@@ -49,7 +54,7 @@ module Kappa::V2
       end
     end
 
-    # This flag is specified by the owner of the channel.
+    # Does this channel have mature content? This flag is specified by the owner of the channel.
     # @return [Boolean] `true` if the channel has mature content, `false` otherwise.
     def mature?
       @mature
@@ -62,8 +67,8 @@ module Kappa::V2
       Stream.get(@name)
     end
 
-    # This makes a separate request to get the channel's stream. If you want to actually use
-    # the stream object, you should call `#stream` instead.
+    # Does this channel currently have a live stream?
+    # @note This makes a separate request to get the channel's stream. If you want to actually use the stream object, you should call `#stream` instead.
     # @return [Boolean] `true` if the channel currently has a live stream, `false` otherwise.
     # @see #stream
     def streaming?
@@ -74,6 +79,8 @@ module Kappa::V2
     # GET /channels/:channel/editors
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschanneleditors
     #
+    # @private
+    # Private until implemented.
     def editors
       # TODO
     end
@@ -82,15 +89,39 @@ module Kappa::V2
     # GET /channels/:channels/videos
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-channelschannelvideos
     #
+    # @private
+    # Private until implemented.
     def videos(params = {})
       # TODO
+    end
+
+    # TODO: Requires authentication.
+    # @private
+    # Private until implemented.
+    def subscribers
+    end
+
+    #
+    # GET /channels/:channel/subscriptions/:user
+    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/subscriptions.md#get-channelschannelsubscriptionsuser
+    #
+    # TODO: Requires authentication.
+    # @private
+    # Private until implemented.
+    def has_subscriber?(user)
+      # Support User object or username (string)
     end
 
     #
     # GET /channels/:channel/follows
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschannelfollows
-    # TODO: Warning: this set can be very large, this can run for very long time, recommend using :limit/:offset.
     #
+
+    # Get the users following this channel.
+    # @note The number of followers is potentially very large, so it's recommended that you specify a `:limit`.
+    # @param :limit [Fixnum] (optional) Limit on the number of results returned. If omitted, all results are returned.
+    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration.
+    # @return [[User]] List of users following this channel.
     def followers(args = {})
       params = {}
 
@@ -112,19 +143,6 @@ module Kappa::V2
       )
     end
 
-    # TODO: Requires authentication.
-    def subscribers
-    end
-
-    #
-    # GET /channels/:channel/subscriptions/:user
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/subscriptions.md#get-channelschannelsubscriptionsuser
-    #
-    # TODO: Requires authentication.
-    def has_subscriber?(user)
-      # Support User object or username (string)
-    end
-
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
@@ -137,7 +155,7 @@ module Kappa::V2
     # @return [DateTime] When the channel was created.
     attr_reader :created_at
 
-    # @return [String] User-friendly display name, e.g. name used for page title.
+    # @return [String] User-friendly display name. This name is used for the channel's page title.
     attr_reader :display_name
 
     # @return [String] Name of the primary game for this channel.
@@ -149,10 +167,10 @@ module Kappa::V2
     # @return [String] Unique Twitch name.
     attr_reader :name
 
-    # @return [String] Current status.
+    # @return [String] Current status set by the channel's owner.
     attr_reader :status
 
-    # @return [DateTime] When the channel was last updated, e.g. last stream time.
+    # @return [DateTime] When the channel was last updated. When a stream is started, its channel is updated.
     attr_reader :updated_at
 
     # @return [String] The URL for the channel's main page.
@@ -161,6 +179,7 @@ module Kappa::V2
     # @return [String] URL for the image shown when the stream is offline.
     attr_reader :video_banner_url
 
+    # @return [[Team]] The list of teams that this channel is associated with. Not all channels have associated teams.
     attr_reader :teams
   end
 end
