@@ -13,7 +13,7 @@ module Kappa::V2
 
     # @private
     def initialize(hash)
-      @id = hash['id']
+      @id = hash['_id']
       @title = hash['title']
       @recorded_at = DateTime.parse(hash['recorded_at'])
       @url = hash['url']
@@ -51,7 +51,7 @@ module Kappa::V2
       Channel.new(connection.get("channels/#{@channel_name}"))
     end
 
-    # @return [Fixnum] Unique Twitch ID for this video.
+    # @return [String] Unique Twitch ID for this video.
     attr_reader :id
 
     # @return [String] Title of this video. This is seen on the video's page.
@@ -80,6 +80,8 @@ module Kappa::V2
 
     # @return [String] The name of the channel on which this video was originally streamed.
     attr_reader :channel_name # TODO: Move this under "v.channel.name" and force the query if other attributes are requested.
+
+    # TODO: embed (HTML embed code)
   end
 
   # Query class used for finding top videos.

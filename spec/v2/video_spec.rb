@@ -15,6 +15,19 @@ describe Kappa::V2::Video do
 
   describe '#new' do
     it 'accepts a hash' do
+      hash = yaml_load('video/video.yml')
+      v = Video.new(hash)
+      v.id.should == hash['_id']
+      v.title.should == hash['title']
+      v.recorded_at.class.should == DateTime
+      v.recorded_at.should < DateTime.now
+      v.url.should == hash['url']
+      v.view_count.should == hash['views']
+      v.description.should == hash['description']
+      v.length_sec.should == hash['length']
+      v.game_name.should == hash['game']
+      v.preview_url.should == hash['preview']
+      v.channel_name.should == hash['channel']['name']
     end
   end
 
