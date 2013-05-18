@@ -45,12 +45,16 @@ module Kappa::V2
       end
     end
 
-    # @note This does incur an additional web request.
+    # @note This incurs an additional web request.
     # @return [Channel] The channel on which this video was originally streamed.
     def channel
       Channel.new(connection.get("channels/#{@channel_name}"))
     end
 
+    # @note This is a `String`, not a `Fixnum` like most other object IDs.
+    # @example
+    #   v = Video.get('a396294648')
+    #   v.id # => "a396294648"
     # @return [String] Unique Twitch ID for this video.
     attr_reader :id
 
@@ -60,7 +64,7 @@ module Kappa::V2
     # @return [DateTime] When this video was recorded.
     attr_reader :recorded_at
 
-    # @return [String] URL to view this video on Twitch.
+    # @return [String] URL of this video on Twitch.
     attr_reader :url
 
     # @return [Fixnum] The number of views this video has received all-time.

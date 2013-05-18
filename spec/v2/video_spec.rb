@@ -6,11 +6,11 @@ include Kappa::V2
 
 describe Kappa::V2::Video do
   before do
-    # WebMocks.load_dir(fixture('video'))
+    WebMocks.load_dir(fixture('video'))
   end
 
   after do
-    # WebMock.reset!
+    WebMock.reset!
   end
 
   describe '#new' do
@@ -33,11 +33,27 @@ describe Kappa::V2::Video do
 
   describe '.get' do
     it 'creates a Video from video ID' do
+      v = Video.get('a402689752')
+      v.should_not be_nil
     end
 
     it 'returns nil when video does not exist' do
+      v = Video.get('does_not_exist')
+      v.should be_nil
     end
 
-    # TODO: Handles video ID with URL characters.
+    it 'handles video name with URL characters' do
+      v = Video.get('foo/bar')
+      v.should_not be_nil
+    end
+  end
+
+  describe '.channel' do
+    it 'returns a valid channel' do
+      v = Video.get('a402689752')
+      v.should_not be_nil
+      c = v.channel
+      c.should_not be_nil
+    end
   end
 end
