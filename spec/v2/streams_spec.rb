@@ -60,7 +60,7 @@ describe Kappa::V2::Streams do
     end
 
     it 'handles server errors' do
-      # HTTP 500
+      # TODO: HTTP 500
     end
 
     # TODO: It can handle :channel channels with URL characters in their name.

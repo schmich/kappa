@@ -123,17 +123,25 @@ module Kappa::V2
     # @param :live [Boolean] (Optional) If `true`, only returns games that are currently live on at least one channel. Default: `false`.
     # @see GameSuggestion
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
+    # @raise [ArgumentError] If `:name` is not specified.
     # @return [Array<GameSuggestion>] List of games matching the criteria.
     def self.find(args = {})
-      # TODO: Enforce :name/:live parameters
-
-      live = args[:live] || false
       name = args[:name]
+      raise ArgumentError if name.nil?
+
+      params = {
+        :query => name,
+        :type => 'suggest'
+      }
+
+      if args[:live]
+        params.merge!(:live => true)
+      end
 
       games = []
       ids = Set.new
 
-      json = connection.get('search/games', :query => name, :type => 'suggest', :live => live)
+      json = connection.get('search/games', params)
       all_games = json['games']
       all_games.each do |game_json|
         game = GameSuggestion.new(game_json)
