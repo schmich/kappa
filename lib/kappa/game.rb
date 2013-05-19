@@ -1,20 +1,10 @@
-module Kappa
-  # @private
-  class GameBase
-    include IdEquality
-  end
-
-  # @private
-  class GameSuggestionBase
-    include IdEquality
-  end
-end
-
 module Kappa::V2
   # Games are categories (e.g. League of Legends, Diablo 3) used by streams and channels.
   # Games can be searched for by query.
   # @see Games
-  class Game < Kappa::GameBase
+  class Game
+    include Kappa::IdEquality
+
     # @private
     def initialize(hash)
       @channel_count = hash['channels']
@@ -52,7 +42,9 @@ module Kappa::V2
 
   # A game suggestion returned by Twitch when searching for games via `Games#find`.
   # @see Games.find
-  class GameSuggestion < Kappa::GameSuggestionBase
+  class GameSuggestion
+    include Kappa::IdEquality
+
     # @private
     def initialize(hash)
       @id = hash['_id']
