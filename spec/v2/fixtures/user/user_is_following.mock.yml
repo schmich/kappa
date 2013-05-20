@@ -1,0 +1,231 @@
+https://api.twitch.tv/kraken/users/eghuk:
+  updated_at: '2013-05-20T07:02:38Z'
+  staff: false
+  created_at: '2010-12-18T02:25:42Z'
+  _id: 18812592
+  logo: http://static-cdn.jtvnw.net/jtv_user_pictures/eghuk-profile_image-d9ca41a8c9361300-300x300.jpeg
+  _links:
+    self: https://api.twitch.tv/kraken/users/eghuk
+  name: eghuk
+  display_name: EGHuK
+https://api.twitch.tv/kraken/users/eghuk/follows/channels?limit=100&offset=0:
+  follows:
+  - channel:
+      video_banner: 
+      created_at: '2010-05-03T17:07:00Z'
+      updated_at: '2013-05-19T12:40:10Z'
+      url: http://www.twitch.tv/liquidtlo
+      status: ! "17May-  Streaming From Berlin\r\n\r\nhttp://grooveshark.com/playlist/EPIC+Fantasy+Medieval/61219138"
+      _id: 12380241
+      mature: 
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/liquidtlo-channel_header_image-fb050ad2cdffdd72-640x125.jpeg
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/liquidtlo-profile_image-ec057638e717d3fd-300x300.jpeg
+      display_name: LiquidTLO
+      name: liquidtlo
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/liquidtlo-channel_background_image-58a8b1dd92eeaa82.jpeg
+      _links:
+        stream_key: https://api.twitch.tv/kraken/channels/liquidtlo/stream_key
+        commercial: https://api.twitch.tv/kraken/channels/liquidtlo/commercial
+        subscriptions: https://api.twitch.tv/kraken/channels/liquidtlo/subscriptions
+        features: https://api.twitch.tv/kraken/channels/liquidtlo/features
+        self: https://api.twitch.tv/kraken/channels/liquidtlo
+        videos: https://api.twitch.tv/kraken/channels/liquidtlo/videos
+        follows: https://api.twitch.tv/kraken/channels/liquidtlo/follows
+        editors: https://api.twitch.tv/kraken/channels/liquidtlo/editors
+        chat: https://api.twitch.tv/kraken/chat/liquidtlo
+      teams:
+      - created_at: '2011-10-27T01:00:44Z'
+        updated_at: '2013-04-27T16:58:55Z'
+        _id: 12
+        banner: 
+        logo: 
+        info: ! "TeamLiquid is awesome. and esports. video games. \n\n"
+        name: teamliquid
+        display_name: TeamLiquid
+        background: 
+        _links:
+          self: https://api.twitch.tv/kraken/teams/teamliquid
+      game: ! 'StarCraft II: Heart of the Swarm'
+    _links:
+      self: https://api.twitch.tv/kraken/users/eghuk/follows/channels/liquidtlo
+  - channel:
+      updated_at: '2013-05-13T17:34:50Z'
+      created_at: '2010-08-05T17:46:18Z'
+      video_banner: 
+      status: Playing HotS woo!
+      url: http://www.twitch.tv/joshsuth
+      _id: 14379839
+      mature: false
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/joshsuth-profile_image-b30ba17094469af1-300x300.jpeg
+      banner: 
+      name: joshsuth
+      display_name: Joshsuth
+      background: 
+      game: 
+      _links:
+        stream_key: https://api.twitch.tv/kraken/channels/joshsuth/stream_key
+        subscriptions: https://api.twitch.tv/kraken/channels/joshsuth/subscriptions
+        commercial: https://api.twitch.tv/kraken/channels/joshsuth/commercial
+        features: https://api.twitch.tv/kraken/channels/joshsuth/features
+        videos: https://api.twitch.tv/kraken/channels/joshsuth/videos
+        self: https://api.twitch.tv/kraken/channels/joshsuth
+        editors: https://api.twitch.tv/kraken/channels/joshsuth/editors
+        follows: https://api.twitch.tv/kraken/channels/joshsuth/follows
+        chat: https://api.twitch.tv/kraken/chat/joshsuth
+      teams: []
+    _links:
+      self: https://api.twitch.tv/kraken/users/eghuk/follows/channels/joshsuth
+  - channel:
+      updated_at: '2013-05-20T06:26:49Z'
+      created_at: '2011-01-01T17:09:42Z'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/burtar-channel_offline_image-c5f64fbfb7c44ad4-640x360.jpeg
+      status: Diamond Terran, Hellbat time!
+      url: http://www.twitch.tv/burtar
+      _id: 19172892
+      mature: 
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/burtar-profile_image-17ecaca0db763912-300x300.jpeg
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/burtar-channel_header_image-3e3d93e09089e394-640x125.jpeg
+      name: burtar
+      display_name: Burtar
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/burtar-channel_background_image-79c36e6ab69b8e59.jpeg
+      game: ! 'StarCraft II: Heart of the Swarm'
+      _links:
+        stream_key: https://api.twitch.tv/kraken/channels/burtar/stream_key
+        subscriptions: https://api.twitch.tv/kraken/channels/burtar/subscriptions
+        commercial: https://api.twitch.tv/kraken/channels/burtar/commercial
+        features: https://api.twitch.tv/kraken/channels/burtar/features
+        videos: https://api.twitch.tv/kraken/channels/burtar/videos
+        self: https://api.twitch.tv/kraken/channels/burtar
+        editors: https://api.twitch.tv/kraken/channels/burtar/editors
+        follows: https://api.twitch.tv/kraken/channels/burtar/follows
+        chat: https://api.twitch.tv/kraken/chat/burtar
+      teams: []
+    _links:
+      self: https://api.twitch.tv/kraken/users/eghuk/follows/channels/burtar
+  - channel:
+      updated_at: '2013-05-13T23:04:36Z'
+      created_at: '2011-01-02T20:41:42Z'
+      video_banner: 
+      status: NonY - Protoss -  New Season
+      url: http://www.twitch.tv/nony
+      _id: 19209134
+      mature: 
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-profile_image-a447710f0dbf634f-300x300.jpeg
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-channel_header_image-ce13bf55f6e93656-640x125.png
+      name: nony
+      display_name: NonY
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-channel_background_image-901c5cca410c9c46.jpeg
+      game: ! 'StarCraft II: Heart of the Swarm'
+      _links:
+        stream_key: https://api.twitch.tv/kraken/channels/nony/stream_key
+        subscriptions: https://api.twitch.tv/kraken/channels/nony/subscriptions
+        commercial: https://api.twitch.tv/kraken/channels/nony/commercial
+        features: https://api.twitch.tv/kraken/channels/nony/features
+        videos: https://api.twitch.tv/kraken/channels/nony/videos
+        self: https://api.twitch.tv/kraken/channels/nony
+        editors: https://api.twitch.tv/kraken/channels/nony/editors
+        follows: https://api.twitch.tv/kraken/channels/nony/follows
+        chat: https://api.twitch.tv/kraken/chat/nony
+      teams: []
+    _links:
+      self: https://api.twitch.tv/kraken/users/eghuk/follows/channels/nony
+  _total: 4
+  _links:
+    next: https://api.twitch.tv/kraken/users/eghuk/follows/channels?limit=100&offset=100
+    self: https://api.twitch.tv/kraken/users/eghuk/follows/channels?limit=100&offset=0
+https://api.twitch.tv/kraken/channels/nony:
+  updated_at: '2013-05-13T23:04:36Z'
+  created_at: '2011-01-02T20:41:42Z'
+  video_banner: 
+  status: NonY - Protoss -  New Season
+  url: http://www.twitch.tv/nony
+  _id: 19209134
+  _links:
+    stream_key: https://api.twitch.tv/kraken/channels/nony/stream_key
+    subscriptions: https://api.twitch.tv/kraken/channels/nony/subscriptions
+    commercial: https://api.twitch.tv/kraken/channels/nony/commercial
+    features: https://api.twitch.tv/kraken/channels/nony/features
+    videos: https://api.twitch.tv/kraken/channels/nony/videos
+    self: https://api.twitch.tv/kraken/channels/nony
+    editors: https://api.twitch.tv/kraken/channels/nony/editors
+    follows: https://api.twitch.tv/kraken/channels/nony/follows
+    chat: https://api.twitch.tv/kraken/chat/nony
+  mature: 
+  logo: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-profile_image-a447710f0dbf634f-300x300.jpeg
+  banner: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-channel_header_image-ce13bf55f6e93656-640x125.png
+  name: nony
+  display_name: NonY
+  background: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-channel_background_image-901c5cca410c9c46.jpeg
+  game: ! 'StarCraft II: Heart of the Swarm'
+  teams: []
+https://api.twitch.tv/kraken/users/eghuk/follows/channels/liquidtlo:
+  channel:
+    updated_at: '2013-05-19T12:40:10Z'
+    created_at: '2010-05-03T17:07:00Z'
+    status: ! "17May-  Streaming From Berlin\r\n\r\nhttp://grooveshark.com/playlist/EPIC+Fantasy+Medieval/61219138"
+    url: http://www.twitch.tv/liquidtlo
+    _id: 12380241
+    mature: 
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/liquidtlo-profile_image-ec057638e717d3fd-300x300.jpeg
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/liquidtlo-channel_header_image-fb050ad2cdffdd72-640x125.jpeg
+    name: liquidtlo
+    display_name: LiquidTLO
+    video_banner: 
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/liquidtlo-channel_background_image-58a8b1dd92eeaa82.jpeg
+    _links:
+      stream_key: https://api.twitch.tv/kraken/channels/liquidtlo/stream_key
+      subscriptions: https://api.twitch.tv/kraken/channels/liquidtlo/subscriptions
+      commercial: https://api.twitch.tv/kraken/channels/liquidtlo/commercial
+      features: https://api.twitch.tv/kraken/channels/liquidtlo/features
+      videos: https://api.twitch.tv/kraken/channels/liquidtlo/videos
+      self: https://api.twitch.tv/kraken/channels/liquidtlo
+      editors: https://api.twitch.tv/kraken/channels/liquidtlo/editors
+      follows: https://api.twitch.tv/kraken/channels/liquidtlo/follows
+      chat: https://api.twitch.tv/kraken/chat/liquidtlo
+    game: ! 'StarCraft II: Heart of the Swarm'
+    teams:
+    - updated_at: '2013-04-27T16:58:55Z'
+      created_at: '2011-10-27T01:00:44Z'
+      _id: 12
+      info: ! "TeamLiquid is awesome. and esports. video games. \n\n"
+      logo: 
+      banner: 
+      display_name: TeamLiquid
+      name: teamliquid
+      background: 
+      _links:
+        self: https://api.twitch.tv/kraken/teams/teamliquid
+  _links:
+    self: https://api.twitch.tv/kraken/users/eghuk/follows/channels/liquidtlo
+https://api.twitch.tv/kraken/users/eghuk/follows/channels/idrajit:
+  status: 404
+  message: eghuk is not following idrajit
+  error: Not Found
+https://api.twitch.tv/kraken/users/eghuk/follows/channels/nony:
+  channel:
+    updated_at: '2013-05-13T23:04:36Z'
+    created_at: '2011-01-02T20:41:42Z'
+    status: NonY - Protoss -  New Season
+    url: http://www.twitch.tv/nony
+    _id: 19209134
+    mature: 
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-profile_image-a447710f0dbf634f-300x300.jpeg
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-channel_header_image-ce13bf55f6e93656-640x125.png
+    _links:
+      stream_key: https://api.twitch.tv/kraken/channels/nony/stream_key
+      subscriptions: https://api.twitch.tv/kraken/channels/nony/subscriptions
+      commercial: https://api.twitch.tv/kraken/channels/nony/commercial
+      features: https://api.twitch.tv/kraken/channels/nony/features
+      videos: https://api.twitch.tv/kraken/channels/nony/videos
+      self: https://api.twitch.tv/kraken/channels/nony
+      editors: https://api.twitch.tv/kraken/channels/nony/editors
+      follows: https://api.twitch.tv/kraken/channels/nony/follows
+      chat: https://api.twitch.tv/kraken/chat/nony
+    name: nony
+    display_name: NonY
+    video_banner: 
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/nony-channel_background_image-901c5cca410c9c46.jpeg
+    game: ! 'StarCraft II: Heart of the Swarm'
+    teams: []
+  _links:
+    self: https://api.twitch.tv/kraken/users/eghuk/follows/channels/nony

@@ -69,6 +69,49 @@ describe Kappa::V2::User do
     end
   end
 
-  # TODO: User#following
-  # TODO: User#following?
+  describe '#following' do
+    it 'returns the list of channels a user is following' do
+      u = User.get('nathanias')
+      u.should_not be_nil
+      f = u.following
+      f.should_not be_nil
+      f.count.should == 60
+      f.each { |c| c.class.should == Channel }
+    end
+
+    it 'limits the number of results returned based on the :limit parameter' do
+      u = User.get('nathanias')
+      u.should_not be_nil
+      f = u.following(:limit => 7)
+      f.should_not be_nil
+      f.count.should == 7
+      f.each { |c| c.class.should == Channel }
+    end
+  end
+
+  describe '#following?' do
+    it 'returns true if the user is following the channel' do
+      u = User.get('eghuk')
+      u.should_not be_nil
+      f = u.following?('liquidtlo')
+      f.should == true
+    end
+
+    it 'returns false if the user is not following the channel' do
+      u = User.get('eghuk')
+      u.should_not be_nil
+      f = u.following?('idrajit')
+      f.should == false
+    end
+
+    it 'accepts a Channel object' do
+      u = User.get('eghuk')
+      u.should_not be_nil
+      c = Channel.get('nony')
+      f = u.following?(c)
+      f.should == true
+    end
+
+    # TODO: URL characters
+  end
 end

@@ -58,13 +58,9 @@ module Kappa::V2
     def subscribed_to?(channel_name)
     end
 
-    #
-    # GET /users/:user/follows/channels
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels
-    #
-
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
     # @see #following?
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels GET /users/:user/follows/channels
     # @return [Array<Channel>] List of channels the user is currently following.
     def following(args = {})
       params = {}
@@ -87,15 +83,13 @@ module Kappa::V2
       )
     end
 
-    #
-    # GET /users/:user/follows/:channels/:target
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannelstarget
-    #
-
     # @param channel [String, Channel] The name of the channel (or `Channel` object) to check.
     # @return [Boolean] `true` if the user is following the channel, `false` otherwise.
     # @see #following
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannelstarget GET /users/:user/follows/:channels/:target
     def following?(channel)
+      # TODO: Support User for channel parameter? Stream?
+
       channel_name = case channel
         when String
           channel
