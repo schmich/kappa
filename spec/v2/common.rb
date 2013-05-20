@@ -11,35 +11,6 @@ def yaml_load(file)
   YAML.load_file(fixture(file))
 end
 
-module YAML
-  def self.load_expand(file)
-    expand(YAML.load_file(file), file)
-  end
-
-private
-  def self.expand(node, file)
-    case node
-      when Hash
-        node.each do |k, v|
-          if v.is_a? String
-            if v =~ /^\$\((.*)\)/
-              file = File.join(File.dirname(file), $1)
-              node[k] = load_expand(file)
-            end
-          else
-            expand(v, file)
-          end
-        end
-      when Array
-        node.each do |n|
-          expand(n, file)
-        end
-    end
-
-    node
-  end
-end
-
 include WebMock::API
 
 class WebMocks
@@ -51,7 +22,7 @@ class WebMocks
   end
 
   def self.load(file_name)
-    doc = YAML.load_expand(file_name)
+    doc = YAML.load_file(file_name)
     doc.each do |url, response|
       uri = Addressable::URI.parse(url)
 
