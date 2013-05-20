@@ -76,6 +76,25 @@ describe Kappa::V2::Channel do
     end
   end
 
-  # TODO: Channel#followers
+  describe '#followers' do
+    it 'returns the list of users following this channel' do
+      c = Channel.get('osrusher')
+      c.should_not be_nil
+      f = c.followers
+      f.should_not be_nil
+      f.count.should == 533
+      f.each { |u| u.class.should == User }
+    end
+
+    it 'limits the number of results based on the :limit parameter' do
+      c = Channel.get('osrusher')
+      c.should_not be_nil
+      f = c.followers(:limit => 7)
+      f.should_not be_nil
+      f.count.should == 7
+      f.each { |u| u.class.should == User }
+    end
+  end
+
   # TODO: Channel#videos
 end
