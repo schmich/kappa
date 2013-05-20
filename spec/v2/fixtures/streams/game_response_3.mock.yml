@@ -1,9 +1,0 @@
-https://api.twitch.tv/kraken/streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=100&offset=200:
-  _links:
-    summary: https://api.twitch.tv/kraken/streams/summary
-    next: https://api.twitch.tv/kraken/streams?game=StarCraft+II%3A+Heart+of+the+Swarm&limit=100&offset=300
-    followed: https://api.twitch.tv/kraken/streams/followed
-    featured: https://api.twitch.tv/kraken/streams/featured
-    self: https://api.twitch.tv/kraken/streams?game=StarCraft+II%3A+Heart+of+the+Swarm&limit=100&offset=200
-    prev: https://api.twitch.tv/kraken/streams?game=StarCraft+II%3A+Heart+of+the+Swarm&limit=100&offset=100
-  streams: []

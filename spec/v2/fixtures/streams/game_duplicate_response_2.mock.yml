@@ -1,9 +1,0 @@
-https://api.twitch.tv/kraken/streams?game=Ultimate%20Marvel%20vs.%20Capcom%203&limit=100&offset=100:
-  _links:
-    summary: https://api.twitch.tv/kraken/streams/summary
-    prev: https://api.twitch.tv/kraken/streams?game=Ultimate+Marvel+vs.+Capcom+3&limit=100&offset=0
-    featured: https://api.twitch.tv/kraken/streams/featured
-    next: https://api.twitch.tv/kraken/streams?game=Ultimate+Marvel+vs.+Capcom+3&limit=100&offset=200
-    self: https://api.twitch.tv/kraken/streams?game=Ultimate+Marvel+vs.+Capcom+3&limit=100&offset=100
-    followed: https://api.twitch.tv/kraken/streams/followed
-  streams: []

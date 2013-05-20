@@ -6428,11 +6428,3 @@ https://api.twitch.tv/kraken/channels/osrusher/follows?limit=100&offset=500:
       logo: 
       name: thealphatroll
       display_name: TheAlphaTroll
-https://api.twitch.tv/kraken/channels/osrusher/follows?limit=100&offset=600:
-  _links:
-    prev: https://api.twitch.tv/kraken/channels/osrusher/follows?limit=100&offset=500
-    next: https://api.twitch.tv/kraken/channels/osrusher/follows?limit=100&offset=700
-    self: https://api.twitch.tv/kraken/channels/osrusher/follows?limit=100&offset=600
-  _total: 531
-  follows: []
-

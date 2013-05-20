@@ -1,9 +1,0 @@
-https://api.twitch.tv/kraken/streams?channel%5B0%5D=leveluplive&channel%5B1%5D=djwheat&limit=100&offset=100:
-  _links:
-    summary: https://api.twitch.tv/kraken/streams/summary
-    prev: https://api.twitch.tv/kraken/streams?channel%5B%5D=leveluplive&channel%5B%5D=djwheat&limit=100&offset=0
-    next: https://api.twitch.tv/kraken/streams?channel%5B%5D=leveluplive&channel%5B%5D=djwheat&limit=100&offset=200
-    followed: https://api.twitch.tv/kraken/streams/followed
-    self: https://api.twitch.tv/kraken/streams?channel%5B%5D=leveluplive&channel%5B%5D=djwheat&limit=100&offset=100
-    featured: https://api.twitch.tv/kraken/streams/featured
-  streams: []

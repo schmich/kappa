@@ -1,4 +1,3 @@
----
 https://api.twitch.tv/kraken/streams?game=StarCraft%20II:%20Heart%20of%20the%20Swarm&limit=100&offset=0:
   _links:
     summary: https://api.twitch.tv/kraken/streams/summary

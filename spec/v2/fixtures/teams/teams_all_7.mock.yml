@@ -1,6 +1,0 @@
-https://api.twitch.tv/kraken/teams?limit=100&offset=600:
-  teams: []
-  _links:
-    next: https://api.twitch.tv/kraken/teams?limit=100&offset=700
-    self: https://api.twitch.tv/kraken/teams?limit=100&offset=600
-    prev: https://api.twitch.tv/kraken/teams?limit=100&offset=500
