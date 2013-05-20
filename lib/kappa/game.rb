@@ -138,6 +138,8 @@ module Kappa::V2
         params.merge!(:live => true)
       end
 
+      # TODO: Use connection#accumulate here.
+
       games = []
       ids = Set.new
 

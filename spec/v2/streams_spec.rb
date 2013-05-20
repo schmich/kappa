@@ -13,6 +13,7 @@ describe Kappa::V2::Streams do
     WebMock.reset!
   end
 
+  # TODO: Streams.all
   describe '.all' do
   end
 
@@ -66,11 +67,21 @@ describe Kappa::V2::Streams do
     # TODO: It can handle :channel channels with URL characters in their name.
   end
 
-  # TODO: Streams.featured
   describe '.featured' do
-  end
+    it 'returns a list of featured streams' do
+      s = Streams.featured
+      s.should_not be_nil
+      s.count.should == 15
+      s.each { |e| e.class.should == Stream }
+    end
 
-  # TODO: Streams.all
+    it 'limits the number of results based on the :limit parameter' do
+      s = Streams.featured(:limit => 3)
+      s.should_not be_nil
+      s.count.should == 3
+      s.each { |e| e.class.should == Stream }
+    end
+  end
 
   # TODO: Test Streams.find with > 100 channels (force pagination).
   # See sc2daily for example.

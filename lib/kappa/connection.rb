@@ -41,11 +41,13 @@ module Kappa
 
     def accumulate(args)
       path = args[:path]
-      params = args[:params]
+      params = args[:params] || {}
       json = args[:json]
       sub_json = args[:sub_json]
       klass = args[:class]
-      limit = args[:limit]
+
+      total_limit = args[:limit]
+      page_limit = params[:limit] || 100
 
       objects = []
       ids = Set.new
@@ -57,13 +59,13 @@ module Kappa
           object = klass.new(object_json)
           if ids.add?(object.id)
             objects << object
-            if objects.count == limit
+            if objects.count == total_limit
               return objects
             end
           end
         end
 
-        !current_objects.empty?
+        !current_objects.empty? && (current_objects.count >= page_limit)
       end
 
       return objects
