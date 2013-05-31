@@ -16,8 +16,6 @@ module Kappa
       uuid = SecureRandom.uuid
       # TODO: Use current library version.
       @client_id = "Kappa-v1-#{uuid}"
-
-      @last_request_time = Time.now - RATE_LIMIT_SEC
     end
 
     def get(path, query = nil)
@@ -27,9 +25,7 @@ module Kappa
         'Client-ID' => @client_id,
       }.merge(custom_headers)
 
-      response = rate_limit do
-        self.class.get(request_url, :headers => headers, :query => query)
-      end
+      response = self.class.get(request_url, :headers => headers, :query => query)
 
       # TODO: Handle non-JSON response
       # TODO: Handle invalid JSON
@@ -109,20 +105,6 @@ module Kappa
     end
 
   private
-    def rate_limit
-      delta = Time.now - @last_request_time
-      delay = [RATE_LIMIT_SEC - delta, 0].max
-
-      sleep delay if delay > 0
-
-      begin
-        return yield
-      ensure
-        @last_request_time = Time.now
-      end
-    end
-
-    RATE_LIMIT_SEC = 1
     DEFAULT_BASE_URL = 'https://api.twitch.tv/kraken/'
   end
 end
