@@ -136,8 +136,8 @@ Detailed API documentation is available at [http://rdoc.info/github/schmich/kapp
 - Run `bundle install` to install development requirements.
 - Implement your feature or bug fix.
 - Add specs under the `spec` folder to prevent regressions or to test new code.
-- Add [YARD](http://rubydoc.info/docs/yard/file/docs/GettingStarted.md) documentation for new features.
-- Run `rake coverage:local` to run specs with code coverage. All specs must pass, coverage must remain at 100%.
+- Add [YARD](http://rubydoc.info/docs/yard/file/docs/GettingStarted.md) documentation for new features. Run `rake yard` to view documentation.
+- Run `rake coverage:local` to run specs with code coverage. All specs must pass; coverage must remain at 100%.
 - Commit and push your changes.
 - [Submit a pull request.](http://help.github.com/send-pull-requests/)
 
