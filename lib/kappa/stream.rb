@@ -88,7 +88,7 @@ module Kappa::V2
     # @param :game [String/Game] Only return streams currently streaming the specified game.
     # @param :channel [Array<String/Channel>] Only return streams for these channels.
     #   If a channel is not currently streaming, it is omitted. You must specify an array of channels
-    #   or channel names. If you want to find the stream for a single channel, see {Kappa::V2::Stream#name}.
+    #   or channel names. If you want to find the stream for a single channel, see {Stream.get}.
     # @param :embeddable [Boolean] TODO
     # @param :hls [Boolean] TODO
     # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
