@@ -122,7 +122,7 @@ s.map(&:popularity)  # => [120, 4, 1, 1]
 
 ## Documentation
 
-Detailed API documentation is avaiable at [http://rdoc.info/github/schmich/kappa/master/frames](http://rdoc.info/github/schmich/kappa/master/frames).
+Detailed API documentation is available at [http://rdoc.info/github/schmich/kappa/master/frames](http://rdoc.info/github/schmich/kappa/master/frames).
 
 ## Versioning
 
