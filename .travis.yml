@@ -1,5 +1,5 @@
 language: ruby
-script: rake coverage
+script: rake coverage:coveralls
 rvm:
   - 1.9.3
   - 2.0.0
