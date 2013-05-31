@@ -35,9 +35,9 @@ c.nil?        # => false (channel exists)
 c.stream      # => #<Kappa::V2::Stream> (current live stream)
 c.url         # => "http://www.twitch.tv/destiny"
 c.status      # => "Destiny - Diamond I ADC  - Number 1 Draven player..."
-c.teams       # => []      
-c.videos      # => []
-c.followers   # => []
+c.teams       # => [#<Kappa::V2::Team>]      
+c.videos      # => [#<Kappa::V2::Video>, ...]
+c.followers   # => [#<Kappa::V2::User>, ...]
 ```
 
 ### <a id="streams"></a>Streams
