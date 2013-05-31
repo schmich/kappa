@@ -36,11 +36,12 @@ module Kappa::V2
       end
     end
 
-    # @return [Channel] The `Channel` associated with this user account.
-    # @private
-    # Private until implemented.
+    # Get the `Channel` associated with this user.
+    # @note This incurs an additional web request.
+    # @return [Channel] The `Channel` associated with this user, or `nil` if this is a Justin.tv account.
+    # @see Channel.get
     def channel
-      # TODO
+      Channel.get(@name)
     end
 
     # @return [Boolean] `true` if the user is a member of the Twitch.tv staff, `false` otherwise.

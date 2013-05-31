@@ -114,4 +114,14 @@ describe Kappa::V2::User do
 
     # TODO: URL characters
   end
+
+  describe '#channel' do
+    it 'returns the channel associated with the user' do
+      u = User.get('colthestc')
+      u.should_not be_nil
+      c = u.channel
+      c.should_not be_nil
+      c.name.should == u.name
+    end
+  end
 end
