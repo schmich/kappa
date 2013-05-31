@@ -50,6 +50,11 @@ describe Kappa::V2::Stream do
       s.should be_nil
     end
 
+    it 'returns nil when the stream is associated with a Justin.tv account' do
+      c = Stream.get('desrow')
+      c.should be_nil
+    end
+
     # TODO: Handles stream name with URL characters.
   end
 
