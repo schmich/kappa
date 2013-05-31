@@ -13,6 +13,10 @@ module Kappa
     def initialize(base_url = DEFAULT_BASE_URL)
       @base_url = Addressable::URI.parse(base_url)
 
+      # TODO: Expose client_id so clients of the library can (optionally) set this
+      # themselves and avoid rate limiting. Clients should still have the option to
+      # not set this and use a randomly generated ID.
+      
       uuid = SecureRandom.uuid
       # TODO: Use current library version.
       @client_id = "Kappa-v1-#{uuid}"
