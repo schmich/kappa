@@ -40,7 +40,7 @@ module Kappa::V2
     attr_reader :viewer_count
   end
 
-  # A game suggestion returned by Twitch when searching for games via `Games#find`.
+  # A game suggestion returned by Twitch when searching for games via `Games.find`.
   # @see Games.find
   class GameSuggestion
     include Kappa::IdEquality
