@@ -1,30 +1,11 @@
-module Kappa
-  # @private
-  class TeamBase
-    include IdEquality
-
-    #
-    # GET /teams/:team
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam
-    #
-    # TODO: Include in documentation.
-    def self.get(team_name)
-      json = connection.get("teams/#{team_name}")
-      if json['status'] == 404
-        nil
-      else
-        new(json)
-      end
-    end
-  end
-end
-
 module Kappa::V2
   # Teams are an organization of channels.
+  # @see .get Team.get
   # @see Teams
   # @see Channel
-  class Team < Kappa::TeamBase
+  class Team
     include Connection
+    include Kappa::IdEquality
     
     # @private
     def initialize(hash)
@@ -37,6 +18,19 @@ module Kappa::V2
       @display_name = hash['display_name']
       @updated_at = DateTime.parse(hash['updated_at'])
       @created_at = DateTime.parse(hash['created_at'])
+    end
+
+    # Get a team by name.
+    # @param team_name [String] The name of the team to get.
+    # @return [Team] A valid `Team` object if the team exists, `nil` otherwise.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam GET /teams/:team
+    def self.get(team_name)
+      json = connection.get("teams/#{team_name}")
+      if json['status'] == 404
+        nil
+      else
+        new(json)
+      end
     end
 
     # @return [Fixnum] Unique Twitch ID.
