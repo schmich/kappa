@@ -1,7 +1,7 @@
 require 'cgi'
 
 module Kappa::V2
-  # Streams are video broadcasts that are currently live. They have a broadcaster and are part of a channel.
+  # Streams are video broadcasts that are currently live. They belong to a user and are part of a channel.
   # @see .get Stream.get
   # @see Streams
   # @see Channel

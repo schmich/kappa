@@ -23,7 +23,7 @@ puts grubby.streaming?
 
 ## Examples
 
-### Channels
+### <a id="channels"></a>Channels
 
 Channels serve as the home location for a [user's](#users) content. Channels have a [stream](#streams), can run commercials, store [videos](#videos), display information and status, and have a customized page including banners and backgrounds.
 
@@ -40,9 +40,9 @@ c.videos      # => []
 c.followers   # => []
 ```
 
-### Streams
+### <a id="streams"></a>Streams
 
-Streams are video broadcasts that are currently live. They have a [broadcaster](#users) and are part of a [channel](#channels).
+Streams are video broadcasts that are currently live. They belong to a [user](#users) and are part of a [channel](#channels).
 
 See also [`Kappa::V2::Stream`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Stream) and [`Kappa::V2::Streams`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Streams) documentation.
 
@@ -54,7 +54,7 @@ s.viewer_count  # => 7267
 s.channel.url   # => "http://www.twitch.tv/idrajit"
 ```
 
-### Users
+### <a id="users"></a>Users
 
 These are members of the Twitch community who have a Twitch account. If broadcasting, they can own a [stream](#streams) that they can broadcast on their [channel](#channels). If mainly viewing, they might follow or subscribe to channels.
 
@@ -67,7 +67,7 @@ u.channel                 # => #<Kappa::V2::Channel>
 u.following.map(&:name)   # => ["national_esl1", "dreamhacklol", "riotgames"]
 ```
 
-### Videos
+### <a id="videos"></a>Videos
 
 Videos are broadcasts or highlights owned by a [channel](#channels). Broadcasts are unedited videos that are saved after a streaming session. Highlights are videos edited from broadcasts by the channel's owner.
 
@@ -82,7 +82,7 @@ v.recorded_at   # => #<DateTime: 2013-04-26T18:33:48+00:00>
 v.view_count    # => 12506
 ```
 
-### Teams
+### <a id="teams"></a>Teams
 
 Teams are an organization of [channels](#channels).
 
@@ -95,7 +95,7 @@ t.info          # => "TeamLiquid is awesome. and esports. video games. \n\n"
 t.updated_at    # => #<DateTime: 2013-04-27T16:58:55+00:00>
 ```
 
-### Games
+### <a id="games"></a>Games
 
 Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#streams) and [channels](#channels). Games can be searched for by query.
 
