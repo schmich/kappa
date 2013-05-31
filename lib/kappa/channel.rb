@@ -46,7 +46,9 @@ module Kappa::V2
     def self.get(channel_name)
       encoded_name = CGI.escape(channel_name)
       json = connection.get("channels/#{encoded_name}")
-      if !json || json['status'] == 404
+
+      # HTTP 422 can happen if the channel is associated with a Justin.tv account.
+      if !json || json['status'] == 404 || json['status'] == 422
         nil
       else
         new(json)

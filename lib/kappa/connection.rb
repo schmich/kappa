@@ -34,6 +34,7 @@ module Kappa
       # TODO: Handle non-JSON response
       # TODO: Handle invalid JSON
       # TODO: Handle non-200 codes
+      # TODO: Include HTTP status code in the return value
 
       json = response.body
       return JSON.parse(json)

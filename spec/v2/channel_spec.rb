@@ -58,6 +58,11 @@ describe Kappa::V2::Channel do
       c = Channel.get('does_not_exist')
       c.should be_nil
     end
+
+    it 'returns nil when the channel is associated with a Justin.tv account' do
+      c = Channel.get('desrow')
+      c.should be_nil
+    end
   end
 
   describe '.streaming?' do
