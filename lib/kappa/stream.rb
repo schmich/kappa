@@ -30,6 +30,8 @@ module Kappa::V2
     #   s = Strearm.get('destiny')
     #   s.nil?          # => true (stream is offline)
     # @param stream_name [String] The name of the stream to get. This is the same as the channel or user name.
+    # @see Streams.find
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamschannel GET /streams/:channel
     # @return [Stream] A valid `Stream` object if the stream exists and is currently live, `nil` otherwise.
     def self.get(stream_name)
       encoded_name = CGI.escape(stream_name)
@@ -85,19 +87,21 @@ module Kappa::V2
     #   Streams.find(:channel => ['fgtvlive', 'incontroltv', 'destiny'])
     # @example
     #   Streams.find(:game => 'Diablo III', :channel => ['nl_kripp', 'protech'])
-    # @param :game [String/Game] Only return streams currently streaming the specified game.
-    # @param :channel [Array<String/Channel>] Only return streams for these channels.
+    # @param options [Hash] Search criteria.
+    # @option options [String/Game] :game Only return streams currently streaming the specified game.
+    # @option options [Array<String/Channel>] :channel Only return streams for these channels.
     #   If a channel is not currently streaming, it is omitted. You must specify an array of channels
     #   or channel names. If you want to find the stream for a single channel, see {Stream.get}.
-    # @param :embeddable [Boolean] TODO
-    # @param :hls [Boolean] TODO
-    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
-    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
+    # @option options [Boolean] :embeddable TODO
+    # @option options [Boolean] :hls TODO
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @see Stream.get
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
-    # @raise [ArgumentError] If `args` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
+    # @raise [ArgumentError] If `options` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
     # @return [Array<Stream>] List of streams matching the specified criteria.
-    def self.find(args)
-      check = args.dup
+    def self.find(options)
+      check = options.dup
       check.delete(:limit)
       check.delete(:offset)
       raise ArgumentError if check.empty?
@@ -107,15 +111,15 @@ module Kappa::V2
 
       params = {}
 
-      if args[:channel]
-        params[:channel] = args[:channel].join(',')
+      if options[:channel]
+        params[:channel] = options[:channel].join(',')
       end
 
-      if args[:game]
-        params[:game] = args[:game]
+      if options[:game]
+        params[:game] = options[:game]
       end
 
-      limit = args[:limit]
+      limit = options[:limit]
       if limit && (limit < 100)
         params[:limit] = limit
       else
@@ -138,18 +142,19 @@ module Kappa::V2
     #   Streams.featured
     # @example
     #   Streams.featured(:limit => 5)
-    # @param :hls [Boolean] (optional) TODO
-    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
-    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
+    # @param options [Hash] Filter criteria.
+    # @option options [Boolean] :hls (false) TODO
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured GET /streams/featured
     # @return [Array<Stream>] List of currently featured streams.
-    def self.featured(args = {})
+    def self.featured(options = {})
       params = {}
 
       # TODO: Support :offset param
       # TODO: Support :hls param
 
-      limit = args[:limit]
+      limit = options[:limit]
       if limit && (limit < 100)
         params[:limit] = limit
       else

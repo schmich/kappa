@@ -85,19 +85,20 @@ module Kappa::V2
     #   Games.top
     # @example
     #   Games.top(:limit => 10)
-    # @param :hls [Boolean] TODO
-    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
-    # @param :offset [Fixnum] (optional) Offset into the result set to begin enumeration. Default: `0`.
+    # @param options [Hash] Filter criteria.
+    # @option options [Boolean] :hls (false) TODO
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see Game
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop GET /games/top
     # @return [Array<Game>] List of games sorted by number of current viewers on Twitch, most popular first.
-    def self.top(args = {})
+    def self.top(options = {})
       params = {}
 
       # TODO: Support :offset.
       # TODO: Support :hls.
 
-      limit = args[:limit]
+      limit = options[:limit]
       if limit && (limit < 100)
         params[:limit] = limit
       else
@@ -119,22 +120,24 @@ module Kappa::V2
     #   Games.find(:name => 'diablo')
     # @example
     #   Games.find(:name => 'starcraft', :live => true)
-    # @param :name [String] Game name search term. This can be a partial name, e.g. 'league'.
-    # @param :live [Boolean] (Optional) If `true`, only returns games that are currently live on at least one channel. Default: `false`.
+    # @param options [Hash] Search criteria.
+    # @option options [String] :name Game name search term. This can be a partial name, e.g. `"league"`.
+    # @option options [Boolean] :live (false) If `true`, only returns games that are currently live on at least one channel.
     # @see GameSuggestion
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
     # @raise [ArgumentError] If `:name` is not specified.
     # @return [Array<GameSuggestion>] List of games matching the criteria.
-    def self.find(args = {})
-      name = args[:name]
-      raise ArgumentError if name.nil?
+    def self.find(options)
+      raise ArgumentError if options.nil? || options[:name].nil?
+
+      name = options[:name]
 
       params = {
         :query => name,
         :type => 'suggest'
       }
 
-      if args[:live]
+      if options[:live]
         params.merge!(:live => true)
       end
 

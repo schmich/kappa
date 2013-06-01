@@ -57,6 +57,16 @@ describe Kappa::V2::Games do
       expect {
         Games.find(:live => true)
       }.to raise_error(ArgumentError)
+
+      expect {
+        Games.find({})
+      }.to raise_error(ArgumentError)
+    end
+
+    it 'requires a valid hash to be specified' do
+      expect {
+        Games.find(nil)
+      }.to raise_error(ArgumentError)
     end
 
     it 'handles empty results' do

@@ -59,14 +59,16 @@ module Kappa::V2
     def subscribed_to?(channel_name)
     end
 
-    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
+    # @param options [Hash] Filter criteria.
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @see #following?
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels GET /users/:user/follows/channels
     # @return [Array<Channel>] List of channels the user is currently following.
-    def following(args = {})
+    def following(options = {})
+      # TODO: If offset supported?
       params = {}
 
-      limit = args[:limit]
+      limit = options[:limit]
       if limit && (limit < 100)
         params[:limit] = limit
       else

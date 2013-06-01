@@ -71,13 +71,15 @@ module Kappa::V2
     #   Teams.all
     # @example
     #   Teams.all(:limit => 10)
-    # @param :limit [Fixnum] (optional) Limit on the number of results returned. Default: no limit.
+    # @param options [Hash] Filter criteria.
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams GET /teams
     # @return [Array<Team>] List of all active teams.
-    def self.all(args = {})
+    def self.all(options = {})
+      # TODO: Is offset supported?
       params = {}
 
-      limit = args[:limit]
+      limit = options[:limit]
       if limit && (limit < 100)
         params[:limit] = limit
       else

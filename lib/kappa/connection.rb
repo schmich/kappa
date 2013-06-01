@@ -40,14 +40,14 @@ module Kappa
       return JSON.parse(json)
     end
 
-    def accumulate(args)
-      path = args[:path]
-      params = args[:params] || {}
-      json = args[:json]
-      sub_json = args[:sub_json]
-      klass = args[:class]
+    def accumulate(options)
+      path = options[:path]
+      params = options[:params] || {}
+      json = options[:json]
+      sub_json = options[:sub_json]
+      klass = options[:class]
 
-      total_limit = args[:limit]
+      total_limit = options[:limit]
       page_limit = params[:limit] || 100
 
       objects = []
