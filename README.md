@@ -21,7 +21,7 @@ grubby = Channel.get('followgrubby')
 puts grubby.streaming?
 ```
 
-## Examples
+## Overview
 
 ### <a id="channels"></a>Channels
 
@@ -120,9 +120,12 @@ s.map(&:name)        # => ["Diablo III", "Diablo II", "Diablo", "Diablo II: Lord
 s.map(&:popularity)  # => [120, 4, 1, 1]
 ```
 
+## Examples
+
 ## Documentation
 
-Detailed API documentation is available at [http://rdoc.info/github/schmich/kappa/master/frames](http://rdoc.info/github/schmich/kappa/master/frames).
+- Detailed API documentation: [http://rdoc.info/gems/kappa/frames](http://rdoc.info/gems/kappa/frames)
+- Twitch REST API documentation: [https://github.com/justintv/Twitch-API](https://github.com/justintv/Twitch-API)
 
 ## Versioning
 
