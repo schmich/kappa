@@ -10,7 +10,9 @@ Kappa is the Ruby library for interfacing with the [Twitch.tv API](https://githu
 
 ## Getting Started
 
-`gem install kappa`
+```bash
+gem install kappa
+```
 
 ```ruby
 require 'kappa'
