@@ -57,6 +57,16 @@ describe Kappa::V2::Stream do
 
     # TODO: Handles stream name with URL characters.
   end
+  
+  describe '.user' do
+    it 'returns the user owning the stream' do
+      s = Stream.get('nathanias')
+      s.should_not be_nil
+      u = s.user
+      u.should_not be_nil
+      s.channel.name.should == u.name
+    end
+  end
 
   it 'should be equal to self' do
   end

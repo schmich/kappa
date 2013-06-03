@@ -44,6 +44,13 @@ module Kappa::V2
       end
     end
 
+    # Get the owner of this stream.
+    # @note This incurs an additional web request.
+    # @return [User] The user that owns this stream.
+    def user
+      User.get(@channel.name)
+    end
+
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 

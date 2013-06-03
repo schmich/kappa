@@ -107,6 +107,7 @@ describe Kappa::V2::Channel do
       c.should_not be_nil
       u = c.user
       u.should_not be_nil
+      c.name.should == u.name
     end
   end
 
