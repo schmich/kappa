@@ -131,7 +131,7 @@ s.map(&:popularity)  # => [120, 4, 1, 1]
 
 ### Library version
 
-Kappa adheres to the [Semantic Versioning 2.0.0](http://semver.org/) specification. Most importantly, any compatibility-breaking changes will result in a new major version (e.g. `1.x.x` to `2.x.x`). Because of this, you should use a [pessimistic version constraint](http://docs.rubygems.org/read/chapter/16#page74) when taking a dependency on this library, for example:
+Kappa adheres to the [Semantic Versioning 2.0.0](http://semver.org/) specification. Most importantly, any compatibility- or API-breaking changes will result in a new major version (e.g. `1.x.x` to `2.x.x`). Because of this, you should use a [pessimistic version constraint](http://docs.rubygems.org/read/chapter/16#page74) when taking a dependency on this library, for example:
 
 ```ruby
 gem 'kappa', '~> 1.0'
@@ -139,7 +139,7 @@ gem 'kappa', '~> 1.0'
 
 ### Twitch API versions
 
-Twitch supports multiple versions of their API simultaneously, each potentially providing different data and behaving differently. Because of this, you must specify which version of the Twitch API you wish to use. With Kappa, this is done with modules.
+Twitch supports multiple versions of their API simultaneously, with each version potentially providing different data and behaving differently. Because of this, you must specify which version of the Twitch API you wish to use. With Kappa, this is done with modules.
 
 For example, if you want to use the v2 Twitch API:
 
