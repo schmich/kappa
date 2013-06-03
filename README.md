@@ -27,7 +27,7 @@ puts grubby.streaming?
 
 Channels serve as the home location for a [user's](#users) content. Channels have a [stream](#streams), can run commercials, store [videos](#videos), display information and status, and have a customized page including banners and backgrounds.
 
-See also [`Kappa::V2::Channel`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Channel) documentation.
+See also [`Kappa::V2::Channel`](http://rdoc.info/gems/kappa/Kappa/V2/Channel) documentation.
 
 ```ruby
 c = Channel.get('destiny')
@@ -44,7 +44,7 @@ c.followers   # => [#<Kappa::V2::User>, ...]
 
 Streams are video broadcasts that are currently live. They belong to a [user](#users) and are part of a [channel](#channels).
 
-See also [`Kappa::V2::Stream`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Stream) and [`Kappa::V2::Streams`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Streams) documentation.
+See also [`Kappa::V2::Stream`](http://rdoc.info/gems/kappa/Kappa/V2/Stream) and [`Kappa::V2::Streams`](http://rdoc.info/gems/kappa/Kappa/V2/Streams) documentation.
 
 ```ruby
 s = Stream.get('idrajit')
@@ -58,7 +58,7 @@ s.channel.url   # => "http://www.twitch.tv/idrajit"
 
 These are members of the Twitch community who have a Twitch account. If broadcasting, they can own a [stream](#streams) that they can broadcast on their [channel](#channels). If mainly viewing, they might follow or subscribe to channels.
 
-See also [`Kappa::V2::User`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/User) documentation.
+See also [`Kappa::V2::User`](http://rdoc.info/gems/kappa/Kappa/V2/User) documentation.
 
 ```ruby
 u = User.get('snoopeh')
@@ -71,7 +71,7 @@ u.following.map(&:name)   # => ["national_esl1", "dreamhacklol", "riotgames"]
 
 Videos are broadcasts or highlights owned by a [channel](#channels). Broadcasts are unedited videos that are saved after a streaming session. Highlights are videos edited from broadcasts by the channel's owner.
 
-See also [`Kappa::V2::Video`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Video) and [`Kappa::V2::Videos`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Videos) documentation.
+See also [`Kappa::V2::Video`](http://rdoc.info/gems/kappa/Kappa/V2/Video) and [`Kappa::V2::Videos`](http://rdoc.info/gems/kappa/Kappa/V2/Videos) documentation.
 
 ```ruby
 v = Video.get('a395995729')
@@ -86,7 +86,7 @@ v.view_count    # => 12506
 
 Teams are an organization of [channels](#channels).
 
-See also [`Kappa::V2::Team`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Team) documentation.
+See also [`Kappa::V2::Team`](http://rdoc.info/gems/kappa/Kappa/V2/Team) documentation.
 
 ```ruby
 t = Team.get('teamliquid')
@@ -99,7 +99,7 @@ t.updated_at    # => #<DateTime: 2013-04-27T16:58:55+00:00>
 
 Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#streams) and [channels](#channels). Games can be searched for by query.
 
-See also [`Kappa::V2::Game`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Game), [`Kappa::V2::Games`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/Games), and [`Kappa::V2::GameSuggestion`](http://rdoc.info/github/schmich/kappa/master/Kappa/V2/GameSuggestion) documentation.
+See also [`Kappa::V2::Game`](http://rdoc.info/gems/kappa/Kappa/V2/Game), [`Kappa::V2::Games`](http://rdoc.info/gems/kappa/Kappa/V2/Games), and [`Kappa::V2::GameSuggestion`](http://rdoc.info/gems/kappa/Kappa/V2/GameSuggestion) documentation.
 
 ```ruby
 top = Games.top(:limit => 3)
