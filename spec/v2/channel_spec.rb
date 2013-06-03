@@ -101,5 +101,14 @@ describe Kappa::V2::Channel do
     end
   end
 
+  describe '.user' do
+    it 'returns the user owning the channel' do
+      c = Channel.get('nathanias')
+      c.should_not be_nil
+      u = c.user
+      u.should_not be_nil
+    end
+  end
+
   # TODO: Channel#videos
 end

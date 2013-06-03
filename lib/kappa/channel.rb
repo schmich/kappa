@@ -76,6 +76,13 @@ module Kappa::V2
       !stream.nil?
     end
 
+    # Get the owner of this channel.
+    # @note This incurs an additional web request.
+    # @return [User] The user that owns this channel.
+    def user
+      User.get(@name)
+    end
+
     #
     # GET /channels/:channel/editors
     # https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschanneleditors
