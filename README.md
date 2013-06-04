@@ -133,7 +133,7 @@ s.map(&:popularity)  # => [120, 4, 1, 1]
 
 ### Library version
 
-Kappa adheres to the [Semantic Versioning 2.0.0](http://semver.org/) specification. Most importantly, any compatibility- or API-breaking changes will result in a new major version (e.g. `1.x.x` to `2.x.x`). Because of this, you should use a [pessimistic version constraint](http://docs.rubygems.org/read/chapter/16#page74) when taking a dependency on this library, for example:
+Kappa adheres to the [Semantic Versioning 2.0.0](http://semver.org/) specification. Most importantly, any compatibility- or API-breaking changes will result in a new major version (e.g. `1.x.x` to `2.x.x`). Because of this, you should use a [pessimistic version constraint](http://docs.rubygems.org/read/chapter/16#page74) when taking a dependency on this library. For example:
 
 ```ruby
 gem 'kappa', '~> 1.0'
