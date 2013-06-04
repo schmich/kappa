@@ -8,12 +8,12 @@ end
 
 desc 'Run RSpec code examples with code coverage'
 RSpec::Core::RakeTask.new(:'coverage') do |config|
-  config.ruby_opts = '-r ./spec/coverage-local.rb -I./spec/v2'
+  config.ruby_opts = '-r ./spec/coverage.rb -I./spec/v2'
 end
 
 desc 'Run RSpec code examples and upload coverage stats'
 RSpec::Core::RakeTask.new(:'coverage:upload') do |config|
-  config.ruby_opts = '-r ./spec/coverage-coveralls.rb -I./spec/v2'
+  config.ruby_opts = '-r ./spec/coverage-upload.rb -I./spec/v2'
 end
 
 class GemInfo
