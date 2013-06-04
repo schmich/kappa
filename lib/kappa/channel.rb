@@ -62,6 +62,7 @@ module Kappa::V2
     end
 
     # Get the live stream associated with this channel.
+    # @note This incurs an additional web request.
     # @return [Stream] Live stream object for this channel, or `nil` if the channel is not currently streaming.
     # @see #streaming?
     def stream

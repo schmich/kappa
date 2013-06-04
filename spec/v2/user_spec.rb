@@ -124,4 +124,34 @@ describe Kappa::V2::User do
       c.name.should == u.name
     end
   end
+
+  describe '#stream' do
+    it 'returns a valid stream if the user is streaming' do
+      u = User.get('incontroltv')
+      u.should_not be_nil
+      s = u.stream
+      s.should_not be_nil
+    end
+
+    it 'returns nil if the user is not streaming' do
+      u = User.get('tsm_dyrus')
+      u.should_not be_nil
+      s = u.stream
+      s.should be_nil
+    end
+  end
+
+  describe '#streaming?' do
+    it 'returns true if the user is streaming' do
+      u = User.get('incontroltv')
+      u.should_not be_nil
+      u.streaming?.should == true
+    end
+
+    it 'returns false if the user is not streaming' do
+      u = User.get('tsm_dyrus')
+      u.should_not be_nil
+      u.streaming?.should == false
+    end
+  end
 end

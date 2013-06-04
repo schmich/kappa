@@ -44,6 +44,22 @@ module Kappa::V2
       Channel.get(@name)
     end
 
+    # Get the live stream associated with this user.
+    # @note This incurs an additional web request.
+    # @return [Stream] Live stream object for this user, or `nil` if the user is not currently streaming.
+    # @see #streaming?
+    def stream
+      Stream.get(@name)
+    end
+
+    # Is this user currently streaming?
+    # @note This makes a separate request to get the user's stream. If you want to actually use the stream object, you should call `#stream` instead.
+    # @return [Boolean] `true` if the user currently has a live stream, `false` otherwise.
+    # @see #stream
+    def streaming?
+      !stream.nil?
+    end
+
     # @return [Boolean] `true` if the user is a member of the Twitch.tv staff, `false` otherwise.
     def staff?
       @staff
