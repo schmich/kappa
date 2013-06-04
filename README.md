@@ -150,7 +150,8 @@ For example, if you want to use the v2 Twitch API:
 include Kappa::V2
 c = Channel.get('day9tv')
 u = User.get('artosis')
-
+```
+```ruby
 # Option 2: Specify the full class name each time.
 c = Kappa::V2::Channel.get('day9tv')
 u = Kappa::V2::User.get('artosis')
