@@ -13,10 +13,6 @@ describe Kappa::V2::Streams do
     WebMock.reset!
   end
 
-  # TODO: Streams.all
-  describe '.all' do
-  end
-
   describe '.find' do
     it 'requires some query parameter' do
       expect {
@@ -59,12 +55,6 @@ describe Kappa::V2::Streams do
       s = Streams.find(:game => 'Ultimate Marvel vs. Capcom 3')
       s.length.should == 2
     end
-
-    it 'handles server errors' do
-      # TODO: HTTP 500
-    end
-
-    # TODO: It can handle :channel channels with URL characters in their name.
   end
 
   describe '.featured' do
@@ -82,7 +72,4 @@ describe Kappa::V2::Streams do
       s.each { |e| e.class.should == Stream }
     end
   end
-
-  # TODO: Test Streams.find with > 100 channels (force pagination).
-  # See sc2daily for example.
 end

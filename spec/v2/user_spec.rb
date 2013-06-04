@@ -39,8 +39,6 @@ describe Kappa::V2::User do
       u = User.get('does_not_exist')
       u.should be_nil
     end
-
-    # TODO: Handles user name with URL characters.
   end
 
   describe '#eql?' do
@@ -111,8 +109,6 @@ describe Kappa::V2::User do
       f = u.following?(c)
       f.should == true
     end
-
-    # TODO: URL characters
   end
 
   describe '#channel' do

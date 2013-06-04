@@ -65,23 +65,12 @@ module Kappa::V2
       @staff
     end
 
-    #
-    # GET /channels/:channel/subscriptions/:user
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/subscriptions.md#get-channelschannelsubscriptionsuser
-    #
-
-    # TODO: Requires authentication. Private until implemented.
-    # @private
-    def subscribed_to?(channel_name)
-    end
-
     # @param options [Hash] Filter criteria.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @see #following?
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels GET /users/:user/follows/channels
     # @return [Array<Channel>] List of channels the user is currently following.
     def following(options = {})
-      # TODO: If offset supported?
       params = {}
 
       limit = options[:limit]
@@ -107,8 +96,6 @@ module Kappa::V2
     # @see #following
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannelstarget GET /users/:user/follows/:channels/:target
     def following?(channel)
-      # TODO: Support User for channel parameter? Stream?
-
       channel_name = case channel
         when String
           channel
@@ -140,9 +127,5 @@ module Kappa::V2
 
     # @return [String] Unique Twitch name.
     attr_reader :name
-
-    # TODO: Authenticated user attributes.
-    # attr_reader :email
-    # def partnered?
   end
 end

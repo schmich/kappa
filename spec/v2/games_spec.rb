@@ -27,10 +27,6 @@ describe Kappa::V2::Games do
       g.each { |s| s.class.should == Game }
       g.count.should == 3
     end
-
-    it 'handles server errors' do
-      # TODO: HTTP 500
-    end
   end
 
   describe '.find' do
@@ -73,10 +69,6 @@ describe Kappa::V2::Games do
       g = Games.find(:name => 'empty_results')
       g.should_not be_nil
       g.should be_empty
-    end
-
-    it 'handles server errors' do
-      # TODO: HTTP 500
     end
   end
 end

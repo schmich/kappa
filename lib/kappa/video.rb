@@ -23,7 +23,6 @@ module Kappa::V2
       @game_name = hash['game']
       @preview_url = hash['preview']
       @channel_name = hash['channel']['name']
-      # @channel_display_name = json['channel']['display_name']
     end
 
     # Get a video by ID.
@@ -74,7 +73,7 @@ module Kappa::V2
     attr_reader :description
 
     # @return [Fixnum] The length of this video in seconds.
-    attr_reader :length_sec # TODO: Is this actually in seconds? Doesn't seem to match up with video length.
+    attr_reader :length_sec
 
     # @return [String] The name of the game played in this video.
     attr_reader :game_name
@@ -83,18 +82,11 @@ module Kappa::V2
     attr_reader :preview_url
 
     # @return [String] The name of the channel on which this video was originally streamed.
-    attr_reader :channel_name # TODO: Move this under "v.channel.name" and force the query if other attributes are requested.
-
-    # TODO: embed (HTML embed code)
+    attr_reader :channel_name
   end
 
   # Query class used for finding top videos.
   # @see Video
   class Videos
-    # @private
-    # Private until implemented.
-    def self.top(params = {})
-      # TODO
-    end
   end
 end

@@ -17,8 +17,6 @@ module Kappa::V2
       @template_url.gsub('{width}', width.to_s).gsub('{height}', height.to_s)
     end
 
-    # TODO: Add documentation notes about rough sizes for small, medium, large images.
-
     # @return [String] URL for the large-sized version of this image.
     attr_reader :large_url
 

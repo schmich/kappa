@@ -76,7 +76,6 @@ module Kappa::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams GET /teams
     # @return [Array<Team>] List of all active teams.
     def self.all(options = {})
-      # TODO: Is offset supported?
       params = {}
 
       limit = options[:limit]

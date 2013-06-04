@@ -110,6 +110,4 @@ describe Kappa::V2::Channel do
       c.name.should == u.name
     end
   end
-
-  # TODO: Channel#videos
 end

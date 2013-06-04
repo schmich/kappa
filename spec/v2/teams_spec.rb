@@ -24,7 +24,5 @@ describe Kappa::V2::Team do
       t = Teams.all(:limit => 10)
       t.count.should == 10
     end
-
-    # TODO: Teams.all(:offset => 10)
   end
 end

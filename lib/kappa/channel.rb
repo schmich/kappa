@@ -8,12 +8,6 @@ module Kappa::V2
   # @see Stream
   # @see User
   class Channel
-    # TODO:
-    # c.subscriptions
-    # c.start_commercial
-    # c.reset_stream_key
-    # c.foo = 'bar' ; c.save!
-    # Current user's channel
     include Connection
     include Kappa::IdEquality
 
@@ -82,43 +76,6 @@ module Kappa::V2
     # @return [User] The user that owns this channel.
     def user
       User.get(@name)
-    end
-
-    #
-    # GET /channels/:channel/editors
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschanneleditors
-    #
-    # @private
-    # Private until implemented.
-    def editors
-      # TODO
-    end
-
-    #
-    # GET /channels/:channels/videos
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-channelschannelvideos
-    #
-    # @private
-    # Private until implemented.
-    def videos(params = {})
-      # TODO
-    end
-
-    # TODO: Requires authentication.
-    # @private
-    # Private until implemented.
-    def subscribers
-    end
-
-    #
-    # GET /channels/:channel/subscriptions/:user
-    # https://github.com/justintv/Twitch-API/blob/master/v2_resources/subscriptions.md#get-channelschannelsubscriptionsuser
-    #
-    # TODO: Requires authentication.
-    # @private
-    # Private until implemented.
-    def has_subscriber?(user)
-      # Support User object or username (string)
     end
 
     # Get the users following this channel.

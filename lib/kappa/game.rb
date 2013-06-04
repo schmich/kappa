@@ -95,9 +95,6 @@ module Kappa::V2
     def self.top(options = {})
       params = {}
 
-      # TODO: Support :offset.
-      # TODO: Support :hls.
-
       limit = options[:limit]
       if limit && (limit < 100)
         params[:limit] = limit
@@ -140,8 +137,6 @@ module Kappa::V2
       if options[:live]
         params.merge!(:live => true)
       end
-
-      # TODO: Use connection#accumulate here.
 
       games = []
       ids = Set.new

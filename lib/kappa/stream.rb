@@ -81,12 +81,6 @@ module Kappa::V2
   class Streams
     include Connection
 
-    # @private
-    # Private until implemented
-    def self.all
-      # TODO
-    end
-
     # Get a list of streams for a specific game, for a set of channels, or by other criteria.
     # @example
     #   Streams.find(:game => 'League of Legends', :limit => 50)
@@ -112,9 +106,6 @@ module Kappa::V2
       check.delete(:limit)
       check.delete(:offset)
       raise ArgumentError if check.empty?
-
-      # TODO: Support Kappa::Vx::Game object for the :game param.
-      # TODO: Support Kappa::Vx::Channel object for the :channel param.
 
       params = {}
 
@@ -157,9 +148,6 @@ module Kappa::V2
     # @return [Array<Stream>] List of currently featured streams.
     def self.featured(options = {})
       params = {}
-
-      # TODO: Support :offset param
-      # TODO: Support :hls param
 
       limit = options[:limit]
       if limit && (limit < 100)

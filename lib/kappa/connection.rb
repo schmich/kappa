@@ -12,13 +12,8 @@ module Kappa
 
     def initialize(base_url = DEFAULT_BASE_URL)
       @base_url = Addressable::URI.parse(base_url)
-
-      # TODO: Expose client_id so clients of the library can (optionally) set this
-      # themselves and avoid rate limiting. Clients should still have the option to
-      # not set this and use a randomly generated ID.
       
       uuid = SecureRandom.uuid
-      # TODO: Use current library version.
       @client_id = "Kappa-v1-#{uuid}"
     end
 
@@ -30,11 +25,6 @@ module Kappa
       }.merge(custom_headers)
 
       response = self.class.get(request_url, :headers => headers, :query => query)
-
-      # TODO: Handle non-JSON response
-      # TODO: Handle invalid JSON
-      # TODO: Handle non-200 codes
-      # TODO: Include HTTP status code in the return value
 
       json = response.body
       return JSON.parse(json)
@@ -89,7 +79,6 @@ module Kappa
 
       json = get(request_url, params)
 
-      # TODO: Hande request retry.
       loop do
         break if json['error'] && (json['status'] == 503)
         break if !yield(json)

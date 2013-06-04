@@ -23,7 +23,7 @@ describe Kappa::V2::Stream do
       s.name.should == hash['name']
       s.viewer_count.should == hash['viewers']
       s.preview_url.should == hash['preview']
-      # TODO: s.channel assert
+      s.channel.should_not be_nil
     end
 
     it 'has an associated channel' do
@@ -54,8 +54,6 @@ describe Kappa::V2::Stream do
       c = Stream.get('desrow')
       c.should be_nil
     end
-
-    # TODO: Handles stream name with URL characters.
   end
   
   describe '.user' do
