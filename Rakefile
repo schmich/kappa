@@ -1,5 +1,7 @@
 require 'fileutils'
 require 'launchy'
+require 'json'
+require 'yaml'
 require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec) do |config|
@@ -111,6 +113,24 @@ task :release => :build do
   sh "gem push gem/#{$gem.gem_filename}"
 
   puts 'Fin.'
+end
+
+desc 'Log a Twitch request as YAML'
+task :request do
+  print 'Path: '
+  path = $stdin.gets.strip.sub(/^\/+/, '')
+  url = "https://api.twitch.tv/kraken/#{path}"
+  puts "Requesting #{url}."
+  content = `curl -k -H "Accept: application/vnd.twitchtv.v2+json" "#{url}"`
+  File.open('out.yml', 'a+') do |file|
+    file.puts "#{url}:"
+    hash = JSON.parse(content)
+    yaml = YAML.dump(hash)
+    yaml.lines.drop(1).each do |line|
+      file.puts "  #{line}"
+    end
+  end
+  puts 'Written to out.yml.'
 end
 
 desc 'Run tests'
