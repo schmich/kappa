@@ -65,6 +65,7 @@ module Kappa::V2
       @staff
     end
 
+    # Get the channels the user is currently following.
     # @param options [Hash] Filter criteria.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @see #following?
