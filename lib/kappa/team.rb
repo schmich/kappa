@@ -18,6 +18,7 @@ module Kappa::V2
       @display_name = hash['display_name']
       @updated_at = DateTime.parse(hash['updated_at'])
       @created_at = DateTime.parse(hash['created_at'])
+      @url = "http://www.twitch.tv/team/#{@name}"
     end
 
     # Get a team by name.
@@ -59,6 +60,11 @@ module Kappa::V2
 
     # @return [DateTime] When the team was created.
     attr_reader :created_at
+
+    # @example
+    #   "http://www.twitch.tv/team/root"
+    # @return [String] URL for the team's Twitch landing page.
+    attr_reader :url
   end
 
   # Query class used for finding all active teams.

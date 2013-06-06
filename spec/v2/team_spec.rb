@@ -2,6 +2,7 @@ require 'rspec'
 require 'yaml'
 require 'kappa'
 require 'common'
+require 'uri'
 
 include Kappa::V2
 
@@ -41,6 +42,17 @@ describe Kappa::V2::Team do
     it 'returns nil when team does not exist' do
       t = Team.get('does_not_exist')
       t.should be_nil
+    end
+  end
+
+  describe '#url' do
+    it 'should return a valid URI' do
+      t = Team.get('teamliquid')
+      t.should_not be_nil
+      u = t.url
+      u.should_not be_nil
+      uri = URI.parse(u)
+      uri.class.should == URI::HTTP
     end
   end
 end
