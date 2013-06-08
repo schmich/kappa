@@ -1,6 +1,24 @@
 require 'cgi'
+require 'time'
 
 module Kappa::V2
+  # @private
+  class ChannelProxy
+    def initialize(name, display_name)
+      @name = name
+      @display_name = display_name
+    end
+
+    attr_reader :name
+    attr_reader :display_name
+
+    include Proxy
+
+    proxy {
+      Channel.get(@name)
+    }
+  end
+
   # Videos are broadcasts or highlights owned by a channel. Broadcasts are unedited
   # videos that are saved after a streaming session. Highlights are videos edited from
   # broadcasts by the channel's owner.
@@ -15,14 +33,18 @@ module Kappa::V2
     def initialize(hash)
       @id = hash['_id']
       @title = hash['title']
-      @recorded_at = DateTime.parse(hash['recorded_at'])
+      @recorded_at = Time.parse(hash['recorded_at']).utc
       @url = hash['url']
       @view_count = hash['views']
       @description = hash['description']
       @length_sec = hash['length']
       @game_name = hash['game']
       @preview_url = hash['preview']
-      @channel_name = hash['channel']['name']
+
+      @channel = ChannelProxy.new(
+        hash['channel']['name'],
+        hash['channel']['display_name']
+      )
     end
 
     # Get a video by ID.
@@ -44,12 +66,6 @@ module Kappa::V2
       end
     end
 
-    # @note This incurs an additional web request.
-    # @return [Channel] The channel on which this video was originally streamed.
-    def channel
-      Channel.new(connection.get("channels/#{@channel_name}"))
-    end
-
     # @note This is a `String`, not a `Fixnum` like most other object IDs.
     # @example
     #   v = Video.get('a396294648')
@@ -60,7 +76,7 @@ module Kappa::V2
     # @return [String] Title of this video. This is seen on the video's page.
     attr_reader :title
 
-    # @return [DateTime] When this video was recorded.
+    # @return [Time] When this video was recorded.
     attr_reader :recorded_at
 
     # @return [String] URL of this video on Twitch.
@@ -81,8 +97,8 @@ module Kappa::V2
     # @return [String] URL of a preview screenshot taken from the video stream.
     attr_reader :preview_url
 
-    # @return [String] The name of the channel on which this video was originally streamed.
-    attr_reader :channel_name
+    # @return [Channel] The channel on which this video was originally streamed.
+    attr_reader :channel
   end
 
   # Query class used for finding top videos.

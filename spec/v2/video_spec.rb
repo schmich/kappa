@@ -1,4 +1,5 @@
 require 'rspec'
+require 'webmock/rspec'
 require 'kappa'
 require 'common'
 
@@ -19,15 +20,15 @@ describe Kappa::V2::Video do
       v = Video.new(hash)
       v.id.should == hash['_id']
       v.title.should == hash['title']
-      v.recorded_at.class.should == DateTime
-      v.recorded_at.should < DateTime.now
+      v.recorded_at.class.should == Time
+      v.recorded_at.should < Time.now
       v.url.should == hash['url']
       v.view_count.should == hash['views']
       v.description.should == hash['description']
       v.length_sec.should == hash['length']
       v.game_name.should == hash['game']
       v.preview_url.should == hash['preview']
-      v.channel_name.should == hash['channel']['name']
+      v.channel.should_not be_nil
     end
   end
 
@@ -54,6 +55,28 @@ describe Kappa::V2::Video do
       v.should_not be_nil
       c = v.channel
       c.should_not be_nil
+    end
+
+    it 'returns a proxy channel object without causing a request' do
+      v = Video.get('a402689752')
+      v.should_not be_nil
+      c = v.channel
+      c.should_not be_nil
+      c.name.should_not be_nil
+      c.display_name.should_not be_nil
+      a_request(:get, 'https://api.twitch.tv/kraken/channels/wcs_osl').should_not have_been_made
+    end
+
+    it 'causes a request when getting other channel attributes' do
+      v = Video.get('a413663426')
+      v.should_not be_nil
+      c = v.channel
+      c.should_not be_nil
+      c.status.should_not be_nil
+      c.respond_to? :status
+      m = c.method(:status)
+      m.should_not be_nil
+      a_request(:get, 'https://api.twitch.tv/kraken/channels/wcs_osl').should have_been_made
     end
   end
 end

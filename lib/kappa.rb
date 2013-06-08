@@ -1,4 +1,5 @@
 require 'kappa/id_equality'
+require 'kappa/proxy'
 require 'kappa/connection'
 require 'kappa/channel'
 require 'kappa/stream'
