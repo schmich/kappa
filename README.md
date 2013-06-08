@@ -80,7 +80,7 @@ v = Video.get('a395995729')
 v.nil?          # => false (video exists)
 v.title         # => "DreamHack Open Stockholm 26-27 April"
 v.game_name     # => "StarCraft II: Heart of the Swarm"
-v.recorded_at   # => #<DateTime: 2013-04-26T18:33:48+00:00>
+v.recorded_at   # => 2013-04-26 18:33:48 UTC
 v.view_count    # => 12506
 ```
 
@@ -94,7 +94,7 @@ See also [`Kappa::V2::Team`](http://rdoc.info/gems/kappa/Kappa/V2/Team) document
 t = Team.get('teamliquid')
 t.display_name  # => "TeamLiquid"
 t.info          # => "TeamLiquid is awesome. and esports. video games. \n\n"
-t.updated_at    # => #<DateTime: 2013-04-27T16:58:55+00:00>
+t.updated_at    # => 2013-05-24 00:17:10 UTC
 ```
 
 ### <a id="games"></a>Games

@@ -1,4 +1,5 @@
 require 'cgi'
+require 'time'
 
 module Kappa::V2
   # These are members of the Twitch community who have a Twitch account. If broadcasting,
@@ -14,12 +15,12 @@ module Kappa::V2
     # @private
     def initialize(hash)
       @id = hash['_id']
-      @created_at = DateTime.parse(hash['created_at'])
+      @created_at = Time.parse(hash['created_at']).utc
       @display_name = hash['display_name']
       @logo_url = hash['logo']
       @name = hash['name']
       @staff = hash['staff'] || false
-      @updated_at = DateTime.parse(hash['updated_at'])
+      @updated_at = Time.parse(hash['updated_at']).utc
     end
 
     # Get a user by name.
@@ -114,10 +115,10 @@ module Kappa::V2
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
-    # @return [DateTime] When the user account was created.
+    # @return [Time] When the user account was created.
     attr_reader :created_at
 
-    # @return [DateTime] When the user account was last updated.
+    # @return [Time] When the user account was last updated.
     attr_reader :updated_at
 
     # @return [String] User-friendly display name.

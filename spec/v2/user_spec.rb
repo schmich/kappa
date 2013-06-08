@@ -18,14 +18,14 @@ describe Kappa::V2::User do
       hash = yaml_load('user/user_real.yml')
       u = User.new(hash)
       u.id.should == hash['_id']
-      u.created_at.class.should == DateTime
-      u.created_at.should < DateTime.now
+      u.created_at.class.should == Time
+      u.created_at.should < Time.now
       u.display_name.should == hash['display_name']
       u.logo_url.should == hash['logo']
       u.name.should == hash['name']
       u.staff?.should == hash['staff']
-      u.updated_at.class.should == DateTime
-      u.updated_at.should < DateTime.now
+      u.updated_at.class.should == Time
+      u.updated_at.should < Time.now
     end
   end
 

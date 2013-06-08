@@ -1,4 +1,5 @@
 require 'cgi'
+require 'time'
 
 module Kappa::V2
   # Channels serve as the home location for a user's content. Channels have a stream, can run
@@ -16,14 +17,14 @@ module Kappa::V2
       @id = hash['_id']
       @background_url = hash['background']
       @banner_url = hash['banner']
-      @created_at = DateTime.parse(hash['created_at'])
+      @created_at = Time.parse(hash['created_at']).utc
       @display_name = hash['display_name']
       @game_name = hash['game']
       @logo_url = hash['logo']
       @mature = hash['mature'] || false
       @name = hash['name']
       @status = hash['status']
-      @updated_at = DateTime.parse(hash['updated_at'])
+      @updated_at = Time.parse(hash['updated_at']).utc
       @url = hash['url']
       @video_banner_url = hash['video_banner']
 
@@ -116,7 +117,7 @@ module Kappa::V2
     # @return [String] URL for banner image.
     attr_reader :banner_url
 
-    # @return [DateTime] When the channel was created.
+    # @return [Time] When the channel was created.
     attr_reader :created_at
 
     # @return [String] User-friendly display name. This name is used for the channel's page title.
@@ -134,7 +135,7 @@ module Kappa::V2
     # @return [String] Current status set by the channel's owner.
     attr_reader :status
 
-    # @return [DateTime] When the channel was last updated. When a stream is started, its channel is updated.
+    # @return [Time] When the channel was last updated. When a stream is started, its channel is updated.
     attr_reader :updated_at
 
     # @return [String] The URL for the channel's main page.

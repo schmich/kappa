@@ -23,10 +23,10 @@ describe Kappa::V2::Team do
       t.logo_url.should == hash['logo']
       t.display_name.should == hash['display_name']
       t.background_url.should == hash['background']
-      t.updated_at.class.should == DateTime
-      t.updated_at.should < DateTime.now
-      t.created_at.class.should == DateTime
-      t.created_at.should < DateTime.now
+      t.updated_at.class.should == Time
+      t.updated_at.should < Time.now
+      t.created_at.class.should == Time
+      t.created_at.should < Time.now
       t.info.should == hash['info']
       t.banner_url.should == hash['banner']
       t.name.should == hash['name']

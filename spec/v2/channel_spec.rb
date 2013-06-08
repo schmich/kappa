@@ -21,15 +21,15 @@ describe Kappa::V2::Channel do
       c.id.should == hash['_id']
       c.background_url.should == hash['background']
       c.banner_url.should == hash['banner']
-      c.created_at.class.should == DateTime
-      c.created_at.should < DateTime.now
+      c.created_at.class.should == Time
+      c.created_at.should < Time.now
       c.display_name.should == hash['display_name']
       c.game_name.should == hash['game']
       c.logo_url.should == hash['logo']
       c.name.should == hash['name']
       c.status.should == hash['status']
-      c.updated_at.class.should == DateTime
-      c.updated_at.should < DateTime.now
+      c.updated_at.class.should == Time
+      c.updated_at.should < Time.now
       c.url.should == hash['url']
       c.video_banner_url.should == hash['video_banner']
       c.mature?.should == hash['mature']

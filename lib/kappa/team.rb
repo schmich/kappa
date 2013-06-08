@@ -1,3 +1,5 @@
+require 'time'
+
 module Kappa::V2
   # Teams are an organization of channels.
   # @see .get Team.get
@@ -16,8 +18,8 @@ module Kappa::V2
       @logo_url = hash['logo']
       @name = hash['name']
       @display_name = hash['display_name']
-      @updated_at = DateTime.parse(hash['updated_at'])
-      @created_at = DateTime.parse(hash['created_at'])
+      @updated_at = Time.parse(hash['updated_at']).utc
+      @created_at = Time.parse(hash['created_at']).utc
       @url = "http://www.twitch.tv/team/#{@name}"
     end
 
@@ -55,10 +57,10 @@ module Kappa::V2
     # @return [String] User-friendly display name. This name is used for the team's page title.
     attr_reader :display_name
 
-    # @return [DateTime] When the team was last updated.
+    # @return [Time] When the team was last updated.
     attr_reader :updated_at
 
-    # @return [DateTime] When the team was created.
+    # @return [Time] When the team was created.
     attr_reader :created_at
 
     # @example
