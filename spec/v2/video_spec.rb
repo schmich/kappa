@@ -22,6 +22,7 @@ describe Kappa::V2::Video do
       v.title.should == hash['title']
       v.recorded_at.class.should == Time
       v.recorded_at.should < Time.now
+      v.recorded_at.utc?.should be_true
       v.url.should == hash['url']
       v.view_count.should == hash['views']
       v.description.should == hash['description']

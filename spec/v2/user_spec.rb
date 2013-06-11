@@ -92,14 +92,14 @@ describe Kappa::V2::User do
       u = User.get('eghuk')
       u.should_not be_nil
       f = u.following?('liquidtlo')
-      f.should == true
+      f.should be_true
     end
 
     it 'returns false if the user is not following the channel' do
       u = User.get('eghuk')
       u.should_not be_nil
       f = u.following?('idrajit')
-      f.should == false
+      f.should be_false
     end
 
     it 'accepts a Channel object' do
@@ -107,7 +107,7 @@ describe Kappa::V2::User do
       u.should_not be_nil
       c = Channel.get('nony')
       f = u.following?(c)
-      f.should == true
+      f.should be_true
     end
   end
 
@@ -141,13 +141,13 @@ describe Kappa::V2::User do
     it 'returns true if the user is streaming' do
       u = User.get('incontroltv')
       u.should_not be_nil
-      u.streaming?.should == true
+      u.streaming?.should be_true
     end
 
     it 'returns false if the user is not streaming' do
       u = User.get('tsm_dyrus')
       u.should_not be_nil
-      u.streaming?.should == false
+      u.streaming?.should be_false
     end
   end
 end

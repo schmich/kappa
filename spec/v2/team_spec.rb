@@ -25,8 +25,10 @@ describe Kappa::V2::Team do
       t.background_url.should == hash['background']
       t.updated_at.class.should == Time
       t.updated_at.should < Time.now
+      t.updated_at.utc?.should be_true
       t.created_at.class.should == Time
       t.created_at.should < Time.now
+      t.created_at.utc?.should be_true
       t.info.should == hash['info']
       t.banner_url.should == hash['banner']
       t.name.should == hash['name']

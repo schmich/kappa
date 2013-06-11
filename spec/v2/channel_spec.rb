@@ -23,6 +23,7 @@ describe Kappa::V2::Channel do
       c.banner_url.should == hash['banner']
       c.created_at.class.should == Time
       c.created_at.should < Time.now
+      c.created_at.utc?.should be_true
       c.display_name.should == hash['display_name']
       c.game_name.should == hash['game']
       c.logo_url.should == hash['logo']
@@ -30,6 +31,7 @@ describe Kappa::V2::Channel do
       c.status.should == hash['status']
       c.updated_at.class.should == Time
       c.updated_at.should < Time.now
+      c.updated_at.utc?.should be_true
       c.url.should == hash['url']
       c.video_banner_url.should == hash['video_banner']
       c.mature?.should == hash['mature']
