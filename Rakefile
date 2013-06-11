@@ -9,7 +9,7 @@ RSpec::Core::RakeTask.new(:spec) do |config|
 end
 
 desc 'Run RSpec code examples with code coverage'
-RSpec::Core::RakeTask.new(:'coverage') do |config|
+RSpec::Core::RakeTask.new(:coverage) do |config|
   config.ruby_opts = '-r ./spec/coverage.rb -I./spec/v2'
 end
 
@@ -119,8 +119,10 @@ desc 'Log a Twitch request as YAML'
 task :request do
   print 'Path: '
   path = $stdin.gets.strip.sub(/^\/+/, '')
+
   url = "https://api.twitch.tv/kraken/#{path}"
   puts "Requesting #{url}."
+
   content = `curl -k -H "Accept: application/vnd.twitchtv.v2+json" "#{url}"`
   File.open('out.yml', 'a+') do |file|
     file.puts "#{url}:"
@@ -130,7 +132,20 @@ task :request do
       file.puts "  #{line}"
     end
   end
+
   puts 'Written to out.yml.'
+end
+
+desc 'View code coverage results'
+task :'coverage:view' do
+  file = File.absolute_path('coverage/index.html')
+  if !File.exists?(file)
+    $stderr.puts "Coverage results not present. Run 'rake coverage' first."
+    exit
+  end
+
+  url = "file:///#{file}"
+  Launchy.open(url)
 end
 
 desc 'Run tests'
