@@ -56,6 +56,7 @@ module Kappa::V2
 
     # @example
     #   "fme", "xsplit", "obs"
+    # @deprecated This attribute will not be present in the V3 API.
     # @return [String] The broadcasting software used for this stream.
     attr_reader :broadcaster
     
