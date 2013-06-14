@@ -126,7 +126,8 @@ s.map(&:popularity)  # => [120, 4, 1, 1]
 
 ## Documentation
 
-- Detailed API documentation: [http://rdoc.info/gems/kappa/frames](http://rdoc.info/gems/kappa/frames)
+- Currently released gem documentation: [http://rdoc.info/gems/kappa/frames](http://rdoc.info/gems/kappa/frames)
+- Latest master documentation: [http://rdoc.info/github/schmich/kappa/frames](http://rdoc.info/github/schmich/kappa/frames)
 - Twitch REST API documentation: [https://github.com/justintv/Twitch-API](https://github.com/justintv/Twitch-API)
 
 ## Versioning
