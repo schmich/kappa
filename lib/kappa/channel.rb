@@ -117,7 +117,7 @@ module Kappa::V2
     # @return [String] URL for banner image.
     attr_reader :banner_url
 
-    # @return [Time] When the channel was created.
+    # @return [Time] When the channel was created (UTC).
     attr_reader :created_at
 
     # @return [String] User-friendly display name. This name is used for the channel's page title.
@@ -135,7 +135,7 @@ module Kappa::V2
     # @return [String] Current status set by the channel's owner.
     attr_reader :status
 
-    # @return [Time] When the channel was last updated. When a stream is started, its channel is updated.
+    # @return [Time] When the channel was last updated (UTC). For example, when a stream is started, its channel is updated.
     attr_reader :updated_at
 
     # @return [String] The URL for the channel's main page.

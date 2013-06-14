@@ -115,10 +115,10 @@ module Kappa::V2
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
-    # @return [Time] When the user account was created.
+    # @return [Time] When the user account was created (UTC).
     attr_reader :created_at
 
-    # @return [Time] When the user account was last updated.
+    # @return [Time] When the user account was last updated (UTC).
     attr_reader :updated_at
 
     # @return [String] User-friendly display name.

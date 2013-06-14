@@ -26,7 +26,7 @@ describe Kappa::V2::Video do
       v.url.should == hash['url']
       v.view_count.should == hash['views']
       v.description.should == hash['description']
-      v.length_sec.should == hash['length']
+      v.length.should == hash['length']
       v.game_name.should == hash['game']
       v.preview_url.should == hash['preview']
       v.channel.should_not be_nil

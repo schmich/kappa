@@ -37,7 +37,7 @@ module Kappa::V2
       @url = hash['url']
       @view_count = hash['views']
       @description = hash['description']
-      @length_sec = hash['length']
+      @length = hash['length']
       @game_name = hash['game']
       @preview_url = hash['preview']
 
@@ -76,7 +76,7 @@ module Kappa::V2
     # @return [String] Title of this video. This is seen on the video's page.
     attr_reader :title
 
-    # @return [Time] When this video was recorded.
+    # @return [Time] When this video was recorded (UTC).
     attr_reader :recorded_at
 
     # @return [String] URL of this video on Twitch.
@@ -88,8 +88,10 @@ module Kappa::V2
     # @return [String] Description of this video.
     attr_reader :description
 
-    # @return [Fixnum] The length of this video in seconds.
-    attr_reader :length_sec
+    # @example
+    #   v.length # => 4205 (1 hour, 10 minutes, 5 seconds)
+    # @return [Fixnum] The length of this video (seconds).
+    attr_reader :length
 
     # @return [String] The name of the game played in this video.
     attr_reader :game_name

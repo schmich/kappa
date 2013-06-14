@@ -57,10 +57,10 @@ module Kappa::V2
     # @return [String] User-friendly display name. This name is used for the team's page title.
     attr_reader :display_name
 
-    # @return [Time] When the team was last updated.
+    # @return [Time] When the team was last updated (UTC).
     attr_reader :updated_at
 
-    # @return [Time] When the team was created.
+    # @return [Time] When the team was created (UTC).
     attr_reader :created_at
 
     # @example

@@ -75,6 +75,10 @@ end
 
 desc 'Run YARD server to view docs'
 task :yard do
+  if Dir.exists?('.yardoc')
+    FileUtils.rm_rf('.yardoc')
+  end
+
   Launchy.open('http://localhost:8808/docs/frames')
   system('yard server --reload')
 end
