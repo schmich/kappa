@@ -92,6 +92,7 @@ See also [`Team`](http://rdoc.info/gems/kappa/Kappa/V2/Team) documentation.
 
 ```ruby
 t = Team.get('teamliquid')
+t.nil?          # => false (team exists)
 t.display_name  # => "TeamLiquid"
 t.info          # => "TeamLiquid is awesome. and esports. video games. \n\n"
 t.updated_at    # => 2013-05-24 00:17:10 UTC
