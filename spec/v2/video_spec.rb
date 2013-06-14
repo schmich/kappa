@@ -74,9 +74,6 @@ describe Kappa::V2::Video do
       c = v.channel
       c.should_not be_nil
       c.status.should_not be_nil
-      c.respond_to? :status
-      m = c.method(:status)
-      m.should_not be_nil
       a_request(:get, 'https://api.twitch.tv/kraken/channels/wcs_osl').should have_been_made
     end
   end
