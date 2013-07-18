@@ -1,4 +1,4 @@
-https://api.twitch.tv/kraken/videos/top?game=Super+Meat+Boy&limit=100&offset=0:
+https://api.twitch.tv/kraken/videos/top?game=Super+Meat+Boy&limit=100&offset=0&period=week:
   videos:
   - url: http://www.twitch.tv/jsmithoti/c/2581988
     game: Super Meat Boy

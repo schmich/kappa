@@ -126,14 +126,12 @@ module Kappa::V2
         params[:game] = options[:game]
       end
 
-      period = options[:period]
-      if period
-        if ![:week, :month, :all].include?(period)
-          raise ArgumentError, 'period'
-        end
-
-        params[:period] = period.to_s
+      period = options[:period] || :week
+      if ![:week, :month, :all].include?(period)
+        raise ArgumentError, 'period'
       end
+
+      params[:period] = period.to_s
 
       return connection.accumulate(
         :path => 'videos/top',
