@@ -135,11 +135,17 @@ s.map(&:popularity)  # => [120, 4, 1, 1]
 
 ### Library version
 
-Kappa adheres to the [Semantic Versioning 2.0.0](http://semver.org/) specification. Most importantly, any compatibility- or API-breaking changes will result in a new major version (e.g. `1.x.x` to `2.x.x`). Because of this, you should use a [pessimistic version constraint](http://docs.rubygems.org/read/chapter/16#page74) when taking a dependency on this library. For example:
+Kappa adheres to the [Semantic Versioning 2.0.0](http://semver.org/) specification. Most importantly, any
+compatibility- or API-breaking changes will result in a new major version (e.g. `1.x.x` to `2.x.x`). Because
+of this, you should use a [pessimistic version constraint](http://docs.rubygems.org/read/chapter/16#page74) when
+taking a dependency on this library. For example:
 
 ```ruby
 gem 'kappa', '~> 1.0'
 ```
+
+Any new backwards-compatible features will result in a new minor version (e.g. `x.1.x` to `x.2.x`) while any
+backwards-compatible bugfixes will result in a new patch version (e.g. `x.x.1` to `x.x.2`).
 
 ### Twitch API versions
 
