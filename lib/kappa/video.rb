@@ -106,5 +106,43 @@ module Kappa::V2
   # Query class used for finding top videos.
   # @see Video
   class Videos
+    include Connection
+
+    # Get the list of most popular videos based on view count.
+    # @note The number of videos returned is potentially very large, so it's recommended that you specify a `:limit`.
+    # @example
+    #   Videos.top
+    # @example
+    #   Videos.top(:period => :month, :game => 'Super Meat Boy')
+    # @param options [Hash] Filter criteria.
+    # @option options [Symbol] :period (:week) Return videos only in this time period. Supported values are `:week`, `:month`, `:all`.
+    # @option options [String] :game (nil) Return videos only for this game.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-videostop 
+    # @return [Array<Video>] List of top videos.
+    def self.top(options = {})
+      params = {}
+
+      if options[:game]
+        params[:game] = options[:game]
+      end
+
+      period = options[:period]
+      if period
+        if ![:week, :month, :all].include?(period)
+          raise ArgumentError, 'period'
+        end
+
+        params[:period] = period.to_s
+      end
+
+      return connection.accumulate(
+        :path => 'videos/top',
+        :params => params,
+        :json => 'videos',
+        :class => Video,
+        :limit => options[:limit],
+        :offset => options[:offset]
+      )
+    end
   end
 end

@@ -1,0 +1,355 @@
+https://api.twitch.tv/kraken/videos/top?limit=100&offset=0:
+  videos:
+  - game: League of Legends
+    length: 148
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-431223105-320x240.jpg
+    recorded_at: '2013-07-16T07:43:33Z'
+    broadcast_id: 6172371552
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2583401&amp;start_volume=25&amp;channel=tsm_dyrus&amp;title=Dyrus%2Bmoment%2Bof%2Bthe%2Byear&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2583401
+    channel:
+      display_name: TSM_Dyrus
+      name: tsm_dyrus
+    title: Dyrus moment of the year
+    url: http://www.twitch.tv/tsm_dyrus/c/2583401
+    views: 107506
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/tsm_dyrus
+      self: https://api.twitch.tv/kraken/videos/c2583401
+    description: life is hard
+  - game: Dota 2
+    length: 2616
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-428899837-320x240.jpg
+    recorded_at: '2013-07-11T11:38:20Z'
+    broadcast_id: 6119613264
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2559345&amp;start_volume=25&amp;channel=sing_sing&amp;title=asdf%2Bpotm&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2559345
+    channel:
+      display_name: Sing_sing
+      name: sing_sing
+    title: asdf potm
+    url: http://www.twitch.tv/sing_sing/c/2559345
+    views: 36312
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/sing_sing
+      self: https://api.twitch.tv/kraken/videos/c2559345
+    description: asdfdsf
+  - game: League of Legends
+    length: 128
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-429674763-320x240.jpg
+    recorded_at: '2013-07-13T01:46:26Z'
+    broadcast_id: 6137933248
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2567205&amp;start_volume=25&amp;channel=dorastream&amp;title=Orb%2Bof%2Bwinter&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2567205
+    channel:
+      display_name: Dorastream
+      name: dorastream
+    title: Orb of winter
+    url: http://www.twitch.tv/dorastream/c/2567205
+    views: 29303
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/dorastream
+      self: https://api.twitch.tv/kraken/videos/c2567205
+    description: Orb og winter abuse.. faking op
+  - game: League of Legends
+    length: 350
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-430052038-320x240.jpg
+    recorded_at: '2013-07-13T21:10:31Z'
+    broadcast_id: 6145815888
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2573372&amp;start_volume=25&amp;channel=megumixbear&amp;title=1v1%2BLoL%2BBear%2BCups%2BAnnouncement&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2573372
+    channel:
+      display_name: megumixbear
+      name: megumixbear
+    title: 1v1 LoL Bear Cups Announcement
+    url: http://www.twitch.tv/megumixbear/c/2573372
+    views: 21381
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/megumixbear
+      self: https://api.twitch.tv/kraken/videos/c2573372
+    description: ! "Sign up!\r\nhttp://megumixbear.com/bearcupslol"
+  - game: League of Legends
+    length: 102
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-428891102-320x240.jpg
+    recorded_at: '2013-07-11T10:55:03Z'
+    broadcast_id: 6119562080
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2559682&amp;start_volume=25&amp;channel=sp4zie&amp;title=%25E2%2599%25A5%2BSKADUSCH&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2559682
+    channel:
+      display_name: Sp4zie
+      name: sp4zie
+    title: ♥ SKADUSCH
+    url: http://www.twitch.tv/sp4zie/c/2559682
+    views: 16375
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/sp4zie
+      self: https://api.twitch.tv/kraken/videos/c2559682
+    description: I am so ball, you better uninstall!
+  - game: League of Legends
+    length: 3798
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-429385712-320x240.jpg
+    recorded_at: '2013-07-12T11:09:55Z'
+    broadcast_id: 6130984256
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2564580&amp;start_volume=25&amp;channel=inkysan&amp;title=GPL%2B%252368%2BTPA%2Bvs%2Bahq&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2564580
+    channel:
+      display_name: inkysan
+      name: inkysan
+    title: ! 'GPL #68 TPA vs ahq'
+    url: http://www.twitch.tv/inkysan/c/2564580
+    views: 15222
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/inkysan
+      self: https://api.twitch.tv/kraken/videos/c2564580
+    description: ! 'GPL #68 TPA vs ahq'
+  - game: ! 'World of Warcraft: Mists of Pandaria'
+    length: 226
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-429314570-320x240.jpg
+    recorded_at: '2013-07-12T06:34:49Z'
+    broadcast_id: 6127798064
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2563751&amp;start_volume=25&amp;channel=veev&amp;title=Abn&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2563751
+    channel:
+      display_name: Veev
+      name: veev
+    title: Abn
+    url: http://www.twitch.tv/veev/c/2563751
+    views: 15103
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/veev
+      self: https://api.twitch.tv/kraken/videos/c2563751
+    description: Abn lol
+  - game: League of Legends
+    length: 36
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-429931812-320x240.jpg
+    recorded_at: '2013-07-13T15:42:01Z'
+    broadcast_id: 6140855776
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2570244&amp;start_volume=25&amp;channel=phantoml0rd&amp;title=Can%2Bthe%2BDonger%2Bdo%2Bit%2521%253F&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2570244
+    channel:
+      display_name: PhantomL0rd
+      name: phantoml0rd
+    title: Can the Donger do it!?
+    url: http://www.twitch.tv/phantoml0rd/c/2570244
+    views: 15051
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/phantoml0rd
+      self: https://api.twitch.tv/kraken/videos/c2570244
+    description: ヽ༼ຈل͜ຈ༽ﾉ raise your donger ヽ༼ຈل͜ຈ༽ﾉ
+  - game: ! 'World of Warcraft: Mists of Pandaria'
+    length: 1102
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-429274686-320x240.jpg
+    recorded_at: '2013-07-12T04:25:30Z'
+    broadcast_id: 6126571376
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2571642&amp;start_volume=25&amp;channel=lunalovebad&amp;title=A%2Bwild%2Bdonger%2Bappears%2Bin%2BAmnesia&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2571642
+    channel:
+      display_name: Lunalovebad
+      name: lunalovebad
+    title: A wild donger appears in Amnesia
+    url: http://www.twitch.tv/lunalovebad/c/2571642
+    views: 13459
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/lunalovebad
+      self: https://api.twitch.tv/kraken/videos/c2571642
+    description: A dead donger
+  - game: League of Legends
+    length: 68
+    preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-429843804-320x240.jpg
+    recorded_at: '2013-07-13T10:38:36Z'
+    broadcast_id: 6140855776
+    embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+      width=''400''>
+  
+      <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+      />
+  
+      <param name=''allowScriptAccess'' value=''always'' />
+  
+      <param name=''allowNetworking'' value=''all'' />
+  
+      <param name=''allowFullScreen'' value=''true'' />
+  
+      <param name=''flashvars'' value=''chapter_id=2570004&amp;start_volume=25&amp;channel=phantoml0rd&amp;title=GIMMIE%2BTHE%2BPENTA&amp;auto_play=false''
+      />
+  
+      </object>
+  
+  '
+    _id: c2570004
+    channel:
+      display_name: PhantomL0rd
+      name: phantoml0rd
+    title: GIMMIE THE PENTA
+    url: http://www.twitch.tv/phantoml0rd/c/2570004
+    views: 13129
+    _links:
+      channel: https://api.twitch.tv/kraken/channels/phantoml0rd
+      self: https://api.twitch.tv/kraken/videos/c2570004
+    description: Cho'Gath gettin all them kills
+  _links:
+    next: https://api.twitch.tv/kraken/videos/top?limit=10&offset=10
+    self: https://api.twitch.tv/kraken/videos/top?limit=10&offset=0

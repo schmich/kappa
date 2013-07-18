@@ -37,20 +37,25 @@ module Kappa
       sub_json = options[:sub_json]
       klass = options[:class]
 
+      raise ArgumentError, 'json' if json.nil?
+      raise ArgumentError, 'path' if path.nil?
+      raise ArgumentError, 'class' if klass.nil?
+
       total_limit = options[:limit]
-      page_limit = params[:limit] || 100
+      page_limit = [total_limit || 100, 100].min
+      offset = options[:offset] || 0
 
       objects = []
       ids = Set.new
 
-      paginated(path, params) do |response_json|
+      paginated(path, page_limit, offset, params) do |response_json|
         current_objects = response_json[json]
         current_objects.each do |object_json|
           object_json = object_json[sub_json] if sub_json
           object = klass.new(object_json)
           if ids.add?(object.id)
             objects << object
-            if objects.count == total_limit
+            if !total_limit.nil? && (objects.count == total_limit)
               return objects
             end
           end
@@ -62,20 +67,13 @@ module Kappa
       return objects
     end
 
-    def paginated(path, params = {})
-      limit = [params[:limit] || 100, 100].min
-      offset = params[:offset] || 0
-
+    def paginated(path, limit, offset, params = {})
       path_uri = Addressable::URI.parse(path)
       query = { 'limit' => limit, 'offset' => offset }
       path_uri.query_values ||= {}
       path_uri.query_values = path_uri.query_values.merge(query)
 
       request_url = path_uri.to_s
-
-      params = params.dup
-      params.delete(:limit)
-      params.delete(:offset)
 
       json = get(request_url, params)
 

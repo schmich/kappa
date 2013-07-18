@@ -90,21 +90,14 @@ module Kappa::V2
     def followers(options = {})
       params = {}
 
-      limit = options[:limit]
-      if limit && (limit < 100)
-        params[:limit] = limit
-      else
-        params[:limit] = 100
-        limit = 0
-      end
-
       return connection.accumulate(
         :path => "channels/#{@name}/follows",
         :params => params,
         :json => 'follows',
         :sub_json => 'user',
         :class => User,
-        :limit => limit
+        :limit => options[:limit],
+        :offset => options[:offset]
       )
     end
 

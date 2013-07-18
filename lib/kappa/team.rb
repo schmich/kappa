@@ -86,20 +86,13 @@ module Kappa::V2
     def self.all(options = {})
       params = {}
 
-      limit = options[:limit]
-      if limit && (limit < 100)
-        params[:limit] = limit
-      else
-        params[:limit] = 100
-        limit = 0
-      end
-
       return connection.accumulate(
         :path => 'teams',
         :params => params,
         :json => 'teams',
         :class => Team,
-        :limit => limit
+        :limit => options[:limit],
+        :offset => options[:offset]
       )
     end
   end

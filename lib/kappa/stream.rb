@@ -106,7 +106,7 @@ module Kappa::V2
       check = options.dup
       check.delete(:limit)
       check.delete(:offset)
-      raise ArgumentError if check.empty?
+      raise ArgumentError, 'options' if check.empty?
 
       params = {}
 
@@ -118,20 +118,13 @@ module Kappa::V2
         params[:game] = options[:game]
       end
 
-      limit = options[:limit]
-      if limit && (limit < 100)
-        params[:limit] = limit
-      else
-        params[:limit] = 100
-        limit = 0
-      end
-
       return connection.accumulate(
         :path => 'streams',
         :params => params,
         :json => 'streams',
         :class => Stream,
-        :limit => limit
+        :limit => options[:limit],
+        :offset => options[:offset]
       )
     end
 
@@ -150,21 +143,14 @@ module Kappa::V2
     def self.featured(options = {})
       params = {}
 
-      limit = options[:limit]
-      if limit && (limit < 100)
-        params[:limit] = limit
-      else
-        params[:limit] = 100
-        limit = 0
-      end
-
       return connection.accumulate(
         :path => 'streams/featured',
         :params => params,
         :json => 'featured',
         :sub_json => 'stream',
         :class => Stream,
-        :limit => limit
+        :limit => options[:limit],
+        :offset => options[:offset]
       )
     end
   end
