@@ -1,4 +1,4 @@
-https://api.twitch.tv/kraken/search/games?type=suggest&query=starcraft:
+https://api.twitch.tv/kraken/search/games?type=suggest&query=starcraft&limit=100&offset=0:
   _links:
     self: https://api.twitch.tv/kraken/search/games?query=starcraft&type=suggest
   games:
@@ -107,7 +107,7 @@ https://api.twitch.tv/kraken/search/games?type=suggest&query=starcraft:
       small: http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%3A%20Retribution-52x72.jpg
     _links: {}
     name: ! 'StarCraft: Retribution'
-https://api.twitch.tv/kraken/search/games?type=suggest&query=diablo:
+https://api.twitch.tv/kraken/search/games?type=suggest&query=diablo&limit=100&offset=0:
   _links:
     self: https://api.twitch.tv/kraken/search/games?query=diablo&type=suggest
   games:
@@ -186,7 +186,7 @@ https://api.twitch.tv/kraken/search/games?type=suggest&query=diablo:
     _links: {}
     popularity: 1
     name: Diablo Hellfire
-https://api.twitch.tv/kraken/search/games?type=suggest&query=diablo&live=true:
+https://api.twitch.tv/kraken/search/games?type=suggest&query=diablo&live=true&limit=100&offset=0:
   _links:
     self: https://api.twitch.tv/kraken/search/games?live=true&query=diablo&type=suggest
   games:
@@ -250,7 +250,7 @@ https://api.twitch.tv/kraken/search/games?type=suggest&query=diablo&live=true:
     name: ! 'Diablo II: Lord of Destruction'
     _links: {}
     giantbomb_id: 15589
-https://api.twitch.tv/kraken/search/games?type=suggest&query=empty_results:
+https://api.twitch.tv/kraken/search/games?type=suggest&query=empty_results&limit=100&offset=0:
   games: []
   _links:
     self: https://api.twitch.tv/kraken/search/games?query=empty_results&type=suggest

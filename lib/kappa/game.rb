@@ -113,17 +113,17 @@ module Kappa::V2
     # @param options [Hash] Search criteria.
     # @option options [String] :name Game name search term. This can be a partial name, e.g. `"league"`.
     # @option options [Boolean] :live (false) If `true`, only returns games that are currently live on at least one channel.
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @see GameSuggestion
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
     # @raise [ArgumentError] If `:name` is not specified.
     # @return [Array<GameSuggestion>] List of games matching the criteria.
     def self.find(options)
-      raise ArgumentError if options.nil? || options[:name].nil?
-
-      name = options[:name]
+      raise ArgumentError, 'options' if options.nil?
+      raise ArgumentError, 'name' if options[:name].nil?
 
       params = {
-        :query => name,
+        :query => options[:name],
         :type => 'suggest'
       }
 
@@ -131,19 +131,13 @@ module Kappa::V2
         params.merge!(:live => true)
       end
 
-      games = []
-      ids = Set.new
-
-      json = connection.get('search/games', params)
-      all_games = json['games']
-      all_games.each do |game_json|
-        game = GameSuggestion.new(game_json)
-        if ids.add?(game.id)
-          games << game
-        end
-      end
-
-      games
+      return connection.accumulate(
+        :path => 'search/games',
+        :params => params,
+        :json => 'games',
+        :class => GameSuggestion,
+        :limit => options[:limit]
+      )
     end
   end
 end
