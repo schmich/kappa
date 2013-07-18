@@ -114,10 +114,14 @@ module Kappa::V2
     #   Videos.top
     # @example
     #   Videos.top(:period => :month, :game => 'Super Meat Boy')
+    # @example
+    #   Videos.top(:period => :all, :limit => 10)
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :period (:week) Return videos only in this time period. Supported values are `:week`, `:month`, `:all`.
     # @option options [String] :game (nil) Return videos only for this game.
-    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-videostop 
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-videostop GET /videos/top
     # @return [Array<Video>] List of top videos.
     def self.top(options = {})
       params = {}
