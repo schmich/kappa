@@ -1,0 +1,157 @@
+https://api.twitch.tv/kraken/users/lethalfrag:
+  _links:
+    self: https://api.twitch.tv/kraken/users/lethalfrag
+  display_name: Lethalfrag
+  staff: false
+  updated_at: '2013-07-19T05:28:18Z'
+  _id: 23460970
+  created_at: '2011-07-15T07:53:58Z'
+  name: lethalfrag
+  logo: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-profile_image-050adf252718823b-300x300.png
+https://api.twitch.tv/kraken/users/lethalfrag/follows/channels?limit=5&offset=2:
+  _links:
+    prev: https://api.twitch.tv/kraken/users/lethalfrag/follows/channels?direction=DESC&limit=5&offset=0
+    next: https://api.twitch.tv/kraken/users/lethalfrag/follows/channels?direction=DESC&limit=5&offset=7
+    self: https://api.twitch.tv/kraken/users/lethalfrag/follows/channels?direction=DESC&limit=5&offset=2
+  follows:
+  - _links:
+      self: https://api.twitch.tv/kraken/users/lethalfrag/follows/channels/chiknmn8998
+    channel:
+      game: 
+      logo: 
+      updated_at: '2013-07-11T09:15:46Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/chiknmn8998/videos
+        commercial: https://api.twitch.tv/kraken/channels/chiknmn8998/commercial
+        follows: https://api.twitch.tv/kraken/channels/chiknmn8998/follows
+        chat: https://api.twitch.tv/kraken/chat/chiknmn8998
+        stream_key: https://api.twitch.tv/kraken/channels/chiknmn8998/stream_key
+        self: https://api.twitch.tv/kraken/channels/chiknmn8998
+        editors: https://api.twitch.tv/kraken/channels/chiknmn8998/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/chiknmn8998/subscriptions
+        features: https://api.twitch.tv/kraken/channels/chiknmn8998/features
+      status: 
+      background: 
+      teams: []
+      display_name: ChiknMN8998
+      banner: 
+      mature: 
+      _id: 39507472
+      name: chiknmn8998
+      url: http://www.twitch.tv/chiknmn8998
+      video_banner: 
+      created_at: '2013-01-20T07:19:10Z'
+    created_at: '2013-07-05T09:16:50Z'
+  - _links:
+      self: https://api.twitch.tv/kraken/users/lethalfrag/follows/channels/paperbat
+    channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/paperbat-profile_image-03c05c9364c96475-300x300.jpeg
+      game: League of Legends
+      updated_at: '2013-07-19T00:08:06Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/paperbat/videos
+        follows: https://api.twitch.tv/kraken/channels/paperbat/follows
+        commercial: https://api.twitch.tv/kraken/channels/paperbat/commercial
+        chat: https://api.twitch.tv/kraken/chat/paperbat
+        self: https://api.twitch.tv/kraken/channels/paperbat
+        stream_key: https://api.twitch.tv/kraken/channels/paperbat/stream_key
+        editors: https://api.twitch.tv/kraken/channels/paperbat/editors
+        features: https://api.twitch.tv/kraken/channels/paperbat/features
+        subscriptions: https://api.twitch.tv/kraken/channels/paperbat/subscriptions
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/paperbat-channel_background_image-75b71750ba28e4c3.jpeg
+      status: PBat Live - This Pink Hair Lookin' A$$ Dude
+      teams: []
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/paperbat-channel_header_image-70c13dec2e7df7ad-640x125.jpeg
+      display_name: Paperbat
+      mature: 
+      _id: 8880462
+      url: http://www.twitch.tv/paperbat
+      name: paperbat
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/paperbat-channel_offline_image-881cfbf1f1ffa23b-640x360.jpeg
+      created_at: '2009-10-27T22:32:46Z'
+    created_at: '2013-07-02T12:09:34Z'
+  - _links:
+      self: https://api.twitch.tv/kraken/users/lethalfrag/follows/channels/sroag
+    channel:
+      game: 
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/sroag-profile_image-8c65e5e6e0adf06e-300x300.jpeg
+      updated_at: '2013-07-13T12:22:13Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/sroag/videos
+        commercial: https://api.twitch.tv/kraken/channels/sroag/commercial
+        follows: https://api.twitch.tv/kraken/channels/sroag/follows
+        chat: https://api.twitch.tv/kraken/chat/sroag
+        stream_key: https://api.twitch.tv/kraken/channels/sroag/stream_key
+        self: https://api.twitch.tv/kraken/channels/sroag
+        editors: https://api.twitch.tv/kraken/channels/sroag/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/sroag/subscriptions
+        features: https://api.twitch.tv/kraken/channels/sroag/features
+      status: Medieval Themed Stream
+      background: 
+      teams: []
+      display_name: sroag
+      banner: 
+      mature: 
+      _id: 27726532
+      name: sroag
+      url: http://www.twitch.tv/sroag
+      video_banner: 
+      created_at: '2012-01-25T15:15:34Z'
+    created_at: '2013-06-24T10:44:23Z'
+  - _links:
+      self: https://api.twitch.tv/kraken/users/lethalfrag/follows/channels/donorak
+    channel:
+      game: Cube World
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/donorak-profile_image-01f4f97e78aec7ef-300x300.png
+      updated_at: '2013-07-15T00:42:18Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/donorak/videos
+        commercial: https://api.twitch.tv/kraken/channels/donorak/commercial
+        follows: https://api.twitch.tv/kraken/channels/donorak/follows
+        chat: https://api.twitch.tv/kraken/chat/donorak
+        stream_key: https://api.twitch.tv/kraken/channels/donorak/stream_key
+        self: https://api.twitch.tv/kraken/channels/donorak
+        editors: https://api.twitch.tv/kraken/channels/donorak/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/donorak/subscriptions
+        features: https://api.twitch.tv/kraken/channels/donorak/features
+      status: Cubeworld with The Don! the first days
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/donorak-channel_background_image-2fb20644cd3c02a0.jpeg
+      teams: []
+      display_name: Donorak
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/donorak-channel_header_image-b164fef142c2328e-640x125.jpeg
+      mature: 
+      _id: 23628558
+      name: donorak
+      url: http://www.twitch.tv/donorak
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/donorak-channel_offline_image-2dbcb317ae13f4b4-640x360.png
+      created_at: '2011-07-23T22:50:48Z'
+    created_at: '2013-06-24T10:43:56Z'
+  - _links:
+      self: https://api.twitch.tv/kraken/users/lethalfrag/follows/channels/elementology21
+    channel:
+      game: 
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/elementology21-profile_image-c02a8644b8b36fc1-300x300.jpeg
+      updated_at: '2013-07-17T08:11:01Z'
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/elementology21/videos
+        commercial: https://api.twitch.tv/kraken/channels/elementology21/commercial
+        follows: https://api.twitch.tv/kraken/channels/elementology21/follows
+        chat: https://api.twitch.tv/kraken/chat/elementology21
+        stream_key: https://api.twitch.tv/kraken/channels/elementology21/stream_key
+        self: https://api.twitch.tv/kraken/channels/elementology21
+        editors: https://api.twitch.tv/kraken/channels/elementology21/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/elementology21/subscriptions
+        features: https://api.twitch.tv/kraken/channels/elementology21/features
+      status: Easy Stream
+      background: 
+      teams: []
+      display_name: Elementology21
+      banner: 
+      mature: 
+      _id: 24868086
+      name: elementology21
+      url: http://www.twitch.tv/elementology21
+      video_banner: 
+      created_at: '2011-09-17T14:25:19Z'
+    created_at: '2013-06-24T10:43:26Z'
+  _total: 195

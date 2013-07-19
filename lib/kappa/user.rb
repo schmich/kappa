@@ -69,15 +69,13 @@ module Kappa::V2
     # Get the channels the user is currently following.
     # @param options [Hash] Filter criteria.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see #following?
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels GET /users/:user/follows/channels
     # @return [Array<Channel>] List of channels the user is currently following.
     def following(options = {})
-      params = {}
-
       return connection.accumulate(
         :path => "users/#{@name}/follows/channels",
-        :params => params,
         :json => 'follows',
         :sub_json => 'channel',
         :class => Channel,

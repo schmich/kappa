@@ -85,6 +85,14 @@ describe Kappa::V2::User do
       f.count.should == 7
       f.each { |c| c.class.should == Channel }
     end
+
+    it 'returns results offset by the :offset parameter' do
+      u = User.get('lethalfrag')
+      u.should_not be_nil
+      f = u.following(:limit => 5, :offset => 2)
+      f.should_not be_nil
+      f.count.should == 5
+    end
   end
 
   describe '#following?' do
