@@ -121,23 +121,19 @@ end
 
 desc 'Log a Twitch request as YAML'
 task :request do
-  print 'Path: '
+  $stderr.print 'Path: '
   path = $stdin.gets.strip.sub(/^\/+/, '')
 
   url = "https://api.twitch.tv/kraken/#{path}"
-  puts "Requesting #{url}."
+  $stderr.puts "Requesting #{url}."
 
   content = `curl -k -H "Accept: application/vnd.twitchtv.v2+json" "#{url}"`
-  File.open('out.yml', 'a+') do |file|
-    file.puts "#{url}:"
-    hash = JSON.parse(content)
-    yaml = YAML.dump(hash)
-    yaml.lines.drop(1).each do |line|
-      file.puts "  #{line}"
-    end
+  $stdout.puts "#{url}:"
+  hash = JSON.parse(content)
+  yaml = YAML.dump(hash)
+  yaml.lines.drop(1).each do |line|
+    $stdout.puts "  #{line}"
   end
-
-  puts 'Written to out.yml.'
 end
 
 desc 'View code coverage results'
