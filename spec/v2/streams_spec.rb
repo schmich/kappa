@@ -41,6 +41,12 @@ describe Kappa::V2::Streams do
       s.length.should == 120
     end
 
+    it 'can filter by :hls parameter' do
+      s = Streams.find(:hls => true, :limit => 10)
+      s.should_not be_nil
+      s.count.should == 10
+    end
+
     it 'can query streams by game name with limit' do
       s = Streams.find(:game => 'League of Legends', :limit => 10)
       s.length.should == 10

@@ -86,7 +86,7 @@ module Kappa::V2
     # @example
     #   Games.top(:limit => 10)
     # @param options [Hash] Filter criteria.
-    # @option options [Boolean] :hls (nil) If `true`, limit the games to those that have any streams using HLS (HTTP Live Streaming). If `false` or `nil`, do not filter.
+    # @option options [Boolean] :hls (nil) If `true`, limit the games to those that have any streams using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see Game
