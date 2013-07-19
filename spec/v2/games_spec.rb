@@ -27,6 +27,13 @@ describe Kappa::V2::Games do
       g.each { |s| s.class.should == Game }
       g.count.should == 3
     end
+
+    it 'can be filtered with the :hls parameter' do
+      g = Games.top(:hls => true, :limit => 3)
+      g.should_not be_nil
+      g.should_not be_empty
+      g.count.should == 3
+    end
   end
 
   describe '.find' do

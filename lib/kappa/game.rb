@@ -86,7 +86,7 @@ module Kappa::V2
     # @example
     #   Games.top(:limit => 10)
     # @param options [Hash] Filter criteria.
-    # @option options [Boolean] :hls (false) TODO
+    # @option options [Boolean] :hls (nil) If `true`, limit the games to those that have any streams using HLS (HTTP Live Streaming). If `false` or `nil`, do not filter.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see Game
@@ -94,6 +94,10 @@ module Kappa::V2
     # @return [Array<Game>] List of games sorted by number of current viewers on Twitch, most popular first.
     def self.top(options = {})
       params = {}
+
+      if options[:hls]
+        params[:hls] = true
+      end
 
       return connection.accumulate(
         :path => 'games/top',
