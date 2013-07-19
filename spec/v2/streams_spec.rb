@@ -36,6 +36,11 @@ describe Kappa::V2::Streams do
       s.length.should == 156
     end
 
+    it 'can limit paginated results' do
+      s = Streams.find(:game => 'StarCraft II: Heart of the Swarm', :limit => 120)
+      s.length.should == 120
+    end
+
     it 'can query streams by game name with limit' do
       s = Streams.find(:game => 'League of Legends', :limit => 10)
       s.length.should == 10
