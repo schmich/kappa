@@ -90,5 +90,11 @@ describe Kappa::V2::Streams do
       s.count.should == 3
       s.each { |e| e.class.should == Stream }
     end
+
+    it 'can filter by :hls parameter' do
+      s = Streams.featured(:hls => true, :limit => 5)
+      s.should_not be_nil
+      s.count.should == 5
+    end
   end
 end

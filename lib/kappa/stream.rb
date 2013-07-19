@@ -139,13 +139,17 @@ module Kappa::V2
     # @example
     #   Streams.featured(:limit => 5)
     # @param options [Hash] Filter criteria.
-    # @option options [Boolean] :hls (false) TODO
+    # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured GET /streams/featured
     # @return [Array<Stream>] List of currently featured streams.
     def self.featured(options = {})
       params = {}
+
+      if options[:hls]
+        params[:hls] = true
+      end
 
       return connection.accumulate(
         :path => 'streams/featured',
