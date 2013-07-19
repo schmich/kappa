@@ -55,7 +55,7 @@ module Kappa::V2
     attr_reader :id
 
     # @example
-    #   "fme", "xsplit", "obs"
+    #   "fme", "xsplit", "obs", "rebroadcast", "delay", "unknown rtmp"
     # @deprecated This attribute will not be present in the V3 API.
     # @return [String] The broadcasting software used for this stream.
     attr_reader :broadcaster
