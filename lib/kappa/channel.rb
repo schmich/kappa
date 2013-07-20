@@ -101,8 +101,8 @@ module Kappa::V2
     # Get the videos for a channel, most recently created first.
     # @note This incurs additional web requests.
     # @example
-    #   c = Channel.get()
-    #   c.videos(:type => :broadcasts)
+    #   c = Channel.get('idrajit')
+    #   v = c.videos(:type => :broadcasts)
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
