@@ -34,6 +34,13 @@ describe Kappa::V2::Games do
       g.should_not be_empty
       g.count.should == 3
     end
+
+    it 'returns results offset by the :offset parameter' do
+      g = Games.top(:offset => 5, :limit => 5)
+      g.should_not be_nil
+      g.should_not be_empty
+      g.count.should == 5
+    end
   end
 
   describe '.find' do
