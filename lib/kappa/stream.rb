@@ -98,7 +98,7 @@ module Kappa::V2
     # @option options [Array<String/Channel/#name>] :channel Only return streams for these channels.
     #   If a channel is not currently streaming, it is omitted. You must specify an array of channels
     #   or channel names. If you want to find the stream for a single channel, see {Stream.get}.
-    # @option options [Boolean] :embeddable TODO
+    # @option options [Boolean] :embeddable (nil) If `true`, limit the streams to those that can be embedded. If `false` or `nil`, do not limit.
     # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
@@ -136,6 +136,10 @@ module Kappa::V2
 
       if options[:hls]
         params[:hls] = true
+      end
+
+      if options[:embeddable]
+        params[:embeddable] = true
       end
 
       return connection.accumulate(
