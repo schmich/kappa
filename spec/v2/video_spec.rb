@@ -30,6 +30,8 @@ describe Kappa::V2::Video do
       v.game_name.should == hash['game']
       v.preview_url.should == hash['preview']
       v.channel.should_not be_nil
+      v.embed_html.should_not be_nil
+      v.embed_html.should_not be_empty
     end
   end
 

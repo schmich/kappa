@@ -40,6 +40,7 @@ module Kappa::V2
       @length = hash['length']
       @game_name = hash['game']
       @preview_url = hash['preview']
+      @embed_html = hash['embed']
 
       @channel = ChannelProxy.new(
         hash['channel']['name'],
@@ -101,6 +102,9 @@ module Kappa::V2
 
     # @return [Channel] The channel on which this video was originally streamed.
     attr_reader :channel
+
+    # @return [String] HTML code for embedding this video on a web page.
+    attr_reader :embed_html
   end
 
   # Query class used for finding top videos.
