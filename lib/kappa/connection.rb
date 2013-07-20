@@ -91,7 +91,7 @@ module Kappa
         break if total && (offset > total)
 
         request_url = next_url
-        json = get(request_url)
+        json = get(request_url, params)
       end
     end
 
