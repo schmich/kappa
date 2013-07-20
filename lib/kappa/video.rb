@@ -126,6 +126,7 @@ module Kappa::V2
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-videostop GET /videos/top
+    # @raise [ArgumentError] If `:period` is not one of `:week`, `:month`, or `:all`.
     # @return [Array<Video>] List of top videos.
     def self.top(options = {})
       params = {}

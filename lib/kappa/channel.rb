@@ -109,6 +109,7 @@ module Kappa::V2
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see Video
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-channelschannelvideos GET /channels/:channel/videos
+    # @raise [ArgumentError] If `:type` is not one of `:broadcasts` or `:highlights`.
     # @return [Array<Video>] List of videos for the channel.
     def videos(options = {})
       params = {}
