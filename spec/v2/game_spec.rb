@@ -22,3 +22,104 @@ describe Kappa::V2::Game do
     end
   end
 end
+
+describe Kappa::V2::Games do
+  before do
+    WebMocks.load_dir(fixture('games'))
+  end
+
+  after do
+    WebMock.reset!
+  end
+
+  describe '.top' do
+    it 'returns a list of top games' do
+      g = Games.top
+      g.should_not be_nil
+      g.each { |s| s.class.should == Game }
+      g.count.should == 445
+    end
+
+    it 'limits results with the :limit parameter' do
+      g = Games.top(:limit => 3)
+      g.should_not be_nil
+      g.each { |s| s.class.should == Game }
+      g.count.should == 3
+    end
+
+    it 'can be filtered with the :hls parameter' do
+      g = Games.top(:hls => true, :limit => 3)
+      g.should_not be_nil
+      g.should_not be_empty
+      g.count.should == 3
+    end
+
+    it 'returns results offset by the :offset parameter' do
+      g = Games.top(:offset => 5, :limit => 5)
+      g.should_not be_nil
+      g.should_not be_empty
+      g.count.should == 5
+    end
+  end
+
+  describe '.find' do
+    it 'returns a list of game suggestions' do
+      g = Games.find(:name => 'starcraft')
+      g.should_not be_nil
+      g.count.should == 7
+      g.each { |s| s.class.should == GameSuggestion }
+    end
+
+    it 'returns a list of game suggestions that are live' do
+      g1 = Games.find(:name => 'diablo')
+      g1.should_not be_nil
+      g2 = Games.find(:name => 'diablo', :live => true)
+      g2.should_not be_nil
+      g1.count.should > g2.count
+    end
+
+    it 'requires :name to be specified' do
+      expect {
+        Games.find
+      }.to raise_error(ArgumentError)
+
+      expect {
+        Games.find(:live => true)
+      }.to raise_error(ArgumentError)
+
+      expect {
+        Games.find({})
+      }.to raise_error(ArgumentError)
+    end
+
+    it 'requires a valid hash to be specified' do
+      expect {
+        Games.find(nil)
+      }.to raise_error(ArgumentError)
+    end
+
+    it 'handles empty results' do
+      g = Games.find(:name => 'empty_results')
+      g.should_not be_nil
+      g.should be_empty
+    end
+  end
+end
+
+describe Kappa::V2::GameSuggestion do
+  describe '.new' do
+    it 'accepts a hash' do
+      hash = yaml_load('game_suggestion/game_suggestion.yml')
+      g = GameSuggestion.new(hash)
+      g.should_not be_nil
+      g.id.should == hash['_id']
+      g.name.should == hash['name']
+      g.giantbomb_id.should == hash['giantbomb_id']
+      g.popularity.should == hash['popularity']
+      g.box_images.should_not be_nil
+      g.box_images.class.should == Images
+      g.logo_images.should_not be_nil
+      g.logo_images.class.should == Images
+    end
+  end
+end
