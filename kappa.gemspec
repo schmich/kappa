@@ -1,6 +1,8 @@
+require File.expand_path('lib/kappa/version.rb', File.dirname(__FILE__))
+
 Gem::Specification.new do |s|
   s.name = 'kappa'
-  s.version = eval(File.read('lib/kappa/version.rb'))
+  s.version = Kappa::VERSION
   s.date = Time.now.strftime('%Y-%m-%d')
   s.summary = 'Ruby library for interfacing with the Twitch.tv API.'
   s.description = <<-END
