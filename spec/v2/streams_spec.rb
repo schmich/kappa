@@ -91,6 +91,12 @@ describe Kappa::V2::Streams do
       s.each { |e| e.class.should == Stream }
     end
 
+    it 'returns results offset by the :offset parameter' do
+      s = Streams.featured(:offset => 5)
+      s.should_not be_nil
+      s.count.should == 22
+    end
+
     it 'can filter by :hls parameter' do
       s = Streams.featured(:hls => true, :limit => 5)
       s.should_not be_nil
