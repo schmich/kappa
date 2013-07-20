@@ -1,6 +1,5 @@
 require 'httparty'
 require 'addressable/uri'
-require 'securerandom'
 require 'json'
 require 'singleton'
 require 'set'
@@ -12,16 +11,14 @@ module Kappa
 
     def initialize(base_url = DEFAULT_BASE_URL)
       @base_url = Addressable::URI.parse(base_url)
-      
-      uuid = SecureRandom.uuid
-      @client_id = "Kappa-v1-#{uuid}"
     end
 
     def get(path, query = nil)
       request_url = @base_url + path
 
       headers = {
-        'Client-ID' => @client_id,
+        'Client-ID' => Configuration.instance.client_id,
+        'Kappa-Version' => Kappa::VERSION
       }.merge(custom_headers)
 
       response = self.class.get(request_url, :headers => headers, :query => query)

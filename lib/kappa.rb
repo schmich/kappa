@@ -1,6 +1,7 @@
 require 'kappa/id_equality'
 require 'kappa/proxy'
 require 'kappa/connection'
+require 'kappa/configuration'
 require 'kappa/channel'
 require 'kappa/stream'
 require 'kappa/game'
