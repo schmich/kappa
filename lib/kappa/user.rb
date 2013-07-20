@@ -84,21 +84,20 @@ module Kappa::V2
       )
     end
 
-    # @param channel [String, Channel] The name of the channel (or `Channel` object) to check.
+    # @param channel [String/Channel/User/Stream/#name] The name of the channel to check.
     # @return [Boolean] `true` if the user is following the channel, `false` otherwise.
     # @see #following
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannelstarget GET /users/:user/follows/:channels/:target
-    def following?(channel)
-      channel_name = case channel
-        when String
-          channel
-        when Channel
-          channel.name
+    def following?(target)
+      name = if target.respond_to?(:name)
+        target.name
+      else
+        target.to_s
       end
 
-      channel_name = CGI.escape(channel_name)
+      name = CGI.escape(name)
 
-      json = connection.get("users/#{@name}/follows/channels/#{channel_name}")
+      json = connection.get("users/#{@name}/follows/channels/#{name}")
       status = json['status']
       return !status || (status != 404)
     end
