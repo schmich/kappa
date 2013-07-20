@@ -88,14 +88,45 @@ module Kappa::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschannelfollows GET /channels/:channel/follows
     # @return [Array<User>] List of users following this channel.
     def followers(options = {})
-      params = {}
-
       return connection.accumulate(
         :path => "channels/#{@name}/follows",
-        :params => params,
         :json => 'follows',
         :sub_json => 'user',
         :class => User,
+        :limit => options[:limit],
+        :offset => options[:offset]
+      )
+    end
+
+    # Get the videos for a channel, most recently created first.
+    # @note This incurs additional web requests.
+    # @example
+    #   c = Channel.get()
+    #   c.videos(:type => :broadcasts)
+    # @param options [Hash] Filter criteria.
+    # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @see Video
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-channelschannelvideos GET /channels/:channel/videos
+    # @return [Array<Video>] List of videos for the channel.
+    def videos(options = {})
+      params = {}
+
+      type = options[:type] || :highlights
+      if !type.nil?
+        if ![:broadcasts, :highlights].include?(type)
+          raise ArgumentError, 'type'
+        end
+
+        params[:broadcasts] = (type == :broadcasts)
+      end
+
+      return connection.accumulate(
+        :path => "channels/#{@name}/videos",
+        :params => params,
+        :json => 'videos',
+        :class => Video,
         :limit => options[:limit],
         :offset => options[:offset]
       )

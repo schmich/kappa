@@ -121,7 +121,7 @@ module Kappa::V2
     # @example
     #   Videos.top(:period => :all, :limit => 10)
     # @param options [Hash] Filter criteria.
-    # @option options [Symbol] :period (:week) Return videos only in this time period. Supported values are `:week`, `:month`, `:all`.
+    # @option options [Symbol] :period (:week) Return videos only in this time period. Valid values are `:week`, `:month`, `:all`.
     # @option options [String] :game (nil) Return videos only for this game.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.

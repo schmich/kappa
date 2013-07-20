@@ -103,13 +103,39 @@ describe Kappa::V2::Channel do
     end
   end
 
-  describe '.user' do
+  describe '#user' do
     it 'returns the user owning the channel' do
       c = Channel.get('nathanias')
       c.should_not be_nil
       u = c.user
       u.should_not be_nil
       c.name.should == u.name
+    end
+  end
+
+  describe '#videos' do
+    it 'returns broadcasts' do
+      c = Channel.get('ms_vixen')
+      c.should_not be_nil
+      v = c.videos(:type => :broadcasts, :limit => 75)
+      v.should_not be_nil
+      v.count.should == 75
+    end
+
+    it 'returns highlights' do
+      c = Channel.get('ms_vixen')
+      c.should_not be_nil
+      v = c.videos(:type => :highlights, :limit => 50)
+      v.should_not be_nil
+      v.count.should == 50
+    end
+
+    it 'rejects :type if not :broadcats or :highlights' do
+      expect {
+        c = Channel.get('ms_vixen')
+        c.should_not be_nil
+        v = c.videos(:type => :invalid)
+      }.to raise_error(ArgumentError)
     end
   end
 end
