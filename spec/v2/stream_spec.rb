@@ -92,16 +92,26 @@ describe Kappa::V2::Streams do
 
     it 'can query streams by channel list' do
       s = Streams.find(:channel => ['mlgsc2', 'rootcatz', 'crs_saintvicious', 'phantoml0rd'])
+      s.should_not be_nil
       s.length.should == 4
+    end
+
+    it 'can query streams by Channel' do
+      c = Channel.new(yaml_load('channel/lethalfrag.yml'))
+      s = Streams.find(:channel => [c])
+      s.should_not be_nil
+      s.length.should == 1
     end
 
     it 'can query streams by game name' do
       s = Streams.find(:game => 'StarCraft II: Heart of the Swarm')
+      s.should_not be_nil
       s.length.should == 156
     end
 
     it 'can limit paginated results' do
       s = Streams.find(:game => 'StarCraft II: Heart of the Swarm', :limit => 120)
+      s.should_not be_nil
       s.length.should == 120
     end
 
@@ -113,6 +123,13 @@ describe Kappa::V2::Streams do
 
     it 'can query streams by game name with limit' do
       s = Streams.find(:game => 'League of Legends', :limit => 10)
+      s.length.should == 10
+    end
+
+    it 'can query streams by Game objects' do
+      g = Game.new(yaml_load('game/game.yml'))
+      s = Streams.find(:game => g, :limit => 10)
+      s.should_not be_nil
       s.length.should == 10
     end
 

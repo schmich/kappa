@@ -94,8 +94,8 @@ module Kappa::V2
     # @example
     #   Streams.find(:game => 'Diablo III', :channel => ['nl_kripp', 'protech'])
     # @param options [Hash] Search criteria.
-    # @option options [String/Game] :game Only return streams currently streaming the specified game.
-    # @option options [Array<String/Channel>] :channel Only return streams for these channels.
+    # @option options [String/Game/#name] :game Only return streams currently streaming the specified game.
+    # @option options [Array<String/Channel/#name>] :channel Only return streams for these channels.
     #   If a channel is not currently streaming, it is omitted. You must specify an array of channels
     #   or channel names. If you want to find the stream for a single channel, see {Stream.get}.
     # @option options [Boolean] :embeddable TODO
@@ -114,12 +114,24 @@ module Kappa::V2
 
       params = {}
 
-      if options[:channel]
-        params[:channel] = options[:channel].join(',')
+      channels = options[:channel]
+      if channels
+        params[:channel] = channels.map { |channel|
+          if channel.respond_to?(:name)
+            channel.name
+          else
+            channel.to_s
+          end
+        }.join(',')
       end
 
-      if options[:game]
-        params[:game] = options[:game]
+      game = options[:game]
+      if game
+        if game.respond_to?(:name)
+          params[:game] = game.name
+        else
+          params[:game] = game.to_s
+        end
       end
 
       if options[:hls]
