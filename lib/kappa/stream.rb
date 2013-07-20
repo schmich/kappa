@@ -18,6 +18,7 @@ module Kappa::V2
       @viewer_count = hash['viewers']
       @preview_url = hash['preview']
       @channel = Channel.new(hash['channel'])
+      @url = @channel.url
     end
 
     # Get a live stream by name.
@@ -75,6 +76,9 @@ module Kappa::V2
     # @note This does not incur any web requests.
     # @return [Channel] The `Channel` associated with this stream.
     attr_reader :channel
+
+    # @return [String] The URL for this stream.
+    attr_reader :url
   end
 
   # Query class used for finding featured streams or streams meeting certain criteria.

@@ -24,6 +24,7 @@ describe Kappa::V2::Stream do
       s.viewer_count.should == hash['viewers']
       s.preview_url.should == hash['preview']
       s.channel.should_not be_nil
+      s.url.should_not be_nil
     end
 
     it 'has an associated channel' do
