@@ -52,24 +52,34 @@ module Kappa::V2
       User.get(@channel.name)
     end
 
+    # @example
+    #   6226912672
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
     # @example
     #   "fme", "xsplit", "obs", "rebroadcast", "delay", "unknown rtmp"
-    # @deprecated This attribute will not be present in the V3 API.
+    # @deprecated This attribute is not present in the V3 API.
     # @return [String] The broadcasting software used for this stream.
     attr_reader :broadcaster
     
+    # @example
+    #   "Super Meat Boy"
     # @return [String] The name of the game currently being streamed.
     attr_reader :game_name
 
+    # @example
+    #   "live_user_lethalfrag"
     # @return [String] The unique Twitch name for this stream.
     attr_reader :name
 
+    # @example
+    #   2342
     # @return [Fixnum] The number of viewers currently watching the stream.
     attr_reader :viewer_count
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/previews-ttv/live_user_lethalfrag-320x200.jpg"
     # @return [String] URL of a preview screenshot taken from the video stream.
     attr_reader :preview_url
 
@@ -77,6 +87,8 @@ module Kappa::V2
     # @return [Channel] The `Channel` associated with this stream.
     attr_reader :channel
 
+    # @example
+    #   "http://www.twitch.tv/lethalfrag" 
     # @return [String] The URL for this stream.
     attr_reader :url
   end

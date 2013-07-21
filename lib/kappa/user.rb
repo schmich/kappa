@@ -102,21 +102,33 @@ module Kappa::V2
       return !status || (status != 404)
     end
 
+    # @example
+    #   23945610 
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
+    # @example
+    #   2011-08-08 21:03:44 UTC
     # @return [Time] When the user account was created (UTC).
     attr_reader :created_at
 
+    # @example
+    #   2013-07-19 23:51:43 UTC
     # @return [Time] When the user account was last updated (UTC).
     attr_reader :updated_at
 
+    # @example
+    #   "LAGTVMaximusBlack"
     # @return [String] User-friendly display name.
     attr_reader :display_name
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lagtvmaximusblack-profile_image-4b77a2305f5d85c8-300x300.png"
     # @return [String] URL for the logo image.
     attr_reader :logo_url
 
+    # @example
+    #   "lagtvmaximusblack"
     # @return [String] Unique Twitch name.
     attr_reader :name
   end

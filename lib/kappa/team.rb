@@ -36,35 +36,55 @@ module Kappa::V2
       end
     end
 
+    # @example
+    #   12
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
+    # @example
+    #   "TeamLiquid is awesome. and esports. video games. \n\n"
     # @return [String] Info about the team. This is displayed on the team's page and can contain HTML.
     attr_reader :info
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-background_image-da36973b6d829ac6.png"
     # @return [String] URL for background image.
     attr_reader :background_url
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-banner_image-1ad9c4738f4698b1-640x125.png"
     # @return [String] URL for banner image.
     attr_reader :banner_url
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-team_logo_image-9107b874d4c3fc3b-300x300.jpeg"
     # @return [String] URL for the logo image.
     attr_reader :logo_url
 
+    # @example
+    #   "teamliquid"
+    # @see #display_name
     # @return [String] Unique Twitch name.
     attr_reader :name
 
+    # @example
+    #   "TeamLiquid"
+    # @see #name
     # @return [String] User-friendly display name. This name is used for the team's page title.
     attr_reader :display_name
 
+    # @example
+    #   2013-05-24 00:17:10 UTC
     # @return [Time] When the team was last updated (UTC).
     attr_reader :updated_at
 
+    # @example
+    #   2011-10-27 01:00:44 UTC
     # @return [Time] When the team was created (UTC).
     attr_reader :created_at
 
     # @example
-    #   "http://www.twitch.tv/team/root"
+    #   "http://www.twitch.tv/team/teamliquid"
     # @return [String] URL for the team's Twitch landing page.
     attr_reader :url
   end

@@ -51,7 +51,6 @@ module Kappa::V2
     # Get a video by ID.
     # @example
     #   v = Video.get('a396294648')
-    #   v.title # => "DreamHack Open Stockholm 26-27 April"
     # @param id [String] The ID of the video to get.
     # @raise [ArgumentError] If `id` is `nil` or blank.
     # @return [Video] A valid `Video` object if the video exists, `nil` otherwise.
@@ -69,20 +68,27 @@ module Kappa::V2
 
     # @note This is a `String`, not a `Fixnum` like most other object IDs.
     # @example
-    #   v = Video.get('a396294648')
-    #   v.id # => "a396294648"
+    #   "a396294648"
     # @return [String] Unique Twitch ID for this video.
     attr_reader :id
 
+    # @example
+    #   "DreamHack Open Stockholm 26-27 April"
     # @return [String] Title of this video. This is seen on the video's page.
     attr_reader :title
 
+    # @example
+    #   2013-04-27 09:37:30 UTC
     # @return [Time] When this video was recorded (UTC).
     attr_reader :recorded_at
 
+    # @example
+    #   "http://www.twitch.tv/dreamhacktv/b/396294648"
     # @return [String] URL of this video on Twitch.
     attr_reader :url
 
+    # @example
+    #   81754
     # @return [Fixnum] The number of views this video has received all-time.
     attr_reader :view_count
 
@@ -90,19 +96,25 @@ module Kappa::V2
     attr_reader :description
 
     # @example
-    #   v.length # => 4205 (1 hour, 10 minutes, 5 seconds)
+    #   4205 # (1 hour, 10 minutes, 5 seconds)
     # @return [Fixnum] The length of this video (seconds).
     attr_reader :length
 
+    # @example
+    #   "StarCraft II: Heart of the Swarm"
     # @return [String] The name of the game played in this video.
     attr_reader :game_name
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv.thumbs/archive-396294648-320x240.jpg"
     # @return [String] URL of a preview screenshot taken from the video stream.
     attr_reader :preview_url
 
     # @return [Channel] The channel on which this video was originally streamed.
     attr_reader :channel
 
+    # @example
+    #   "<object data='http://www.twitch.tv/widgets/archive_embed_player.swf'>...</object>"
     # @return [String] HTML code for embedding this video on a web page.
     attr_reader :embed_html
   end

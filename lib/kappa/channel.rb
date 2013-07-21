@@ -36,6 +36,8 @@ module Kappa::V2
     end
 
     # Get a channel by name.
+    # @example
+    #   c = Channel.get('day9tv')
     # @param channel_name [String] The name of the channel to get. This is the same as the stream or user name.
     # @return [Channel] A valid `Channel` object if the channel exists, `nil` otherwise.
     def self.get(channel_name)
@@ -81,6 +83,8 @@ module Kappa::V2
 
     # Get the users following this channel.
     # @note The number of followers is potentially very large, so it's recommended that you specify a `:limit`.
+    # @example
+    #   f = c.followers(:limit => 20)
     # @param options [Hash] Filter criteria.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
@@ -133,42 +137,69 @@ module Kappa::V2
       )
     end
 
+    # @example
+    #   23460970
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_background_image-833a4324bc698c9b.jpeg"
     # @return [String] URL for background image.
     attr_reader :background_url
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_header_image-463a4670c91c2b61-640x125.jpeg"
     # @return [String] URL for banner image.
     attr_reader :banner_url
 
+    # @example
+    #   2011-07-15 07:53:58 UTC
     # @return [Time] When the channel was created (UTC).
     attr_reader :created_at
 
+    # @example
+    #   "Lethalfrag"
+    # @see #name
     # @return [String] User-friendly display name. This name is used for the channel's page title.
     attr_reader :display_name
 
+    # @example
+    #   "Super Meat Boy"
     # @return [String] Name of the primary game for this channel.
     attr_reader :game_name
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-profile_image-050adf252718823b-300x300.png"
     # @return [String] URL for the logo image.
     attr_reader :logo_url
 
+    # @example
+    #   "lethalfrag"
+    # @see #display_name
     # @return [String] Unique Twitch name.
     attr_reader :name
 
+    # @example
+    #   "(Day 563/731) | Dinner and a Game (Cooking at http://twitch.tv/lookatmychicken)"
     # @return [String] Current status set by the channel's owner.
     attr_reader :status
 
+    # @example
+    #   2013-07-21 05:27:58 UTC
     # @return [Time] When the channel was last updated (UTC). For example, when a stream is started, its channel is updated.
     attr_reader :updated_at
 
+    # @example
+    #   "http://www.twitch.tv/lethalfrag"
     # @return [String] The URL for the channel's main page.
     attr_reader :url
 
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_offline_image-3b801b2ccc11830b-640x360.jpeg"
     # @return [String] URL for the image shown when the stream is offline.
     attr_reader :video_banner_url
 
+    # @see Team
     # @return [Array<Team>] The list of teams that this channel is associated with. Not all channels have associated teams.
     attr_reader :teams
   end

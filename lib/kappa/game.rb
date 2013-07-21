@@ -18,12 +18,18 @@ module Kappa::V2
       @logo_images = Images.new(game['logo'])
     end
 
+    # @example
+    #   21799
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
+    # @example
+    #   "League of Legends"
     # @return [String] User-friendly game name.
     attr_reader :name
 
+    # @example
+    #   24024
     # @return [Fixnum] Unique game ID for GiantBomb.com. 
     attr_reader :giantbomb_id
 
@@ -33,9 +39,13 @@ module Kappa::V2
     # @return [Images] Set of images for the game's logo.
     attr_reader :logo_images
 
+    # @example
+    #   802
     # @return [Fixnum] Total number of channels currently streaming this game on Twitch.
     attr_reader :channel_count
 
+    # @example
+    #   68592
     # @return [Fixnum] Total number of viewers across all channels currently watching this game on Twitch.
     attr_reader :viewer_count
   end
@@ -55,16 +65,24 @@ module Kappa::V2
       @logo_images = Images.new(hash['logo'])
     end
 
+    # @example
+    #   155075940
     # @return [Fixnum] Unique Twitch ID.
     attr_reader :id
 
+    # @example
+    #   "Dark Souls"
     # @return [String] Game name.
     attr_reader :name
 
+    # @example
+    #   32697
     # @return [Fixnum] Unique game ID for GiantBomb.com. 
     attr_reader :giantbomb_id
 
-    # @return [Fixnum] Relative popularity metric. Higher number means more popular.
+    # @example
+    #   67
+    # @return [Fixnum] Relative popularity metric. Higher number means more popular. This value only has meaning relative to other popularity values.
     attr_reader :popularity
 
     # @return [Images] Set of images for the game's box art.
