@@ -182,7 +182,7 @@ u = Kappa::V2::User.get('artosis')
 ## Contributing
 
 - [Fork and clone the repo.](http://help.github.com/fork-a-repo/)
-- [Create a branch for your changes.](http://learn.github.com/p/branching.html)
+- [Create a branch for your changes.](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging)
 - Run `bundle install` to install development requirements.
 - Implement your feature or bug fix.
 - Add specs under the `spec` folder to prevent regressions or to test new code.
