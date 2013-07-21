@@ -23,6 +23,20 @@ grubby = Channel.get('followgrubby')
 puts grubby.streaming?
 ```
 
+## Configuration
+
+When making requests to Twitch, you must specify a client ID for your application.
+If you do not specify a client ID, Twitch reserves the right to rate-limit your application
+without warning.
+
+Your client ID can be specified through configuration, for example:
+
+```ruby
+Kappa.configure do |config|
+  config.client_id = 'sc2daily-v1.0.0'
+end
+```
+
 ## Overview
 
 ### <a id="channels"></a>Channels
