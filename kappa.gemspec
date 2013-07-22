@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.date = Time.now.strftime('%Y-%m-%d')
   s.summary = 'Ruby library for interfacing with the Twitch.tv API.'
   s.description = <<-END
-    A Ruby library for interfacing with the Twitch.tv API
-    including users, channels, streams, and followers.
+    The Ruby library for interfacing with the Twitch.tv API
+    including users, channels, streams, games, and videos.
   END
   s.authors = ['Chris Schmich']
   s.email = 'schmch@gmail.com'
