@@ -78,12 +78,12 @@ module Twitch::V2
 
     # Get a live stream by name.
     # @example
-    #   s = Stream.get('lagtvmaximusblack')
+    #   s = Twitch.streams.get('lagtvmaximusblack')
     #   s.nil?          # => false (stream is live)
     #   s.game_name     # => "StarCraft II: Heart of the Swarm"
     #   s.viewer_count  # => 2403
     # @example
-    #   s = Strearm.get('destiny')
+    #   s = Twitch.streams.get('destiny')
     #   s.nil?          # => true (stream is offline)
     # @param stream_name [String] The name of the stream to get. This is the same as the channel or user name.
     # @see Streams.find
@@ -102,11 +102,11 @@ module Twitch::V2
 
     # Get a list of streams for a specific game, for a set of channels, or by other criteria.
     # @example
-    #   Streams.find(:game => 'League of Legends', :limit => 50)
+    #   Twitch.streams.find(:game => 'League of Legends', :limit => 50)
     # @example
-    #   Streams.find(:channel => ['fgtvlive', 'incontroltv', 'destiny'])
+    #   Twitch.streams.find(:channel => ['fgtvlive', 'incontroltv', 'destiny'])
     # @example
-    #   Streams.find(:game => 'Diablo III', :channel => ['nl_kripp', 'protech'])
+    #   Twitch.streams.find(:game => 'Diablo III', :channel => ['nl_kripp', 'protech'])
     # @param options [Hash] Search criteria.
     # @option options [String/Game/#name] :game Only return streams currently streaming the specified game.
     # @option options [Array<String/Channel/#name>] :channel Only return streams for these channels.
@@ -174,9 +174,9 @@ module Twitch::V2
     # Get the list of currently featured (promoted) streams. This includes the list of streams shown on the Twitch homepage.
     # @note There is no guarantee of how many streams are featured at any given time.
     # @example
-    #   Streams.featured
+    #   Twitch.streams.featured
     # @example
-    #   Streams.featured(:limit => 5)
+    #   Twitch.streams.featured(:limit => 5)
     # @param options [Hash] Filter criteria.
     # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.

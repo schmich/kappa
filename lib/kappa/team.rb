@@ -83,6 +83,8 @@ module Twitch::V2
     end
 
     # Get a team by name.
+    # @example
+    #   Twitch.teams.get('teamliquid')
     # @param team_name [String] The name of the team to get.
     # @return [Team] A valid `Team` object if the team exists, `nil` otherwise.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam GET /teams/:team
@@ -97,9 +99,9 @@ module Twitch::V2
 
     # Get the list of all active teams.
     # @example
-    #   Teams.all
+    #   Twitch.teams.all
     # @example
-    #   Teams.all(:limit => 10)
+    #   Twitch.teams.all(:limit => 10)
     # @param options [Hash] Filter criteria.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams GET /teams

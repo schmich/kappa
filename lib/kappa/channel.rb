@@ -88,7 +88,7 @@ module Twitch::V2
     # Get the videos for a channel, most recently created first.
     # @note This incurs additional web requests.
     # @example
-    #   c = Channel.get('idrajit')
+    #   c = Twitch.channels.get('idrajit')
     #   v = c.videos(:type => :broadcasts)
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
@@ -194,7 +194,7 @@ module Twitch::V2
 
     # Get a channel by name.
     # @example
-    #   c = Channel.get('day9tv')
+    #   c = Twitch.channels.get('day9tv')
     # @param channel_name [String] The name of the channel to get. This is the same as the stream or user name.
     # @return [Channel] A valid `Channel` object if the channel exists, `nil` otherwise.
     def get(channel_name)

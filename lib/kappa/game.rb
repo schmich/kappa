@@ -102,9 +102,9 @@ module Twitch::V2
 
     # Get a list of games with the highest number of current viewers on Twitch.
     # @example
-    #   Games.top
+    #   Twitch.games.top
     # @example
-    #   Games.top(:limit => 10)
+    #   Twitch.games.top(:limit => 10)
     # @param options [Hash] Filter criteria.
     # @option options [Boolean] :hls (nil) If `true`, limit the games to those that have any streams using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
@@ -131,9 +131,9 @@ module Twitch::V2
     
     # Get a list of games with names similar to the specified name.
     # @example
-    #   Games.find(:name => 'diablo')
+    #   Twitch.games.find(:name => 'diablo')
     # @example
-    #   Games.find(:name => 'starcraft', :live => true)
+    #   Twitch.games.find(:name => 'starcraft', :live => true)
     # @param options [Hash] Search criteria.
     # @option options [String] :name Game name search term. This can be a partial name, e.g. `"league"`.
     # @option options [Boolean] :live (false) If `true`, only returns games that are currently live on at least one channel.

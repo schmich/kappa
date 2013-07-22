@@ -125,6 +125,8 @@ module Twitch::V2
     end
 
     # Get a user by name.
+    # @example
+    #   Twitch.users.get('totalbiscuit')
     # @param user_name [String] The name of the user to get. This is the same as the channel or stream name.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser GET /users/:user
     # @return [User] A valid `User` object if the user exists, `nil` otherwise.

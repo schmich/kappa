@@ -111,7 +111,7 @@ module Twitch::V2
 
     # Get a video by ID.
     # @example
-    #   v = Video.get('a396294648')
+    #   Twitch.videos.get('a396294648')
     # @param id [String] The ID of the video to get.
     # @raise [ArgumentError] If `id` is `nil` or empty.
     # @return [Video] A valid `Video` object if the video exists, `nil` otherwise.
@@ -130,11 +130,11 @@ module Twitch::V2
     # Get the list of most popular videos based on view count.
     # @note The number of videos returned is potentially very large, so it's recommended that you specify a `:limit`.
     # @example
-    #   Videos.top
+    #   Twitch.videos.top
     # @example
-    #   Videos.top(:period => :month, :game => 'Super Meat Boy')
+    #   Twitch.videos.top(:period => :month, :game => 'Super Meat Boy')
     # @example
-    #   Videos.top(:period => :all, :limit => 10)
+    #   Twitch.videos.top(:period => :all, :limit => 10)
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :period (:week) Return videos only in this time period. Valid values are `:week`, `:month`, `:all`.
     # @option options [String] :game (nil) Return videos only for this game.
