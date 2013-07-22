@@ -1,6 +1,8 @@
 module Twitch::V2
   # Games are categories (e.g. League of Legends, Diablo 3) used by streams and channels.
   # Games can be searched for by query.
+  # @see Games#top Games#top
+  # @see Games#find Games#find
   # @see Games
   class Game
     include Twitch::IdEquality
@@ -50,8 +52,8 @@ module Twitch::V2
     attr_reader :viewer_count
   end
 
-  # A game suggestion returned by Twitch when searching for games via `Games.find`.
-  # @see Games.find
+  # A game suggestion returned by Twitch when searching for games via `Twitch.games.find`.
+  # @see Games#find Games#find
   class GameSuggestion
     include Twitch::IdEquality
 
@@ -92,10 +94,11 @@ module Twitch::V2
     attr_reader :logo_images
   end
 
-  # Query class used for finding top games or finding games by name.
+  # Query class for finding top games or finding games by name.
   # @see Game
   # @see GameSuggestion
   class Games
+    # @private
     def initialize(query)
       @query = query
     end
@@ -109,7 +112,7 @@ module Twitch::V2
     # @option options [Boolean] :hls (nil) If `true`, limit the games to those that have any streams using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
-    # @see Game
+    # @see Game Game
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop GET /games/top
     # @return [Array<Game>] List of games sorted by number of current viewers on Twitch, most popular first.
     def top(options = {})
@@ -138,7 +141,7 @@ module Twitch::V2
     # @option options [String] :name Game name search term. This can be a partial name, e.g. `"league"`.
     # @option options [Boolean] :live (false) If `true`, only returns games that are currently live on at least one channel.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
-    # @see GameSuggestion
+    # @see GameSuggestion GameSuggestion
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
     # @raise [ArgumentError] If `:name` is not specified.
     # @return [Array<GameSuggestion>] List of games matching the criteria.

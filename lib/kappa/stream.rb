@@ -2,7 +2,9 @@ require 'cgi'
 
 module Twitch::V2
   # Streams are video broadcasts that are currently live. They belong to a user and are part of a channel.
-  # @see .get Stream.get
+  # @see Streams#get Streams#get
+  # @see Streams#find Streams#find
+  # @see Streams#featured Streams#featured
   # @see Streams
   # @see Channel
   class Stream
@@ -69,9 +71,10 @@ module Twitch::V2
     attr_reader :url
   end
 
-  # Query class used for finding featured streams or streams meeting certain criteria.
+  # Query class for finding featured streams or streams meeting certain criteria.
   # @see Stream
   class Streams
+    # @private
     def initialize(query)
       @query = query
     end
@@ -86,7 +89,7 @@ module Twitch::V2
     #   s = Twitch.streams.get('destiny')
     #   s.nil?          # => true (stream is offline)
     # @param stream_name [String] The name of the stream to get. This is the same as the channel or user name.
-    # @see Streams.find
+    # @see #find
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamschannel GET /streams/:channel
     # @return [Stream] A valid `Stream` object if the stream exists and is currently live, `nil` otherwise.
     def get(stream_name)
@@ -111,12 +114,12 @@ module Twitch::V2
     # @option options [String/Game/#name] :game Only return streams currently streaming the specified game.
     # @option options [Array<String/Channel/#name>] :channel Only return streams for these channels.
     #   If a channel is not currently streaming, it is omitted. You must specify an array of channels
-    #   or channel names. If you want to find the stream for a single channel, see {Stream.get}.
+    #   or channel names. If you want to find the stream for a single channel, see {Streams#get}.
     # @option options [Boolean] :embeddable (nil) If `true`, limit the streams to those that can be embedded. If `false` or `nil`, do not limit.
     # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
-    # @see Stream.get
+    # @see #get
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
     # @raise [ArgumentError] If `options` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
     # @raise [ArgumentError] If `:channel` is not an array.

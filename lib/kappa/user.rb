@@ -5,7 +5,8 @@ module Twitch::V2
   # These are members of the Twitch community who have a Twitch account. If broadcasting,
   # they can own a stream that they can broadcast on their channel. If mainly viewing,
   # they might follow or subscribe to channels.
-  # @see .get User.get
+  # @see Users#get Users#get
+  # @see Users
   # @see Channel
   # @see Stream
   class User
@@ -26,7 +27,7 @@ module Twitch::V2
     # Get the `Channel` associated with this user.
     # @note This incurs an additional web request.
     # @return [Channel] The `Channel` associated with this user, or `nil` if this is a Justin.tv account.
-    # @see Channel.get
+    # @see Channel#get Channel#get
     def channel
       @query.channels.get(@name)
     end
@@ -119,7 +120,10 @@ module Twitch::V2
     attr_reader :name
   end
 
+  # Query class for finding users.
+  # @see User
   class Users
+    # @private
     def initialize(query)
       @query = query
     end

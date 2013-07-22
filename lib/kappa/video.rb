@@ -23,7 +23,8 @@ module Twitch::V2
   # Videos are broadcasts or highlights owned by a channel. Broadcasts are unedited
   # videos that are saved after a streaming session. Highlights are videos edited from
   # broadcasts by the channel's owner.
-  # @see .get Video.get
+  # @see Videos#get Videos#get
+  # @see Videos#top Videos#top
   # @see Videos
   # @see Channel
   class Video
@@ -102,9 +103,10 @@ module Twitch::V2
     attr_reader :embed_html
   end
 
-  # Query class used for finding top videos.
+  # Query class for finding videos.
   # @see Video
   class Videos
+    # @private
     def initialize(query)
       @query = query
     end

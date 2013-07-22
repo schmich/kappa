@@ -2,7 +2,8 @@ require 'time'
 
 module Twitch::V2
   # Teams are an organization of channels.
-  # @see .get Team.get
+  # @see Teams#get Teams#get
+  # @see Teams#all Teams#all
   # @see Teams
   # @see Channel
   class Team
@@ -75,9 +76,10 @@ module Twitch::V2
     attr_reader :url
   end
 
-  # Query class used for finding all active teams.
+  # Query class for finding all active teams.
   # @see Team
   class Teams
+    # @private
     def initialize(query)
       @query = query
     end

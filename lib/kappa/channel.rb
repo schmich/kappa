@@ -5,7 +5,8 @@ module Twitch::V2
   # Channels serve as the home location for a user's content. Channels have a stream, can run
   # commercials, store videos, display information and status, and have a customized page including
   # banners and backgrounds.
-  # @see .get Channel.get
+  # @see Channels#get Channels#get
+  # @see Channels
   # @see Stream
   # @see User
   class Channel
@@ -187,7 +188,10 @@ module Twitch::V2
     attr_reader :teams
   end
 
+  # Query class for finding channels.
+  # @see Channel
   class Channels
+    # @private
     def initialize(query)
       @query = query
     end
