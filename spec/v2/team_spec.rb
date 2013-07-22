@@ -4,9 +4,7 @@ require 'kappa'
 require 'common'
 require 'uri'
 
-include Kappa::V2
-
-describe Kappa::V2::Team do
+describe Twitch::V2::Team do
   before do
     WebMocks.load_dir(fixture('team'))
   end
@@ -34,22 +32,10 @@ describe Kappa::V2::Team do
       t.name.should == hash['name']
     end
   end
-  
-  describe '.get' do
-    it 'creates a Team from team name' do
-      t = Team.get('teamliquid')
-      t.should_not be_nil
-    end
-
-    it 'returns nil when team does not exist' do
-      t = Team.get('does_not_exist')
-      t.should be_nil
-    end
-  end
 
   describe '#url' do
     it 'should return a valid URI' do
-      t = Team.get('teamliquid')
+      t = Twitch.teams.get('teamliquid')
       t.should_not be_nil
       u = t.url
       u.should_not be_nil
@@ -59,23 +45,35 @@ describe Kappa::V2::Team do
   end
 end
 
-describe Kappa::V2::Team do
+describe Twitch::V2::Teams do
   before do
-    WebMocks.load_dir(fixture('teams'))
+    WebMocks.load_dir(fixture('team'))
   end
 
   after do
     WebMock.reset!
   end
+  
+  describe '#get' do
+    it 'creates a Team from team name' do
+      t = Twitch.teams.get('teamliquid')
+      t.should_not be_nil
+    end
 
-  describe '.all' do
+    it 'returns nil when team does not exist' do
+      t = Twitch.teams.get('does_not_exist')
+      t.should be_nil
+    end
+  end
+
+  describe '#all' do
     it 'returns all teams by default' do
-      t = Teams.all
+      t = Twitch.teams.all
       t.count.should == 486
     end
 
     it 'returns a limited number of teams when specified' do
-      t = Teams.all(:limit => 10)
+      t = Twitch.teams.all(:limit => 10)
       t.count.should == 10
     end
   end

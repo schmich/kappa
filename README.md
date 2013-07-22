@@ -18,10 +18,8 @@ gem install kappa
 ```ruby
 require 'kappa'
 
-include Kappa::V2
-
-grubby = Channel.get('followgrubby')
-puts grubby.streaming?
+frag = Twitch.channels.get('lethalfrag')
+puts frag.streaming?
 ```
 
 ## Configuration
@@ -33,7 +31,7 @@ without warning.
 Your client ID can be specified through configuration, for example:
 
 ```ruby
-Kappa.configure do |config|
+Twitch.configure do |config|
   config.client_id = 'sc2daily-v1.0.0'
 end
 ```
@@ -47,7 +45,7 @@ Channels serve as the home location for a [user's](#users) content. Channels hav
 See also [`Channel`](http://rdoc.info/gems/kappa/Kappa/V2/Channel) documentation.
 
 ```ruby
-c = Channel.get('destiny')
+c = Twitch.channels.get('destiny')
 c.nil?        # => false (channel exists)
 c.stream      # => #<Kappa::V2::Stream> (current live stream)
 c.url         # => "http://www.twitch.tv/destiny"
@@ -64,7 +62,7 @@ Streams are video broadcasts that are currently live. They belong to a [user](#u
 See also [`Stream`](http://rdoc.info/gems/kappa/Kappa/V2/Stream) and [`Streams`](http://rdoc.info/gems/kappa/Kappa/V2/Streams) documentation.
 
 ```ruby
-s = Stream.get('idrajit')
+s = Twitch.streams.get('idrajit')
 s.nil?          # => false (currently live)
 s.game_name     # => "StarCraft II: Heart of the Swarm"
 s.viewer_count  # => 7267
@@ -78,7 +76,7 @@ These are members of the Twitch community who have a Twitch account. If broadcas
 See also [`User`](http://rdoc.info/gems/kappa/Kappa/V2/User) documentation.
 
 ```ruby
-u = User.get('snoopeh')
+u = Twitch.users.get('snoopeh')
 u.nil?                    # => false (user exists)
 u.channel                 # => #<Kappa::V2::Channel>
 u.following.map(&:name)   # => ["national_esl1", "dreamhacklol", "riotgames"]
@@ -91,7 +89,7 @@ Videos are broadcasts or highlights owned by a [channel](#channels). Broadcasts 
 See also [`Video`](http://rdoc.info/gems/kappa/Kappa/V2/Video) and [`Videos`](http://rdoc.info/gems/kappa/Kappa/V2/Videos) documentation.
 
 ```ruby
-v = Video.get('a395995729')
+v = Twitch.videos.get('a395995729')
 v.nil?          # => false (video exists)
 v.title         # => "DreamHack Open Stockholm 26-27 April"
 v.game_name     # => "StarCraft II: Heart of the Swarm"
@@ -106,7 +104,7 @@ Teams are an organization of [channels](#channels).
 See also [`Team`](http://rdoc.info/gems/kappa/Kappa/V2/Team) documentation.
 
 ```ruby
-t = Team.get('teamliquid')
+t = Twitch.teams.get('teamliquid')
 t.nil?          # => false (team exists)
 t.display_name  # => "TeamLiquid"
 t.info          # => "TeamLiquid is awesome. and esports. video games. \n\n"
@@ -120,12 +118,12 @@ Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#strea
 See also [`Game`](http://rdoc.info/gems/kappa/Kappa/V2/Game), [`Games`](http://rdoc.info/gems/kappa/Kappa/V2/Games), and [`GameSuggestion`](http://rdoc.info/gems/kappa/Kappa/V2/GameSuggestion) documentation.
 
 ```ruby
-top = Games.top(:limit => 3)
+top = Twitch.games.top(:limit => 3)
 top.map(&:name)  # => ["League of Legends", "Dota 2", "StarCraft II: Heart of the Swarm"]
 ```
 
 ```ruby
-g = Games.top(:limit => 1).first
+g = Twitch.games.top(:limit => 1).first
 g.name                   # => "League of Legends"
 g.channel_count          # => 906
 g.viewer_count           # => 79223
@@ -133,7 +131,7 @@ g.box_images.medium_url  # =>"http://static-cdn.jtvnw.net/ttv-boxart/League%20of
 ```
 
 ```ruby
-s = Games.find(:name => 'diablo', :live => true)
+s = Twitch.games.find(:name => 'diablo', :live => true)
 s.map(&:name)        # => ["Diablo III", "Diablo II", "Diablo", "Diablo II: Lord of Destruction"]
 s.map(&:popularity)  # => [120, 4, 1, 1]
 ```
@@ -164,21 +162,20 @@ backwards-compatible bugfixes will result in a new patch version (e.g. `x.x.1` t
 
 ### Twitch API versions
 
-Twitch supports multiple versions of their API simultaneously, with each version potentially providing different data and behaving differently. Because of this, you must specify which version of the Twitch API you wish to use. With Kappa, this is done with modules.
+Twitch supports multiple versions of their API simultaneously, with each version potentially providing different data
+and behaving differently. Because of this, you can specify which version of the Twitch API you wish to use.
+This is done through Kappa configuration.
 
-For example, if you want to use the v2 Twitch API:
+For example, if you want to use the V2 Twitch API:
 
 ```ruby
-# Option 1: Include the module once.
-include Kappa::V2
-c = Channel.get('day9tv')
-u = User.get('artosis')
+Twitch.configure do |config|
+  config.client_id = 'sc2daily-v1.0.0'
+  config.api = Twitch::V2
+end
 ```
-```ruby
-# Option 2: Specify the full class name each time.
-c = Kappa::V2::Channel.get('day9tv')
-u = Kappa::V2::User.get('artosis')
-```
+
+`Twitch::V2` is the default and is currently the only supported API version.
 
 ## Contributing
 

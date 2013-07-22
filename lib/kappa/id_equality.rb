@@ -1,4 +1,4 @@
-module Kappa
+module Twitch
   # @private
   module IdEquality
     def hash

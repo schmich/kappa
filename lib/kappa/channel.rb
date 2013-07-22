@@ -1,19 +1,20 @@
 require 'cgi'
 require 'time'
 
-module Kappa::V2
+module Twitch::V2
   # Channels serve as the home location for a user's content. Channels have a stream, can run
   # commercials, store videos, display information and status, and have a customized page including
   # banners and backgrounds.
-  # @see .get Channel.get
+  # @see Channels#get Channels#get
+  # @see Channels
   # @see Stream
   # @see User
   class Channel
-    include Connection
-    include Kappa::IdEquality
+    include Twitch::IdEquality
 
     # @private
-    def initialize(hash)
+    def initialize(hash, query)
+      @query = query
       @id = hash['_id']
       @background_url = hash['background']
       @banner_url = hash['banner']
@@ -35,23 +36,6 @@ module Kappa::V2
       end
     end
 
-    # Get a channel by name.
-    # @example
-    #   c = Channel.get('day9tv')
-    # @param channel_name [String] The name of the channel to get. This is the same as the stream or user name.
-    # @return [Channel] A valid `Channel` object if the channel exists, `nil` otherwise.
-    def self.get(channel_name)
-      encoded_name = CGI.escape(channel_name)
-      json = connection.get("channels/#{encoded_name}")
-
-      # HTTP 422 can happen if the channel is associated with a Justin.tv account.
-      if !json || json['status'] == 404 || json['status'] == 422
-        nil
-      else
-        new(json)
-      end
-    end
-
     # Does this channel have mature content? This flag is specified by the owner of the channel.
     # @return [Boolean] `true` if the channel has mature content, `false` otherwise.
     def mature?
@@ -63,7 +47,7 @@ module Kappa::V2
     # @return [Stream] Live stream object for this channel, or `nil` if the channel is not currently streaming.
     # @see #streaming?
     def stream
-      Stream.get(@name)
+      @query.streams.get(@name)
     end
 
     # Does this channel currently have a live stream?
@@ -78,7 +62,7 @@ module Kappa::V2
     # @note This incurs an additional web request.
     # @return [User] The user that owns this channel.
     def user
-      User.get(@name)
+      @query.users.get(@name)
     end
 
     # Get the users following this channel.
@@ -92,11 +76,11 @@ module Kappa::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschannelfollows GET /channels/:channel/follows
     # @return [Array<User>] List of users following this channel.
     def followers(options = {})
-      return connection.accumulate(
+      return @query.connection.accumulate(
         :path => "channels/#{@name}/follows",
         :json => 'follows',
         :sub_json => 'user',
-        :class => User,
+        :create => -> hash { User.new(hash, @query) },
         :limit => options[:limit],
         :offset => options[:offset]
       )
@@ -105,7 +89,7 @@ module Kappa::V2
     # Get the videos for a channel, most recently created first.
     # @note This incurs additional web requests.
     # @example
-    #   c = Channel.get('idrajit')
+    #   c = Twitch.channels.get('idrajit')
     #   v = c.videos(:type => :broadcasts)
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
@@ -127,11 +111,11 @@ module Kappa::V2
         params[:broadcasts] = (type == :broadcasts)
       end
 
-      return connection.accumulate(
+      return @query.connection.accumulate(
         :path => "channels/#{@name}/videos",
         :params => params,
         :json => 'videos',
-        :class => Video,
+        :create => -> hash { Video.new(hash, @query) },
         :limit => options[:limit],
         :offset => options[:offset]
       )
@@ -202,5 +186,31 @@ module Kappa::V2
     # @see Team
     # @return [Array<Team>] The list of teams that this channel is associated with. Not all channels have associated teams.
     attr_reader :teams
+  end
+
+  # Query class for finding channels.
+  # @see Channel
+  class Channels
+    # @private
+    def initialize(query)
+      @query = query
+    end
+
+    # Get a channel by name.
+    # @example
+    #   c = Twitch.channels.get('day9tv')
+    # @param channel_name [String] The name of the channel to get. This is the same as the stream or user name.
+    # @return [Channel] A valid `Channel` object if the channel exists, `nil` otherwise.
+    def get(channel_name)
+      encoded_name = CGI.escape(channel_name)
+      json = @query.connection.get("channels/#{encoded_name}")
+
+      # HTTP 422 can happen if the channel is associated with a Justin.tv account.
+      if !json || json['status'] == 404 || json['status'] == 422
+        nil
+      else
+        Channel.new(json, @query)
+      end
+    end
   end
 end

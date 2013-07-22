@@ -1,19 +1,20 @@
 require 'cgi'
 require 'time'
 
-module Kappa::V2
+module Twitch::V2
   # These are members of the Twitch community who have a Twitch account. If broadcasting,
   # they can own a stream that they can broadcast on their channel. If mainly viewing,
   # they might follow or subscribe to channels.
-  # @see .get User.get
+  # @see Users#get Users#get
+  # @see Users
   # @see Channel
   # @see Stream
   class User
-    include Connection
-    include Kappa::IdEquality
+    include Twitch::IdEquality
 
     # @private
-    def initialize(hash)
+    def initialize(hash, query)
+      @query = query
       @id = hash['_id']
       @created_at = Time.parse(hash['created_at']).utc
       @display_name = hash['display_name']
@@ -23,26 +24,12 @@ module Kappa::V2
       @updated_at = Time.parse(hash['updated_at']).utc
     end
 
-    # Get a user by name.
-    # @param user_name [String] The name of the user to get. This is the same as the channel or stream name.
-    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser GET /users/:user
-    # @return [User] A valid `User` object if the user exists, `nil` otherwise.
-    def self.get(user_name)
-      encoded_name = CGI.escape(user_name)
-      json = connection.get("users/#{encoded_name}")
-      if !json || json['status'] == 404
-        nil
-      else
-        new(json)
-      end
-    end
-
     # Get the `Channel` associated with this user.
     # @note This incurs an additional web request.
     # @return [Channel] The `Channel` associated with this user, or `nil` if this is a Justin.tv account.
-    # @see Channel.get
+    # @see Channel#get Channel#get
     def channel
-      Channel.get(@name)
+      @query.channels.get(@name)
     end
 
     # Get the live stream associated with this user.
@@ -50,7 +37,7 @@ module Kappa::V2
     # @return [Stream] Live stream object for this user, or `nil` if the user is not currently streaming.
     # @see #streaming?
     def stream
-      Stream.get(@name)
+      @query.streams.get(@name)
     end
 
     # Is this user currently streaming?
@@ -74,11 +61,11 @@ module Kappa::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels GET /users/:user/follows/channels
     # @return [Array<Channel>] List of channels the user is currently following.
     def following(options = {})
-      return connection.accumulate(
+      return @query.connection.accumulate(
         :path => "users/#{@name}/follows/channels",
         :json => 'follows',
         :sub_json => 'channel',
-        :class => Channel,
+        :create => -> hash { Channel.new(hash, @query) },
         :limit => options[:limit],
         :offset => options[:offset]
       )
@@ -97,7 +84,7 @@ module Kappa::V2
 
       name = CGI.escape(name)
 
-      json = connection.get("users/#{@name}/follows/channels/#{name}")
+      json = @query.connection.get("users/#{@name}/follows/channels/#{name}")
       status = json['status']
       return !status || (status != 404)
     end
@@ -131,5 +118,30 @@ module Kappa::V2
     #   "lagtvmaximusblack"
     # @return [String] Unique Twitch name.
     attr_reader :name
+  end
+
+  # Query class for finding users.
+  # @see User
+  class Users
+    # @private
+    def initialize(query)
+      @query = query
+    end
+
+    # Get a user by name.
+    # @example
+    #   Twitch.users.get('totalbiscuit')
+    # @param user_name [String] The name of the user to get. This is the same as the channel or stream name.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser GET /users/:user
+    # @return [User] A valid `User` object if the user exists, `nil` otherwise.
+    def get(user_name)
+      encoded_name = CGI.escape(user_name)
+      json = @query.connection.get("users/#{encoded_name}")
+      if !json || json['status'] == 404
+        nil
+      else
+        User.new(json, @query)
+      end
+    end
   end
 end
