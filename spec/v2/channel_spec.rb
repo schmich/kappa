@@ -3,9 +3,9 @@ require 'yaml'
 require 'kappa'
 require 'common'
 
-include Kappa::V2
+include Twitch::V2
 
-describe Kappa::V2::Channel do
+describe Twitch::V2::Channel do
   before do
     WebMocks.load_dir(fixture('channel'))
   end
@@ -17,7 +17,7 @@ describe Kappa::V2::Channel do
   describe '.new' do
     it 'can be created from a hash' do
       hash = yaml_load('channel/colminigun.yml')
-      c = Channel.new(hash)
+      c = Channel.new(hash, nil)
       c.id.should == hash['_id']
       c.background_url.should == hash['background']
       c.banner_url.should == hash['banner']
@@ -39,44 +39,22 @@ describe Kappa::V2::Channel do
 
     it 'has associated teams' do
       hash = yaml_load('channel/colminigun.yml')
-      c = Channel.new(hash)
+      c = Channel.new(hash, nil)
       c.teams.should_not be_nil
       c.teams.should_not be_empty
     end
   end
- 
-  describe '.get' do
-    it 'creates a Channel from channel name' do
-      c = Channel.get('colminigun')
-      c.should_not be_nil
-    end
 
-    it 'handles channel name with URL characters' do
-      c = Channel.get('foo/bar')
-      c.should_not be_nil
-    end
-
-    it 'returns nil when channel does not exist' do
-      c = Channel.get('does_not_exist')
-      c.should be_nil
-    end
-
-    it 'returns nil when the channel is associated with a Justin.tv account' do
-      c = Channel.get('desrow')
-      c.should be_nil
-    end
-  end
-
-  describe '.streaming?' do
+  describe '#streaming?' do
     it 'returns true when a channel has a live stream' do
-      c = Channel.get('incontroltv')
+      c = Twitch.channels.get('incontroltv')
       c.should_not be_nil
       c.streaming?.should be_true
       c.stream.should_not be_nil
     end
 
     it 'returns false when a channel does not have a live stream' do
-      c = Channel.get('lagtvmaximusblack')
+      c = Twitch.channels.get('lagtvmaximusblack')
       c.should_not be_nil
       c.streaming?.should be_false
       c.stream.should be_nil
@@ -85,7 +63,7 @@ describe Kappa::V2::Channel do
 
   describe '#followers' do
     it 'returns the list of users following this channel' do
-      c = Channel.get('osrusher')
+      c = Twitch.channels.get('osrusher')
       c.should_not be_nil
       f = c.followers
       f.should_not be_nil
@@ -94,7 +72,7 @@ describe Kappa::V2::Channel do
     end
 
     it 'limits the number of results based on the :limit parameter' do
-      c = Channel.get('osrusher')
+      c = Twitch.channels.get('osrusher')
       c.should_not be_nil
       f = c.followers(:limit => 7)
       f.should_not be_nil
@@ -105,7 +83,7 @@ describe Kappa::V2::Channel do
 
   describe '#user' do
     it 'returns the user owning the channel' do
-      c = Channel.get('nathanias')
+      c = Twitch.channels.get('nathanias')
       c.should_not be_nil
       u = c.user
       u.should_not be_nil
@@ -115,7 +93,7 @@ describe Kappa::V2::Channel do
 
   describe '#videos' do
     it 'returns broadcasts' do
-      c = Channel.get('ms_vixen')
+      c = Twitch.channels.get('ms_vixen')
       c.should_not be_nil
       v = c.videos(:type => :broadcasts, :limit => 75)
       v.should_not be_nil
@@ -123,7 +101,7 @@ describe Kappa::V2::Channel do
     end
 
     it 'returns highlights' do
-      c = Channel.get('ms_vixen')
+      c = Twitch.channels.get('ms_vixen')
       c.should_not be_nil
       v = c.videos(:type => :highlights, :limit => 50)
       v.should_not be_nil
@@ -132,10 +110,42 @@ describe Kappa::V2::Channel do
 
     it 'rejects :type if not :broadcats or :highlights' do
       expect {
-        c = Channel.get('ms_vixen')
+        c = Twitch.channels.get('ms_vixen')
         c.should_not be_nil
         v = c.videos(:type => :invalid)
       }.to raise_error(ArgumentError)
+    end
+  end
+end
+
+describe Twitch::V2::Channels do
+  before do
+    WebMocks.load_dir(fixture('channel'))
+  end
+
+  after do
+    WebMock.reset!
+  end
+ 
+  describe '#get' do
+    it 'creates a Channel from channel name' do
+      c = Twitch.channels.get('colminigun')
+      c.should_not be_nil
+    end
+
+    it 'handles channel name with URL characters' do
+      c = Twitch.channels.get('foo/bar')
+      c.should_not be_nil
+    end
+
+    it 'returns nil when channel does not exist' do
+      c = Twitch.channels.get('does_not_exist')
+      c.should be_nil
+    end
+
+    it 'returns nil when the channel is associated with a Justin.tv account' do
+      c = Twitch.channels.get('desrow')
+      c.should be_nil
     end
   end
 end

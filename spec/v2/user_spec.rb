@@ -2,9 +2,7 @@ require 'rspec'
 require 'kappa'
 require 'common'
 
-include Kappa::V2
-
-describe Kappa::V2::User do
+describe Twitch::V2::User do
   before do
     WebMocks.load_dir(fixture('user'))
   end
@@ -16,7 +14,7 @@ describe Kappa::V2::User do
   describe '#new' do
     it 'accepts a hash' do
       hash = yaml_load('user/user_real.yml')
-      u = User.new(hash)
+      u = User.new(hash, nil)
       u.id.should == hash['_id']
       u.created_at.class.should == Time
       u.created_at.should < Time.now
@@ -29,29 +27,17 @@ describe Kappa::V2::User do
     end
   end
 
-  describe '.get' do
-    it 'creates a User from user name' do
-      u = User.get('colminigun')
-      u.should_not be_nil
-    end
-
-    it 'returns nil when user does not exist' do
-      u = User.get('does_not_exist')
-      u.should be_nil
-    end
-  end
-
   describe '#eql?' do
     it 'should be equal to self' do
-      u1 = User.new(yaml_load('user/user_real.yml'))
+      u1 = User.new(yaml_load('user/user_real.yml'), nil)
       u1.should == u1
       u1.eql?(u1).should be_true
       (u1 == u1).should be_true
     end
 
     it 'should be equal by ID' do
-      u1 = User.new(yaml_load('user/user_real.yml'))
-      u2 = User.new(yaml_load('user/user_real.yml'))
+      u1 = User.new(yaml_load('user/user_real.yml'), nil)
+      u2 = User.new(yaml_load('user/user_real.yml'), nil)
       u1.should == u2
       u1.hash.should == u2.hash
       u1.eql?(u2).should be_true
@@ -59,8 +45,8 @@ describe Kappa::V2::User do
     end
 
     it 'should be different by ID' do
-      u1 = User.new(yaml_load('user/user_real.yml'))
-      u2 = User.new(yaml_load('user/user_foo.yml'))
+      u1 = User.new(yaml_load('user/user_real.yml'), nil)
+      u2 = User.new(yaml_load('user/user_foo.yml'), nil)
       u1.should_not == u2
       u1.eql?(u2).should be_false
       (u1 == u2).should be_false
@@ -69,7 +55,7 @@ describe Kappa::V2::User do
 
   describe '#following' do
     it 'returns the list of channels a user is following' do
-      u = User.get('nathanias')
+      u = Twitch.users.get('nathanias')
       u.should_not be_nil
       f = u.following
       f.should_not be_nil
@@ -78,7 +64,7 @@ describe Kappa::V2::User do
     end
 
     it 'limits the number of results returned based on the :limit parameter' do
-      u = User.get('nathanias')
+      u = Twitch.users.get('nathanias')
       u.should_not be_nil
       f = u.following(:limit => 7)
       f.should_not be_nil
@@ -87,7 +73,7 @@ describe Kappa::V2::User do
     end
 
     it 'returns results offset by the :offset parameter' do
-      u = User.get('lethalfrag')
+      u = Twitch.users.get('lethalfrag')
       u.should_not be_nil
       f = u.following(:limit => 5, :offset => 2)
       f.should_not be_nil
@@ -97,23 +83,23 @@ describe Kappa::V2::User do
 
   describe '#following?' do
     it 'returns true if the user is following the channel' do
-      u = User.get('eghuk')
+      u = Twitch.users.get('eghuk')
       u.should_not be_nil
       f = u.following?('liquidtlo')
       f.should be_true
     end
 
     it 'returns false if the user is not following the channel' do
-      u = User.get('eghuk')
+      u = Twitch.users.get('eghuk')
       u.should_not be_nil
       f = u.following?('idrajit')
       f.should be_false
     end
 
     it 'accepts a Channel object' do
-      u = User.get('eghuk')
+      u = Twitch.users.get('eghuk')
       u.should_not be_nil
-      c = Channel.get('nony')
+      c = Twitch.channels.get('nony')
       f = u.following?(c)
       f.should be_true
     end
@@ -121,7 +107,7 @@ describe Kappa::V2::User do
 
   describe '#channel' do
     it 'returns the channel associated with the user' do
-      u = User.get('colthestc')
+      u = Twitch.users.get('colthestc')
       u.should_not be_nil
       c = u.channel
       c.should_not be_nil
@@ -131,14 +117,14 @@ describe Kappa::V2::User do
 
   describe '#stream' do
     it 'returns a valid stream if the user is streaming' do
-      u = User.get('incontroltv')
+      u = Twitch.users.get('incontroltv')
       u.should_not be_nil
       s = u.stream
       s.should_not be_nil
     end
 
     it 'returns nil if the user is not streaming' do
-      u = User.get('tsm_dyrus')
+      u = Twitch.users.get('tsm_dyrus')
       u.should_not be_nil
       s = u.stream
       s.should be_nil
@@ -147,15 +133,37 @@ describe Kappa::V2::User do
 
   describe '#streaming?' do
     it 'returns true if the user is streaming' do
-      u = User.get('incontroltv')
+      u = Twitch.users.get('incontroltv')
       u.should_not be_nil
       u.streaming?.should be_true
     end
 
     it 'returns false if the user is not streaming' do
-      u = User.get('tsm_dyrus')
+      u = Twitch.users.get('tsm_dyrus')
       u.should_not be_nil
       u.streaming?.should be_false
+    end
+  end
+end
+
+describe Twitch::V2::Users do
+  before do
+    WebMocks.load_dir(fixture('user'))
+  end
+
+  after do
+    WebMock.reset!
+  end
+
+  describe '#get' do
+    it 'creates a User from user name' do
+      u = Twitch.users.get('colminigun')
+      u.should_not be_nil
+    end
+
+    it 'returns nil when user does not exist' do
+      u = Twitch.users.get('does_not_exist')
+      u.should be_nil
     end
   end
 end

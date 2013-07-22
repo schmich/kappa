@@ -3,9 +3,7 @@ require 'webmock/rspec'
 require 'kappa'
 require 'common'
 
-include Kappa::V2
-
-describe Kappa::V2::Video do
+describe Twitch::V2::Video do
   before do
     WebMocks.load_dir(fixture('video'))
   end
@@ -17,7 +15,7 @@ describe Kappa::V2::Video do
   describe '#new' do
     it 'accepts a hash' do
       hash = yaml_load('video/video.yml')
-      v = Video.new(hash)
+      v = Video.new(hash, nil)
       v.id.should == hash['_id']
       v.title.should == hash['title']
       v.recorded_at.class.should == Time
@@ -35,33 +33,16 @@ describe Kappa::V2::Video do
     end
   end
 
-  describe '.get' do
-    it 'creates a Video from video ID' do
-      v = Video.get('a402689752')
-      v.should_not be_nil
-    end
-
-    it 'returns nil when video does not exist' do
-      v = Video.get('does_not_exist')
-      v.should be_nil
-    end
-
-    it 'handles video name with URL characters' do
-      v = Video.get('foo/bar')
-      v.should_not be_nil
-    end
-  end
-
   describe '.channel' do
     it 'returns a valid channel' do
-      v = Video.get('a402689752')
+      v = Twitch.videos.get('a402689752')
       v.should_not be_nil
       c = v.channel
       c.should_not be_nil
     end
 
     it 'returns a proxy channel object without causing a request' do
-      v = Video.get('a402689752')
+      v = Twitch.videos.get('a402689752')
       v.should_not be_nil
       c = v.channel
       c.should_not be_nil
@@ -71,7 +52,7 @@ describe Kappa::V2::Video do
     end
 
     it 'causes a request when getting other channel attributes' do
-      v = Video.get('a413663426')
+      v = Twitch.videos.get('a413663426')
       v.should_not be_nil
       c = v.channel
       c.should_not be_nil
@@ -81,25 +62,42 @@ describe Kappa::V2::Video do
   end
 end
 
-describe Kappa::V2::Videos do
+describe Twitch::V2::Videos do
   before do
-    WebMocks.load_dir(fixture('videos'))
+    WebMocks.load_dir(fixture('video'))
   end
 
   after do
     WebMock.reset!
   end
 
-  describe '.top' do
+  describe '#get' do
+    it 'creates a Video from video ID' do
+      v = Twitch.videos.get('a402689752')
+      v.should_not be_nil
+    end
+
+    it 'returns nil when video does not exist' do
+      v = Twitch.videos.get('does_not_exist')
+      v.should be_nil
+    end
+
+    it 'handles video name with URL characters' do
+      v = Twitch.videos.get('foo/bar')
+      v.should_not be_nil
+    end
+  end
+
+  describe '#top' do
     it 'returns top videos' do
-      v = Videos.top
+      v = Twitch.videos.top
       v.should_not be_nil
       v.should_not be_empty
       v.length.should == 10
     end
 
     it 'can be filtered by game' do
-      v = Videos.top(:game => 'Super Meat Boy')
+      v = Twitch.videos.top(:game => 'Super Meat Boy')
       v.should_not be_nil
       v.should_not be_empty
       v.length.should == 10
@@ -109,17 +107,17 @@ describe Kappa::V2::Videos do
     end
 
     it 'can return videos from multiple time periods' do
-      v = Videos.top(:period => :week)
+      v = Twitch.videos.top(:period => :week)
       v.should_not be_nil
       v.should_not be_empty
       v.length.should == 10
 
-      v = Videos.top(:period => :month)
+      v = Twitch.videos.top(:period => :month)
       v.should_not be_nil
       v.should_not be_empty
       v.length.should == 10
 
-      v = Videos.top(:period => :all)
+      v = Twitch.videos.top(:period => :all)
       v.should_not be_nil
       v.should_not be_empty
       v.length.should == 10
@@ -127,7 +125,7 @@ describe Kappa::V2::Videos do
 
     it 'rejects invalid periods' do
       expect {
-        v = Videos.top(:period => :invalid)
+        v = Twitch.videos.top(:period => :invalid)
       }.to raise_error(ArgumentError)
     end
   end

@@ -2,9 +2,7 @@ require 'rspec'
 require 'kappa'
 require 'common'
 
-include Kappa::V2
-
-describe Kappa::V2::Images do
+describe Twitch::V2::Images do
   describe '.new' do
     it 'accepts a hash' do
       hash = yaml_load('images/images.yml')

@@ -1,12 +1,13 @@
 require 'cgi'
 require 'time'
 
-module Kappa::V2
+module Twitch::V2
   # @private
   class ChannelProxy
-    def initialize(name, display_name)
+    def initialize(name, display_name, query)
       @name = name
       @display_name = display_name
+      @query = query
     end
 
     attr_reader :name
@@ -15,7 +16,7 @@ module Kappa::V2
     include Proxy
 
     proxy {
-      Channel.get(@name)
+      @query.channels.get(@name)
     }
   end
 
@@ -26,11 +27,10 @@ module Kappa::V2
   # @see Videos
   # @see Channel
   class Video
-    include Connection
-    include Kappa::IdEquality
+    include Twitch::IdEquality
 
     # @private
-    def initialize(hash)
+    def initialize(hash, query)
       @id = hash['_id']
       @title = hash['title']
       @recorded_at = Time.parse(hash['recorded_at']).utc
@@ -44,26 +44,9 @@ module Kappa::V2
 
       @channel = ChannelProxy.new(
         hash['channel']['name'],
-        hash['channel']['display_name']
+        hash['channel']['display_name'],
+        query
       )
-    end
-
-    # Get a video by ID.
-    # @example
-    #   v = Video.get('a396294648')
-    # @param id [String] The ID of the video to get.
-    # @raise [ArgumentError] If `id` is `nil` or blank.
-    # @return [Video] A valid `Video` object if the video exists, `nil` otherwise.
-    def self.get(id)
-      raise ArgumentError if !id || id.strip.empty?
-
-      encoded_id = CGI.escape(id)
-      json = connection.get("videos/#{encoded_id}")
-      if !json || json['status'] == 404
-        nil
-      else
-        new(json)
-      end
     end
 
     # @note This is a `String`, not a `Fixnum` like most other object IDs.
@@ -122,7 +105,27 @@ module Kappa::V2
   # Query class used for finding top videos.
   # @see Video
   class Videos
-    include Connection
+    def initialize(query)
+      @query = query
+    end
+
+    # Get a video by ID.
+    # @example
+    #   v = Video.get('a396294648')
+    # @param id [String] The ID of the video to get.
+    # @raise [ArgumentError] If `id` is `nil` or empty.
+    # @return [Video] A valid `Video` object if the video exists, `nil` otherwise.
+    def get(id)
+      raise ArgumentError, 'id' if !id || id.strip.empty?
+
+      encoded_id = CGI.escape(id)
+      json = @query.connection.get("videos/#{encoded_id}")
+      if !json || json['status'] == 404
+        nil
+      else
+        Video.new(json, @query)
+      end
+    end
 
     # Get the list of most popular videos based on view count.
     # @note The number of videos returned is potentially very large, so it's recommended that you specify a `:limit`.
@@ -140,7 +143,7 @@ module Kappa::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-videostop GET /videos/top
     # @raise [ArgumentError] If `:period` is not one of `:week`, `:month`, or `:all`.
     # @return [Array<Video>] List of top videos.
-    def self.top(options = {})
+    def top(options = {})
       params = {}
 
       if options[:game]
@@ -154,11 +157,11 @@ module Kappa::V2
 
       params[:period] = period.to_s
 
-      return connection.accumulate(
+      return @query.connection.accumulate(
         :path => 'videos/top',
         :params => params,
         :json => 'videos',
-        :class => Video,
+        :create => -> hash { Video.new(hash, @query) },
         :limit => options[:limit],
         :offset => options[:offset]
       )

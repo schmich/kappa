@@ -1,27 +1,27 @@
 require 'httparty'
 require 'addressable/uri'
 require 'json'
-require 'singleton'
 require 'set'
 
-module Kappa
+module Twitch
   # @private
   class ConnectionBase
     include HTTParty
 
-    def initialize(base_url = DEFAULT_BASE_URL)
+    def initialize(client_id, base_url = DEFAULT_BASE_URL)
+      @client_id = client_id
       @base_url = Addressable::URI.parse(base_url)
     end
 
     def get(path, query = nil)
       request_url = @base_url + path
 
-      headers = {
-        'Client-ID' => Configuration.instance.client_id,
-        'Kappa-Version' => Kappa::VERSION
-      }.merge(custom_headers)
+      all_headers = {
+        'Client-ID' => @client_id,
+        'Kappa-Version' => Twitch::VERSION
+      }.merge(headers())
 
-      response = self.class.get(request_url, :headers => headers, :query => query)
+      response = self.class.get(request_url, :headers => all_headers, :query => query)
 
       json = response.body
       return JSON.parse(json)
@@ -32,11 +32,16 @@ module Kappa
       params = options[:params] || {}
       json = options[:json]
       sub_json = options[:sub_json]
-      klass = options[:class]
+      create = options[:create]
 
       raise ArgumentError, 'json' if json.nil?
       raise ArgumentError, 'path' if path.nil?
-      raise ArgumentError, 'class' if klass.nil?
+      raise ArgumentError, 'create' if create.nil?
+
+      if create.is_a? Class
+        klass = create
+        create = -> hash { klass.new(hash) }
+      end
 
       total_limit = options[:limit]
       page_limit = [total_limit || 100, 100].min
@@ -45,11 +50,11 @@ module Kappa
       objects = []
       ids = Set.new
 
-      paginated(path, page_limit, offset, params) do |response_json|
+      paginate(path, page_limit, offset, params) do |response_json|
         current_objects = response_json[json]
         current_objects.each do |object_json|
           object_json = object_json[sub_json] if sub_json
-          object = klass.new(object_json)
+          object = create.call(object_json)
           if ids.add?(object.id)
             objects << object
             if !total_limit.nil? && (objects.count == total_limit)
@@ -64,7 +69,7 @@ module Kappa
       return objects
     end
 
-    def paginated(path, limit, offset, params = {})
+    def paginate(path, limit, offset, params = {})
       path_uri = Addressable::URI.parse(path)
       query = { 'limit' => limit, 'offset' => offset }
       path_uri.query_values ||= {}
@@ -97,30 +102,11 @@ module Kappa
   end
 end
 
-module Kappa::V2
+module Twitch::V2
   # @private
-  module Connection
-    class Impl < Kappa::ConnectionBase
-      include Singleton
-
-    private
-      def custom_headers
+  class Connection < Twitch::ConnectionBase
+      def headers
         { 'Accept' => 'application/vnd.twitchtv.v2+json' }
       end
-    end
-
-    def self.included(base)
-      base.extend(ClassMethods)
-    end
-
-    def connection
-      Impl.instance
-    end
-
-    module ClassMethods
-      def connection
-        Impl.instance
-      end
-    end
   end
 end

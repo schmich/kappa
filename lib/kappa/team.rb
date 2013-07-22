@@ -1,13 +1,12 @@
 require 'time'
 
-module Kappa::V2
+module Twitch::V2
   # Teams are an organization of channels.
   # @see .get Team.get
   # @see Teams
   # @see Channel
   class Team
-    include Connection
-    include Kappa::IdEquality
+    include Twitch::IdEquality
     
     # @private
     def initialize(hash)
@@ -21,19 +20,6 @@ module Kappa::V2
       @updated_at = Time.parse(hash['updated_at']).utc
       @created_at = Time.parse(hash['created_at']).utc
       @url = "http://www.twitch.tv/team/#{@name}"
-    end
-
-    # Get a team by name.
-    # @param team_name [String] The name of the team to get.
-    # @return [Team] A valid `Team` object if the team exists, `nil` otherwise.
-    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam GET /teams/:team
-    def self.get(team_name)
-      json = connection.get("teams/#{team_name}")
-      if json['status'] == 404
-        nil
-      else
-        new(json)
-      end
     end
 
     # @example
@@ -92,7 +78,22 @@ module Kappa::V2
   # Query class used for finding all active teams.
   # @see Team
   class Teams
-    include Connection
+    def initialize(query)
+      @query = query
+    end
+
+    # Get a team by name.
+    # @param team_name [String] The name of the team to get.
+    # @return [Team] A valid `Team` object if the team exists, `nil` otherwise.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam GET /teams/:team
+    def get(team_name)
+      json = @query.connection.get("teams/#{team_name}")
+      if json['status'] == 404
+        nil
+      else
+        Team.new(json)
+      end
+    end
 
     # Get the list of all active teams.
     # @example
@@ -103,14 +104,11 @@ module Kappa::V2
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams GET /teams
     # @return [Array<Team>] List of all active teams.
-    def self.all(options = {})
-      params = {}
-
-      return connection.accumulate(
+    def all(options = {})
+      return @query.connection.accumulate(
         :path => 'teams',
-        :params => params,
         :json => 'teams',
-        :class => Team,
+        :create => Team,
         :limit => options[:limit],
         :offset => options[:offset]
       )

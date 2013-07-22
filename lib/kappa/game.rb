@@ -1,9 +1,9 @@
-module Kappa::V2
+module Twitch::V2
   # Games are categories (e.g. League of Legends, Diablo 3) used by streams and channels.
   # Games can be searched for by query.
   # @see Games
   class Game
-    include Kappa::IdEquality
+    include Twitch::IdEquality
 
     # @private
     def initialize(hash)
@@ -53,7 +53,7 @@ module Kappa::V2
   # A game suggestion returned by Twitch when searching for games via `Games.find`.
   # @see Games.find
   class GameSuggestion
-    include Kappa::IdEquality
+    include Twitch::IdEquality
 
     # @private
     def initialize(hash)
@@ -96,7 +96,9 @@ module Kappa::V2
   # @see Game
   # @see GameSuggestion
   class Games
-    include Connection
+    def initialize(query)
+      @query = query
+    end
 
     # Get a list of games with the highest number of current viewers on Twitch.
     # @example
@@ -110,18 +112,18 @@ module Kappa::V2
     # @see Game
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop GET /games/top
     # @return [Array<Game>] List of games sorted by number of current viewers on Twitch, most popular first.
-    def self.top(options = {})
+    def top(options = {})
       params = {}
 
       if options[:hls]
         params[:hls] = true
       end
 
-      return connection.accumulate(
+      return @query.connection.accumulate(
         :path => 'games/top',
         :params => params,
         :json => 'top',
-        :class => Game,
+        :create => Game,
         :limit => options[:limit],
         :offset => options[:offset]
       )
@@ -140,7 +142,7 @@ module Kappa::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
     # @raise [ArgumentError] If `:name` is not specified.
     # @return [Array<GameSuggestion>] List of games matching the criteria.
-    def self.find(options)
+    def find(options)
       raise ArgumentError, 'options' if options.nil?
       raise ArgumentError, 'name' if options[:name].nil?
 
@@ -153,11 +155,11 @@ module Kappa::V2
         params.merge!(:live => true)
       end
 
-      return connection.accumulate(
+      return @query.connection.accumulate(
         :path => 'search/games',
         :params => params,
         :json => 'games',
-        :class => GameSuggestion,
+        :create => GameSuggestion,
         :limit => options[:limit]
       )
     end
