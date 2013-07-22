@@ -5,15 +5,15 @@ module Twitch
 
   # Configure global settings for interacting with Twitch. Future requests will use these settings.
   # @example
-  #   Twitch.default do |config|
+  #   Twitch.configure do |config|
   #     config.client_id = 'sc2daily-v1.0.0'
   #     config.api_version = Twitch::V2
   #   end
-  def self.default(&block)
-    @query = configure(&block)
+  def self.configure(&block)
+    @query = instance(&block)
   end
 
-  def self.configure(&block)
+  def self.instance(&block)
     config = Configuration.new
     config.instance_eval(&block)
     connection = config.create(:Connection, config.client_id)
