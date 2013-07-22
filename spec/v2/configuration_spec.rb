@@ -15,7 +15,7 @@ describe Twitch do
   end
 
   describe '.configure' do
-    it 'sets Client-ID header if client_id is set' do
+    it 'sets Client-ID header if #client_id is set' do
       client_id = SecureRandom.uuid
 
       Twitch.configure do |config|
@@ -29,10 +29,21 @@ describe Twitch do
         .with(:headers => { 'Client-ID' => client_id })
         .should have_been_made.once
     end
+
+    it 'uses correct classes when #api is set' do
+      Twitch.configure do |config|
+        config.api = Twitch::V2
+      end
+
+      Twitch.channels.class.should == Twitch::V2::Channels
+
+      c = Twitch.channels.get('giantwaffle')
+      c.class.should == Twitch::V2::Channel
+    end
   end
 
   describe '.instance' do
-    it 'sets Client-ID header if client_id is set' do
+    it 'sets Client-ID header if #client_id is set' do
       default_client_id = SecureRandom.uuid
       instance_client_id = SecureRandom.uuid
 

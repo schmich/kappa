@@ -7,7 +7,7 @@ module Twitch
   # @example
   #   Twitch.configure do |config|
   #     config.client_id = 'sc2daily-v1.0.0'
-  #     config.api_version = Twitch::V2
+  #     config.api = Twitch::V2
   #   end
   def self.configure(&block)
     @query = instance(&block)
@@ -28,7 +28,7 @@ module Twitch
   # @private
   class Configuration
     def initialize
-      @api_version = Twitch::V2
+      @api = Twitch::V2
     end
 
     def client_id
@@ -38,11 +38,11 @@ module Twitch
     end
 
     def create(symbol, *args)
-      @api_version.const_get(symbol).new(*args)
+      @api.const_get(symbol).new(*args)
     end
 
     attr_writer :client_id
-    attr_accessor :api_version
+    attr_accessor :api
   end
 
 private
