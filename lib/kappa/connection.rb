@@ -5,7 +5,7 @@ require 'set'
 
 module Twitch
   # @private
-  class ConnectionBase
+  class Connection
     include HTTParty
 
     def initialize(client_id, base_url = DEFAULT_BASE_URL)
@@ -104,7 +104,7 @@ end
 
 module Twitch::V2
   # @private
-  class Connection < Twitch::ConnectionBase
+  class Connection < Twitch::Connection
       def headers
         { 'Accept' => 'application/vnd.twitchtv.v2+json' }
       end
