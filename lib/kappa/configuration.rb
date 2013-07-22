@@ -2,7 +2,6 @@ require 'securerandom'
 
 module Twitch
   @query = nil
-  @config = nil
 
   # Configure global settings for interacting with Twitch. Future requests will use these settings.
   # @example
