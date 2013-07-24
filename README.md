@@ -194,3 +194,5 @@ end
 Copyright &copy; 2013 Chris Schmich
 <br />
 MIT License, See [LICENSE](LICENSE) for details.
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/b885add21cf8f2b473d1394edc1cf5b4 "githalytics.com")](http://githalytics.com/schmich/kappa)
