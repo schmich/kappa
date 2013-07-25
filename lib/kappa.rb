@@ -1,5 +1,6 @@
 require 'kappa/id_equality'
 require 'kappa/proxy'
+require 'kappa/errors'
 require 'kappa/connection'
 require 'kappa/configuration'
 require 'kappa/query'

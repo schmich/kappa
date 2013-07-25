@@ -9,11 +9,16 @@ module Twitch
     include HTTParty
 
     def initialize(client_id, base_url = DEFAULT_BASE_URL)
+      raise ArgumentError, 'client_id' if !client_id || client_id.empty?
+      raise ArgumentError, 'base_url' if !base_url || base_url.empty?
+
       @client_id = client_id
       @base_url = Addressable::URI.parse(base_url)
     end
 
     def get(path, query = nil)
+      raise ArgumentError, 'path' if !path || path.empty?
+
       request_url = @base_url + path
 
       all_headers = {
@@ -24,7 +29,12 @@ module Twitch
       response = self.class.get(request_url, :headers => all_headers, :query => query)
 
       json = response.body
-      return JSON.parse(json)
+
+      begin
+        return JSON.parse(json)
+      rescue JSON::ParserError => e
+        raise Error::ResponseFormatError.new(e, response.request.last_uri.to_s)
+      end
     end
 
     def accumulate(options)
@@ -105,8 +115,8 @@ end
 module Twitch::V2
   # @private
   class Connection < Twitch::Connection
-      def headers
-        { 'Accept' => 'application/vnd.twitchtv.v2+json' }
-      end
+    def headers
+      { 'Accept' => 'application/vnd.twitchtv.v2+json' }
+    end
   end
 end
