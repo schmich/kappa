@@ -129,4 +129,24 @@ describe Twitch::V2::Videos do
       }.to raise_error(ArgumentError)
     end
   end
+
+  describe '#for_channel' do
+    it 'returns broadcasts' do
+      v = Twitch.videos.for_channel('ms_vixen', :type => :broadcasts, :limit => 75)
+      v.should_not be_nil
+      v.count.should == 75
+    end
+
+    it 'returns highlights' do
+      v = Twitch.videos.for_channel('ms_vixen', :type => :highlights, :limit => 50)
+      v.should_not be_nil
+      v.count.should == 50
+    end
+
+    it 'rejects :type if not :broadcats or :highlights' do
+      expect {
+        v = Twitch.videos.for_channel('ms_vixen', :type => :invalid)
+      }.to raise_error(ArgumentError)
+    end
+  end
 end

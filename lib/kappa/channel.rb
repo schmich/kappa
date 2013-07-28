@@ -88,6 +88,7 @@ module Twitch::V2
 
     # Get the videos for a channel, most recently created first.
     # @note This incurs additional web requests.
+    # @note You can get videos directly from a channel name via {Videos#for_channel}.
     # @example
     #   c = Twitch.channels.get('idrajit')
     #   v = c.videos(:type => :broadcasts)
@@ -96,29 +97,12 @@ module Twitch::V2
     # @option options [Fixnum] :limit (none) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see Video
+    # @see Videos#for_channel Videos#for_channel
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-channelschannelvideos GET /channels/:channel/videos
     # @raise [ArgumentError] If `:type` is not one of `:broadcasts` or `:highlights`.
     # @return [Array<Video>] List of videos for the channel.
     def videos(options = {})
-      params = {}
-
-      type = options[:type] || :highlights
-      if !type.nil?
-        if ![:broadcasts, :highlights].include?(type)
-          raise ArgumentError, 'type'
-        end
-
-        params[:broadcasts] = (type == :broadcasts)
-      end
-
-      return @query.connection.accumulate(
-        :path => "channels/#{@name}/videos",
-        :params => params,
-        :json => 'videos',
-        :create => -> hash { Video.new(hash, @query) },
-        :limit => options[:limit],
-        :offset => options[:offset]
-      )
+      @query.videos.for_channel(@name, options)
     end
 
     # @example

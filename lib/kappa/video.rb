@@ -168,5 +168,46 @@ module Twitch::V2
         :offset => options[:offset]
       )
     end
+
+    # Get the videos for a channel, most recently created first.
+    # @example
+    #   v = Twitch.videos.for_channel('dreamhacktv')
+    # @example
+    #   v = Twitch.videos.for_channel('dreamhacktv', :type => :highlights, :limit => 10)
+    # @param options [Hash] Filter criteria.
+    # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @see Channel#videos Channel#videos
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-channelschannelvideos GET /channels/:channel/videos
+    # @raise [ArgumentError] If `:type` is not one of `:broadcasts` or `:highlights`.
+    # @return [Array<Video>] List of videos for the channel.
+    def for_channel(channel, options = {})
+      if channel.respond_to?(:name)
+        channel_name = channel.name
+      else
+        channel_name = channel.to_s
+      end
+
+      params = {}
+
+      type = options[:type] || :highlights
+      if !type.nil?
+        if ![:broadcasts, :highlights].include?(type)
+          raise ArgumentError, 'type'
+        end
+
+        params[:broadcasts] = (type == :broadcasts)
+      end
+
+      return @query.connection.accumulate(
+        :path => "channels/#{channel_name}/videos",
+        :params => params,
+        :json => 'videos',
+        :create => -> hash { Video.new(hash, @query) },
+        :limit => options[:limit],
+        :offset => options[:offset]
+      )
+    end
   end
 end
