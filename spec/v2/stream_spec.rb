@@ -44,6 +44,25 @@ describe Twitch::V2::Stream do
   end
 end
 
+describe Twitch::V2::StreamSummary do
+  before do
+    WebMocks.load_dir(fixture('stream'))
+  end
+
+  after do
+    WebMock.reset!
+  end
+
+  describe '.new' do
+    it 'accepts a hash' do
+      hash = yaml_load('stream/stream_summary.yml')
+      s = StreamSummary.new(hash)
+      s.viewer_count.should == hash['viewers']
+      s.channel_count.should == hash['channels']
+    end
+  end
+end
+
 describe Twitch::V2::Streams do
   before do
     WebMocks.load_dir(fixture('stream'))
@@ -192,6 +211,15 @@ describe Twitch::V2::Streams do
       s = Twitch.streams.featured(:hls => true, :limit => 5)
       s.should_not be_nil
       s.count.should == 5
+    end
+  end
+
+  describe '#summary' do
+    it 'returns stream summary' do
+      s = Twitch.streams.summary
+      s.should_not be_nil
+      s.viewer_count.should > 0
+      s.channel_count.should > 0
     end
   end
 end
