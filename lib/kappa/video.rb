@@ -120,8 +120,8 @@ module Twitch::V2
     def get(id)
       raise ArgumentError, 'id' if !id || id.strip.empty?
 
-      encoded_id = CGI.escape(id)
-      json = @query.connection.get("videos/#{encoded_id}")
+      id = CGI.escape(id)
+      json = @query.connection.get("videos/#{id}")
       if !json || json['status'] == 404
         nil
       else
@@ -200,8 +200,9 @@ module Twitch::V2
         params[:broadcasts] = (type == :broadcasts)
       end
 
+      name = CGI.escape(channel_name)
       return @query.connection.accumulate(
-        :path => "channels/#{channel_name}/videos",
+        :path => "channels/#{name}/videos",
         :params => params,
         :json => 'videos',
         :create => -> hash { Video.new(hash, @query) },

@@ -113,8 +113,8 @@ module Twitch::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamschannel GET /streams/:channel
     # @return [Stream] A valid `Stream` object if the stream exists and is currently live, `nil` otherwise.
     def get(stream_name)
-      encoded_name = CGI.escape(stream_name)
-      json = @query.connection.get("streams/#{encoded_name}")
+      name = CGI.escape(stream_name)
+      json = @query.connection.get("streams/#{name}")
       stream = json['stream']
       if json['status'] == 404 || !stream
         nil

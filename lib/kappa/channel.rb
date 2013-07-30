@@ -76,8 +76,9 @@ module Twitch::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschannelfollows GET /channels/:channel/follows
     # @return [Array<User>] List of users following this channel.
     def followers(options = {})
+      name = CGI.escape(@name)
       return @query.connection.accumulate(
-        :path => "channels/#{@name}/follows",
+        :path => "channels/#{name}/follows",
         :json => 'follows',
         :sub_json => 'user',
         :create => -> hash { User.new(hash, @query) },
@@ -186,8 +187,8 @@ module Twitch::V2
     # @param channel_name [String] The name of the channel to get. This is the same as the stream or user name.
     # @return [Channel] A valid `Channel` object if the channel exists, `nil` otherwise.
     def get(channel_name)
-      encoded_name = CGI.escape(channel_name)
-      json = @query.connection.get("channels/#{encoded_name}")
+      name = CGI.escape(channel_name)
+      json = @query.connection.get("channels/#{name}")
 
       # HTTP 422 can happen if the channel is associated with a Justin.tv account.
       if !json || json['status'] == 404 || json['status'] == 422

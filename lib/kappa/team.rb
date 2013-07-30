@@ -1,3 +1,4 @@
+require 'cgi'
 require 'time'
 
 module Twitch::V2
@@ -20,7 +21,9 @@ module Twitch::V2
       @display_name = hash['display_name']
       @updated_at = Time.parse(hash['updated_at']).utc
       @created_at = Time.parse(hash['created_at']).utc
-      @url = "http://www.twitch.tv/team/#{@name}"
+
+      name = CGI.escape(@name)
+      @url = "http://www.twitch.tv/team/#{name}"
     end
 
     # @example
@@ -91,7 +94,9 @@ module Twitch::V2
     # @return [Team] A valid `Team` object if the team exists, `nil` otherwise.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam GET /teams/:team
     def get(team_name)
-      json = @query.connection.get("teams/#{team_name}")
+      name = CGI.escape(team_name)
+      json = @query.connection.get("teams/#{name}")
+
       if json['status'] == 404
         nil
       else

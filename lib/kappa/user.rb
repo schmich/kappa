@@ -61,8 +61,9 @@ module Twitch::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels GET /users/:user/follows/channels
     # @return [Array<Channel>] List of channels the user is currently following.
     def following(options = {})
+      name = CGI.escape(@name)
       return @query.connection.accumulate(
-        :path => "users/#{@name}/follows/channels",
+        :path => "users/#{name}/follows/channels",
         :json => 'follows',
         :sub_json => 'channel',
         :create => -> hash { Channel.new(hash, @query) },
@@ -82,9 +83,10 @@ module Twitch::V2
         target.to_s
       end
 
-      name = CGI.escape(name)
+      user_name = CGI.escape(@name)
+      channel_name = CGI.escape(name)
 
-      json = @query.connection.get("users/#{@name}/follows/channels/#{name}")
+      json = @query.connection.get("users/#{user_name}/follows/channels/#{channel_name}")
       status = json['status']
       return !status || (status != 404)
     end
@@ -135,8 +137,9 @@ module Twitch::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/users.md#get-usersuser GET /users/:user
     # @return [User] A valid `User` object if the user exists, `nil` otherwise.
     def get(user_name)
-      encoded_name = CGI.escape(user_name)
-      json = @query.connection.get("users/#{encoded_name}")
+      name = CGI.escape(user_name)
+      json = @query.connection.get("users/#{name}")
+
       if !json || json['status'] == 404
         nil
       else
