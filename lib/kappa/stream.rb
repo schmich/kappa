@@ -71,6 +71,26 @@ module Twitch::V2
     attr_reader :url
   end
 
+  # Site-wide stream summary statistics.
+  # @see Streams#summary Streams#summary
+  class StreamSummary
+    # @private
+    def initialize(hash)
+      @viewer_count = hash['viewers']
+      @channel_count = hash['channels']
+    end
+
+    # @example
+    #   194774
+    # @return [Fixnum] The sum of all viewers across all live streams.
+    attr_reader :viewer_count
+
+    # @example
+    #   4144
+    # @return [Fixnum] The count of all channels currently streaming.
+    attr_reader :channel_count
+  end
+
   # Query class for finding featured streams or streams meeting certain criteria.
   # @see Stream
   class Streams
@@ -202,6 +222,18 @@ module Twitch::V2
         :limit => options[:limit],
         :offset => options[:offset]
       )
+    end
+
+    # Get site-wide stream summary statistics.
+    # @example
+    #   summary = Twitch.streams.summary
+    #   summary.viewer_count  # => 194774
+    #   summary.channel_count # => 4144
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#gedt-streamssummary GET /streams/summary
+    # @return [StreamSummary] Stream summary statistics.
+    def summary
+      json = @query.connection.get('streams/summary')
+      StreamSummary.new(json)
     end
   end
 end
