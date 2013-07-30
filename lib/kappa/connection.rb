@@ -37,7 +37,7 @@ module Twitch
       end
     end
 
-    def accumulate(options)
+    def accumulate(options, &block)
       path = options[:path]
       params = options[:params] || {}
       json = options[:json]
@@ -57,8 +57,13 @@ module Twitch
       page_limit = [total_limit || 100, 100].min
       offset = options[:offset] || 0
 
-      objects = []
       ids = Set.new
+      objects = []
+      count = 0
+
+      block ||= -> object {
+        objects << object
+      }
 
       paginate(path, page_limit, offset, params) do |response_json|
         current_objects = response_json[json]
@@ -66,14 +71,15 @@ module Twitch
           object_json = object_json[sub_json] if sub_json
           object = create.call(object_json)
           if ids.add?(object.id)
-            objects << object
-            if !total_limit.nil? && (objects.count == total_limit)
+            count += 1
+            block.call(object)
+            if count == total_limit
               return objects
             end
           end
         end
 
-        !current_objects.empty? && (current_objects.count >= page_limit)
+        break if current_objects.empty? || (current_objects.count < page_limit)
       end
 
       return objects
@@ -91,7 +97,7 @@ module Twitch
 
       loop do
         break if json['error'] && (json['status'] == 503)
-        break if !yield(json)
+        yield json
 
         links = json['_links']
         next_url = links['next']
