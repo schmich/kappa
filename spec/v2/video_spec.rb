@@ -137,6 +137,16 @@ describe Twitch::V2::Videos do
       v.count.should == 75
     end
 
+    it 'accepts objects responding to #name' do
+      channel = Object.new
+      def channel.name
+        'ms_vixen'
+      end
+      v = Twitch.videos.for_channel(channel, :type => :broadcasts, :limit => 75)
+      v.should_not be_nil
+      v.count.should == 75
+    end
+
     it 'returns highlights' do
       v = Twitch.videos.for_channel('ms_vixen', :type => :highlights, :limit => 50)
       v.should_not be_nil

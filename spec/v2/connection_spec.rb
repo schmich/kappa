@@ -29,13 +29,16 @@ describe Twitch::Connection do
       stub_request(:any, /.*api\.twitch\.tv.*/)
         .to_return(:body => '"Invalid JSON')
 
+      error = false
       begin
         c = Twitch::V2::Connection.new('client_id')
         json = c.get('/test')
-        fail 'Should have raised an error.'
       rescue Twitch::Error::ResponseFormatError => e
+        error = true
         e.request_url.should =~ /test/ 
       end
+
+      error.should be_true
     end
   end
 end
