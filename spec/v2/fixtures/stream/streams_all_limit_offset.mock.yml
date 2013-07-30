@@ -1,0 +1,2292 @@
+https://api.twitch.tv/kraken/streams?offset=100&limit=50:
+  streams:
+  - channel:
+      url: http://www.twitch.tv/ttrittonz
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/ttrittonz-channel_background_image-19616e4e199cae96.png
+      mature: false
+      status: ! 'Guitar hero with the GOAT '
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ttrittonz-channel_offline_image-e8d71e75f116647e-640x360.png
+      teams: []
+      display_name: TTrittonz
+      _id: 26433305
+      updated_at: '2013-07-30T08:48:19Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ttrittonz-channel_header_image-2190290186741cab-640x125.png
+      game: ! 'Call of Duty: Black Ops II'
+      created_at: '2011-11-28T00:37:56Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/ttrittonz/follows
+        chat: https://api.twitch.tv/kraken/chat/ttrittonz
+        stream_key: https://api.twitch.tv/kraken/channels/ttrittonz/stream_key
+        editors: https://api.twitch.tv/kraken/channels/ttrittonz/editors
+        self: https://api.twitch.tv/kraken/channels/ttrittonz
+        subscriptions: https://api.twitch.tv/kraken/channels/ttrittonz/subscriptions
+        features: https://api.twitch.tv/kraken/channels/ttrittonz/features
+        commercial: https://api.twitch.tv/kraken/channels/ttrittonz/commercial
+        videos: https://api.twitch.tv/kraken/channels/ttrittonz/videos
+      name: ttrittonz
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ttrittonz-profile_image-0846e7c6d96df098-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ttrittonz-320x200.jpg
+    broadcaster: obs
+    _id: 6321041536
+    game: ! 'Call of Duty: Black Ops II'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/ttrittonz
+    viewers: 131
+    name: live_user_ttrittonz
+  - channel:
+      url: http://www.twitch.tv/ladelfin4
+      mature: 
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/ladelfin4-channel_background_image-f46a4f7124878dd3.jpeg
+      status: 深喉嚨壓縮!  ・・・(ノД`)・
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ladelfin4-channel_offline_image-4d43f0638f774e33-640x360.jpeg
+      display_name: Ladelfin4
+      teams: []
+      updated_at: '2013-07-30T05:42:49Z'
+      _id: 17212755
+      game: Tera
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ladelfin4-channel_header_image-542fd36f824cc4ad-640x125.jpeg
+      created_at: '2010-10-30T14:04:41Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/ladelfin4/follows
+        chat: https://api.twitch.tv/kraken/chat/ladelfin4
+        stream_key: https://api.twitch.tv/kraken/channels/ladelfin4/stream_key
+        editors: https://api.twitch.tv/kraken/channels/ladelfin4/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/ladelfin4/subscriptions
+        self: https://api.twitch.tv/kraken/channels/ladelfin4
+        features: https://api.twitch.tv/kraken/channels/ladelfin4/features
+        commercial: https://api.twitch.tv/kraken/channels/ladelfin4/commercial
+        videos: https://api.twitch.tv/kraken/channels/ladelfin4/videos
+      name: ladelfin4
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ladelfin4-profile_image-f476a7c2c778be1e-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ladelfin4-320x200.jpg
+    broadcaster: obs
+    _id: 6322412576
+    game: Tera
+    _links:
+      self: https://api.twitch.tv/kraken/streams/ladelfin4
+    viewers: 128
+    name: live_user_ladelfin4
+  - channel:
+      url: http://www.twitch.tv/liteyear
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/liteyear-channel_background_image-79b335e73ec2e303.jpeg
+      mature: 
+      status: ! 'Lufia 2: Rise of the Sinistrals Day 8 [nosrl]'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/liteyear-channel_offline_image-f5a615e3157c68f5-640x360.png
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thecrew-background_image-25f51c617cd8a3a8.jpeg
+        display_name: The Crew
+        _id: 21
+        info: ! 'The Crew is an awesome alternative to e-sports and competative gaming,
+          featuring some of the best casual gamers on the interwebs.
+  
+  
+          <a rel="nofollow" href="http://crewlounge.org" target="_blank"><img src="http://crewlounge.org/badge/crewBadge.png"
+          border="0" alt="The Crew Lounge" /></a>
+  
+  '
+        updated_at: '2013-05-24T00:17:11Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thecrew-banner_image-22b56101c5ab13ac-640x125.png
+        created_at: '2011-11-03T19:14:47Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/thecrew
+        name: thecrew
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-thecrew-team_logo_image-6164c7ba6b1ffee1-300x300.png
+      - background: 
+        display_name: SpeedRunsLive
+        _id: 145
+        info: ! 'Check out <a rel="nofollow" href="http://speedrunslive.com" target="_blank">SpeedRunsLive.com!</a>
+  
+  '
+        updated_at: '2013-05-24T00:17:18Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-srl-banner_image-af620c8f039bdd48-640x125.jpeg
+        created_at: '2012-01-06T08:16:10Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/srl
+        name: srl
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-srl-team_logo_image-eed2eed579966c19-300x300.jpeg
+      display_name: LiteYear
+      _id: 10552451
+      updated_at: '2013-07-30T06:21:59Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/liteyear-channel_header_image-a96c6da4c5b2ba6c-640x125.png
+      game: ! 'Lufia II: Rise of the Sinistrals'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/liteyear/follows
+        chat: https://api.twitch.tv/kraken/chat/liteyear
+        stream_key: https://api.twitch.tv/kraken/channels/liteyear/stream_key
+        editors: https://api.twitch.tv/kraken/channels/liteyear/editors
+        self: https://api.twitch.tv/kraken/channels/liteyear
+        subscriptions: https://api.twitch.tv/kraken/channels/liteyear/subscriptions
+        features: https://api.twitch.tv/kraken/channels/liteyear/features
+        commercial: https://api.twitch.tv/kraken/channels/liteyear/commercial
+        videos: https://api.twitch.tv/kraken/channels/liteyear/videos
+      created_at: '2010-02-14T06:10:33Z'
+      name: liteyear
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/liteyear-profile_image-ab66588dd8d4793e-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_liteyear-320x200.jpg
+    broadcaster: obs
+    _id: 6322683184
+    game: ! 'Lufia II: Rise of the Sinistrals'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/liteyear
+    viewers: 128
+    name: live_user_liteyear
+  - channel:
+      url: http://www.twitch.tv/bdiz
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/bdiz-channel_background_image-06937920f46d23bb.jpeg
+      mature: 
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/bdiz-channel_offline_image-65125420144a161a-640x360.jpeg
+      status: EG.Bdiz playing MM with NO ONE STEAM IS DOWN http://eg.ebaycharity.gg
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-background_image-96bc59c30173c749.jpeg
+        display_name: Evil Geniuses
+        _id: 2
+        info: ! 'Team Info
+  
+  '
+        updated_at: '2013-07-30T01:16:18Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-banner_image-d132def1297d3fe0-640x125.jpeg
+        created_at: '2011-10-11T23:59:43Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/eg
+        name: eg
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-team_logo_image-af5fbb0a2727cd4c-300x300.jpeg
+      display_name: Bdiz
+      _id: 509890
+      updated_at: '2013-07-30T08:25:28Z'
+      banner: 
+      game: Dota 2
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/bdiz/follows
+        chat: https://api.twitch.tv/kraken/chat/bdiz
+        stream_key: https://api.twitch.tv/kraken/channels/bdiz/stream_key
+        editors: https://api.twitch.tv/kraken/channels/bdiz/editors
+        self: https://api.twitch.tv/kraken/channels/bdiz
+        subscriptions: https://api.twitch.tv/kraken/channels/bdiz/subscriptions
+        features: https://api.twitch.tv/kraken/channels/bdiz/features
+        commercial: https://api.twitch.tv/kraken/channels/bdiz/commercial
+        videos: https://api.twitch.tv/kraken/channels/bdiz/videos
+      created_at: '2008-04-29T21:39:15Z'
+      name: bdiz
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/bdiz-profile_image-9aed108264fb1012-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_bdiz-320x200.jpg
+    broadcaster: obs
+    _id: 6322813392
+    game: Dota 2
+    _links:
+      self: https://api.twitch.tv/kraken/streams/bdiz
+    viewers: 126
+    name: live_user_bdiz
+  - channel:
+      url: http://www.twitch.tv/stabbystabby
+      background: 
+      mature: false
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/stabbystabby-channel_offline_image-59cde46aa4745043-640x360.png
+      status: boat stream attempt--my server!  66.150.188.38:27015
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-comptf2-background_image-6bf7a56196182bbf.jpeg
+        display_name: Competitive TF2
+        _id: 378
+        info: ! "<ul class=\"multi_select\"><li class=\"selector\" style=\"float:left;padding-top:10px;\">\n\t\t\t<a
+          rel=\"nofollow\" href=\"http://www.youtube.com/user/StreamHighlights\" target=\"_blank\">\n\t\t\t\t<span
+          class=\"ms-int\" style=\"width:305px;height:64px;background-image:url(http://i.imgur.com/p6KlB.png);background-position:right;border:0;margin:0;padding:0;background-repeat:no-repeat;\">\n\t\t\t\t\t<span
+          class=\"button\" style=\"width:305px;height:64px;border:0;margin:0;padding:0;background-repeat:no-repeat;\"><strong
+          style=\"float:right;padding-right:80px;\">Subscribe to YouTube channel</strong></span>\n\t\t\t\t</span>\n\t\t\t</a>\n\t\t</li>\n\t\t<li
+          class=\"selector\" style=\"float:right;padding-top:10px;\">\n\t\t\t<a rel=\"nofollow\"
+          href=\"https://twitter.com/TeamFortressTV\" target=\"_blank\">\n\t\t\t\t<span
+          class=\"ms-int\" style=\"width:305px;height:64px;background-image:url(http://i.imgur.com/GsN86.png);background-position:left;border:0;margin:0;padding:0;background-repeat:no-repeat;\">\n\t\t\t\t\t<span
+          class=\"button\" style=\"width:305px;height:64px;border:0;margin:0;padding:0;background-repeat:no-repeat;\"><strong
+          style=\"padding-left:80px;\">Follow on twitter</strong></span>\n\t\t\t\t</span>\n\t\t\t</a>\n\t\t</li>\n\t</ul><center>\n<font
+          size=\"4\">Head over to <a rel=\"nofollow\" href=\"http://www.teamfortress.tv/\"
+          target=\"_blank\">teamfortress.tv</a> for more TF2 action!</font></center>\n"
+        updated_at: '2013-05-24T00:17:57Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-comptf2-banner_image-80270b5158083f63-640x125.png
+        _links:
+          self: https://api.twitch.tv/kraken/teams/comptf2
+        created_at: '2012-08-10T08:15:23Z'
+        name: comptf2
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-comptf2-team_logo_image-428c90ee4842a073-300x300.png
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamfortresstv-background_image-7b70347a9db0c596.png
+        display_name: TeamFortress.TV
+        _id: 516
+        info: ! 'Check out the all of the best TF2 players and streams at TeamFortress.TV!
+  
+          <br /> Catch past broadcasts at youtube.com/TeamfortressTV
+  
+          <br /> Follow on Twitter for news and updates @TeamfortressTV
+  
+  
+  
+  
+  
+  
+  '
+        updated_at: '2013-05-24T00:17:59Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamfortresstv-banner_image-cef18a5e9e8c3850-640x125.png
+        _links:
+          self: https://api.twitch.tv/kraken/teams/teamfortresstv
+        created_at: '2013-01-02T08:50:24Z'
+        name: teamfortresstv
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamfortresstv-team_logo_image-37787b73bc5bcff2-300x300.png
+      display_name: stabbystabby
+      _id: 27541787
+      updated_at: '2013-07-30T08:53:07Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/stabbystabby-channel_header_image-a521efe14f8d06a6-640x125.png
+      game: Team Fortress 2
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/stabbystabby/follows
+        chat: https://api.twitch.tv/kraken/chat/stabbystabby
+        stream_key: https://api.twitch.tv/kraken/channels/stabbystabby/stream_key
+        editors: https://api.twitch.tv/kraken/channels/stabbystabby/editors
+        self: https://api.twitch.tv/kraken/channels/stabbystabby
+        subscriptions: https://api.twitch.tv/kraken/channels/stabbystabby/subscriptions
+        features: https://api.twitch.tv/kraken/channels/stabbystabby/features
+        commercial: https://api.twitch.tv/kraken/channels/stabbystabby/commercial
+        videos: https://api.twitch.tv/kraken/channels/stabbystabby/videos
+      created_at: '2012-01-18T13:05:42Z'
+      name: stabbystabby
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/stabbystabby-profile_image-1c2ef7de2c68e389-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_stabbystabby-320x200.jpg
+    broadcaster: obs
+    _id: 6323374864
+    game: Team Fortress 2
+    _links:
+      self: https://api.twitch.tv/kraken/streams/stabbystabby
+    viewers: 126
+    name: live_user_stabbystabby
+  - channel:
+      url: http://www.twitch.tv/settle_
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/settle_-channel_background_image-64367781032aa9db.jpeg
+      mature: true
+      status: ! '[720p] DayZ - We have things!'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/settle_-channel_offline_image-64e339706a4d2ab6-640x360.jpeg
+      teams:
+      - background: 
+        display_name: The Midnight Crew
+        _id: 502
+        info: ! '
+  
+  '
+        updated_at: '2013-05-24T00:17:56Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-tmc_gaming-banner_image-5c32afa5f9250b8d-640x125.png
+        created_at: '2012-12-11T18:40:52Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/tmc_gaming
+        name: tmc_gaming
+        logo: 
+      display_name: Settle_
+      _id: 28654981
+      updated_at: '2013-07-30T05:38:29Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/settle_-channel_header_image-7d65c29eacca40f4-640x125.jpeg
+      game: DayZ
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/settle_/follows
+        chat: https://api.twitch.tv/kraken/chat/settle_
+        stream_key: https://api.twitch.tv/kraken/channels/settle_/stream_key
+        editors: https://api.twitch.tv/kraken/channels/settle_/editors
+        self: https://api.twitch.tv/kraken/channels/settle_
+        subscriptions: https://api.twitch.tv/kraken/channels/settle_/subscriptions
+        features: https://api.twitch.tv/kraken/channels/settle_/features
+        commercial: https://api.twitch.tv/kraken/channels/settle_/commercial
+        videos: https://api.twitch.tv/kraken/channels/settle_/videos
+      created_at: '2012-03-02T18:55:43Z'
+      name: settle_
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/settle_-profile_image-ce6fd5b3757352db-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_settle_-320x200.jpg
+    broadcaster: xsplit
+    _id: 6320193456
+    game: DayZ
+    _links:
+      self: https://api.twitch.tv/kraken/streams/settle_
+    viewers: 124
+    name: live_user_settle_
+  - channel:
+      url: http://www.twitch.tv/whiskeyfive
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/whiskeyfive-channel_background_image-64126137d2de923a.png
+      mature: true
+      video_banner: 
+      status: ! 'ESEA '
+      teams: []
+      display_name: WhiskeyFive
+      _id: 25298099
+      updated_at: '2013-07-30T07:25:19Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/whiskeyfive-channel_header_image-beca73201fe0a709-640x125.jpeg
+      game: ! 'Counter-Strike: Global Offensive'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/whiskeyfive/follows
+        chat: https://api.twitch.tv/kraken/chat/whiskeyfive
+        stream_key: https://api.twitch.tv/kraken/channels/whiskeyfive/stream_key
+        editors: https://api.twitch.tv/kraken/channels/whiskeyfive/editors
+        self: https://api.twitch.tv/kraken/channels/whiskeyfive
+        subscriptions: https://api.twitch.tv/kraken/channels/whiskeyfive/subscriptions
+        features: https://api.twitch.tv/kraken/channels/whiskeyfive/features
+        commercial: https://api.twitch.tv/kraken/channels/whiskeyfive/commercial
+        videos: https://api.twitch.tv/kraken/channels/whiskeyfive/videos
+      created_at: '2011-10-07T16:36:30Z'
+      name: whiskeyfive
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/whiskeyfive-profile_image-a98e1ca85e8d7551-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_whiskeyfive-320x200.jpg
+    broadcaster: obs
+    _id: 6320521600
+    game: ! 'Counter-Strike: Global Offensive'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/whiskeyfive
+    viewers: 122
+    name: live_user_whiskeyfive
+  - channel:
+      url: http://www.twitch.tv/akamalipc
+      background: 
+      mature: 
+      status: BAZOKA GIVEAWAY AT 1000 VEiWERS!
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/akamalipc-channel_offline_image-6addba36d79290f3-640x360.jpeg
+      teams: []
+      display_name: akamalipc
+      _id: 39207673
+      updated_at: '2013-07-30T08:45:17Z'
+      banner: 
+      game: ! 'Infestation: Survivor Stories'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/akamalipc/follows
+        chat: https://api.twitch.tv/kraken/chat/akamalipc
+        stream_key: https://api.twitch.tv/kraken/channels/akamalipc/stream_key
+        editors: https://api.twitch.tv/kraken/channels/akamalipc/editors
+        self: https://api.twitch.tv/kraken/channels/akamalipc
+        subscriptions: https://api.twitch.tv/kraken/channels/akamalipc/subscriptions
+        features: https://api.twitch.tv/kraken/channels/akamalipc/features
+        commercial: https://api.twitch.tv/kraken/channels/akamalipc/commercial
+        videos: https://api.twitch.tv/kraken/channels/akamalipc/videos
+      created_at: '2013-01-10T15:39:40Z'
+      name: akamalipc
+      logo: 
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_akamalipc-320x200.jpg
+    broadcaster: obs
+    _id: 6323506704
+    game: ! 'Infestation: Survivor Stories'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/akamalipc
+    viewers: 122
+    name: live_user_akamalipc
+  - channel:
+      url: http://www.twitch.tv/fourplayerpodcast
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/fourplayerpodcast-channel_background_image-b67d2003988ae502.jpeg
+      mature: false
+      status: Vunik plays a good Castlevania Game
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/fourplayerpodcast-channel_offline_image-4e707cf67d9ccae0-640x360.jpeg
+      teams: []
+      display_name: FourPlayerPodcast
+      _id: 261715
+      updated_at: '2013-07-30T08:36:49Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/fourplayerpodcast-channel_header_image-2da736af4cbc0867-640x125.jpeg
+      game: ! 'Castlevania: Aria of Sorrow'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/fourplayerpodcast/follows
+        chat: https://api.twitch.tv/kraken/chat/fourplayerpodcast
+        stream_key: https://api.twitch.tv/kraken/channels/fourplayerpodcast/stream_key
+        editors: https://api.twitch.tv/kraken/channels/fourplayerpodcast/editors
+        self: https://api.twitch.tv/kraken/channels/fourplayerpodcast
+        subscriptions: https://api.twitch.tv/kraken/channels/fourplayerpodcast/subscriptions
+        features: https://api.twitch.tv/kraken/channels/fourplayerpodcast/features
+        commercial: https://api.twitch.tv/kraken/channels/fourplayerpodcast/commercial
+        videos: https://api.twitch.tv/kraken/channels/fourplayerpodcast/videos
+      created_at: '2008-02-04T04:47:21Z'
+      name: fourplayerpodcast
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/fourplayerpodcast-profile_image-a5772f943f3cc055-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_fourplayerpodcast-320x200.jpg
+    broadcaster: obs
+    _id: 6321988864
+    game: ! 'Castlevania: Aria of Sorrow'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/fourplayerpodcast
+    viewers: 121
+    name: live_user_fourplayerpodcast
+  - channel:
+      url: http://www.twitch.tv/bitcloud1
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/bitcloud1-channel_background_image-103e69dff423e4f5.jpeg
+      mature: true
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/bitcloud1-channel_offline_image-22c6de722bfa8ac2-640x360.jpeg
+      status: Bit - HQ - Elementalist World vs World PvP!
+      teams:
+      - background: 
+        display_name: The Bearded Network
+        _id: 547
+        info: ! '
+  
+  '
+        updated_at: '2013-05-24T00:18:04Z'
+        banner: 
+        created_at: '2013-01-23T21:36:52Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/thebeardednetwork
+        name: thebeardednetwork
+        logo: 
+      display_name: BitCloud1
+      _id: 22368888
+      updated_at: '2013-07-30T05:40:40Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/bitcloud1-channel_header_image-ce9727c1ef288aee-640x125.png
+      game: Guild Wars 2
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/bitcloud1/follows
+        chat: https://api.twitch.tv/kraken/chat/bitcloud1
+        stream_key: https://api.twitch.tv/kraken/channels/bitcloud1/stream_key
+        editors: https://api.twitch.tv/kraken/channels/bitcloud1/editors
+        self: https://api.twitch.tv/kraken/channels/bitcloud1
+        subscriptions: https://api.twitch.tv/kraken/channels/bitcloud1/subscriptions
+        features: https://api.twitch.tv/kraken/channels/bitcloud1/features
+        commercial: https://api.twitch.tv/kraken/channels/bitcloud1/commercial
+        videos: https://api.twitch.tv/kraken/channels/bitcloud1/videos
+      created_at: '2011-05-12T17:49:00Z'
+      name: bitcloud1
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/bitcloud1-profile_image-48a9f2dd6425e894-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_bitcloud1-320x200.jpg
+    broadcaster: obs
+    _id: 6322425888
+    game: Guild Wars 2
+    _links:
+      self: https://api.twitch.tv/kraken/streams/bitcloud1
+    viewers: 121
+    name: live_user_bitcloud1
+  - channel:
+      url: http://www.twitch.tv/oushu_genji
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/oushu_genji-channel_background_image-50948540fc747873.jpeg
+      mature: 
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/oushu_genji-channel_offline_image-7b3b6f0ee841cfc4-640x360.png
+      status: ダークソウル PC - 1080p [JPN] @LA | CatCam | Simple English OK | Read Below
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-jsa-background_image-717b3fcd5db88bdb.jpeg
+        display_name: The United Stream of Japan
+        _id: 469
+        info: ! '<div><div><div style="padding:15px;background-color:#ffffff;border:1px
+          solid #343434;">
+  
+          <p style="padding-left:10px;">
+  
+          <img src="http://livedoor.blogimg.jp/leloucy/imgs/d/2/d26de8de.png" alt="for_jp"
+          /><br /><br /><font size="2" color="#000000">
+  
+          <b>参加条件</b><br />
+  
+          ・日本語をある程度理解して話せること<br />
+  
+          ・チーム内で問題を起こさないこと<br />
+  
+          ・配信頻度が低くないこと<br />
+  
+          ・同盟の締結<br />
+  
+          上記の条件が参加後に守れなければ除名<br /><br /><br /><img src="http://livedoor.blogimg.jp/leloucy/imgs/5/c/5c5946d5.png"
+          alt="for_world" /><br /><br /><b>Conditions of Join</b><br />
+  
+          You must speak and understand Japanese language.<br />
+  
+          However, Rainicorn is a special because she has helped to create this team.<br
+          /><br /></font></p><center>
+  
+          <table border="0" cellspacing="0" cellpadding="0"><tr><td><img src="http://livedoor.blogimg.jp/leloucy/imgs/7/2/72575a02.png"
+          title="Zero" alt="Zero" /></td>
+  
+          <td>I shall announce here that, from now on, we will regain our independence
+          from Japanese Stream.<br />
+  
+          However, that dosen''t mean a revival of the previous Japanese Stream.<br
+          />
+  
+          I won''t make the foolish mistake of repeating history!<br />
+  
+          What we are going to create is a brand new Japanese Stream.<br />
+  
+          She must have a wide embrace, ready to accept anyone regardless of race, past,
+          and ideals.<br />
+  
+          A  place where the strong won''t oppress the weak!<br />
+  
+          Her name is... the United Stream of Japan!</td>
+  
+          </tr></table></center>
+  
+          </div></div></div>
+  
+  
+  
+  
+  
+  '
+        updated_at: '2013-07-29T09:08:15Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-jsa-banner_image-affa4d1d39ed0733-640x125.jpeg
+        created_at: '2012-11-07T01:56:57Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/jsa
+        name: jsa
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-jsa-team_logo_image-2962ed052922f82d-300x300.png
+      display_name: oushu_genji
+      _id: 29162427
+      updated_at: '2013-07-30T07:56:10Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/oushu_genji-channel_header_image-63c4f02fd65706d1-640x125.png
+      game: Dark Souls
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/oushu_genji/follows
+        chat: https://api.twitch.tv/kraken/chat/oushu_genji
+        stream_key: https://api.twitch.tv/kraken/channels/oushu_genji/stream_key
+        editors: https://api.twitch.tv/kraken/channels/oushu_genji/editors
+        self: https://api.twitch.tv/kraken/channels/oushu_genji
+        subscriptions: https://api.twitch.tv/kraken/channels/oushu_genji/subscriptions
+        features: https://api.twitch.tv/kraken/channels/oushu_genji/features
+        commercial: https://api.twitch.tv/kraken/channels/oushu_genji/commercial
+        videos: https://api.twitch.tv/kraken/channels/oushu_genji/videos
+      created_at: '2012-03-21T10:31:33Z'
+      name: oushu_genji
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/oushu_genji-profile_image-882fb59cad1e5f04-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_oushu_genji-320x200.jpg
+    broadcaster: xsplit
+    _id: 6323231664
+    game: Dark Souls
+    _links:
+      self: https://api.twitch.tv/kraken/streams/oushu_genji
+    viewers: 120
+    name: live_user_oushu_genji
+  - channel:
+      url: http://www.twitch.tv/linct4000
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/linct4000-channel_background_image-7db106cdb7800504.jpeg
+      mature: 
+      status: Tw羽Mo BROMANCE基友台 今天玩台服 鑽一 KR Server Diamond I TW Server Diamond I
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/linct4000-channel_offline_image-c36da4f869190561-640x360.png
+      teams: []
+      display_name: linct4000
+      _id: 29889055
+      updated_at: '2013-07-30T06:56:58Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/linct4000-channel_header_image-fcb7fd2e6b5ae104-640x125.png
+      game: League of Legends
+      created_at: '2012-04-19T11:33:16Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/linct4000/follows
+        chat: https://api.twitch.tv/kraken/chat/linct4000
+        stream_key: https://api.twitch.tv/kraken/channels/linct4000/stream_key
+        editors: https://api.twitch.tv/kraken/channels/linct4000/editors
+        self: https://api.twitch.tv/kraken/channels/linct4000
+        subscriptions: https://api.twitch.tv/kraken/channels/linct4000/subscriptions
+        features: https://api.twitch.tv/kraken/channels/linct4000/features
+        commercial: https://api.twitch.tv/kraken/channels/linct4000/commercial
+        videos: https://api.twitch.tv/kraken/channels/linct4000/videos
+      name: linct4000
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/linct4000-profile_image-626801e5f1774f13-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_linct4000-320x200.jpg
+    broadcaster: obs
+    _id: 6322891024
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/linct4000
+    viewers: 119
+    name: live_user_linct4000
+  - channel:
+      url: http://www.twitch.tv/morikiopa
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/morikiopa-channel_background_image-48e3f20d26d8d5f1.jpeg
+      mature: true
+      status: ! '[US/EU] -  MP10 WD. Giveaways and farming. Gold hotfix tomorrow!'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/morikiopa-channel_offline_image-c8a0445b04d29ccf-640x360.jpeg
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-liftsquad-background_image-cf1393a7ae7585a7.jpeg
+        display_name: Lift Squad
+        _id: 498
+        info: ! '<br />&quot;Do you even lift, bro?&quot;
+  
+          <br /><br />
+  
+          Welcome to the home page of the infamous Lift Squad where we bench 500lbs
+          on the daily and most importantly, do so completely nude on our front patio
+          so that all of the women can see us working that bowflex and going ham like
+          a beast.
+  
+          Oh and by the way... this is DatModz!<br /><center><img src="http://i.imgur.com/7HCbq9K.png"
+          alt="7HCbq9K.png" /></center>
+  
+  
+  
+  
+  
+  
+  '
+        updated_at: '2013-05-24T00:17:56Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-liftsquad-banner_image-19d9ecf1b89af8ab-640x125.png
+        created_at: '2012-12-08T01:31:51Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/liftsquad
+        name: liftsquad
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-liftsquad-team_logo_image-632426c2a462ff92-300x300.jpeg
+      display_name: Morikiopa
+      _id: 33185656
+      updated_at: '2013-07-30T05:09:57Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/morikiopa-channel_header_image-8b81185cae1bb460-640x125.jpeg
+      game: Diablo III
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/morikiopa/follows
+        chat: https://api.twitch.tv/kraken/chat/morikiopa
+        stream_key: https://api.twitch.tv/kraken/channels/morikiopa/stream_key
+        editors: https://api.twitch.tv/kraken/channels/morikiopa/editors
+        self: https://api.twitch.tv/kraken/channels/morikiopa
+        subscriptions: https://api.twitch.tv/kraken/channels/morikiopa/subscriptions
+        features: https://api.twitch.tv/kraken/channels/morikiopa/features
+        commercial: https://api.twitch.tv/kraken/channels/morikiopa/commercial
+        videos: https://api.twitch.tv/kraken/channels/morikiopa/videos
+      created_at: '2012-08-13T02:03:04Z'
+      name: morikiopa
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/morikiopa-profile_image-8e14970ccc459e75-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_morikiopa-320x200.jpg
+    broadcaster: xsplit
+    _id: 6322221328
+    game: Diablo III
+    _links:
+      self: https://api.twitch.tv/kraken/streams/morikiopa
+    viewers: 119
+    name: live_user_morikiopa
+  - channel:
+      url: http://www.twitch.tv/tudo852
+      background: 
+      mature: false
+      status: 神之左手小慶慶      目前鑽石1>>>精英   好久不見我回來了!!  我要成為台服最強的稻草人  將狗講解台~~
+      video_banner: 
+      teams: []
+      display_name: tudo852
+      _id: 28444558
+      updated_at: '2013-07-30T08:30:46Z'
+      banner: 
+      game: League of Legends
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/tudo852/follows
+        chat: https://api.twitch.tv/kraken/chat/tudo852
+        stream_key: https://api.twitch.tv/kraken/channels/tudo852/stream_key
+        editors: https://api.twitch.tv/kraken/channels/tudo852/editors
+        self: https://api.twitch.tv/kraken/channels/tudo852
+        subscriptions: https://api.twitch.tv/kraken/channels/tudo852/subscriptions
+        features: https://api.twitch.tv/kraken/channels/tudo852/features
+        commercial: https://api.twitch.tv/kraken/channels/tudo852/commercial
+        videos: https://api.twitch.tv/kraken/channels/tudo852/videos
+      created_at: '2012-02-23T16:28:16Z'
+      name: tudo852
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/tudo852-profile_image-8fd13dbbad4e2f6c-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_tudo852-320x200.jpg
+    broadcaster: obs
+    _id: 6323421472
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/tudo852
+    viewers: 116
+    name: live_user_tudo852
+  - channel:
+      url: http://www.twitch.tv/finbbb
+      background: 
+      mature: 
+      video_banner: 
+      status: ! '07 Staking - 24M START - '
+      teams: []
+      display_name: Finbbb
+      _id: 46831619
+      updated_at: '2013-07-30T08:30:39Z'
+      banner: 
+      game: RuneScape
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/finbbb/follows
+        chat: https://api.twitch.tv/kraken/chat/finbbb
+        stream_key: https://api.twitch.tv/kraken/channels/finbbb/stream_key
+        editors: https://api.twitch.tv/kraken/channels/finbbb/editors
+        self: https://api.twitch.tv/kraken/channels/finbbb
+        subscriptions: https://api.twitch.tv/kraken/channels/finbbb/subscriptions
+        features: https://api.twitch.tv/kraken/channels/finbbb/features
+        commercial: https://api.twitch.tv/kraken/channels/finbbb/commercial
+        videos: https://api.twitch.tv/kraken/channels/finbbb/videos
+      created_at: '2013-07-30T05:00:07Z'
+      name: finbbb
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/finbbb-profile_image-5bcfa63273cb0204-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_finbbb-320x200.jpg
+    broadcaster: obs
+    _id: 6322204112
+    game: RuneScape
+    _links:
+      self: https://api.twitch.tv/kraken/streams/finbbb
+    viewers: 110
+    name: live_user_finbbb
+  - channel:
+      url: http://www.twitch.tv/peishin714
+      mature: false
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/peishin714-channel_background_image-078dce97eecf33a1.jpeg
+      status: 【美服 US】Diablo III 也是有女生在玩的-http://www.model.com.tw/
+      video_banner: 
+      display_name: peishin714
+      teams: []
+      updated_at: '2013-07-30T05:56:52Z'
+      _id: 36612159
+      game: Diablo III
+      banner: 
+      created_at: '2012-10-03T06:41:29Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/peishin714/follows
+        chat: https://api.twitch.tv/kraken/chat/peishin714
+        stream_key: https://api.twitch.tv/kraken/channels/peishin714/stream_key
+        editors: https://api.twitch.tv/kraken/channels/peishin714/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/peishin714/subscriptions
+        self: https://api.twitch.tv/kraken/channels/peishin714
+        features: https://api.twitch.tv/kraken/channels/peishin714/features
+        commercial: https://api.twitch.tv/kraken/channels/peishin714/commercial
+        videos: https://api.twitch.tv/kraken/channels/peishin714/videos
+      name: peishin714
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/peishin714-profile_image-733b68bb992c3f60-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_peishin714-320x200.jpg
+    broadcaster: obs
+    _id: 6322527952
+    game: Diablo III
+    _links:
+      self: https://api.twitch.tv/kraken/streams/peishin714
+    viewers: 107
+    name: live_user_peishin714
+  - channel:
+      url: http://www.twitch.tv/diesel1521
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/diesel1521-channel_background_image-cc74546320aec19c.jpeg
+      mature: 
+      status: DIesel in da midlane
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/diesel1521-channel_offline_image-0ae05876cd77a804-640x360.png
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lolhungary-background_image-ba3a08d0563c00ba.jpeg
+        display_name: Leauge of Legends Hungary
+        _id: 718
+        info: ! '<center>A   League of Legends Hungary twitch.tv csatornája. Csatlakozz
+          Te is hozzánk már ma, ha aktív magyar LoL streamer vagy! <a rel="nofollow"
+          href="http://lol-hungary.hu/index.php?option=com_content&amp;view=article&amp;id=525&amp;Itemid=284"
+          target="_blank">Feltételek</a> - <a rel="nofollow" href="http://www.facebook.com/lolhungary"
+          target="_blank">Facebook</a>- <a rel="nofollow" href="http://www.lol-hungary.hu"
+          target="_blank"> www.lol-hungary.hu</a><br /><br /><a rel="nofollow" href="http://www.lol-hungary.hu/"
+          target="_blank"><img src="http://www.tacticups.com/stuffs/twitchlolhumain1.jpg"
+          alt="twitchlolhumain.jpg" width="200" /></a><a rel="nofollow" href="http://www.facebook.com/lolhungary"
+          target="_blank"><img src="http://www.tacticups.com/stuffs/twitchlolhufb.jpg"
+          alt="twitchlolhufb.jpg" width="200" /></a><a rel="nofollow" href="http://www.twitter.com/lolhungary"
+          target="_blank"><img src="http://www.tacticups.com/stuffs/twitchlolhutwitter.jpg"
+          alt="twitchlolhutwitter.jpg" width="200" /></a></center>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  '
+        updated_at: '2013-07-22T18:09:50Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lolhungary-banner_image-aa0eccff69588599-640x125.jpeg
+        _links:
+          self: https://api.twitch.tv/kraken/teams/lolhungary
+        created_at: '2013-06-28T23:19:00Z'
+        name: lolhungary
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lolhungary-team_logo_image-89c1a2d11447200b-300x300.png
+      display_name: diesel1521
+      _id: 27576483
+      updated_at: '2013-07-30T09:03:24Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/diesel1521-channel_header_image-538b84e50ed275ea-640x125.png
+      game: League of Legends
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/diesel1521/follows
+        chat: https://api.twitch.tv/kraken/chat/diesel1521
+        stream_key: https://api.twitch.tv/kraken/channels/diesel1521/stream_key
+        editors: https://api.twitch.tv/kraken/channels/diesel1521/editors
+        self: https://api.twitch.tv/kraken/channels/diesel1521
+        subscriptions: https://api.twitch.tv/kraken/channels/diesel1521/subscriptions
+        features: https://api.twitch.tv/kraken/channels/diesel1521/features
+        commercial: https://api.twitch.tv/kraken/channels/diesel1521/commercial
+        videos: https://api.twitch.tv/kraken/channels/diesel1521/videos
+      created_at: '2012-01-19T15:08:50Z'
+      name: diesel1521
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/diesel1521-profile_image-be2771f16064d012-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_diesel1521-320x200.jpg
+    broadcaster: xsplit
+    _id: 6323486208
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/diesel1521
+    viewers: 102
+    name: live_user_diesel1521
+  - channel:
+      url: http://www.twitch.tv/artemisknives
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/artemisknives-channel_background_image-efb5e99f48df132d.jpeg
+      mature: false
+      status: Bieber Fever
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/artemisknives-channel_offline_image-f89a84f6aa15fa9d-640x360.jpeg
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-sillyhatsonly-background_image-b6baf6a8e331f13c.jpeg
+        display_name: Silly Hats Only
+        _id: 610
+        info: ! "Silly Hats Only!  A streaming club for streamers with hats!  Apply
+          to Artemis Knives via PM if you stream with a hat! \n\n\n"
+        updated_at: '2013-05-24T00:18:13Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-sillyhatsonly-banner_image-69ec6e024e31681f-640x125.png
+        _links:
+          self: https://api.twitch.tv/kraken/teams/sillyhatsonly
+        created_at: '2013-02-20T17:52:38Z'
+        name: sillyhatsonly
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-sillyhatsonly-team_logo_image-b1f701b3720d9b9e-300x300.png
+      display_name: ArtemisKnives
+      _id: 26706352
+      updated_at: '2013-07-30T09:06:58Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/artemisknives-channel_header_image-80988afa80db41d0-640x125.png
+      game: Payday 2
+      created_at: '2011-12-10T22:55:27Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/artemisknives/follows
+        chat: https://api.twitch.tv/kraken/chat/artemisknives
+        stream_key: https://api.twitch.tv/kraken/channels/artemisknives/stream_key
+        editors: https://api.twitch.tv/kraken/channels/artemisknives/editors
+        self: https://api.twitch.tv/kraken/channels/artemisknives
+        subscriptions: https://api.twitch.tv/kraken/channels/artemisknives/subscriptions
+        features: https://api.twitch.tv/kraken/channels/artemisknives/features
+        commercial: https://api.twitch.tv/kraken/channels/artemisknives/commercial
+        videos: https://api.twitch.tv/kraken/channels/artemisknives/videos
+      name: artemisknives
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/artemisknives-profile_image-8635452ac1af0de5-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_artemisknives-320x200.jpg
+    broadcaster: obs
+    _id: 6321490864
+    game: Payday 2
+    _links:
+      self: https://api.twitch.tv/kraken/streams/artemisknives
+    viewers: 102
+    name: live_user_artemisknives
+  - channel:
+      url: http://www.twitch.tv/kenb0gard
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/kenb0gard-channel_background_image-4618773feb86c4c4.jpeg
+      mature: 
+      status: ! 'KB LIVE : Test des futurs persos de USFIV sur SFXT. MPSTP ce mercredi
+        21h30 sur ogtv. Merci MisterMV (@mvcaster) !'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/kenb0gard-channel_offline_image-3ac1de70e8bc53e3-640x360.jpeg
+      teams: []
+      display_name: kenb0gard
+      _id: 37523739
+      updated_at: '2013-07-30T09:20:04Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/kenb0gard-channel_header_image-8c617c7e6a5ff01a-640x125.png
+      game: Street Fighter X Tekken
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/kenb0gard/follows
+        chat: https://api.twitch.tv/kraken/chat/kenb0gard
+        stream_key: https://api.twitch.tv/kraken/channels/kenb0gard/stream_key
+        editors: https://api.twitch.tv/kraken/channels/kenb0gard/editors
+        self: https://api.twitch.tv/kraken/channels/kenb0gard
+        subscriptions: https://api.twitch.tv/kraken/channels/kenb0gard/subscriptions
+        features: https://api.twitch.tv/kraken/channels/kenb0gard/features
+        commercial: https://api.twitch.tv/kraken/channels/kenb0gard/commercial
+        videos: https://api.twitch.tv/kraken/channels/kenb0gard/videos
+      created_at: '2012-11-08T07:18:23Z'
+      name: kenb0gard
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/kenb0gard-profile_image-73f34dc9152cfeb5-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_kenb0gard-320x200.jpg
+    broadcaster: obs
+    _id: 6323709504
+    game: Street Fighter X Tekken
+    _links:
+      self: https://api.twitch.tv/kraken/streams/kenb0gard
+    viewers: 97
+    name: live_user_kenb0gard
+  - channel:
+      url: http://www.twitch.tv/txrgetz
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/txrgetz-channel_background_image-30b2de7c59d7a04f.png
+      mature: false
+      status: ! '3 Million Coin Pack Opening  | #TxrgetzArmy'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/txrgetz-channel_offline_image-3609a386cc6daf83-640x360.jpeg
+      teams: []
+      display_name: Txrgetz
+      _id: 32263623
+      updated_at: '2013-07-30T08:08:41Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/txrgetz-channel_header_image-197295b777d55d21-640x125.jpeg
+      game: FIFA Soccer 13
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/txrgetz/follows
+        chat: https://api.twitch.tv/kraken/chat/txrgetz
+        stream_key: https://api.twitch.tv/kraken/channels/txrgetz/stream_key
+        editors: https://api.twitch.tv/kraken/channels/txrgetz/editors
+        self: https://api.twitch.tv/kraken/channels/txrgetz
+        subscriptions: https://api.twitch.tv/kraken/channels/txrgetz/subscriptions
+        features: https://api.twitch.tv/kraken/channels/txrgetz/features
+        commercial: https://api.twitch.tv/kraken/channels/txrgetz/commercial
+        videos: https://api.twitch.tv/kraken/channels/txrgetz/videos
+      created_at: '2012-07-19T21:42:47Z'
+      name: txrgetz
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/txrgetz-profile_image-2eff642dad65717f-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_txrgetz-320x200.jpg
+    broadcaster: obs
+    _id: 6323279040
+    game: FIFA Soccer 13
+    _links:
+      self: https://api.twitch.tv/kraken/streams/txrgetz
+    viewers: 95
+    name: live_user_txrgetz
+  - channel:
+      url: http://www.twitch.tv/pandaxgaming
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/pandaxgaming-channel_background_image-d8c009820fc4cdb6.jpeg
+      mature: true
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/pandaxgaming-channel_offline_image-edc4e3d9c1f92d85-640x360.jpeg
+      status: ! '[24/7] Super Street Fighter IV @solidxpanda @airjuggle New FAQ in description!'
+      teams:
+      - background: 
+        display_name: Affinity Gaming
+        _id: 128
+        info: ! '
+  
+  '
+        updated_at: '2013-05-24T00:17:17Z'
+        banner: 
+        created_at: '2011-12-18T21:59:42Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/ag
+        name: ag
+        logo: 
+      - background: 
+        display_name: Fighting Game Community Streams
+        _id: 98
+        info: ! 'FGC Pro-players, 24/7 streams, and events.
+  
+  
+          Team is administered by <a rel="nofollow" href="http://www.twitch.tv/armshouse"
+          target="_blank">ARMSHOUSE</a> / <a rel="nofollow" href="http://www.twitter.com/jamesbardolph"
+          target="_blank">@jamesbardolph</a>.
+  
+  '
+        updated_at: '2013-06-21T17:38:05Z'
+        banner: 
+        created_at: '2011-12-05T20:29:49Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/fgcpros
+        name: fgcpros
+        logo: 
+      display_name: PandaxGaming
+      _id: 23460504
+      updated_at: '2013-07-30T06:41:36Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/pandaxgaming-channel_header_image-ec7d51970310da61-640x125.jpeg
+      game: Super Street Fighter IV
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/pandaxgaming/follows
+        chat: https://api.twitch.tv/kraken/chat/pandaxgaming
+        stream_key: https://api.twitch.tv/kraken/channels/pandaxgaming/stream_key
+        editors: https://api.twitch.tv/kraken/channels/pandaxgaming/editors
+        self: https://api.twitch.tv/kraken/channels/pandaxgaming
+        subscriptions: https://api.twitch.tv/kraken/channels/pandaxgaming/subscriptions
+        features: https://api.twitch.tv/kraken/channels/pandaxgaming/features
+        commercial: https://api.twitch.tv/kraken/channels/pandaxgaming/commercial
+        videos: https://api.twitch.tv/kraken/channels/pandaxgaming/videos
+      created_at: '2011-07-15T06:42:14Z'
+      name: pandaxgaming
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/pandaxgaming-profile_image-59426f9a7a5e5b2c-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_pandaxgaming-320x200.jpg
+    broadcaster: obs
+    _id: 6322801728
+    game: Super Street Fighter IV
+    _links:
+      self: https://api.twitch.tv/kraken/streams/pandaxgaming
+    viewers: 95
+    name: live_user_pandaxgaming
+  - channel:
+      url: http://www.twitch.tv/matthershman
+      background: 
+      mature: false
+      status: Hershman's Daily Solo PvP
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/matthershman-channel_offline_image-641ebc15a7f09f41-640x360.jpeg
+      teams: []
+      display_name: matthershman
+      _id: 42833252
+      updated_at: '2013-07-30T04:54:28Z'
+      banner: 
+      game: EVE Online
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/matthershman/follows
+        chat: https://api.twitch.tv/kraken/chat/matthershman
+        stream_key: https://api.twitch.tv/kraken/channels/matthershman/stream_key
+        editors: https://api.twitch.tv/kraken/channels/matthershman/editors
+        self: https://api.twitch.tv/kraken/channels/matthershman
+        subscriptions: https://api.twitch.tv/kraken/channels/matthershman/subscriptions
+        features: https://api.twitch.tv/kraken/channels/matthershman/features
+        commercial: https://api.twitch.tv/kraken/channels/matthershman/commercial
+        videos: https://api.twitch.tv/kraken/channels/matthershman/videos
+      created_at: '2013-04-24T23:02:09Z'
+      name: matthershman
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/matthershman-profile_image-e630df8eab7acc05-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_matthershman-320x200.jpg
+    broadcaster: xsplit
+    _id: 6322100864
+    game: EVE Online
+    _links:
+      self: https://api.twitch.tv/kraken/streams/matthershman
+    viewers: 94
+    name: live_user_matthershman
+  - channel:
+      url: http://www.twitch.tv/hephwins
+      background: 
+      mature: false
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/hephwins-channel_offline_image-80d2880247fbb9c7-640x360.png
+      status: ! '[Day 30/730] Big Giant Circles, Broseph.'
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-utensils-background_image-7091e129ec4efd27.jpeg
+        display_name: The Utensils
+        _id: 488
+        info: ! '
+  
+  '
+        updated_at: '2013-05-24T00:17:55Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-utensils-banner_image-a7d4b89f329a4550-640x125.jpeg
+        _links:
+          self: https://api.twitch.tv/kraken/teams/utensils
+        created_at: '2012-11-27T23:28:23Z'
+        name: utensils
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-utensils-team_logo_image-e520f46c949bbb67-300x300.jpeg
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ftb-background_image-6661132d1bcb68c5.jpeg
+        display_name: FTB Stream Team
+        _id: 527
+        info: ! '
+  
+  '
+        updated_at: '2013-05-24T00:18:03Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ftb-banner_image-a11c17edeb3f145a-640x125.png
+        _links:
+          self: https://api.twitch.tv/kraken/teams/ftb
+        created_at: '2013-01-11T19:27:04Z'
+        name: ftb
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ftb-team_logo_image-b0a12dca54a4f441-300x300.png
+      display_name: HephWins
+      _id: 29181352
+      updated_at: '2013-07-30T08:58:13Z'
+      banner: 
+      game: Minecraft
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/hephwins/follows
+        chat: https://api.twitch.tv/kraken/chat/hephwins
+        stream_key: https://api.twitch.tv/kraken/channels/hephwins/stream_key
+        editors: https://api.twitch.tv/kraken/channels/hephwins/editors
+        self: https://api.twitch.tv/kraken/channels/hephwins
+        subscriptions: https://api.twitch.tv/kraken/channels/hephwins/subscriptions
+        features: https://api.twitch.tv/kraken/channels/hephwins/features
+        commercial: https://api.twitch.tv/kraken/channels/hephwins/commercial
+        videos: https://api.twitch.tv/kraken/channels/hephwins/videos
+      created_at: '2012-03-22T07:20:41Z'
+      name: hephwins
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/hephwins-profile_image-c0ffb5c3bac738d0-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_hephwins-320x200.jpg
+    broadcaster: obs
+    _id: 6323579856
+    game: Minecraft
+    _links:
+      self: https://api.twitch.tv/kraken/streams/hephwins
+    viewers: 93
+    name: live_user_hephwins
+  - channel:
+      url: http://www.twitch.tv/leagueoflegends
+      background: 
+      mature: 
+      status: High Elo Featured Games! 24/7
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/leagueoflegends-channel_offline_image-f71ce7fedf1f6073-640x360.jpeg
+      teams: []
+      display_name: LeagueOfLegends
+      _id: 32034397
+      updated_at: '2013-07-26T10:29:31Z'
+      banner: 
+      game: League of Legends
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/leagueoflegends/follows
+        chat: https://api.twitch.tv/kraken/chat/leagueoflegends
+        stream_key: https://api.twitch.tv/kraken/channels/leagueoflegends/stream_key
+        editors: https://api.twitch.tv/kraken/channels/leagueoflegends/editors
+        self: https://api.twitch.tv/kraken/channels/leagueoflegends
+        subscriptions: https://api.twitch.tv/kraken/channels/leagueoflegends/subscriptions
+        features: https://api.twitch.tv/kraken/channels/leagueoflegends/features
+        commercial: https://api.twitch.tv/kraken/channels/leagueoflegends/commercial
+        videos: https://api.twitch.tv/kraken/channels/leagueoflegends/videos
+      created_at: '2012-07-10T23:53:57Z'
+      name: leagueoflegends
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/leagueoflegends-profile_image-c8226219a0c0681d-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_leagueoflegends-320x200.jpg
+    broadcaster: xsplit
+    _id: 6281116640
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/leagueoflegends
+    viewers: 93
+    name: live_user_leagueoflegends
+  - channel:
+      url: http://www.twitch.tv/ashlayyyy_
+      mature: true
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/ashlayyyy_-channel_background_image-3611330f66c6faf9.jpeg
+      status: ! '[720p] Sub Lobbies With MsVixen :D'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ashlayyyy_-channel_offline_image-af664074055eee26-640x360.jpeg
+      display_name: Ashlayyyy_
+      teams:
+      - background: 
+        display_name: TeamVGaming
+        updated_at: '2013-05-24T00:17:08Z'
+        info: ! '
+  
+  '
+        _id: 315
+        banner: 
+        _links:
+          self: https://api.twitch.tv/kraken/teams/vgaming
+        created_at: '2012-06-01T00:36:17Z'
+        name: vgaming
+        logo: 
+      updated_at: '2013-07-30T09:07:52Z'
+      _id: 39861474
+      game: ! 'Call of Duty: Black Ops II'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ashlayyyy_-channel_header_image-ab2323fdecf32c40-640x125.jpeg
+      created_at: '2013-01-31T05:03:09Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/ashlayyyy_/follows
+        chat: https://api.twitch.tv/kraken/chat/ashlayyyy_
+        stream_key: https://api.twitch.tv/kraken/channels/ashlayyyy_/stream_key
+        editors: https://api.twitch.tv/kraken/channels/ashlayyyy_/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/ashlayyyy_/subscriptions
+        self: https://api.twitch.tv/kraken/channels/ashlayyyy_
+        features: https://api.twitch.tv/kraken/channels/ashlayyyy_/features
+        commercial: https://api.twitch.tv/kraken/channels/ashlayyyy_/commercial
+        videos: https://api.twitch.tv/kraken/channels/ashlayyyy_/videos
+      name: ashlayyyy_
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ashlayyyy_-profile_image-41fcd64061353893-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ashlayyyy_-320x200.jpg
+    broadcaster: obs
+    _id: 6323636416
+    game: ! 'Call of Duty: Black Ops II'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/ashlayyyy_
+    viewers: 93
+    name: live_user_ashlayyyy_
+  - channel:
+      url: http://www.twitch.tv/coffee_junkie
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/coffee_junkie-channel_background_image-264296370c2f46b2.jpeg
+      mature: 
+      status: Clean run through TT DLC -  And so the story continues. - 480p
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/coffee_junkie-channel_offline_image-36b59c15bd8061d5-640x360.jpeg
+      teams: []
+      display_name: Coffee_Junkie
+      _id: 30364474
+      updated_at: '2013-07-30T05:24:59Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/coffee_junkie-channel_header_image-b55539ac103cf79b-640x125.jpeg
+      game: Borderlands 2
+      created_at: '2012-05-07T21:53:13Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/coffee_junkie/follows
+        chat: https://api.twitch.tv/kraken/chat/coffee_junkie
+        stream_key: https://api.twitch.tv/kraken/channels/coffee_junkie/stream_key
+        editors: https://api.twitch.tv/kraken/channels/coffee_junkie/editors
+        self: https://api.twitch.tv/kraken/channels/coffee_junkie
+        subscriptions: https://api.twitch.tv/kraken/channels/coffee_junkie/subscriptions
+        features: https://api.twitch.tv/kraken/channels/coffee_junkie/features
+        commercial: https://api.twitch.tv/kraken/channels/coffee_junkie/commercial
+        videos: https://api.twitch.tv/kraken/channels/coffee_junkie/videos
+      name: coffee_junkie
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/coffee_junkie-profile_image-38dd2ffac41f064f-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_coffee_junkie-320x200.jpg
+    broadcaster: obs
+    _id: 6322322976
+    game: Borderlands 2
+    _links:
+      self: https://api.twitch.tv/kraken/streams/coffee_junkie
+    viewers: 90
+    name: live_user_coffee_junkie
+  - channel:
+      url: http://www.twitch.tv/hunnyd3w
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/hunnyd3w-channel_background_image-b2982681a1b371de.jpeg
+      mature: true
+      status: Silver V making my way to the top! Earn x3 hunnypots!
+      video_banner: 
+      teams:
+      - background: 
+        display_name: First Class
+        _id: 717
+        info: ! '
+  
+  '
+        updated_at: '2013-06-28T16:30:16Z'
+        banner: 
+        created_at: '2013-06-28T16:17:31Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/firstclass
+        name: firstclass
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-firstclass-team_logo_image-345cf763594be5f8-300x300.png
+      display_name: hunnyd3w
+      _id: 42526627
+      updated_at: '2013-07-30T05:53:39Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/hunnyd3w-channel_header_image-ea537ad6b6c830b4-640x125.png
+      game: League of Legends
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/hunnyd3w/follows
+        chat: https://api.twitch.tv/kraken/chat/hunnyd3w
+        stream_key: https://api.twitch.tv/kraken/channels/hunnyd3w/stream_key
+        editors: https://api.twitch.tv/kraken/channels/hunnyd3w/editors
+        self: https://api.twitch.tv/kraken/channels/hunnyd3w
+        subscriptions: https://api.twitch.tv/kraken/channels/hunnyd3w/subscriptions
+        features: https://api.twitch.tv/kraken/channels/hunnyd3w/features
+        commercial: https://api.twitch.tv/kraken/channels/hunnyd3w/commercial
+        videos: https://api.twitch.tv/kraken/channels/hunnyd3w/videos
+      created_at: '2013-04-16T10:25:59Z'
+      name: hunnyd3w
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/hunnyd3w-profile_image-76a19a79b780c471-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_hunnyd3w-320x200.jpg
+    broadcaster: obs
+    _id: 6322498272
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/hunnyd3w
+    viewers: 89
+    name: live_user_hunnyd3w
+  - channel:
+      url: http://www.twitch.tv/mosqiil
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/mosqiil-channel_background_image-8320d5ab45f4f61b.png
+      mature: false
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/mosqiil-channel_offline_image-f36855663c48e9fa-640x360.png
+      status: (240/365) Golden voice one year challenge - It's getting hot in here,
+        so burn baby burn! (!inferno for game info)
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-spazsstreamers-background_image-09d942775be4e5a1.jpeg
+        display_name: Spaz's Streamers
+        _id: 410
+        info: ! 'Spaz has selected his favorite streamers and wanted them all on HIS
+          team!
+  
+  
+          Be sure to give everyone a quick claw to the spine...I mean a quick hello!
+  
+  
+  '
+        updated_at: '2013-05-24T00:17:42Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-spazsstreamers-banner_image-d59f32e90021dd62-640x125.jpeg
+        created_at: '2012-09-25T19:50:25Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/spazsstreamers
+        name: spazsstreamers
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-spazsstreamers-team_logo_image-b4878040a8ecb298-300x300.png
+      - background: 
+        display_name: BOILeR
+        _id: 449
+        info: ! 'MAY 31st!!!
+  
+  
+  '
+        updated_at: '2013-05-28T10:03:57Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-isaacraces-banner_image-4204ffd4402f0b0e-640x125.jpeg
+        created_at: '2012-10-22T20:23:42Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/isaacraces
+        name: isaacraces
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-isaacraces-team_logo_image-7bab94399cf3115b-300x300.jpeg
+      display_name: Mosqiil
+      _id: 33140912
+      updated_at: '2013-07-30T07:37:07Z'
+      banner: 
+      game: Little Inferno
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/mosqiil/follows
+        chat: https://api.twitch.tv/kraken/chat/mosqiil
+        stream_key: https://api.twitch.tv/kraken/channels/mosqiil/stream_key
+        editors: https://api.twitch.tv/kraken/channels/mosqiil/editors
+        self: https://api.twitch.tv/kraken/channels/mosqiil
+        subscriptions: https://api.twitch.tv/kraken/channels/mosqiil/subscriptions
+        features: https://api.twitch.tv/kraken/channels/mosqiil/features
+        commercial: https://api.twitch.tv/kraken/channels/mosqiil/commercial
+        videos: https://api.twitch.tv/kraken/channels/mosqiil/videos
+      created_at: '2012-08-12T23:55:23Z'
+      name: mosqiil
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/mosqiil-profile_image-cc42eaf388dc1175-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_mosqiil-320x200.jpg
+    broadcaster: obs
+    _id: 6323037712
+    game: Little Inferno
+    _links:
+      self: https://api.twitch.tv/kraken/streams/mosqiil
+    viewers: 88
+    name: live_user_mosqiil
+  - channel:
+      url: http://www.twitch.tv/thelevelbest
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/thelevelbest-channel_background_image-7a4437a09dadc7cd.png
+      mature: 
+      status: Resident Evil 1 - 3 | TIME ATTACK TUESDAY | How fast can I complete them
+        all?
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/thelevelbest-channel_offline_image-168ffa7c749eb386-640x360.png
+      teams:
+      - background: 
+        display_name: Underdogs
+        _id: 700
+        info: ! 'Underdogs fo lyfe dog.
+  
+  
+  '
+        updated_at: '2013-06-23T22:24:27Z'
+        banner: 
+        created_at: '2013-06-13T17:06:31Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/underdogs
+        name: underdogs
+        logo: 
+      display_name: TheLevelBest
+      _id: 32371279
+      updated_at: '2013-07-30T08:10:18Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/thelevelbest-channel_header_image-b95bd0f88ff9ca6a-640x125.png
+      game: Resident Evil 2
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/thelevelbest/follows
+        chat: https://api.twitch.tv/kraken/chat/thelevelbest
+        stream_key: https://api.twitch.tv/kraken/channels/thelevelbest/stream_key
+        editors: https://api.twitch.tv/kraken/channels/thelevelbest/editors
+        self: https://api.twitch.tv/kraken/channels/thelevelbest
+        subscriptions: https://api.twitch.tv/kraken/channels/thelevelbest/subscriptions
+        features: https://api.twitch.tv/kraken/channels/thelevelbest/features
+        commercial: https://api.twitch.tv/kraken/channels/thelevelbest/commercial
+        videos: https://api.twitch.tv/kraken/channels/thelevelbest/videos
+      created_at: '2012-07-23T18:17:03Z'
+      name: thelevelbest
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/thelevelbest-profile_image-31f5314f40791979-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_thelevelbest-320x200.jpg
+    broadcaster: obs
+    _id: 6322053488
+    game: Resident Evil 2
+    _links:
+      self: https://api.twitch.tv/kraken/streams/thelevelbest
+    viewers: 86
+    name: live_user_thelevelbest
+  - channel:
+      url: http://www.twitch.tv/m4840915
+      background: 
+      mature: 
+      video_banner: 
+      status: 鮪魚努力向上 特訓 OSU 台
+      teams: []
+      display_name: m4840915
+      _id: 26225413
+      updated_at: '2013-07-30T07:32:26Z'
+      banner: 
+      game: League of Legends
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/m4840915/follows
+        chat: https://api.twitch.tv/kraken/chat/m4840915
+        stream_key: https://api.twitch.tv/kraken/channels/m4840915/stream_key
+        editors: https://api.twitch.tv/kraken/channels/m4840915/editors
+        self: https://api.twitch.tv/kraken/channels/m4840915
+        subscriptions: https://api.twitch.tv/kraken/channels/m4840915/subscriptions
+        features: https://api.twitch.tv/kraken/channels/m4840915/features
+        commercial: https://api.twitch.tv/kraken/channels/m4840915/commercial
+        videos: https://api.twitch.tv/kraken/channels/m4840915/videos
+      created_at: '2011-11-19T00:53:10Z'
+      name: m4840915
+      logo: 
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_m4840915-320x200.jpg
+    broadcaster: obs
+    _id: 6323099776
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/m4840915
+    viewers: 86
+    name: live_user_m4840915
+  - channel:
+      url: http://www.twitch.tv/itrolledu
+      background: 
+      mature: false
+      status: ! '[RS3/HD] Trio nex.'
+      video_banner: 
+      teams: []
+      display_name: iTrolledU
+      _id: 25091957
+      updated_at: '2013-07-30T00:39:15Z'
+      banner: 
+      game: RuneScape
+      created_at: '2011-09-26T18:00:05Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/itrolledu/follows
+        chat: https://api.twitch.tv/kraken/chat/itrolledu
+        stream_key: https://api.twitch.tv/kraken/channels/itrolledu/stream_key
+        editors: https://api.twitch.tv/kraken/channels/itrolledu/editors
+        self: https://api.twitch.tv/kraken/channels/itrolledu
+        subscriptions: https://api.twitch.tv/kraken/channels/itrolledu/subscriptions
+        features: https://api.twitch.tv/kraken/channels/itrolledu/features
+        commercial: https://api.twitch.tv/kraken/channels/itrolledu/commercial
+        videos: https://api.twitch.tv/kraken/channels/itrolledu/videos
+      name: itrolledu
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/itrolledu-profile_image-7eb570b03e7737a7-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_itrolledu-320x200.jpg
+    broadcaster: obs
+    _id: 6317869344
+    game: RuneScape
+    _links:
+      self: https://api.twitch.tv/kraken/streams/itrolledu
+    viewers: 85
+    name: live_user_itrolledu
+  - channel:
+      url: http://www.twitch.tv/ichimich
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/ichimich-channel_background_image-b58404b94eb8eede.png
+      mature: true
+      status: 
+      video_banner: 
+      teams: []
+      display_name: Ichimich
+      _id: 22816167
+      updated_at: '2013-07-30T05:39:21Z'
+      banner: 
+      game: 
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/ichimich/follows
+        chat: https://api.twitch.tv/kraken/chat/ichimich
+        stream_key: https://api.twitch.tv/kraken/channels/ichimich/stream_key
+        editors: https://api.twitch.tv/kraken/channels/ichimich/editors
+        self: https://api.twitch.tv/kraken/channels/ichimich
+        subscriptions: https://api.twitch.tv/kraken/channels/ichimich/subscriptions
+        features: https://api.twitch.tv/kraken/channels/ichimich/features
+        commercial: https://api.twitch.tv/kraken/channels/ichimich/commercial
+        videos: https://api.twitch.tv/kraken/channels/ichimich/videos
+      created_at: '2011-06-06T17:23:15Z'
+      name: ichimich
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ichimich-profile_image-620a630b80dae7ef-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ichimich-320x200.jpg
+    broadcaster: fme
+    _id: 6322418368
+    game: 
+    _links:
+      self: https://api.twitch.tv/kraken/streams/ichimich
+    viewers: 85
+    name: live_user_ichimich
+  - channel:
+      url: http://www.twitch.tv/edynlol
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/edynlol-channel_background_image-591e3412e2134799.jpeg
+      mature: 
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/edynlol-channel_offline_image-31010252404bfdea-640x360.jpeg
+      status: ! '[CZ/SK] Redia edynnn  SoloQQ  (◔◡◔)っ ♥'
+      teams: []
+      display_name: edynlol
+      _id: 39775674
+      updated_at: '2013-07-30T09:12:52Z'
+      banner: 
+      game: League of Legends
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/edynlol/follows
+        chat: https://api.twitch.tv/kraken/chat/edynlol
+        stream_key: https://api.twitch.tv/kraken/channels/edynlol/stream_key
+        editors: https://api.twitch.tv/kraken/channels/edynlol/editors
+        self: https://api.twitch.tv/kraken/channels/edynlol
+        subscriptions: https://api.twitch.tv/kraken/channels/edynlol/subscriptions
+        features: https://api.twitch.tv/kraken/channels/edynlol/features
+        commercial: https://api.twitch.tv/kraken/channels/edynlol/commercial
+        videos: https://api.twitch.tv/kraken/channels/edynlol/videos
+      created_at: '2013-01-28T13:26:20Z'
+      name: edynlol
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/edynlol-profile_image-fa8bfa9e09840426-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_edynlol-320x200.jpg
+    broadcaster: obs
+    _id: 6323665664
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/edynlol
+    viewers: 84
+    name: live_user_edynlol
+  - channel:
+      url: http://www.twitch.tv/m0e_tv
+      mature: 
+      background: 
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/m0e_tv-channel_offline_image-56602144f9fbf7bc-640x360.jpeg
+      status: ROAD to first place ESEA-Invite LAN
+      display_name: m0E_tv
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-csgopros-background_image-c778b001274e498c.jpeg
+        display_name: CS:GO Pro Community Streams
+        updated_at: '2013-06-09T23:41:16Z'
+        info: ! '<b><font size="3">TwitchTV''s Official Counter-Strike: Global Offensive
+          Stream Team</font><br /><i>Featuring the world''s best CS:GO players and shoutcasters!</i></b><br
+          /><br /><a rel="nofollow" href="http://www.reddit.com/r/GlobalOffensive/comments/183rkz/creating_a_twitch_stream_directory_for_top_csgo/"
+          target="_blank">Reddit post</a> with more information about the intent of
+          the CS:GO Pro stream team.
+  
+          <br /><br /><i>To be added to the list, professional players, organizers and
+          <i>active</i> shoutcasters should contact sapphiRe at <a rel="nofollow" href="http://www.twitter.com/heathermumm"
+          target="_blank">@heathermumm</a> or <a rel="nofollow" href="http://www.esea.net/users/sapphiRe"
+          target="_blank">ESEA</a></i>
+  
+          <br /><br /><b><font size="4">CS:GO PRO COMMUNITY STREAM TEAM MEMBERS</font></b><br
+          /><br /><b><font size="3" color="#FFA500">TEAMS &amp; ORGANIZATIONS</font></b><br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Team Dynamic<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/fr-lgflag.gif"
+          height="12" width="18" alt="fr-lgflag.gif" /> Team VERYGAMES<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> NiP Gaming<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/da-lgflag.gif"
+          height="12" width="18" alt="da-lgflag.gif" /> Fnatic<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/pl-lgflag.gif"
+          height="12" width="18" alt="pl-lgflag.gif" /> ESC-Gaming<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/rs-lgflag.gif"
+          height="12" width="18" alt="rs-lgflag.gif" /> VirtusPro<br /><br /><b><font
+          size="3" color="#FFA500">PROFESSIONAL PLAYERS</font></b><br /><i><b>Team Dynamic</b></i><br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Sal &quot;Volcano&quot; Garozzo<br
+          /><br /><i><b>Ninjas in Pyjamas</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Richard &quot;Xizt&quot; Landstrom<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Christopher &quot;GeT_RiGhT&quot;
+          Alesund<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Robin &quot;Fifflaren&quot;
+          Johansson<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Adam &quot;friberg&quot; Friberg<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Patrik &quot;f0rest&quot; Lindberg<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Emil &quot;HeatoN&quot; Christensen<br
+          /><br /><i><b>Curse Gaming - North America</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/ca-lgflag.gif"
+          height="12" width="18" alt="ca-lgflag.gif" /> Stan &quot;stan^&quot; Sukachov<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Michael &quot;Michael3D&quot;
+          Wilbanks<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Eric &quot;adreN&quot; Hoag<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Tyler &quot;Skadoodle&quot;
+          Latham<br /><br /><i><b>Team VERYGAMES</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/be-lgflag.gif"
+          height="12" width="18" alt="be-lgflag.gif" /> Adil &quot;ScreaM&quot; Ben-Rlitom<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/fr-lgflag.gif"
+          height="12" width="18" alt="fr-lgflag.gif" /> Loïc ''RegnaM'' Péron<br /><br
+          /><i><b>Curse Gaming - Europe</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/fi-lgflag.gif"
+          height="12" width="18" alt="fi-lgflag.gif" /> Joona &quot;natu&quot; Leppanen<br
+          /><br /><i><b>Natus Vincere</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/up-lgflag.gif"
+          height="12" width="18" alt="up-lgflag.gif" /> Yegor &quot;markeloff&quot;
+          Markelov<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/up-lgflag.gif"
+          height="12" width="18" alt="up-lgflag.gif" /> Ioann &quot;Edward&quot; Sukhariev<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/up-lgflag.gif"
+          height="12" width="18" alt="up-lgflag.gif" /> Arsenij &quot;ceh9&quot; Trynozhenko<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/up-lgflag.gif"
+          height="12" width="18" alt="up-lgflag.gif" /> Seregy &quot;Starix&quot; Ischuk<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/up-lgflag.gif"
+          height="12" width="18" alt="up-lgflag.gif" /> Daniil &quot;Zeus&quot; Teslenko<br
+          /><br /><i><b>ESC-ICY BOX</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/pl-lgflag.gif"
+          height="12" width="18" alt="pl-lgflag.gif" /> Filip &quot;neo&quot; Kubski<br
+          /><br /><i><b>Lemondogs</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Patrik &quot;zajp&quot; Knutsen<br
+          /><br /><i><b>Quantic Gaming</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Spencer &quot;hiko&quot; Martin<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Jordan &quot;n0thing&quot; Gilbert<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Carey &quot;frozt_&quot; Kertenian<br
+          /><br /><i><b>Fnatic</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/da-lgflag.gif"
+          height="12" width="18" alt="da-lgflag.gif" /> Michael &quot;Friis&quot; Jørgensen<br
+          /><br /><i><b>Anexis eSports</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/uk-lgflag.gif"
+          height="12" width="18" alt="uk-lgflag.gif" /> Sam &quot;Rattlesnk&quot; Gawn<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/uk-lgflag.gif"
+          height="12" width="18" alt="uk-lgflag.gif" /> &quot;RE1EASE&quot;<br /><br
+          /><i><b>Nexus Gaming</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Lloyd &quot;shaffeR&quot; Shaffer<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Daniel &quot;reZerf&quot; Powers<br
+          /><br /><i><b>High Rollers Gaming</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> &quot;Lucky&quot;<br /><br /><i><b>MonoManiac
+          eSports</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Jarrod &quot;REMiX&quot; Shaw<br
+          /><br /><i><b>Epsilon Razer</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Jerry &quot;xelos&quot; Raberg<br
+          /><br /><i><b>Torqued</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/uk-lgflag.gif"
+          height="12" width="18" alt="uk-lgflag.gif" /> Josh &quot;steel&quot; Nissan<br
+          /><br /><i><b>Global Revolution</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/ca-lgflag.gif"
+          height="12" width="18" alt="ca-lgflag.gif" /> &quot;YaYoo&quot;<br /><br /><i><b>Team
+          Rareform</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/ca-lgflag.gif"
+          height="12" width="18" alt="ca-lgflag.gif" /> Stephanie &quot;missharvey&quot;
+          Harvey<br /><br /><i><b>FrostGaming</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Moe &quot;moE&quot; Assad<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Yazan &quot;clowN&quot; Ammari<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Ryan &quot;ry9n&quot; Romba<br
+          /><br /><i><b>Sponsorless</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/ca-lgflag.gif"
+          height="12" width="18" alt="ca-lgflag.gif" /> &quot;mosbeck&quot;<br /><br
+          /><i><b>k1ck eSports</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/po-lgflag.gif"
+          height="12" width="18" alt="po-lgflag.gif" /> Ricardo &quot;foxiRiS_CN543&quot;
+          Pacheco<br /><br /><i><b>Other Current/Former Professionals &amp; Top-Tier
+          Players - NORTH &amp; AMERICA</b></i><br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Derek &quot;dboorN&quot; Boorn<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Jeff &quot;emong&quot; Anderson
+          (ex-Curse Gaming)<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> &quot;Glockateer&quot;<br /><img
+          src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> &quot;citoak&quot;<br /><img
+          src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Danny &quot;fRoD&quot; Montaner<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Peter &quot;ptr^&quot;<br /><br
+          /><i><b>Other Current/Former Professionals &amp; Top-Tier Players - EUROPE/ASIA/</b></i><br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/da-lgflag.gif"
+          height="12" width="18" alt="da-lgflag.gif" /> Casper &quot;ruggah&quot; Due
+          (ex-Anexis)<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/uk-lgflag.gif"
+          height="12" width="18" alt="uk-lgflag.gif" /> &quot;msk&quot; (ex-FRAGMASTER
+          TOXIC)<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/uk-lgflag.gif"
+          height="12" width="18" alt="uk-lgflag.gif" /> Henry &quot;HenryG&quot; Greer<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/da-lgflag.gif"
+          height="12" width="18" alt="da-lgflag.gif" /> Mathias &quot;MSL&quot; Lauridsen<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/sw-lgflag.gif"
+          height="12" width="18" alt="sw-lgflag.gif" /> Marcus &quot;Delpan&quot; Larsson<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/po-lgflag.gif"
+          height="12" width="18" alt="po-lgflag.gif" /> Fábio &quot;n3w&quot; Teixeira<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/gr-lgflag.gif"
+          height="12" width="18" alt="gr-lgflag.gif" /> Fabian &quot;V3n0m&quot; Doellert<br
+          /><br /><b><font size="3" color="#FFA500">LEAGUE &amp; LAN SHOUTCASTERS -
+          NORTH AMERICA</font></b><br /><img src="http://profile.ak.fbcdn.net/hprofile-ak-ash3/s160x160/66548_155323474504149_282915_a.jpg"
+          height="12" width="18" alt="66548_155323474504149_282915_a.jpg" /> ESEA<br
+          /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> Whisenhunt<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/us-lgflag.gif"
+          height="12" width="18" alt="us-lgflag.gif" /> dunN<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/ca-lgflag.gif"
+          height="12" width="18" alt="ca-lgflag.gif" /> sanTi<br /><br /><b><font size="3"
+          color="#FFA500">LEAGUE &amp; LAN SHOUTCASTERS - EUROPE/ASIA</font></b><br
+          /><img src="https://twimg0-a.akamaihd.net/profile_images/2642480081/f57bb3fa25afcf6043a89a1e0cc91e41.png"
+          height="12" width="18" alt="f57bb3fa25afcf6043a89a1e0cc91e41.png" /> ESPlanet<br
+          /><img src="http://external.ak.fbcdn.net/safe_image.php?d=AQDn7GmgOzQGQdeQ&amp;w=155&amp;h=114&amp;url=http%3A%2F%2Fthemes.gs-media.de%2F99damage%2Flogo.jpg"
+          height="12" width="18" alt="safe_image.php?d=AQDn7GmgOzQGQdeQ&amp;w=155&amp;h=114&amp;url=http%3A%2F%2Fthemes.gs-media.de%2F99damage%2Flogo.jpg"
+          /> 99damage<br /><img src="http://external.ak.fbcdn.net/safe_image.php?d=AQBeaEAOJBPvALJL&amp;w=155&amp;h=114&amp;url=http%3A%2F%2Fstatic-cdn.jtvnw.net%2Fjtv_user_pictures%2Ffamilgalas-profile_image-70f5b9db7dc2bde6-150x150.png"
+          height="12" width="18" alt="safe_image.php?d=AQBeaEAOJBPvALJL&amp;w=155&amp;h=114&amp;url=http%3A%2F%2Fstatic-cdn.jtvnw.net%2Fjtv_user_pictures%2Ffamilgalas-profile_image-70f5b9db7dc2bde6-150x150.png"
+          /> bumbum TV<br /><img src="http://a3.twimg.com/profile_images/1359734757/twittESL_reasonably_small.jpg"
+          height="12" width="18" alt="twittESL_reasonably_small.jpg" /> ESL TV<br /><img
+          src="http://www.gaming.fi/uutiskuvat/uutinen_b3a2d638ea8d1ba207a8dcdc21c14671.png"
+          height="12" width="18" alt="uutinen_b3a2d638ea8d1ba207a8dcdc21c14671.png"
+          /> ESPC TV<br /><img src="http://www.crystal-serv.com/images/partners/logo_vakarm.png"
+          height="12" width="18" alt="logo_vakarm.png" /> VaKarM<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/no-lgflag.gif"
+          height="12" width="18" alt="no-lgflag.gif" /> warclOwn<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/rs-lgflag.gif"
+          height="12" width="18" alt="rs-lgflag.gif" /> StarLadder<br /><img src="https://www.cia.gov/library/publications/the-world-factbook/graphics/flags/newflags/po-lgflag.gif"
+          height="12" width="18" alt="po-lgflag.gif" /> DZ<br /><br /><a rel="nofollow"
+          href="http://www.reddit.com/r/GlobalOffensive/comments/183rkz/creating_a_twitch_stream_directory_for_top_csgo/"
+          target="_blank">Reddit post</a> with more information about the intent of
+          the CS:GO Pro stream team.
+  
+          <br /><br /><i>To be added to the list, professional players, organizers and
+          shoutcasters should contact sapphiRe at <a rel="nofollow" href="http://www.twitter.com/heathermumm"
+          target="_blank">@heathermumm</a> or <a rel="nofollow" href="http://www.esea.net/users/sapphiRe"
+          target="_blank">ESEA</a>
+  
+          </i>
+  
+  
+  '
+        _id: 586
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-csgopros-banner_image-3092efed6847972a-640x125.jpeg
+        created_at: '2013-02-08T02:13:04Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/csgopros
+        name: csgopros
+        logo: 
+      updated_at: '2013-07-30T08:31:52Z'
+      _id: 36858184
+      game: Payday 2
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/m0e_tv-channel_header_image-6ac40845ec5d99a2-640x125.jpeg
+      created_at: '2012-10-12T23:57:27Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/m0e_tv/follows
+        chat: https://api.twitch.tv/kraken/chat/m0e_tv
+        stream_key: https://api.twitch.tv/kraken/channels/m0e_tv/stream_key
+        editors: https://api.twitch.tv/kraken/channels/m0e_tv/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/m0e_tv/subscriptions
+        self: https://api.twitch.tv/kraken/channels/m0e_tv
+        features: https://api.twitch.tv/kraken/channels/m0e_tv/features
+        commercial: https://api.twitch.tv/kraken/channels/m0e_tv/commercial
+        videos: https://api.twitch.tv/kraken/channels/m0e_tv/videos
+      name: m0e_tv
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/m0e_tv-profile_image-49f3ceea1959f7d6-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_m0e_tv-320x200.jpg
+    broadcaster: obs
+    _id: 6322548992
+    game: Payday 2
+    _links:
+      self: https://api.twitch.tv/kraken/streams/m0e_tv
+    viewers: 85
+    name: live_user_m0e_tv
+  - channel:
+      url: http://www.twitch.tv/wshand
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/wshand-channel_background_image-3441bee07e42ccd0.jpeg
+      mature: false
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/wshand-channel_offline_image-f78776006abfaf1f-640x360.png
+      status: ! 'Check the Deaths: Resident Evil (Gamecube) [First Playthrough/No Spoilers/Backseat
+        Drivers]'
+      teams: []
+      display_name: Wshand
+      _id: 21733581
+      updated_at: '2013-07-30T05:35:40Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/wshand-channel_header_image-b1d7103e933636ea-640x125.png
+      game: Resident Evil
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/wshand/follows
+        chat: https://api.twitch.tv/kraken/chat/wshand
+        stream_key: https://api.twitch.tv/kraken/channels/wshand/stream_key
+        editors: https://api.twitch.tv/kraken/channels/wshand/editors
+        self: https://api.twitch.tv/kraken/channels/wshand
+        subscriptions: https://api.twitch.tv/kraken/channels/wshand/subscriptions
+        features: https://api.twitch.tv/kraken/channels/wshand/features
+        commercial: https://api.twitch.tv/kraken/channels/wshand/commercial
+        videos: https://api.twitch.tv/kraken/channels/wshand/videos
+      created_at: '2011-04-15T10:40:19Z'
+      name: wshand
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/wshand-profile_image-6efdbd67d608c579-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_wshand-320x200.jpg
+    broadcaster: xsplit
+    _id: 6322278368
+    game: Resident Evil
+    _links:
+      self: https://api.twitch.tv/kraken/streams/wshand
+    viewers: 83
+    name: live_user_wshand
+  - channel:
+      url: http://www.twitch.tv/brobben123
+      background: 
+      mature: 
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/brobben123-channel_offline_image-4ebc4719c373c0ff-640x360.jpeg
+      status: ! "Viewer Runs HC Road to Paragon 100! Free Plvling :)Top WD\r\n"
+      teams: []
+      display_name: Brobben123
+      _id: 42136676
+      updated_at: '2013-07-30T05:44:47Z'
+      banner: 
+      game: Diablo III
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/brobben123/follows
+        chat: https://api.twitch.tv/kraken/chat/brobben123
+        stream_key: https://api.twitch.tv/kraken/channels/brobben123/stream_key
+        editors: https://api.twitch.tv/kraken/channels/brobben123/editors
+        self: https://api.twitch.tv/kraken/channels/brobben123
+        subscriptions: https://api.twitch.tv/kraken/channels/brobben123/subscriptions
+        features: https://api.twitch.tv/kraken/channels/brobben123/features
+        commercial: https://api.twitch.tv/kraken/channels/brobben123/commercial
+        videos: https://api.twitch.tv/kraken/channels/brobben123/videos
+      created_at: '2013-04-06T05:14:34Z'
+      name: brobben123
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/brobben123-profile_image-6602583629475c4e-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_brobben123-320x200.jpg
+    broadcaster: obs
+    _id: 6322451952
+    game: Diablo III
+    _links:
+      self: https://api.twitch.tv/kraken/streams/brobben123
+    viewers: 82
+    name: live_user_brobben123
+  - channel:
+      url: http://www.twitch.tv/glaivetv
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/glaivetv-channel_background_image-a54fa24e093d4b15.jpeg
+      mature: 
+      status: WarThunder with Detomaso
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/glaivetv-channel_offline_image-c5d60190b7cd0ba7-640x360.jpeg
+      teams: []
+      display_name: GlaiveTV
+      _id: 45227728
+      updated_at: '2013-07-30T09:05:07Z'
+      banner: 
+      game: War Thunder
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/glaivetv/follows
+        chat: https://api.twitch.tv/kraken/chat/glaivetv
+        stream_key: https://api.twitch.tv/kraken/channels/glaivetv/stream_key
+        editors: https://api.twitch.tv/kraken/channels/glaivetv/editors
+        self: https://api.twitch.tv/kraken/channels/glaivetv
+        subscriptions: https://api.twitch.tv/kraken/channels/glaivetv/subscriptions
+        features: https://api.twitch.tv/kraken/channels/glaivetv/features
+        commercial: https://api.twitch.tv/kraken/channels/glaivetv/commercial
+        videos: https://api.twitch.tv/kraken/channels/glaivetv/videos
+      created_at: '2013-06-26T11:59:34Z'
+      name: glaivetv
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/glaivetv-profile_image-6ce8de7c9da1eb48-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_glaivetv-320x200.jpg
+    broadcaster: obs
+    _id: 6323621072
+    game: War Thunder
+    _links:
+      self: https://api.twitch.tv/kraken/streams/glaivetv
+    viewers: 82
+    name: live_user_glaivetv
+  - channel:
+      url: http://www.twitch.tv/staylow2
+      mature: false
+      background: 
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/staylow2-channel_offline_image-f8af80792654fbb1-640x360.png
+      status: All Nighter Parkour Parkour   w/Followers
+      display_name: StayLow2
+      teams: []
+      updated_at: '2013-07-30T09:09:16Z'
+      _id: 41243996
+      game: Minecraft
+      banner: 
+      created_at: '2013-03-11T21:21:05Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/staylow2/follows
+        chat: https://api.twitch.tv/kraken/chat/staylow2
+        stream_key: https://api.twitch.tv/kraken/channels/staylow2/stream_key
+        editors: https://api.twitch.tv/kraken/channels/staylow2/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/staylow2/subscriptions
+        self: https://api.twitch.tv/kraken/channels/staylow2
+        features: https://api.twitch.tv/kraken/channels/staylow2/features
+        commercial: https://api.twitch.tv/kraken/channels/staylow2/commercial
+        videos: https://api.twitch.tv/kraken/channels/staylow2/videos
+      name: staylow2
+      logo: 
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_staylow2-320x200.jpg
+    broadcaster: xsplit
+    _id: 6323341984
+    game: Minecraft
+    _links:
+      self: https://api.twitch.tv/kraken/streams/staylow2
+    name: live_user_staylow2
+    viewers: 81
+  - channel:
+      url: http://www.twitch.tv/hastr0
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/hastr0-channel_background_image-6eb8f7a34f93bb29.jpeg
+      mature: false
+      video_banner: 
+      status: Late Night with Hastro
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamenvyus-background_image-8c992ea0be1d764b.png
+        display_name: Team Envyus
+        _id: 214
+        info: ! "Team EnVyUs is one of the most successful pro console gaming teams
+          in the world. We are currently competing in the Call of Duty and Gears of
+          War franchises on the XBOX 360 and Sony PS3. \n\n\nFollow and Support Team
+          Envyus!\n\nTeam Website\nhttp://www.TeamEnvyus.com\n\nTeam Twitter\nhttp://www.Twitter.com/TeamEnvyus\n\nTwitchTV\nhttp://www.Twitch.Tv/TeamEnvyusPro\n\nTeam
+          Facebook\nhttp://www.FaceBook.com/TeamEnvyus\n\nTeam Jerseys\nhttp://bit.ly/nv-jerseys\n\nTeam
+          Shirts\nhttp://envyus.spreadshirt.com/\n\n"
+        updated_at: '2013-05-24T00:17:23Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-teamenvyus-banner_image-e38bd41e2bdbe0ec-640x125.jpeg
+        created_at: '2012-03-11T01:58:22Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/teamenvyus
+        name: teamenvyus
+        logo: 
+      display_name: Hastr0
+      _id: 8430431
+      updated_at: '2013-07-30T09:30:12Z'
+      banner: 
+      game: ! 'Call of Duty: Black Ops II'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/hastr0/follows
+        chat: https://api.twitch.tv/kraken/chat/hastr0
+        stream_key: https://api.twitch.tv/kraken/channels/hastr0/stream_key
+        editors: https://api.twitch.tv/kraken/channels/hastr0/editors
+        self: https://api.twitch.tv/kraken/channels/hastr0
+        subscriptions: https://api.twitch.tv/kraken/channels/hastr0/subscriptions
+        features: https://api.twitch.tv/kraken/channels/hastr0/features
+        commercial: https://api.twitch.tv/kraken/channels/hastr0/commercial
+        videos: https://api.twitch.tv/kraken/channels/hastr0/videos
+      created_at: '2009-09-24T23:27:57Z'
+      name: hastr0
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/hastr0-profile_image-9e2984124690853f-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_hastr0-320x200.jpg
+    broadcaster: obs
+    _id: 6323769312
+    game: ! 'Call of Duty: Black Ops II'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/hastr0
+    viewers: 81
+    name: live_user_hastr0
+  - channel:
+      url: http://www.twitch.tv/sinon121821
+      mature: 
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/sinon121821-channel_background_image-683e916e5294d44d.jpeg
+      status: 【廠長盃恐怖遊戲接力】死魂曲．無印【聊天室可能爆炸】
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/sinon121821-channel_offline_image-bc4b9c773786a2bb-640x360.jpeg
+      display_name: Sinon121821
+      teams: []
+      updated_at: '2013-07-30T08:21:38Z'
+      _id: 4715950
+      game: Siren
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/sinon121821-channel_header_image-d0120be8adeed96d-640x125.png
+      created_at: '2009-03-04T09:14:23Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/sinon121821/follows
+        chat: https://api.twitch.tv/kraken/chat/sinon121821
+        stream_key: https://api.twitch.tv/kraken/channels/sinon121821/stream_key
+        editors: https://api.twitch.tv/kraken/channels/sinon121821/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/sinon121821/subscriptions
+        self: https://api.twitch.tv/kraken/channels/sinon121821
+        features: https://api.twitch.tv/kraken/channels/sinon121821/features
+        commercial: https://api.twitch.tv/kraken/channels/sinon121821/commercial
+        videos: https://api.twitch.tv/kraken/channels/sinon121821/videos
+      name: sinon121821
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/sinon121821-profile_image-fb23c5dcbf12d754-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_sinon121821-320x200.jpg
+    broadcaster: obs
+    _id: 6323374928
+    game: Siren
+    _links:
+      self: https://api.twitch.tv/kraken/streams/sinon121821
+    viewers: 80
+    name: live_user_sinon121821
+  - channel:
+      url: http://www.twitch.tv/lo1ts
+      mature: true
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/lo1ts-channel_background_image-50f84814d1e9a689.png
+      status: Half-Life 2 speedrun race [60FPS]
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/lo1ts-channel_offline_image-97b9f9f75ab3e024-640x360.jpeg
+      display_name: Lo1ts
+      teams: []
+      updated_at: '2013-07-30T08:33:22Z'
+      _id: 22016607
+      game: Half-Life 2
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/lo1ts-channel_header_image-0fc22c0a7b0afefa-640x125.jpeg
+      created_at: '2011-04-26T22:17:11Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/lo1ts/follows
+        chat: https://api.twitch.tv/kraken/chat/lo1ts
+        stream_key: https://api.twitch.tv/kraken/channels/lo1ts/stream_key
+        editors: https://api.twitch.tv/kraken/channels/lo1ts/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/lo1ts/subscriptions
+        self: https://api.twitch.tv/kraken/channels/lo1ts
+        features: https://api.twitch.tv/kraken/channels/lo1ts/features
+        commercial: https://api.twitch.tv/kraken/channels/lo1ts/commercial
+        videos: https://api.twitch.tv/kraken/channels/lo1ts/videos
+      name: lo1ts
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/lo1ts-profile_image-dd7166757f743915-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_lo1ts-320x200.jpg
+    broadcaster: obs
+    _id: 6323081776
+    game: Half-Life 2
+    _links:
+      self: https://api.twitch.tv/kraken/streams/lo1ts
+    viewers: 79
+    name: live_user_lo1ts
+  - channel:
+      url: http://www.twitch.tv/tribesascend
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/tribesascend-channel_background_image-65fb5d2b038bae49.png
+      mature: false
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/tribesascend-channel_offline_image-cb7289c01d91adf1-640x360.png
+      status: Tribes with Quba!
+      teams:
+      - background: 
+        display_name: ! 'Competitive Tribes: Ascend Streams'
+        _id: 200
+        info: ! '
+  
+  '
+        updated_at: '2013-05-24T00:17:32Z'
+        banner: 
+        created_at: '2012-02-21T03:49:23Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/tapros
+        name: tapros
+        logo: 
+      display_name: tribesascend
+      _id: 27374465
+      updated_at: '2013-07-30T08:01:40Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/tribesascend-channel_header_image-f4fbd59cc5e8f3c3-640x125.png
+      game: Tribes Ascend
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/tribesascend/follows
+        chat: https://api.twitch.tv/kraken/chat/tribesascend
+        stream_key: https://api.twitch.tv/kraken/channels/tribesascend/stream_key
+        editors: https://api.twitch.tv/kraken/channels/tribesascend/editors
+        self: https://api.twitch.tv/kraken/channels/tribesascend
+        subscriptions: https://api.twitch.tv/kraken/channels/tribesascend/subscriptions
+        features: https://api.twitch.tv/kraken/channels/tribesascend/features
+        commercial: https://api.twitch.tv/kraken/channels/tribesascend/commercial
+        videos: https://api.twitch.tv/kraken/channels/tribesascend/videos
+      created_at: '2012-01-11T19:09:24Z'
+      name: tribesascend
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/tribesascend-profile_image-98ed980be262d475-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_tribesascend-320x200.jpg
+    broadcaster: obs
+    _id: 6323261696
+    game: Tribes Ascend
+    _links:
+      self: https://api.twitch.tv/kraken/streams/tribesascend
+    viewers: 79
+    name: live_user_tribesascend
+  - channel:
+      url: http://www.twitch.tv/vondill_
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/vondill_-channel_background_image-8efe1d029ce7e378.jpeg
+      mature: 
+      status: ! 'RP GIVEAWAY WEEK #30!!! Diamond V Power Top! ~ Vondill'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/vondill_-channel_offline_image-f1e3048bc5e6a035-640x360.jpeg
+      teams: []
+      display_name: Vondill_
+      _id: 23615773
+      updated_at: '2013-07-30T02:20:02Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/vondill_-channel_header_image-7d783fb1f4d67ff5-640x125.png
+      game: League of Legends
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/vondill_/follows
+        chat: https://api.twitch.tv/kraken/chat/vondill_
+        stream_key: https://api.twitch.tv/kraken/channels/vondill_/stream_key
+        editors: https://api.twitch.tv/kraken/channels/vondill_/editors
+        self: https://api.twitch.tv/kraken/channels/vondill_
+        subscriptions: https://api.twitch.tv/kraken/channels/vondill_/subscriptions
+        features: https://api.twitch.tv/kraken/channels/vondill_/features
+        commercial: https://api.twitch.tv/kraken/channels/vondill_/commercial
+        videos: https://api.twitch.tv/kraken/channels/vondill_/videos
+      created_at: '2011-07-23T08:20:37Z'
+      name: vondill_
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/vondill_-profile_image-72a546db7466542f-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_vondill_-320x200.jpg
+    broadcaster: xsplit
+    _id: 6320342160
+    game: League of Legends
+    _links:
+      self: https://api.twitch.tv/kraken/streams/vondill_
+    viewers: 78
+    name: live_user_vondill_
+  - channel:
+      url: http://www.twitch.tv/sk__
+      mature: 
+      background: 
+      status: Teaching the sudds how to 4v4
+      video_banner: 
+      display_name: SK__
+      teams: []
+      updated_at: '2013-07-30T07:55:29Z'
+      _id: 22146956
+      game: Halo 4
+      banner: 
+      created_at: '2011-05-02T05:58:46Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/sk__/follows
+        chat: https://api.twitch.tv/kraken/chat/sk__
+        stream_key: https://api.twitch.tv/kraken/channels/sk__/stream_key
+        editors: https://api.twitch.tv/kraken/channels/sk__/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/sk__/subscriptions
+        self: https://api.twitch.tv/kraken/channels/sk__
+        features: https://api.twitch.tv/kraken/channels/sk__/features
+        commercial: https://api.twitch.tv/kraken/channels/sk__/commercial
+        videos: https://api.twitch.tv/kraken/channels/sk__/videos
+      name: sk__
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/sk__-profile_image-6cf3515dbec0bfe0-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_sk__-320x200.jpg
+    broadcaster: obs
+    _id: 6323221152
+    game: Halo 4
+    _links:
+      self: https://api.twitch.tv/kraken/streams/sk__
+    viewers: 77
+    name: live_user_sk__
+  - channel:
+      url: http://www.twitch.tv/vvvradiation
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/vvvradiation-channel_background_image-08bf455021090f0f.jpeg
+      mature: 
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/vvvradiation-channel_offline_image-95136ad03c63f0b7-640x360.jpeg
+      status: ! '#FUT w/ @vVvRADIATION from @vVv_Gaming'
+      teams:
+      - background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-vvvgaming-background_image-3e9295f29aef5082.png
+        display_name: vVv Gaming
+        _id: 61
+        info: ! "<i>In everything we do, we believe that all gamers with a passion for
+          competition need an engaging outlet to share and express their passions. Competitive
+          gamers thrive in a diverse environment that is social, empowering, supportive
+          and informative, and all gamers, regardless of skill, have a place in competitive
+          gaming. Competitive gaming should entertain, be educational and make you feel
+          a sense of domination, whether you’re the top player or simply a fan. The
+          way we do this is called vVv Gaming, and we just happen to be the best competitive
+          gaming community in the world. Wanna join?</i><br /><br />vVv Gaming is a
+          competitive video game organization with a dynamic and vibrant community.
+          Top players and upcoming talent from numerous video games flock to vVv to
+          have an experience best summed up by our motto: Entertain.Educate.Dominate.<br
+          /><br />With entertaining podcasts, educational articles about teamwork, competition
+          and strategy and dominating finishes at major tournaments around the world,
+          we deliver unparalleled value to anyone interested in competitive video gaming.\r\n\r\n\r\n\r\n<center><a
+          rel=\"nofollow\" href=\"http://www.vvv-gaming.com/\" target=\"_blank\"><img
+          src=\"http://vvv-gaming.com/forum/uploads/gallery/album_839/gallery_17235_839_51231.png\"
+          alt=\"vVv Gaming\" /></a><a rel=\"nofollow\" href=\"http://www.facebook.com/pages/vVv-Gaming/39667060978\"
+          target=\"_blank\"><img src=\"http://vvv-gaming.com/forum/uploads/gallery/album_839/gallery_17235_839_11484.png\"
+          alt=\"Facebook\" /></a><a rel=\"nofollow\" href=\"http://twitter.com/#!/vvv_gaming\"
+          target=\"_blank\"><img src=\"http://vvv-gaming.com/forum/uploads/gallery/album_839/gallery_17235_839_45307.png\"
+          alt=\"Twitter\" /></a><a rel=\"nofollow\" href=\"http://www.youtube.com/thevvvgaming\"
+          target=\"_blank\"><img src=\"http://vvv-gaming.com/forum/uploads/gallery/album_839/gallery_17235_839_12914.png\"
+          alt=\"YouTube\" /></a></center>"
+        updated_at: '2013-05-24T00:18:02Z'
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-vvvgaming-banner_image-e2930967acbd2a98-640x125.png
+        created_at: '2011-11-04T20:57:07Z'
+        _links:
+          self: https://api.twitch.tv/kraken/teams/vvvgaming
+        name: vvvgaming
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-vvvgaming-team_logo_image-3ba9022f1ad578e2-300x300.png
+      display_name: vVvRADIATION
+      _id: 22987108
+      updated_at: '2013-07-30T07:43:01Z'
+      banner: 
+      game: FIFA Soccer 13
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/vvvradiation/follows
+        chat: https://api.twitch.tv/kraken/chat/vvvradiation
+        stream_key: https://api.twitch.tv/kraken/channels/vvvradiation/stream_key
+        editors: https://api.twitch.tv/kraken/channels/vvvradiation/editors
+        self: https://api.twitch.tv/kraken/channels/vvvradiation
+        subscriptions: https://api.twitch.tv/kraken/channels/vvvradiation/subscriptions
+        features: https://api.twitch.tv/kraken/channels/vvvradiation/features
+        commercial: https://api.twitch.tv/kraken/channels/vvvradiation/commercial
+        videos: https://api.twitch.tv/kraken/channels/vvvradiation/videos
+      created_at: '2011-06-17T08:03:35Z'
+      name: vvvradiation
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/vvvradiation-profile_image-52372e67545ef6bd-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_vvvradiation-320x200.jpg
+    broadcaster: unknown_rtmp
+    _id: 6323158976
+    game: FIFA Soccer 13
+    _links:
+      self: https://api.twitch.tv/kraken/streams/vvvradiation
+    viewers: 78
+    name: live_user_vvvradiation
+  - channel:
+      url: http://www.twitch.tv/doctorpentakill
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/doctorpentakill-channel_background_image-9ea094d4764e17ce.jpeg
+      mature: true
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/doctorpentakill-channel_offline_image-4b6cdff21328a30e-640x360.jpeg
+      status: ! "DoctorPentakill | Achievment Grinding | 2 Year Livestream Challenge\r\n|
+        (Day 70/730)"
+      teams: []
+      display_name: DoctorPentakill
+      _id: 26474704
+      updated_at: '2013-07-30T06:06:33Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/doctorpentakill-channel_header_image-80a3dc3ce207e88d-640x125.jpeg
+      game: War Thunder
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/doctorpentakill/follows
+        chat: https://api.twitch.tv/kraken/chat/doctorpentakill
+        stream_key: https://api.twitch.tv/kraken/channels/doctorpentakill/stream_key
+        editors: https://api.twitch.tv/kraken/channels/doctorpentakill/editors
+        self: https://api.twitch.tv/kraken/channels/doctorpentakill
+        subscriptions: https://api.twitch.tv/kraken/channels/doctorpentakill/subscriptions
+        features: https://api.twitch.tv/kraken/channels/doctorpentakill/features
+        commercial: https://api.twitch.tv/kraken/channels/doctorpentakill/commercial
+        videos: https://api.twitch.tv/kraken/channels/doctorpentakill/videos
+      created_at: '2011-11-30T09:16:54Z'
+      name: doctorpentakill
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/doctorpentakill-profile_image-cd9c74c7e44729f9-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_doctorpentakill-320x200.jpg
+    broadcaster: xsplit
+    _id: 6321581040
+    game: War Thunder
+    _links:
+      self: https://api.twitch.tv/kraken/streams/doctorpentakill
+    viewers: 76
+    name: live_user_doctorpentakill
+  - channel:
+      url: http://www.twitch.tv/qttsix
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/qttsix-channel_background_image-caeadb1dae1934d7.jpeg
+      mature: 
+      status: 3X2 SixStorM 小六台 - ROCKMAN X~X6 Marathon SPEED RUN -  宣傳！8/11(日) Rockman
+        X~X6馬拉松電視牆  http://goo.gl/D8f8A
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/qttsix-channel_offline_image-c8699bf4cd4d983c-640x360.png
+      teams: []
+      display_name: Qttsix
+      _id: 16677765
+      updated_at: '2013-07-30T08:58:52Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/qttsix-channel_header_image-c6a73c5729604924-640x125.jpeg
+      game: Mega Man X
+      created_at: '2010-10-16T19:16:31Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/qttsix/follows
+        chat: https://api.twitch.tv/kraken/chat/qttsix
+        stream_key: https://api.twitch.tv/kraken/channels/qttsix/stream_key
+        editors: https://api.twitch.tv/kraken/channels/qttsix/editors
+        self: https://api.twitch.tv/kraken/channels/qttsix
+        subscriptions: https://api.twitch.tv/kraken/channels/qttsix/subscriptions
+        features: https://api.twitch.tv/kraken/channels/qttsix/features
+        commercial: https://api.twitch.tv/kraken/channels/qttsix/commercial
+        videos: https://api.twitch.tv/kraken/channels/qttsix/videos
+      name: qttsix
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/qttsix-profile_image-03e9a9669ba72f4b-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_qttsix-320x200.jpg
+    broadcaster: obs
+    _id: 6323583824
+    game: Mega Man X
+    _links:
+      self: https://api.twitch.tv/kraken/streams/qttsix
+    viewers: 75
+    name: live_user_qttsix
+  - channel:
+      url: http://www.twitch.tv/ixgerstyxi
+      mature: 
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/ixgerstyxi-channel_background_image-50ab546dccca49d0.jpeg
+      video_banner: 
+      status: Xbox 360 Edition - Survival - can't read chat right now :(
+      display_name: IxGERSTYxI
+      teams: []
+      updated_at: '2013-07-30T08:55:00Z'
+      _id: 38532182
+      game: Minecraft
+      banner: 
+      created_at: '2012-12-16T17:02:08Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/ixgerstyxi/follows
+        chat: https://api.twitch.tv/kraken/chat/ixgerstyxi
+        stream_key: https://api.twitch.tv/kraken/channels/ixgerstyxi/stream_key
+        editors: https://api.twitch.tv/kraken/channels/ixgerstyxi/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/ixgerstyxi/subscriptions
+        self: https://api.twitch.tv/kraken/channels/ixgerstyxi
+        features: https://api.twitch.tv/kraken/channels/ixgerstyxi/features
+        commercial: https://api.twitch.tv/kraken/channels/ixgerstyxi/commercial
+        videos: https://api.twitch.tv/kraken/channels/ixgerstyxi/videos
+      name: ixgerstyxi
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ixgerstyxi-profile_image-5f64422c0d70a187-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ixgerstyxi-320x200.jpg
+    broadcaster: xsplit
+    _id: 6323562128
+    game: Minecraft
+    _links:
+      self: https://api.twitch.tv/kraken/streams/ixgerstyxi
+    name: live_user_ixgerstyxi
+    viewers: 74
+  - channel:
+      url: http://www.twitch.tv/xmelibaby
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/xmelibaby-channel_background_image-b4a917da0039710f.png
+      mature: false
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/xmelibaby-channel_offline_image-4e348a52f719187b-640x360.jpeg
+      status: ! '[PS3] Pub Stomping with SmoPandazor + Face Cam ||Road to 750 followers||'
+      teams: []
+      display_name: xMeliBaby
+      _id: 43114099
+      updated_at: '2013-07-30T09:01:39Z'
+      banner: 
+      game: ! 'Call of Duty: Black Ops II'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/xmelibaby/follows
+        chat: https://api.twitch.tv/kraken/chat/xmelibaby
+        stream_key: https://api.twitch.tv/kraken/channels/xmelibaby/stream_key
+        editors: https://api.twitch.tv/kraken/channels/xmelibaby/editors
+        self: https://api.twitch.tv/kraken/channels/xmelibaby
+        subscriptions: https://api.twitch.tv/kraken/channels/xmelibaby/subscriptions
+        features: https://api.twitch.tv/kraken/channels/xmelibaby/features
+        commercial: https://api.twitch.tv/kraken/channels/xmelibaby/commercial
+        videos: https://api.twitch.tv/kraken/channels/xmelibaby/videos
+      created_at: '2013-05-02T20:12:36Z'
+      name: xmelibaby
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/xmelibaby-profile_image-4aeb3a47bfee2003-300x300.jpeg
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_xmelibaby-320x200.jpg
+    broadcaster: obs
+    _id: 6323600672
+    game: ! 'Call of Duty: Black Ops II'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/xmelibaby
+    viewers: 75
+    name: live_user_xmelibaby
+  - channel:
+      url: http://www.twitch.tv/darktwinge
+      mature: 
+      background: 
+      status: FTL Normal Slug B Run without Medbay
+      video_banner: 
+      display_name: DarkTwinge
+      teams: []
+      updated_at: '2013-07-30T08:47:35Z'
+      _id: 27847836
+      game: ! 'FTL: Faster Than Light'
+      banner: 
+      created_at: '2012-01-29T21:19:21Z'
+      _links:
+        follows: https://api.twitch.tv/kraken/channels/darktwinge/follows
+        chat: https://api.twitch.tv/kraken/chat/darktwinge
+        stream_key: https://api.twitch.tv/kraken/channels/darktwinge/stream_key
+        editors: https://api.twitch.tv/kraken/channels/darktwinge/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/darktwinge/subscriptions
+        self: https://api.twitch.tv/kraken/channels/darktwinge
+        features: https://api.twitch.tv/kraken/channels/darktwinge/features
+        commercial: https://api.twitch.tv/kraken/channels/darktwinge/commercial
+        videos: https://api.twitch.tv/kraken/channels/darktwinge/videos
+      name: darktwinge
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/darktwinge-profile_image-cfca13e34b217920-300x300.png
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_darktwinge-320x200.jpg
+    broadcaster: obs
+    _id: 6322612304
+    game: ! 'FTL: Faster Than Light'
+    _links:
+      self: https://api.twitch.tv/kraken/streams/darktwinge
+    viewers: 74
+    name: live_user_darktwinge
+  _links:
+    featured: https://api.twitch.tv/kraken/streams/featured
+    followed: https://api.twitch.tv/kraken/streams/followed
+    summary: https://api.twitch.tv/kraken/streams/summary
+    next: https://api.twitch.tv/kraken/streams?limit=50&offset=150
+    prev: https://api.twitch.tv/kraken/streams?limit=50&offset=50
+    self: https://api.twitch.tv/kraken/streams?limit=50&offset=100

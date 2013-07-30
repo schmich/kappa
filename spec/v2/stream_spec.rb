@@ -94,6 +94,20 @@ describe Twitch::V2::Streams do
     end
   end
 
+  describe '#all' do
+    it 'returns a list of all streams' do
+      s = Twitch.streams.all
+      s.should_not be_nil
+      s.should_not be_empty
+    end
+
+    it 'accepts limit and offset options' do
+      s = Twitch.streams.all(:offset => 100, :limit => 50)
+      s.should_not be_nil
+      s.count.should == 50
+    end
+  end
+
   describe '#find' do
     it 'requires some query parameter' do
       expect {
