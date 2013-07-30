@@ -123,6 +123,27 @@ module Twitch::V2
       end
     end
 
+    # Get all currently live streams.
+    # @example
+    #   Twitch.streams.all
+    # @example
+    #   Twitch.streams.all(:offset => 100, :limit => 10)
+    # @param options [Hash] Limit criteria.
+    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @see #get
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
+    # @return [Array<Stream>] List of streams.
+    def all(options = {})
+      return @query.connection.accumulate(
+        :path => 'streams',
+        :json => 'streams',
+        :create => -> hash { Stream.new(hash, @query) },
+        :limit => options[:limit],
+        :offset => options[:offset]
+      )
+    end
+
     # Get a list of streams for a specific game, for a set of channels, or by other criteria.
     # @example
     #   Twitch.streams.find(:game => 'League of Legends', :limit => 50)
