@@ -55,7 +55,7 @@ module Twitch::V2
 
     # Get the channels the user is currently following.
     # @param options [Hash] Filter criteria.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see #following?
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels GET /users/:user/follows/channels

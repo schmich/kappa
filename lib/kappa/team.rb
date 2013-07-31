@@ -110,7 +110,7 @@ module Twitch::V2
     # @example
     #   Twitch.teams.all(:limit => 10)
     # @param options [Hash] Filter criteria.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams GET /teams
     # @return [Array<Team>] List of all active teams.
     def all(options = {})

@@ -110,7 +110,7 @@ module Twitch::V2
     #   Twitch.games.top(:limit => 10)
     # @param options [Hash] Filter criteria.
     # @option options [Boolean] :hls (nil) If `true`, limit the games to those that have any streams using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see Game Game
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop GET /games/top
@@ -140,7 +140,7 @@ module Twitch::V2
     # @param options [Hash] Search criteria.
     # @option options [String] :name Game name search term. This can be a partial name, e.g. `"league"`.
     # @option options [Boolean] :live (false) If `true`, only returns games that are currently live on at least one channel.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @see GameSuggestion GameSuggestion
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
     # @raise [ArgumentError] If `:name` is not specified.

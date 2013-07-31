@@ -70,7 +70,7 @@ module Twitch::V2
     # @example
     #   f = c.followers(:limit => 20)
     # @param options [Hash] Filter criteria.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see User
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschannelfollows GET /channels/:channel/follows
@@ -95,7 +95,7 @@ module Twitch::V2
     #   v = c.videos(:type => :broadcasts)
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see Video
     # @see Videos#for_channel Videos#for_channel

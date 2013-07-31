@@ -129,7 +129,7 @@ module Twitch::V2
     # @example
     #   Twitch.streams.all(:offset => 100, :limit => 10)
     # @param options [Hash] Limit criteria.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see #get
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
@@ -158,7 +158,7 @@ module Twitch::V2
     #   or channel names. If you want to find the stream for a single channel, see {Streams#get}.
     # @option options [Boolean] :embeddable (nil) If `true`, limit the streams to those that can be embedded. If `false` or `nil`, do not limit.
     # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see #get
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
@@ -223,7 +223,7 @@ module Twitch::V2
     #   Twitch.streams.featured(:limit => 5)
     # @param options [Hash] Filter criteria.
     # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
-    # @option options [Fixnum] :limit (none) Limit on the number of results returned.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured GET /streams/featured
     # @return [Array<Stream>] List of currently featured streams.
