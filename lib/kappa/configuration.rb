@@ -14,11 +14,14 @@ module Twitch
   #   streams = Twitch.streams.featured(:limit => 10)
   # @param client_id [String] When making requests to Twitch,
   #   you must specify a client ID for your application. If you do not specify a client ID,
-  #   Twitch reserves the right to rate-limit your application without warning. Defaults to
-  #   a random string, but in real applications, this should be set.
-  # @param api [Module] The version of the Twitch API to use. Defaults to `Twitch::V2`.
+  #   Twitch reserves the right to rate-limit your application without warning. If unspecified,
+  #   this defaults to a random string, but in real applications, you should set this explicitly.
+  # @param api [Module] The version of the Twitch API to use. Defaults to `Twitch::V2`, the only
+  #   API version currently supported.
+  # @return [nil] nil
   def self.configure(&block)
     @query = instance(&block)
+    nil
   end
 
   # Create a new interface to Twitch. This allows you to have multiple separate
@@ -34,6 +37,14 @@ module Twitch
   #
   #   streams = client_a.streams.featured(:limit => 10)
   #   channel = client_b.channels.get('destiny')
+  # @param client_id [String] When making requests to Twitch,
+  #   you must specify a client ID for your application. If you do not specify a client ID,
+  #   Twitch reserves the right to rate-limit your application without warning. If unspecified,
+  #   this defaults to a random string, but in real applications, you should set this explicitly.
+  # @param api [Module] The version of the Twitch API to use. Defaults to `Twitch::V2`, the only
+  #   API version currently supported.
+  # @return [Object] A Twitch query object through which you can make requests. The methods on this
+  #   object are the same as the methods on the default `Twitch` object.
   def self.instance(&block)
     config = Configuration.new
     config.instance_eval(&block)
