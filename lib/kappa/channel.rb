@@ -188,12 +188,10 @@ module Twitch::V2
     # @return [Channel] A valid `Channel` object if the channel exists, `nil` otherwise.
     def get(channel_name)
       name = CGI.escape(channel_name)
-      json = @query.connection.get("channels/#{name}")
 
       # HTTP 422 can happen if the channel is associated with a Justin.tv account.
-      if !json || json['status'] == 404 || json['status'] == 422
-        nil
-      else
+      Twitch::Status.map(404 => nil, 422 => nil) do
+        json = @query.connection.get("channels/#{name}")
         Channel.new(json, @query)
       end
     end

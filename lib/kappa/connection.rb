@@ -28,12 +28,23 @@ module Twitch
 
       response = self.class.get(request_url, :headers => all_headers, :query => query)
 
-      json = response.body
+      url = response.request.last_uri.to_s
+      status = response.code
+      body = response.body
+
+      case status
+        when 400...500
+          raise Error::ClientError.new("HTTP client error, status #{status}.", url, status, body)
+        when 500...600
+          raise Error::ServerError.new("HTTP server error, status #{status}.", url, status, body)
+        else
+          # Ignore, assume success.
+      end
 
       begin
-        return JSON.parse(json)
+        return JSON.parse(body)
       rescue JSON::ParserError => e
-        raise Error::ResponseFormatError.new(e, response.request.last_uri.to_s)
+        raise Error::FormatError.new(e, url, status, body)
       end
     end
 

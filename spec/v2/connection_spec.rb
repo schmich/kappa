@@ -15,27 +15,74 @@ describe Twitch::Connection do
       }.to raise_error(ArgumentError)
     end
 
-    it 'raises ResponseFormatError if response is not valid JSON' do
-      stub_request(:any, /.*api\.twitch\.tv.*/)
+    it 'raises FormatError if response is not valid JSON' do
+      stub_request(:any, /.*/)
         .to_return(:body => '"Invalid JSON')
 
       expect {
         c = Twitch::V2::Connection.new('client_id')
         json = c.get('/test')
-      }.to raise_error(Twitch::Error::ResponseFormatError)
+      }.to raise_error(Twitch::Error::FormatError)
     end
 
-    it 'raises ResponseFormatError with request URL' do
-      stub_request(:any, /.*api\.twitch\.tv.*/)
-        .to_return(:body => '"Invalid JSON')
+    it 'raises FormatError with request URL' do
+      status = 200
+      body = '"Invalid JSON'
+
+      stub_request(:any, /.*/)
+        .to_return(:status => status, :body => body)
 
       error = false
       begin
         c = Twitch::V2::Connection.new('client_id')
         json = c.get('/test')
-      rescue Twitch::Error::ResponseFormatError => e
+      rescue Twitch::Error::FormatError => e
         error = true
-        e.request_url.should =~ /test/ 
+        e.url.should =~ /test/ 
+        e.status.should == status
+        e.body.should == body
+      end
+
+      error.should be_true
+    end
+
+    it 'raises ClientError when HTTP status is 404' do
+      status = 404
+      body = 'Not found.'
+
+      stub_request(:any, /.*/)
+        .to_return(:status => status, :body => body)
+
+      error = false
+      begin
+        c = Twitch::V2::Connection.new('client_id')
+        json = c.get('/test')
+      rescue Twitch::Error::ClientError => e
+        error = true
+        e.url.should =~ /test/
+        e.status.should == status
+        e.body.should == body
+      end
+
+      error.should be_true
+    end
+
+    it 'raises ServerError when HTTP status is 404' do
+      status = 500
+      body = 'Internal server error.'
+
+      stub_request(:any, /.*/)
+        .to_return(:status => status, :body => body)
+
+      error = false
+      begin
+        c = Twitch::V2::Connection.new('client_id')
+        json = c.get('/test')
+      rescue Twitch::Error::ServerError => e
+        error = true
+        e.url.should =~ /test/
+        e.status.should == status
+        e.body.should == body
       end
 
       error.should be_true

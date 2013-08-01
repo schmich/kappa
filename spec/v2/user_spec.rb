@@ -90,6 +90,9 @@ describe Twitch::V2::User do
     end
 
     it 'returns false if the user is not following the channel' do
+      stub_request(:any, /\/follows\//)
+        .to_return(:status => 404, :body => '{"status":404, "message":"eghuk is not following idrajit", "error":"Not Found"}')
+
       u = Twitch.users.get('eghuk')
       u.should_not be_nil
       f = u.following?('idrajit')

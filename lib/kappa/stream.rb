@@ -114,12 +114,12 @@ module Twitch::V2
     # @return [Stream] A valid `Stream` object if the stream exists and is currently live, `nil` otherwise.
     def get(stream_name)
       name = CGI.escape(stream_name)
-      json = @query.connection.get("streams/#{name}")
-      stream = json['stream']
-      if json['status'] == 404 || !stream
-        nil
-      else
-        Stream.new(stream, @query)
+
+      # HTTP 422 can happen if the stream is associated with a Justin.tv account.
+      Twitch::Status.map(404 => nil, 422 => nil) do
+        json = @query.connection.get("streams/#{name}")
+        stream = json['stream']
+        stream.nil? ? nil : Stream.new(stream, @query)
       end
     end
 

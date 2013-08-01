@@ -95,11 +95,8 @@ module Twitch::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teamsteam GET /teams/:team
     def get(team_name)
       name = CGI.escape(team_name)
-      json = @query.connection.get("teams/#{name}")
-
-      if json['status'] == 404
-        nil
-      else
+      Twitch::Status.map(404 => nil) do
+        json = @query.connection.get("teams/#{name}")
         Team.new(json)
       end
     end

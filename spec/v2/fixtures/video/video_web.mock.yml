@@ -33,10 +33,6 @@ https://api.twitch.tv/kraken/videos/a402689752:
   _links:
     channel: https://api.twitch.tv/kraken/channels/riotgames
     self: https://api.twitch.tv/kraken/videos/a402689752
-https://api.twitch.tv/kraken/videos/does_not_exist:
-  status: 404
-  message: Video does not exist
-  error: Not Found
 https://api.twitch.tv/kraken/videos/foo%2Fbar:
   preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-402689752-320x240.jpg
   embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''

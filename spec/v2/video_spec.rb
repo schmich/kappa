@@ -78,6 +78,9 @@ describe Twitch::V2::Videos do
     end
 
     it 'returns nil when video does not exist' do
+      stub_request(:any, /.*api\.twitch\.tv.*/)
+        .to_return(:status => 404, :body => '{"status":404, "message":"Video does not exist", "error":"Not Found"}')
+
       v = Twitch.videos.get('does_not_exist')
       v.should be_nil
     end

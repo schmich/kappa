@@ -121,10 +121,8 @@ module Twitch::V2
       raise ArgumentError, 'id' if !id || id.strip.empty?
 
       id = CGI.escape(id)
-      json = @query.connection.get("videos/#{id}")
-      if !json || json['status'] == 404
-        nil
-      else
+      Twitch::Status.map(404 => nil) do
+        json = @query.connection.get("videos/#{id}")
         Video.new(json, @query)
       end
     end

@@ -72,10 +72,10 @@ module Twitch::V2
       )
     end
 
-    # @param channel [String/Channel/User/Stream/#name] The name of the channel to check.
+    # @param target [String, Channel, User, Stream, #name] The name of the channel to check.
     # @return [Boolean] `true` if the user is following the channel, `false` otherwise.
     # @see #following
-    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannelstarget GET /users/:user/follows/:channels/:target
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannelstarget GET /users/:user/follows/channels/:target
     def following?(target)
       name = if target.respond_to?(:name)
         target.name
@@ -86,9 +86,10 @@ module Twitch::V2
       user_name = CGI.escape(@name)
       channel_name = CGI.escape(name)
 
-      json = @query.connection.get("users/#{user_name}/follows/channels/#{channel_name}")
-      status = json['status']
-      return !status || (status != 404)
+      Twitch::Status.map(404 => false) do
+        @query.connection.get("users/#{user_name}/follows/channels/#{channel_name}")
+        true
+      end
     end
 
     # @example
@@ -138,11 +139,8 @@ module Twitch::V2
     # @return [User] A valid `User` object if the user exists, `nil` otherwise.
     def get(user_name)
       name = CGI.escape(user_name)
-      json = @query.connection.get("users/#{name}")
-
-      if !json || json['status'] == 404
-        nil
-      else
+      Twitch::Status.map(404 => nil) do
+        json = @query.connection.get("users/#{name}")
         User.new(json, @query)
       end
     end
