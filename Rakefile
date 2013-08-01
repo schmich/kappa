@@ -79,8 +79,13 @@ task :yard do
     FileUtils.rm_rf('.yardoc')
   end
 
-  Launchy.open('http://localhost:8808/docs/frames')
-  system('yard server --reload')
+  yard = Thread.start {
+    system('yard server --reload')
+  }
+
+  Launchy.open('http://localhost:8808/docs/index')
+
+  yard.join
 end
 
 desc "Release #{$gem.name} v#{$gem.version} and tag in git"
