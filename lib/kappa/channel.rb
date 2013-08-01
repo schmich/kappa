@@ -155,7 +155,7 @@ module Twitch::V2
 
     # @example
     #   2013-07-21 05:27:58 UTC
-    # @return [Time] When the channel was last updated (UTC). For example, when a stream is started, its channel is updated.
+    # @return [Time] When the channel was last updated (UTC). For example, when a stream is started or a channel's status is changed, the channel is updated.
     attr_reader :updated_at
 
     # @example
