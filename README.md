@@ -35,9 +35,37 @@ Twitch.configure do |config|
 end
 ```
 
+See the [`Twitch.configure`](http://rdoc.info/gems/kappa/Twitch#configure-class_method) documentation.
+
+
 ## Examples
 
-TODO.
+Get the featured streams on the Twitch.tv homepage:
+```ruby
+Twitch.streams.featured do |stream|
+  channel = stream.channel
+  puts "#{channel.display_name}: #{stream.viewer_count} viewers"
+  puts "#{channel.status}"
+  puts '-' * 80
+end
+```
+
+See if certain users are streaming:
+```ruby
+users = ['destiny', 'followgrubby', 'lethalfrag']
+Twitch.streams.find(:channel => users) do |stream|
+  puts "#{stream.channel.name} is streaming #{stream.game_name}."
+end
+```
+
+Get the most popular games being streamed.
+```ruby
+Twitch.games.top(:limit => 3) do |game|
+  print "#{game.name}: "
+  print "#{game.viewer_count} viewers in "
+  puts  "#{game.channel_count} channels"
+end
+```
 
 ## Resources
 
@@ -45,7 +73,7 @@ TODO.
 
 Channels serve as the home location for a [user's](#users) content. Channels have a [stream](#streams), can run commercials, store [videos](#videos), display information and status, and have a customized page including banners and backgrounds.
 
-See also [`Channel`](http://rdoc.info/gems/kappa/Kappa/V2/Channel) documentation.
+See the [`Channel`](http://rdoc.info/gems/kappa/Kappa/V2/Channel) documentation.
 
 ```ruby
 c = Twitch.channels.get('destiny')
@@ -62,7 +90,7 @@ c.followers   # => [#<Kappa::V2::User>, ...]
 
 Streams are video broadcasts that are currently live. They belong to a [user](#users) and are part of a [channel](#channels).
 
-See also [`Stream`](http://rdoc.info/gems/kappa/Kappa/V2/Stream) and [`Streams`](http://rdoc.info/gems/kappa/Kappa/V2/Streams) documentation.
+See the [`Stream`](http://rdoc.info/gems/kappa/Kappa/V2/Stream) and [`Streams`](http://rdoc.info/gems/kappa/Kappa/V2/Streams) documentation.
 
 ```ruby
 s = Twitch.streams.get('idrajit')
@@ -76,7 +104,7 @@ s.channel.url   # => "http://www.twitch.tv/idrajit"
 
 These are members of the Twitch community who have a Twitch account. If broadcasting, they can own a [stream](#streams) that they can broadcast on their [channel](#channels). If mainly viewing, they might follow or subscribe to channels.
 
-See also [`User`](http://rdoc.info/gems/kappa/Kappa/V2/User) documentation.
+See the [`User`](http://rdoc.info/gems/kappa/Kappa/V2/User) documentation.
 
 ```ruby
 u = Twitch.users.get('snoopeh')
@@ -89,7 +117,7 @@ u.following.map(&:name)   # => ["national_esl1", "dreamhacklol", "riotgames"]
 
 Videos are broadcasts or highlights owned by a [channel](#channels). Broadcasts are unedited videos that are saved after a streaming session. Highlights are videos edited from broadcasts by the channel's owner.
 
-See also [`Video`](http://rdoc.info/gems/kappa/Kappa/V2/Video) and [`Videos`](http://rdoc.info/gems/kappa/Kappa/V2/Videos) documentation.
+See the [`Video`](http://rdoc.info/gems/kappa/Kappa/V2/Video) and [`Videos`](http://rdoc.info/gems/kappa/Kappa/V2/Videos) documentation.
 
 ```ruby
 v = Twitch.videos.get('a395995729')
@@ -104,7 +132,7 @@ v.view_count    # => 12506
 
 Teams are an organization of [channels](#channels).
 
-See also [`Team`](http://rdoc.info/gems/kappa/Kappa/V2/Team) documentation.
+See the [`Team`](http://rdoc.info/gems/kappa/Kappa/V2/Team) documentation.
 
 ```ruby
 t = Twitch.teams.get('teamliquid')
@@ -118,7 +146,7 @@ t.updated_at    # => 2013-05-24 00:17:10 UTC
 
 Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#streams) and [channels](#channels). Games can be searched for by query.
 
-See also [`Game`](http://rdoc.info/gems/kappa/Kappa/V2/Game), [`Games`](http://rdoc.info/gems/kappa/Kappa/V2/Games), and [`GameSuggestion`](http://rdoc.info/gems/kappa/Kappa/V2/GameSuggestion) documentation.
+See the [`Game`](http://rdoc.info/gems/kappa/Kappa/V2/Game), [`Games`](http://rdoc.info/gems/kappa/Kappa/V2/Games), and [`GameSuggestion`](http://rdoc.info/gems/kappa/Kappa/V2/GameSuggestion) documentation.
 
 ```ruby
 top = Twitch.games.top(:limit => 2)
@@ -138,6 +166,10 @@ s = Twitch.games.find(:name => 'diablo', :live => true)
 s.map(&:name)        # => ["Diablo III", "Diablo II", "Diablo"]
 s.map(&:popularity)  # => [120, 4, 1]
 ```
+
+## Errors
+
+
 
 ## Documentation
 
