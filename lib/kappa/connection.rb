@@ -85,7 +85,7 @@ module Twitch
             count += 1
             block.call(object)
             if count == total_limit
-              return objects
+              return block_given? ? nil : objects
             end
           end
         end
@@ -93,7 +93,7 @@ module Twitch
         break if current_objects.empty? || (current_objects.count < page_limit)
       end
 
-      return objects
+      return block_given? ? nil : objects
     end
 
     def paginate(path, limit, offset, params = {})

@@ -111,7 +111,8 @@ module Twitch::V2
     # @param stream_name [String] The name of the stream to get. This is the same as the channel or user name.
     # @see #find
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamschannel GET /streams/:channel
-    # @return [Stream] A valid `Stream` object if the stream exists and is currently live, `nil` otherwise.
+    # @return [Stream] A valid `Stream` object, if the stream exists and is live.
+    # @return [nil] If the stream does not exist or is not live.
     def get(stream_name)
       name = CGI.escape(stream_name)
 
@@ -128,44 +129,61 @@ module Twitch::V2
     #   Twitch.streams.all
     # @example
     #   Twitch.streams.all(:offset => 100, :limit => 10)
+    # @example
+    #   Twitch.streams.all do |stream|
+    #     next if stream.viewer_count < 1000
+    #     puts stream.url
+    #   end
     # @param options [Hash] Limit criteria.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each stream is yielded.
+    # @yieldparam [Stream] stream Current stream.
     # @see #get
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
-    # @return [Array<Stream>] List of streams.
-    def all(options = {})
+    # @return [Array<Stream>] Currently live streams, if no block is given.
+    # @return [nil] If a block is given.
+    def all(options = {}, &block)
       return @query.connection.accumulate(
         :path => 'streams',
         :json => 'streams',
         :create => -> hash { Stream.new(hash, @query) },
         :limit => options[:limit],
-        :offset => options[:offset]
+        :offset => options[:offset],
+        &block
       )
     end
 
-    # Get a list of streams for a specific game, for a set of channels, or by other criteria.
+    # Get streams for a specific game, for a set of channels, or by other criteria.
     # @example
     #   Twitch.streams.find(:game => 'League of Legends', :limit => 50)
     # @example
     #   Twitch.streams.find(:channel => ['fgtvlive', 'incontroltv', 'destiny'])
     # @example
     #   Twitch.streams.find(:game => 'Diablo III', :channel => ['nl_kripp', 'protech'])
+    # @example
+    #   Twitch.streams.find(:game => 'League of Legends') do |stream|
+    #     next if stream.viewer_count < 1000
+    #     puts stream.url
+    #   end
     # @param options [Hash] Search criteria.
-    # @option options [String/Game/#name] :game Only return streams currently streaming the specified game.
-    # @option options [Array<String/Channel/#name>] :channel Only return streams for these channels.
+    # @option options [String, Game, #name] :game Only return streams currently streaming the specified game.
+    # @option options [Array<String, Channel, #name>] :channel Only return streams for these channels.
     #   If a channel is not currently streaming, it is omitted. You must specify an array of channels
     #   or channel names. If you want to find the stream for a single channel, see {Streams#get}.
     # @option options [Boolean] :embeddable (nil) If `true`, limit the streams to those that can be embedded. If `false` or `nil`, do not limit.
     # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each stream found is yielded.
+    # @yieldparam [Stream] stream Current stream.
     # @see #get
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
     # @raise [ArgumentError] If `options` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
     # @raise [ArgumentError] If `:channel` is not an array.
-    # @return [Array<Stream>] List of streams matching the specified criteria.
-    def find(options)
+    # @return [Array<Stream>] Streams matching the specified criteria, if no block is given.
+    # @return [nil] If a block is given.
+    def find(options, &block)
       check = options.dup
       check.delete(:limit)
       check.delete(:offset)
@@ -211,23 +229,32 @@ module Twitch::V2
         :json => 'streams',
         :create => -> hash { Stream.new(hash, @query) },
         :limit => options[:limit],
-        :offset => options[:offset]
+        :offset => options[:offset],
+        &block
       )
     end
 
-    # Get the list of currently featured (promoted) streams. This includes the list of streams shown on the Twitch homepage.
+    # Get the currently featured (promoted) streams. This includes the streams shown on the Twitch homepage.
     # @note There is no guarantee of how many streams are featured at any given time.
     # @example
     #   Twitch.streams.featured
     # @example
     #   Twitch.streams.featured(:limit => 5)
+    # @example
+    #   Twitch.streams.featured do |stream|
+    #     next if stream.viewer_count < 1000
+    #     puts stream.url
+    #   end
     # @param options [Hash] Filter criteria.
     # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each featured stream is yielded.
+    # @yieldparam [Stream] stream Current stream.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streamsfeatured GET /streams/featured
-    # @return [Array<Stream>] List of currently featured streams.
-    def featured(options = {})
+    # @return [Array<Stream>] Featured streams, if no block is given.
+    # @return [nil] If a block is given.
+    def featured(options = {}, &block)
       params = {}
 
       if options[:hls]
@@ -241,7 +268,8 @@ module Twitch::V2
         :sub_json => 'stream',
         :create => -> hash { Stream.new(hash, @query) },
         :limit => options[:limit],
-        :offset => options[:offset]
+        :offset => options[:offset],
+        &block
       )
     end
 

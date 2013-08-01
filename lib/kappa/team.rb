@@ -106,17 +106,26 @@ module Twitch::V2
     #   Twitch.teams.all
     # @example
     #   Twitch.teams.all(:limit => 10)
+    # @example
+    #   Twitch.teams do |team|
+    #     next if (Time.now - team.updated_at) > (60 * 60 * 24)
+    #     puts team.url
+    #   end
     # @param options [Hash] Filter criteria.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
+    # @yield Optional. If a block is given, each team is yielded.
+    # @yieldparam [Team] team Current team.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/teams.md#get-teams GET /teams
-    # @return [Array<Team>] List of all active teams.
-    def all(options = {})
+    # @return [Array<Team>] All active teams, if no block is given.
+    # @return [nil] If a block is given.
+    def all(options = {}, &block)
       return @query.connection.accumulate(
         :path => 'teams',
         :json => 'teams',
         :create => Team,
         :limit => options[:limit],
-        :offset => options[:offset]
+        :offset => options[:offset],
+        &block
       )
     end
   end

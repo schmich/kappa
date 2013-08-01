@@ -54,13 +54,23 @@ module Twitch::V2
     end
 
     # Get the channels the user is currently following.
+    # @example
+    #   user.following(:limit => 10)
+    # @example
+    #   user.following do |channel|
+    #     next if channel.game_name !~ /starcraft/i
+    #     puts channel.display_name
+    #   end
     # @param options [Hash] Filter criteria.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each followed channel is yielded.
+    # @yieldparam [Channel] channel Current channel.
     # @see #following?
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/follows.md#get-usersuserfollowschannels GET /users/:user/follows/channels
-    # @return [Array<Channel>] List of channels the user is currently following.
-    def following(options = {})
+    # @return [Array<Channel>] Channels the user is currently following, if no block is given.
+    # @return [nil] If a block is given.
+    def following(options = {}, &block)
       name = CGI.escape(@name)
       return @query.connection.accumulate(
         :path => "users/#{name}/follows/channels",
@@ -68,7 +78,8 @@ module Twitch::V2
         :sub_json => 'channel',
         :create => -> hash { Channel.new(hash, @query) },
         :limit => options[:limit],
-        :offset => options[:offset]
+        :offset => options[:offset],
+        &block
       )
     end
 

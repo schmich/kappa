@@ -68,14 +68,21 @@ module Twitch::V2
     # Get the users following this channel.
     # @note The number of followers is potentially very large, so it's recommended that you specify a `:limit`.
     # @example
-    #   f = c.followers(:limit => 20)
+    #   channel.followers(:limit => 20)
+    # @example
+    #   channel.followers do |follower|
+    #     puts follower.display_name
+    #   end
     # @param options [Hash] Filter criteria.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each follower is yielded.
+    # @yieldparam [User] follower Current follower.
     # @see User
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/channels.md#get-channelschannelfollows GET /channels/:channel/follows
-    # @return [Array<User>] List of users following this channel.
-    def followers(options = {})
+    # @return [Array<User>] Users following this channel, if no block is given.
+    # @return [nil] If a block is given.
+    def followers(options = {}, &block)
       name = CGI.escape(@name)
       return @query.connection.accumulate(
         :path => "channels/#{name}/follows",
@@ -83,7 +90,8 @@ module Twitch::V2
         :sub_json => 'user',
         :create => -> hash { User.new(hash, @query) },
         :limit => options[:limit],
-        :offset => options[:offset]
+        :offset => options[:offset],
+        &block
       )
     end
 
@@ -91,19 +99,26 @@ module Twitch::V2
     # @note This incurs additional web requests.
     # @note You can get videos directly from a channel name via {Videos#for_channel}.
     # @example
-    #   c = Twitch.channels.get('idrajit')
-    #   v = c.videos(:type => :broadcasts)
+    #   v = channel.videos(:type => :broadcasts)
+    # @example
+    #   channel.videos(:type => :highlights) do |video|
+    #     next if video.view_count < 10000
+    #     puts video.url
+    #   end 
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each video is yielded.
+    # @yieldparam [Video] video Current video.
     # @see Video
     # @see Videos#for_channel Videos#for_channel
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-channelschannelvideos GET /channels/:channel/videos
     # @raise [ArgumentError] If `:type` is not one of `:broadcasts` or `:highlights`.
-    # @return [Array<Video>] List of videos for the channel.
-    def videos(options = {})
-      @query.videos.for_channel(@name, options)
+    # @return [Array<Video>] Videos for the channel, if no block is given.
+    # @return [nil] If a block is given.
+    def videos(options = {}, &block)
+      @query.videos.for_channel(@name, options, &block)
     end
 
     # @example

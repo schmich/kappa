@@ -135,15 +135,23 @@ module Twitch::V2
     #   Twitch.videos.top(:period => :month, :game => 'Super Meat Boy')
     # @example
     #   Twitch.videos.top(:period => :all, :limit => 10)
+    # @example
+    #   Twitch.videos.top(:period => :all) do |video|
+    #     next if video.view_count < 10000
+    #     puts video.url
+    #   end
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :period (:week) Return videos only in this time period. Valid values are `:week`, `:month`, `:all`.
     # @option options [String] :game (nil) Return videos only for this game.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each top video is yielded.
+    # @yieldparam [Video] video Current video.
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-videostop GET /videos/top
     # @raise [ArgumentError] If `:period` is not one of `:week`, `:month`, or `:all`.
-    # @return [Array<Video>] List of top videos.
-    def top(options = {})
+    # @return [Array<Video>] Top videos, if no block is given.
+    # @return [nil] If a block is given.
+    def top(options = {}, &block)
       params = {}
 
       if options[:game]
@@ -163,7 +171,8 @@ module Twitch::V2
         :json => 'videos',
         :create => -> hash { Video.new(hash, @query) },
         :limit => options[:limit],
-        :offset => options[:offset]
+        :offset => options[:offset],
+        &block
       )
     end
 
@@ -172,14 +181,22 @@ module Twitch::V2
     #   v = Twitch.videos.for_channel('dreamhacktv')
     # @example
     #   v = Twitch.videos.for_channel('dreamhacktv', :type => :highlights, :limit => 10)
+    # @example
+    #   Twitch.videos.for_channel('dreamhacktv') do |video|
+    #     next if video.view_count < 10000
+    #     puts video.url
+    #   end
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each video is yielded.
+    # @yieldparam [Video] video Current video.
     # @see Channel#videos Channel#videos
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/videos.md#get-channelschannelvideos GET /channels/:channel/videos
     # @raise [ArgumentError] If `:type` is not one of `:broadcasts` or `:highlights`.
-    # @return [Array<Video>] List of videos for the channel.
+    # @return [Array<Video>] Videos for the channel, if no block is given.
+    # @return [nil] If a block is given.
     def for_channel(channel, options = {})
       if channel.respond_to?(:name)
         channel_name = channel.name

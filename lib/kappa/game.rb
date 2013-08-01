@@ -108,14 +108,22 @@ module Twitch::V2
     #   Twitch.games.top
     # @example
     #   Twitch.games.top(:limit => 10)
+    # @example
+    #   Twitch.games.top do |game|
+    #     next if game.viewer_count < 10000
+    #     puts game.name
+    #   end
     # @param options [Hash] Filter criteria.
     # @option options [Boolean] :hls (nil) If `true`, limit the games to those that have any streams using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
     # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each top game is yielded.
+    # @yieldparam [Game] game Current game.
     # @see Game Game
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop GET /games/top
-    # @return [Array<Game>] List of games sorted by number of current viewers on Twitch, most popular first.
-    def top(options = {})
+    # @return [Array<Game>] Games sorted by number of current viewers on Twitch, most popular first, if no block is given.
+    # @return [nil] If a block is given.
+    def top(options = {}, &block)
       params = {}
 
       if options[:hls]
@@ -128,7 +136,8 @@ module Twitch::V2
         :json => 'top',
         :create => Game,
         :limit => options[:limit],
-        :offset => options[:offset]
+        :offset => options[:offset],
+        &block
       )
     end
     
@@ -137,14 +146,22 @@ module Twitch::V2
     #   Twitch.games.find(:name => 'diablo')
     # @example
     #   Twitch.games.find(:name => 'starcraft', :live => true)
+    # @example
+    #   Twitch.games.find(:name => 'starcraft') do |suggestion|
+    #     next if suggestion.name =~ /heart of the swarm/i
+    #     puts suggestion.name
+    #   end
     # @param options [Hash] Search criteria.
     # @option options [String] :name Game name search term. This can be a partial name, e.g. `"league"`.
     # @option options [Boolean] :live (false) If `true`, only returns games that are currently live on at least one channel.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
+    # @yield Optional. If a block is given, each game suggestion is yielded.
+    # @yieldparam [GameSuggestion] suggestion Current game suggestion.
     # @see GameSuggestion GameSuggestion
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/search.md#get-searchgames GET /search/games
     # @raise [ArgumentError] If `:name` is not specified.
-    # @return [Array<GameSuggestion>] List of games matching the criteria.
+    # @return [Array<GameSuggestion>] Games matching the criteria, if no block is given.
+    # @return [nil] If a block is given.
     def find(options)
       raise ArgumentError, 'options' if options.nil?
       raise ArgumentError, 'name' if options[:name].nil?
