@@ -121,7 +121,7 @@ module Twitch::V2
     # @yieldparam [Game] game Current game.
     # @see Game Game
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/games.md#get-gamestop GET /games/top
-    # @return [Array<Game>] Games sorted by number of current viewers on Twitch, most popular first, if no block is given.
+    # @return [Array<Game>] Games sorted by number of current viewers on Twitch, highest first, if no block is given.
     # @return [nil] If a block is given.
     def top(options = {}, &block)
       params = {}
