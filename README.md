@@ -35,7 +35,11 @@ Twitch.configure do |config|
 end
 ```
 
-## Overview
+## Examples
+
+TODO.
+
+## Resources
 
 ### <a id="channels"></a>Channels
 
@@ -117,8 +121,8 @@ Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#strea
 See also [`Game`](http://rdoc.info/gems/kappa/Kappa/V2/Game), [`Games`](http://rdoc.info/gems/kappa/Kappa/V2/Games), and [`GameSuggestion`](http://rdoc.info/gems/kappa/Kappa/V2/GameSuggestion) documentation.
 
 ```ruby
-top = Twitch.games.top(:limit => 3)
-top.map(&:name)  # => ["League of Legends", "Dota 2", "StarCraft II: Heart of the Swarm"]
+top = Twitch.games.top(:limit => 2)
+top.map(&:name)  # => ["League of Legends", "StarCraft II: Heart of the Swarm"]
 ```
 
 ```ruby
@@ -126,16 +130,14 @@ g = Twitch.games.top(:limit => 1).first
 g.name                   # => "League of Legends"
 g.channel_count          # => 906
 g.viewer_count           # => 79223
-g.box_images.medium_url  # =>"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-272x380.jpg"
+g.box_images.medium_url  # =>"http://static-cdn.jtvnw.net/ttv-boxart/31412.jpg"
 ```
 
 ```ruby
 s = Twitch.games.find(:name => 'diablo', :live => true)
-s.map(&:name)        # => ["Diablo III", "Diablo II", "Diablo", "Diablo II: Lord of Destruction"]
-s.map(&:popularity)  # => [120, 4, 1, 1]
+s.map(&:name)        # => ["Diablo III", "Diablo II", "Diablo"]
+s.map(&:popularity)  # => [120, 4, 1]
 ```
-
-## Examples
 
 ## Documentation
 
