@@ -52,18 +52,47 @@ end
 
 See if certain users are streaming:
 ```ruby
-users = ['destiny', 'followgrubby', 'lethalfrag']
+users = ['destiny', 'followgrubby', 'incontroltv']
 Twitch.streams.find(:channel => users) do |stream|
   puts "#{stream.channel.name} is streaming #{stream.game_name}."
 end
 ```
 
-Get the most popular games being streamed.
+Get the most popular games being streamed:
 ```ruby
 Twitch.games.top(:limit => 3) do |game|
   print "#{game.name}: "
   print "#{game.viewer_count} viewers in "
   puts  "#{game.channel_count} channels"
+end
+```
+
+Get streams for a particular game:
+```ruby
+Twitch.streams.find(:game => 'League of Legends') do |stream|
+  next if stream.viewer_count < 1000
+  puts "#{stream.channel.display_name}: #{stream.viewer_count}"
+end
+```
+
+Get info for a single user:
+```ruby
+user = Twitch.users.get('lethalfrag')
+stream = user.stream
+
+puts user.display_name
+if stream
+  puts "Streaming #{stream.game_name} at #{stream.url}"
+else
+  puts 'Not streaming.'
+end
+```
+
+Get the followers of a channel:
+```ruby
+channel = Twitch.channels.get('day9tv')
+channel.followers do |user|
+  puts user.display_name
 end
 ```
 
