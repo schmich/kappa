@@ -2,11 +2,19 @@ require 'rspec'
 require 'kappa'
 require 'common'
 
-describe Twitch::V2::Game do
+describe Twitch::V2::Game, :game => true do
+  before do
+    WebMocks.load_dir(fixture('game'))
+  end
+
+  after do
+    WebMock.reset!
+  end
+
   describe '.new' do
     it 'accepts a hash' do
       hash = yaml_load('game/game.yml')
-      g = Game.new(hash)
+      g = Game.new(hash, nil)
       g.should_not be_nil
       g.id.should == hash['game']['_id']
       g.name.should == hash['game']['name']
@@ -19,9 +27,29 @@ describe Twitch::V2::Game do
       g.logo_images.class.should == Images
     end
   end
+
+  describe '#streams' do
+    it 'returns a list of streams' do
+      g = Twitch.games.top(:limit => 3).first
+      g.should_not be_nil
+      s = g.streams
+      s.should_not be_nil
+      s.count.should == 99
+    end
+
+    it 'accepts a block' do
+      g = Twitch.games.top(:limit => 3).first
+      g.should_not be_nil
+      i = 0
+      g.streams do |stream|
+        i += 1
+      end
+      i.should == 99
+    end
+  end
 end
 
-describe Twitch::V2::Games do
+describe Twitch::V2::Games, :game => true do
   before do
     WebMocks.load_dir(fixture('game'))
   end
@@ -104,7 +132,7 @@ describe Twitch::V2::Games do
   end
 end
 
-describe Twitch::V2::GameSuggestion do
+describe Twitch::V2::GameSuggestion, :game => true do
   describe '.new' do
     it 'accepts a hash' do
       hash = yaml_load('game/game_suggestion.yml')

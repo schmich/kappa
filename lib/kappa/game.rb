@@ -8,7 +8,8 @@ module Twitch::V2
     include Twitch::IdEquality
 
     # @private
-    def initialize(hash)
+    def initialize(hash, query)
+      @query = query
       @channel_count = hash['channels']
       @viewer_count = hash['viewers']
 
@@ -18,6 +19,34 @@ module Twitch::V2
       @giantbomb_id = game['giantbomb_id']
       @box_images = Images.new(game['box'])
       @logo_images = Images.new(game['logo'])
+    end
+
+    # Get streams for this game.
+    # @example
+    #   game.streams
+    # @example
+    #   game.streams(:embeddable => true, :limit => 20)
+    # @example
+    #   game.streams do |stream|
+    #     next if stream.viewer_count < 1000
+    #     puts stream.url
+    #   end
+    # @param options [Hash] Search criteria.
+    # @option options [Array<String, Channel, #name>] :channel Only return streams for these channels.
+    #   If a channel is not currently streaming, it is omitted. You must specify an array of channels
+    #   or channel names.
+    # @option options [Boolean] :embeddable (nil) If `true`, limit the streams to those that can be embedded. If `false` or `nil`, do not limit.
+    # @option options [Boolean] :hls (nil) If `true`, limit the streams to those using HLS (HTTP Live Streaming). If `false` or `nil`, do not limit.
+    # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
+    # @option options [Fixnum] :offset (0) Offset into the result set to begin enumeration.
+    # @yield Optional. If a block is given, each stream found is yielded.
+    # @yieldparam [Stream] stream Current stream.
+    # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
+    # @raise [ArgumentError] If `:channel` is not an array.
+    # @return [Array<Stream>] Streams matching the specified criteria, if no block is given.
+    # @return [nil] If a block is given.
+    def streams(options = {}, &block)
+      @query.streams.find(options.merge(:game => @name), &block)
     end
 
     # @example
@@ -134,7 +163,7 @@ module Twitch::V2
         :path => 'games/top',
         :params => params,
         :json => 'top',
-        :create => Game,
+        :create => -> hash { Game.new(hash, @query) },
         :limit => options[:limit],
         :offset => options[:offset],
         &block

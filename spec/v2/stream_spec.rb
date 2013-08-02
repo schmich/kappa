@@ -170,7 +170,7 @@ describe Twitch::V2::Streams do
     end
 
     it 'can query streams by Game objects' do
-      g = Game.new(yaml_load('game/game.yml'))
+      g = Game.new(yaml_load('game/game.yml'), nil)
       s = Twitch.streams.find(:game => g, :limit => 10)
       s.should_not be_nil
       s.length.should == 10

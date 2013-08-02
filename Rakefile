@@ -8,6 +8,12 @@ RSpec::Core::RakeTask.new(:spec) do |config|
   config.ruby_opts = '-I./spec/v2'
 end
 
+desc 'Run RSpec code examples for game'
+RSpec::Core::RakeTask.new(:'spec:game') do |config|
+  config.ruby_opts = '-I./spec/v2'
+  config.rspec_opts = '--tag game'
+end
+
 desc 'Run RSpec code examples with code coverage'
 RSpec::Core::RakeTask.new(:coverage) do |config|
   config.ruby_opts = '-r ./spec/coverage.rb -I./spec/v2'
