@@ -21,6 +21,10 @@ frag = Twitch.channels.get('lethalfrag')
 puts frag.streaming?
 ```
 
+```ruby
+gem 'kappa', '~> 1.0'
+```
+
 ## Configuration
 
 When making requests to Twitch, you must specify a client ID for your application.
@@ -105,9 +109,9 @@ end
 
 ### <a id="channels"></a>Channels
 
-Channels serve as the home location for a [user's](#users) content. Channels have a [stream](#streams), can run commercials, store [videos](#videos), display information and status, and have a customized page including banners and backgrounds.
-
-See the [`Channel`](http://rdoc.info/gems/kappa/Kappa/V2/Channel) documentation.
+Channels serve as the home location for a [user's](#users) content. Channels have a [stream](#streams),
+can run commercials, store [videos](#videos), display information and status, and have a customized page
+including banners and backgrounds. See the [`Channel`](http://rdoc.info/gems/kappa/Kappa/V2/Channel) documentation.
 
 ```ruby
 c = Twitch.channels.get('destiny')
@@ -122,9 +126,9 @@ c.followers   # => [#<Kappa::V2::User>, ...]
 
 ### <a id="streams"></a>Streams
 
-Streams are video broadcasts that are currently live. They belong to a [user](#users) and are part of a [channel](#channels).
-
-See the [`Stream`](http://rdoc.info/gems/kappa/Kappa/V2/Stream) and [`Streams`](http://rdoc.info/gems/kappa/Kappa/V2/Streams) documentation.
+Streams are video broadcasts that are currently live. They belong to a [user](#users) and are part of a
+[channel](#channels). See the [`Stream`](http://rdoc.info/gems/kappa/Kappa/V2/Stream) and
+[`Streams`](http://rdoc.info/gems/kappa/Kappa/V2/Streams) documentation.
 
 ```ruby
 s = Twitch.streams.get('idrajit')
@@ -136,9 +140,9 @@ s.channel.url   # => "http://www.twitch.tv/idrajit"
 
 ### <a id="users"></a>Users
 
-These are members of the Twitch community who have a Twitch account. If broadcasting, they can own a [stream](#streams) that they can broadcast on their [channel](#channels). If mainly viewing, they might follow or subscribe to channels.
-
-See the [`User`](http://rdoc.info/gems/kappa/Kappa/V2/User) documentation.
+These are members of the Twitch community who have a Twitch account. If broadcasting, they can own a
+[stream](#streams) that they can broadcast on their [channel](#channels). If mainly viewing, they might
+follow or subscribe to channels. See the [`User`](http://rdoc.info/gems/kappa/Kappa/V2/User) documentation.
 
 ```ruby
 u = Twitch.users.get('snoopeh')
@@ -149,9 +153,10 @@ u.following.map(&:name)   # => ["national_esl1", "dreamhacklol", "riotgames"]
 
 ### <a id="videos"></a>Videos
 
-Videos are broadcasts or highlights owned by a [channel](#channels). Broadcasts are unedited videos that are saved after a streaming session. Highlights are videos edited from broadcasts by the channel's owner.
-
-See the [`Video`](http://rdoc.info/gems/kappa/Kappa/V2/Video) and [`Videos`](http://rdoc.info/gems/kappa/Kappa/V2/Videos) documentation.
+Videos are broadcasts or highlights owned by a [channel](#channels). Broadcasts are unedited videos that are saved
+after a streaming session. Highlights are videos edited from broadcasts by the channel's owner. See the
+[`Video`](http://rdoc.info/gems/kappa/Kappa/V2/Video) and [`Videos`](http://rdoc.info/gems/kappa/Kappa/V2/Videos)
+documentation.
 
 ```ruby
 v = Twitch.videos.get('a395995729')
@@ -164,9 +169,8 @@ v.view_count    # => 12506
 
 ### <a id="teams"></a>Teams
 
-Teams are an organization of [channels](#channels).
-
-See the [`Team`](http://rdoc.info/gems/kappa/Kappa/V2/Team) documentation.
+Teams are an organization of [channels](#channels). See the [`Team`](http://rdoc.info/gems/kappa/Kappa/V2/Team)
+documentation.
 
 ```ruby
 t = Twitch.teams.get('teamliquid')
@@ -178,9 +182,10 @@ t.updated_at    # => 2013-05-24 00:17:10 UTC
 
 ### <a id="games"></a>Games
 
-Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#streams) and [channels](#channels). Games can be searched for by query.
-
-See the [`Game`](http://rdoc.info/gems/kappa/Kappa/V2/Game), [`Games`](http://rdoc.info/gems/kappa/Kappa/V2/Games), and [`GameSuggestion`](http://rdoc.info/gems/kappa/Kappa/V2/GameSuggestion) documentation.
+Games are categories (e.g. League of Legends, Diablo 3) used by [streams](#streams) and [channels](#channels).
+Games can be searched for by query. See the [`Game`](http://rdoc.info/gems/kappa/Kappa/V2/Game),
+[`Games`](http://rdoc.info/gems/kappa/Kappa/V2/Games), and
+[`GameSuggestion`](http://rdoc.info/gems/kappa/Kappa/V2/GameSuggestion) documentation.
 
 ```ruby
 top = Twitch.games.top(:limit => 2)
@@ -203,7 +208,23 @@ s.map(&:popularity)  # => [120, 4, 1]
 
 ## Errors
 
+All errors derive from `Twitch::Error`.
 
+- `Twitch:Error` - Base class for all errors.
+- `Twitch::Error::ResponseError` - Base class for all Twitch.tv API response errors.
+- `Twitch::Error::FormatError` - The returned data was incorrectly formatted (e.g. invalid JSON).
+- `Twitch::Error::ClientError` - The server returned a 4xx status code.
+- `Twitch::Error::ServerError` - The server returned a 5xx status code.
+
+All `ResponseError` errors have additional diagnostic information:
+
+```ruby
+e.status # => 422
+e.body   # => '{"status":422,"message":"...","error":"..."}'
+e.url    # => "https://api.twitch.tv/streams/desrow"
+```
+
+See the [`ResponseError`](http://rdoc.info/gems/kappa/Twitch/Error/ResponseError) documentation.
 
 ## Documentation
 
