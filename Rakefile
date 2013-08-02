@@ -102,7 +102,7 @@ task :yard do
 end
 
 desc "Release #{$gem.name} v#{$gem.version} and tag in git"
-task :release => :build do
+task :release => [:not_root, :build] do
   if (`git` rescue nil).nil?
     puts 'Could not run git command.'
     exit!
@@ -164,6 +164,15 @@ task :'coverage:view' do
 
   url = "file:///#{file}"
   Launchy.open(url)
+end
+
+task :not_root do
+  if !(`whoami` rescue nil).nil?
+    if `whoami`.strip == 'root'
+      puts 'Do not run as root.'
+      exit!
+    end
+  end
 end
 
 desc 'Run tests'
