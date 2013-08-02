@@ -37,10 +37,10 @@ end
 
 See the [`Twitch.configure`](http://rdoc.info/gems/kappa/Twitch#configure-class_method) documentation.
 
-
 ## Examples
 
 Get the featured streams on the Twitch.tv homepage:
+
 ```ruby
 Twitch.streams.featured do |stream|
   channel = stream.channel
@@ -51,6 +51,7 @@ end
 ```
 
 See if certain users are streaming:
+
 ```ruby
 users = ['destiny', 'followgrubby', 'incontroltv']
 Twitch.streams.find(:channel => users) do |stream|
@@ -59,6 +60,7 @@ end
 ```
 
 Get the most popular games being streamed:
+
 ```ruby
 Twitch.games.top(:limit => 3) do |game|
   print "#{game.name}: "
@@ -68,6 +70,7 @@ end
 ```
 
 Get streams for a particular game:
+
 ```ruby
 Twitch.streams.find(:game => 'League of Legends') do |stream|
   next if stream.viewer_count < 1000
@@ -76,6 +79,7 @@ end
 ```
 
 Get info for a single user:
+
 ```ruby
 user = Twitch.users.get('lethalfrag')
 stream = user.stream
@@ -89,6 +93,7 @@ end
 ```
 
 Get the followers of a channel:
+
 ```ruby
 channel = Twitch.channels.get('day9tv')
 channel.followers do |user|
