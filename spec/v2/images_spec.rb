@@ -2,6 +2,8 @@ require 'rspec'
 require 'kappa'
 require 'common'
 
+include Twitch::V2
+
 describe Twitch::V2::Images do
   describe '.new' do
     it 'accepts a hash' do

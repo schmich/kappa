@@ -2,6 +2,8 @@ require 'rspec'
 require 'kappa'
 require 'common'
 
+include Twitch::V2
+
 describe Twitch::V2::Stream do
   before do
     WebMocks.load_dir(fixture('stream'))

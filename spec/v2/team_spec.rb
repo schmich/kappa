@@ -4,6 +4,8 @@ require 'kappa'
 require 'common'
 require 'uri'
 
+include Twitch::V2
+
 describe Twitch::V2::Team do
   before do
     WebMocks.load_dir(fixture('team'))

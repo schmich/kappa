@@ -2,7 +2,9 @@ require 'rspec'
 require 'kappa'
 require 'common'
 
-describe Twitch::V2::Game, :game => true do
+include Twitch::V2
+
+describe Twitch::V2::Game do
   before do
     WebMocks.load_dir(fixture('game'))
   end
@@ -49,7 +51,7 @@ describe Twitch::V2::Game, :game => true do
   end
 end
 
-describe Twitch::V2::Games, :game => true do
+describe Twitch::V2::Games do
   before do
     WebMocks.load_dir(fixture('game'))
   end
@@ -132,7 +134,7 @@ describe Twitch::V2::Games, :game => true do
   end
 end
 
-describe Twitch::V2::GameSuggestion, :game => true do
+describe Twitch::V2::GameSuggestion do
   describe '.new' do
     it 'accepts a hash' do
       hash = yaml_load('game/game_suggestion.yml')

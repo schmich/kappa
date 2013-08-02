@@ -4,25 +4,32 @@ require 'json'
 require 'yaml'
 require 'rspec/core/rake_task'
 
+desc 'Run RSpec examples'
 RSpec::Core::RakeTask.new(:spec) do |config|
   config.ruby_opts = '-I./spec/v2'
 end
 
-desc 'Run RSpec code examples for game'
-RSpec::Core::RakeTask.new(:'spec:game') do |config|
-  config.ruby_opts = '-I./spec/v2'
-  config.rspec_opts = '--tag game'
+def add_rspec_task(tag)
+  desc "Run RSpec #{tag} examples"
+  RSpec::Core::RakeTask.new(:"spec:#{tag}") do |config|
+    config.ruby_opts = '-I./spec/v2'
+    config.pattern = "spec/**/#{tag}_spec.rb"
+  end
 end
 
-desc 'Run RSpec code examples with code coverage'
+desc 'Run RSpec examples with code coverage'
 RSpec::Core::RakeTask.new(:coverage) do |config|
   config.ruby_opts = '-r ./spec/coverage.rb -I./spec/v2'
 end
 
-desc 'Run RSpec code examples and upload coverage stats'
+desc 'Run RSpec examples and upload coverage stats'
 RSpec::Core::RakeTask.new(:'coverage:upload') do |config|
   config.ruby_opts = '-r ./spec/coverage-upload.rb -I./spec/v2'
 end
+
+# Add an RSpec task for each individual spec file.
+tags = Dir['**/*_spec.rb'].map { |file| file =~ /([^\/]*)_spec\.rb$/i; $1 }
+tags.each(&method(:add_rspec_task))
 
 class GemInfo
   def initialize
