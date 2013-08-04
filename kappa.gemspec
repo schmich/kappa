@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   END
   s.authors = ['Chris Schmich']
   s.email = 'schmch@gmail.com'
-  s.files = Dir['{lib}/**/*.rb', 'bin/*', '*.md']
+  s.files = Dir['{lib}/**/*.rb', 'bin/*', '*.md', 'LICENSE', '.yardopts']
   s.require_path = 'lib'
   s.homepage = 'https://github.com/schmich/kappa'
   s.license = 'MIT'
