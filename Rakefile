@@ -65,7 +65,7 @@ task :irb do
 end
 
 desc "Install #{$gem.name} gem"
-task :install => :build do
+task :'gem:install' => :build do
   gemfile = "gem/#{$gem.gem_filename}"
   if !gemfile.nil?
     sh "gem install --no-ri --no-rdoc #{gemfile}"
@@ -75,34 +75,19 @@ task :install => :build do
 end
 
 desc "Uninstall #{$gem.name} gem"
-task :uninstall do
+task :'gem:uninstall' do
   sh "gem uninstall #{$gem.name} -x"
 end
 
 desc "Build #{$gem.name} gem"
-task :build do
+task :'gem:build' do
   FileUtils.mkdir_p('gem')
   sh "gem build #{$gem.gemspec_filename}"
   FileUtils.mv $gem.gem_filename, 'gem'
 end
 
-desc 'Run YARD server to view docs'
-task :yard do
-  if Dir.exists?('.yardoc')
-    FileUtils.rm_rf('.yardoc')
-  end
-
-  yard = Thread.start {
-    system('yard server --reload')
-  }
-
-  Launchy.open('http://localhost:8808/docs/index')
-
-  yard.join
-end
-
 desc "Release #{$gem.name} v#{$gem.version} and tag in git"
-task :release => [:not_root, :build] do
+task :'gem:release' => [:not_root, :build] do
   if (`git` rescue nil).nil?
     abort 'Could not run git command.'
   end
@@ -135,6 +120,21 @@ task :release => [:not_root, :build] do
   sh "gem push gem/#{$gem.gem_filename}"
 
   puts 'Fin.'
+end
+
+desc 'Run YARD server to view docs'
+task :yard do
+  if Dir.exists?('.yardoc')
+    FileUtils.rm_rf('.yardoc')
+  end
+
+  yard = Thread.start {
+    system('yard server --reload')
+  }
+
+  Launchy.open('http://localhost:8808/docs/index')
+
+  yard.join
 end
 
 desc 'Log a Twitch request as YAML'
