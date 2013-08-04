@@ -1,4 +1,5 @@
 *.gem
+/gem/
 *.rbc
 */.bundle/
 */log/*.log
@@ -10,7 +11,7 @@
 *.sublime-workspace
 .config
 .coveralls.yml
-coverage
+/coverage/
 InstalledFiles
 lib/bundler/man
 pkg
@@ -20,7 +21,7 @@ test/tmp
 test/version_tmp
 tmp
 # YARD artifacts
-.yardoc
+/.yardoc/
 _yardoc
 doc/
 Gemfile.lock
