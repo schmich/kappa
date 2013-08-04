@@ -104,26 +104,26 @@ end
 desc "Release #{$gem.name} v#{$gem.version} and tag in git"
 task :release => [:not_root, :build] do
   if (`git` rescue nil).nil?
-    puts 'Could not run git command.'
-    exit!
+    abort 'Could not run git command.'
   end
 
   if (`gem` rescue nil).nil?
-    puts 'Could not run gem command.'
-    exit!
+    abort 'Could not run gem command.'
   end
 
   unless `git branch --no-color`.strip =~ /^\*\s+master$/
-    puts 'You must release from the master branch.'
-    exit!
+    abort 'You must release from the master branch.'
+  end
+
+  unless `git status` =~ /^nothing to commit/m
+    abort 'You cannot release with outstanding changes (see git status).'
   end
 
   version = $gem.version
   tag = "v#{version}"
 
   if `git tag`.strip =~ /^#{tag}$/
-    puts "Tag #{tag} already exists, you must bump version."
-    exit!
+    abort "Tag #{tag} already exists, you must bump version in version.rb."
   end
 
   puts "Releasing version #{version}."
@@ -169,8 +169,7 @@ end
 task :not_root do
   if !(`whoami` rescue nil).nil?
     if `whoami`.strip == 'root'
-      puts 'Do not run as root.'
-      exit!
+      abort 'Do not run as root.'
     end
   end
 end
