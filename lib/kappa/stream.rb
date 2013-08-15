@@ -124,7 +124,7 @@ module Twitch::V2
       end
     end
 
-    # Get all currently live streams.
+    # Get all currently live streams sorted by descending viewer count.
     # @example
     #   Twitch.streams.all
     # @example
@@ -141,7 +141,7 @@ module Twitch::V2
     # @yieldparam [Stream] stream Current stream.
     # @see #get
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
-    # @return [Array<Stream>] Currently live streams, if no block is given.
+    # @return [Array<Stream>] Currently live streams, sorted by descending viewer count, if no block is given.
     # @return [nil] If a block is given.
     def all(options = {}, &block)
       return @query.connection.accumulate(
@@ -154,7 +154,7 @@ module Twitch::V2
       )
     end
 
-    # Get streams for a specific game, for a set of channels, or by other criteria.
+    # Get streams for a specific game, for a set of channels, or by other criteria, sorted by descending viewer count.
     # @example
     #   Twitch.streams.find(:game => 'League of Legends', :limit => 50)
     # @example
@@ -181,7 +181,8 @@ module Twitch::V2
     # @see https://github.com/justintv/Twitch-API/blob/master/v2_resources/streams.md#get-streams GET /streams
     # @raise [ArgumentError] If `options` does not specify a search criteria (`:game`, `:channel`, `:embeddable`, or `:hls`).
     # @raise [ArgumentError] If `:channel` is not an array.
-    # @return [Array<Stream>] Streams matching the specified criteria, if no block is given.
+    # @return [Array<Stream>] Streams matching the specified criteria, sorted by
+    #   descending viewer count, if no block is given.
     # @return [nil] If a block is given.
     def find(options, &block)
       check = options.dup
