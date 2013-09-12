@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.homepage = 'https://github.com/schmich/kappa'
   s.license = 'MIT'
+  s.required_ruby_version = '>= 1.9'
   s.add_runtime_dependency 'httparty', '~> 0.11.0'
   s.add_runtime_dependency 'addressable', '~> 2.3.3'
   s.add_development_dependency 'rake', '~> 0.9'
