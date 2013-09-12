@@ -65,7 +65,7 @@ task :irb do
 end
 
 desc "Install #{$gem.name} gem"
-task :'gem:install' => :build do
+task :'gem:install' => :'gem:build' do
   gemfile = "gem/#{$gem.gem_filename}"
   if !gemfile.nil?
     sh "gem install --no-ri --no-rdoc #{gemfile}"
@@ -87,7 +87,7 @@ task :'gem:build' do
 end
 
 desc "Release #{$gem.name} v#{$gem.version} and tag in git"
-task :'gem:release' => [:not_root, :build] do
+task :'gem:release' => [:not_root, :'gem:build'] do
   if (`git` rescue nil).nil?
     abort 'Could not run git command.'
   end
