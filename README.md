@@ -2,11 +2,11 @@
 
 Kappa is the Ruby library for interfacing with the [Twitch.tv API](https://github.com/justintv/Twitch-API).
 
-[![Gem Version](https://badge.fury.io/rb/kappa.png)](http://rubygems.org/gems/kappa)
-[![Build Status](https://secure.travis-ci.org/schmich/kappa.png)](http://travis-ci.org/schmich/kappa)
-[![Dependency Status](https://gemnasium.com/schmich/kappa.png)](https://gemnasium.com/schmich/kappa)
-[![Coverage Status](https://coveralls.io/repos/schmich/kappa/badge.png?branch=master)](https://coveralls.io/r/schmich/kappa?branch=master)
-[![Code Climate](https://codeclimate.com/github/schmich/kappa.png)](https://codeclimate.com/github/schmich/kappa)
+[![Gem Version](https://badge.fury.io/rb/kappa.svg)](http://rubygems.org/gems/kappa)
+[![Build Status](https://secure.travis-ci.org/schmich/kappa.svg)](http://travis-ci.org/schmich/kappa)
+[![Dependency Status](https://gemnasium.com/schmich/kappa.svg)](https://gemnasium.com/schmich/kappa)
+[![Coverage Status](http://img.shields.io/coveralls/schmich/kappa.svg)](https://coveralls.io/r/schmich/kappa?branch=master)
+[![Code Climate](http://img.shields.io/codeclimate/github/schmich/kappa.svg)](https://codeclimate.com/github/schmich/kappa)
 
 ## Getting Started
 
