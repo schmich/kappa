@@ -1,4 +1,4 @@
-# <img src="https://raw.github.com/schmich/kappa/master/assets/kappa.png" /> Kappa
+# ![Kappa](https://raw.github.com/schmich/kappa/master/assets/kappa.png) Kappa
 
 Kappa is the Ruby library for interfacing with the [Twitch.tv API](https://github.com/justintv/Twitch-API).
 
