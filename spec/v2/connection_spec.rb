@@ -38,12 +38,12 @@ describe Twitch::Connection do
         json = c.get('/test')
       rescue Twitch::Error::FormatError => e
         error = true
-        e.url.should =~ /test/ 
-        e.status.should == status
-        e.body.should == body
+        expect(e.url).to match(/test/) 
+        expect(e.status).to eq(status)
+        expect(e.body).to eq(body)
       end
 
-      error.should be_true
+      expect(error).to be_truthy
     end
 
     it 'raises ClientError when HTTP status is 404' do
@@ -59,12 +59,12 @@ describe Twitch::Connection do
         json = c.get('/test')
       rescue Twitch::Error::ClientError => e
         error = true
-        e.url.should =~ /test/
-        e.status.should == status
-        e.body.should == body
+        expect(e.url).to match(/test/)
+        expect(e.status).to eq(status)
+        expect(e.body).to eq(body)
       end
 
-      error.should be_true
+      expect(error).to be_truthy
     end
 
     it 'raises ServerError when HTTP status is 404' do
@@ -80,12 +80,12 @@ describe Twitch::Connection do
         json = c.get('/test')
       rescue Twitch::Error::ServerError => e
         error = true
-        e.url.should =~ /test/
-        e.status.should == status
-        e.body.should == body
+        expect(e.url).to match(/test/)
+        expect(e.status).to eq(status)
+        expect(e.body).to eq(body)
       end
 
-      error.should be_true
+      expect(error).to be_truthy
     end
   end
 end

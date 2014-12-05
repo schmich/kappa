@@ -19,30 +19,30 @@ describe Twitch::V2::Team do
     it 'can be created from a hash' do
       hash = yaml_load('team/eg.yml')
       t = Team.new(hash)
-      t.id.should == hash['_id']
-      t.logo_url.should == hash['logo']
-      t.display_name.should == hash['display_name']
-      t.background_url.should == hash['background']
-      t.updated_at.class.should == Time
-      t.updated_at.should < Time.now
-      t.updated_at.utc?.should be_true
-      t.created_at.class.should == Time
-      t.created_at.should < Time.now
-      t.created_at.utc?.should be_true
-      t.info.should == hash['info']
-      t.banner_url.should == hash['banner']
-      t.name.should == hash['name']
+      expect(t.id).to eq(hash['_id'])
+      expect(t.logo_url).to eq(hash['logo'])
+      expect(t.display_name).to eq(hash['display_name'])
+      expect(t.background_url).to eq(hash['background'])
+      expect(t.updated_at.class).to eq(Time)
+      expect(t.updated_at).to be < Time.now
+      expect(t.updated_at.utc?).to be_truthy
+      expect(t.created_at.class).to eq(Time)
+      expect(t.created_at).to be < Time.now
+      expect(t.created_at.utc?).to be_truthy
+      expect(t.info).to eq(hash['info'])
+      expect(t.banner_url).to eq(hash['banner'])
+      expect(t.name).to eq(hash['name'])
     end
   end
 
   describe '#url' do
     it 'should return a valid URI' do
       t = Twitch.teams.get('teamliquid')
-      t.should_not be_nil
+      expect(t).not_to be_nil
       u = t.url
-      u.should_not be_nil
+      expect(u).not_to be_nil
       uri = URI.parse(u)
-      uri.class.should == URI::HTTP
+      expect(uri.class).to eq(URI::HTTP)
     end
   end
 end
@@ -59,24 +59,24 @@ describe Twitch::V2::Teams do
   describe '#get' do
     it 'creates a Team from team name' do
       t = Twitch.teams.get('teamliquid')
-      t.should_not be_nil
+      expect(t).not_to be_nil
     end
 
     it 'returns nil when team does not exist' do
       t = Twitch.teams.get('does_not_exist')
-      t.should be_nil
+      expect(t).to be_nil
     end
   end
 
   describe '#all' do
     it 'returns all teams by default' do
       t = Twitch.teams.all
-      t.count.should == 486
+      expect(t.count).to eq(486)
     end
 
     it 'returns a limited number of teams when specified' do
       t = Twitch.teams.all(:limit => 10)
-      t.count.should == 10
+      expect(t.count).to eq(10)
     end
   end
 end

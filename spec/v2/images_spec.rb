@@ -9,14 +9,14 @@ describe Twitch::V2::Images do
     it 'accepts a hash' do
       hash = yaml_load('images/images.yml')
       i = Images.new(hash)
-      i.should_not be_nil
-      i.large_url.should == hash['large']
-      i.medium_url.should == hash['medium']
-      i.small_url.should == hash['small']
-      i.template_url.should == hash['template']
+      expect(i).not_to be_nil
+      expect(i.large_url).to eq(hash['large'])
+      expect(i.medium_url).to eq(hash['medium'])
+      expect(i.small_url).to eq(hash['small'])
+      expect(i.template_url).to eq(hash['template'])
       custom = i.url(320, 240)
-      custom.should_not be_nil
-      custom.should_not == i.template_url
+      expect(custom).not_to be_nil
+      expect(custom).not_to eq(i.template_url)
     end
   end
 end

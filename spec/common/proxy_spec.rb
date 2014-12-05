@@ -26,30 +26,30 @@ end
 describe Proxy do
   it 'responds to methods it has defined without creating proxy' do
     f = Fake.new
-    f.fake.should be_true
-    f.proxied.should be_nil
+    expect(f.fake).to be_truthy
+    expect(f.proxied).to be_nil
   end
 
   it 'responds to proxied methods by creating proxy' do
     f = Fake.new
-    f.real.should be_true
-    f.proxied.should_not be_nil
+    expect(f.real).to be_truthy
+    expect(f.proxied).not_to be_nil
   end
 
   describe '#respond_to?' do
     it 'returns true for methods it has defined' do
       f = Fake.new
-      f.respond_to?(:fake).should be_true
+      expect(f.respond_to?(:fake)).to be_truthy
     end
 
     it 'returns true for proxied methods' do
       f = Fake.new
-      f.respond_to?(:real).should be_true
+      expect(f.respond_to?(:real)).to be_truthy
     end
 
     it 'returns false for undefined methods' do
       f = Fake.new
-      f.respond_to?(:undefined).should be_false
+      expect(f.respond_to?(:undefined)).to be_falsey
     end
   end
 
@@ -57,13 +57,13 @@ describe Proxy do
     it 'returns a valid method for methods it has defined' do
       f = Fake.new
       m = f.method(:fake)
-      m.should_not be_nil
+      expect(m).not_to be_nil
     end
 
     it 'returns a valid method for proxied methods' do
       f = Fake.new
       m = f.method(:real)
-      m.should_not be_nil
+      expect(m).not_to be_nil
     end
 
     it 'returns nil for undefined methods' do

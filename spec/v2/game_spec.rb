@@ -17,36 +17,36 @@ describe Twitch::V2::Game do
     it 'accepts a hash' do
       hash = yaml_load('game/game.yml')
       g = Game.new(hash, nil)
-      g.should_not be_nil
-      g.id.should == hash['game']['_id']
-      g.name.should == hash['game']['name']
-      g.giantbomb_id.should == hash['game']['giantbomb_id']
-      g.channel_count.should == hash['channels']
-      g.viewer_count.should == hash['viewers']
-      g.box_images.should_not be_nil
-      g.box_images.class.should == Images
-      g.logo_images.should_not be_nil
-      g.logo_images.class.should == Images
+      expect(g).not_to be_nil
+      expect(g.id).to eq(hash['game']['_id'])
+      expect(g.name).to eq(hash['game']['name'])
+      expect(g.giantbomb_id).to eq(hash['game']['giantbomb_id'])
+      expect(g.channel_count).to eq(hash['channels'])
+      expect(g.viewer_count).to eq(hash['viewers'])
+      expect(g.box_images).not_to be_nil
+      expect(g.box_images.class).to eq(Images)
+      expect(g.logo_images).not_to be_nil
+      expect(g.logo_images.class).to eq(Images)
     end
   end
 
   describe '#streams' do
     it 'returns a list of streams' do
       g = Twitch.games.top(:limit => 3).first
-      g.should_not be_nil
+      expect(g).not_to be_nil
       s = g.streams
-      s.should_not be_nil
-      s.count.should == 99
+      expect(s).not_to be_nil
+      expect(s.count).to eq(99)
     end
 
     it 'accepts a block' do
       g = Twitch.games.top(:limit => 3).first
-      g.should_not be_nil
+      expect(g).not_to be_nil
       i = 0
       g.streams do |stream|
         i += 1
       end
-      i.should == 99
+      expect(i).to eq(99)
     end
   end
 end
@@ -63,47 +63,47 @@ describe Twitch::V2::Games do
   describe '.top' do
     it 'returns a list of top games' do
       g = Twitch.games.top
-      g.should_not be_nil
-      g.each { |s| s.class.should == Game }
-      g.count.should == 445
+      expect(g).not_to be_nil
+      g.each { |s| expect(s.class).to eq(Game) }
+      expect(g.count).to eq(445)
     end
 
     it 'limits results with the :limit parameter' do
       g = Twitch.games.top(:limit => 3)
-      g.should_not be_nil
-      g.each { |s| s.class.should == Game }
-      g.count.should == 3
+      expect(g).not_to be_nil
+      g.each { |s| expect(s.class).to eq(Game) }
+      expect(g.count).to eq(3)
     end
 
     it 'can be filtered with the :hls parameter' do
       g = Twitch.games.top(:hls => true, :limit => 3)
-      g.should_not be_nil
-      g.should_not be_empty
-      g.count.should == 3
+      expect(g).not_to be_nil
+      expect(g).not_to be_empty
+      expect(g.count).to eq(3)
     end
 
     it 'returns results offset by the :offset parameter' do
       g = Twitch.games.top(:offset => 5, :limit => 5)
-      g.should_not be_nil
-      g.should_not be_empty
-      g.count.should == 5
+      expect(g).not_to be_nil
+      expect(g).not_to be_empty
+      expect(g.count).to eq(5)
     end
   end
 
   describe '.find' do
     it 'returns a list of game suggestions' do
       g = Twitch.games.find(:name => 'starcraft')
-      g.should_not be_nil
-      g.count.should == 7
-      g.each { |s| s.class.should == GameSuggestion }
+      expect(g).not_to be_nil
+      expect(g.count).to eq(7)
+      g.each { |s| expect(s.class).to eq(GameSuggestion) }
     end
 
     it 'returns a list of game suggestions that are live' do
       g1 = Twitch.games.find(:name => 'diablo')
-      g1.should_not be_nil
+      expect(g1).not_to be_nil
       g2 = Twitch.games.find(:name => 'diablo', :live => true)
-      g2.should_not be_nil
-      g1.count.should > g2.count
+      expect(g2).not_to be_nil
+      expect(g1.count).to be > g2.count
     end
 
     it 'requires :name to be specified' do
@@ -128,8 +128,8 @@ describe Twitch::V2::Games do
 
     it 'handles empty results' do
       g = Twitch.games.find(:name => 'empty_results')
-      g.should_not be_nil
-      g.should be_empty
+      expect(g).not_to be_nil
+      expect(g).to be_empty
     end
   end
 end
@@ -139,15 +139,15 @@ describe Twitch::V2::GameSuggestion do
     it 'accepts a hash' do
       hash = yaml_load('game/game_suggestion.yml')
       g = GameSuggestion.new(hash)
-      g.should_not be_nil
-      g.id.should == hash['_id']
-      g.name.should == hash['name']
-      g.giantbomb_id.should == hash['giantbomb_id']
-      g.popularity.should == hash['popularity']
-      g.box_images.should_not be_nil
-      g.box_images.class.should == Images
-      g.logo_images.should_not be_nil
-      g.logo_images.class.should == Images
+      expect(g).not_to be_nil
+      expect(g.id).to eq(hash['_id'])
+      expect(g.name).to eq(hash['name'])
+      expect(g.giantbomb_id).to eq(hash['giantbomb_id'])
+      expect(g.popularity).to eq(hash['popularity'])
+      expect(g.box_images).not_to be_nil
+      expect(g.box_images.class).to eq(Images)
+      expect(g.logo_images).not_to be_nil
+      expect(g.logo_images.class).to eq(Images)
     end
   end
 end

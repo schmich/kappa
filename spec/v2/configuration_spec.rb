@@ -23,11 +23,11 @@ describe Twitch do
       end
 
       c = Twitch.channels.get('giantwaffle')
-      c.should_not be_nil
+      expect(c).not_to be_nil
 
-      a_request(:get, 'https://api.twitch.tv/kraken/channels/giantwaffle')
-        .with(:headers => { 'Client-ID' => client_id })
-        .should have_been_made.once
+      expect(a_request(:get, 'https://api.twitch.tv/kraken/channels/giantwaffle')
+        .with(:headers => { 'Client-ID' => client_id }))
+        .to have_been_made.once
     end
 
     it 'uses correct classes when #api is set' do
@@ -35,10 +35,10 @@ describe Twitch do
         config.api = Twitch::V2
       end
 
-      Twitch.channels.class.should == Twitch::V2::Channels
+      expect(Twitch.channels.class).to eq(Twitch::V2::Channels)
 
       c = Twitch.channels.get('giantwaffle')
-      c.class.should == Twitch::V2::Channel
+      expect(c.class).to eq(Twitch::V2::Channel)
     end
   end
 
@@ -56,11 +56,11 @@ describe Twitch do
       end
 
       c = instance.channels.get('giantwaffle')
-      c.should_not be_nil
+      expect(c).not_to be_nil
 
-      a_request(:get, 'https://api.twitch.tv/kraken/channels/giantwaffle')
-        .with(:headers => { 'Client-ID' => instance_client_id })
-        .should have_been_made.once
+      expect(a_request(:get, 'https://api.twitch.tv/kraken/channels/giantwaffle')
+        .with(:headers => { 'Client-ID' => instance_client_id }))
+        .to have_been_made.once
     end
   end
 end

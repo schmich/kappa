@@ -11,7 +11,7 @@ describe Twitch::Status do
         raise Twitch::Error::ClientError.new('', '', 404, '')
       end
 
-      value.should be_true
+      expect(value).to be_truthy
     end
 
     it 'raises an error when value is not mapped' do
