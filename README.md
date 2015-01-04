@@ -279,6 +279,6 @@ end
 
 ## License
 
-Copyright &copy; 2013-2014 Chris Schmich
+Copyright &copy; 2013 Chris Schmich
 <br />
 MIT License. See [LICENSE](LICENSE) for details.
