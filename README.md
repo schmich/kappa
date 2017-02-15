@@ -22,7 +22,7 @@ puts frag.streaming?
 ```
 
 ```ruby
-gem 'kappa', '~> 1.0'
+gem 'kappa', '~> 2.0'
 ```
 
 ## Configuration
@@ -122,6 +122,9 @@ c.status      # => "Destiny - Diamond I ADC  - Number 1 Draven player..."
 c.teams       # => [#<Kappa::V2::Team>]      
 c.videos      # => [#<Kappa::V2::Video>, ...]
 c.followers   # => [#<Kappa::V2::User>, ...]
+c.broadcaster_language
+c.partner?
+c.views
 ```
 
 ### <a id="streams"></a>Streams
