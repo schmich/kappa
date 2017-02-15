@@ -1,0 +1,355 @@
+https://api.twitch.tv/kraken/streams/featured?hls=true&limit=5&offset=0:
+  featured:
+  - stream:
+      channel:
+        game: ! 'StarCraft II: Heart of the Swarm'
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/gomtv_en-profile_image-94e78553215820d4-300x300.jpeg
+        updated_at: '2013-07-19T08:57:29Z'
+        status: 2013 BenQ GSTL Season 1 Playoffs Round3 - AxiomAcer vs LG-IM
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/gomtv_en-channel_background_image-b40a7fd0a987b80f.jpeg
+        teams: []
+        video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/gomtv_en-channel_offline_image-a56f0868418184c6-640x360.png
+        display_name: GOMTV
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/gomtv_en-channel_header_image-d31cd4b7b1a52113-640x125.jpeg
+        mature: false
+        _id: 32659069
+        _links:
+          videos: https://api.twitch.tv/kraken/channels/gomtv_en/videos
+          commercial: https://api.twitch.tv/kraken/channels/gomtv_en/commercial
+          follows: https://api.twitch.tv/kraken/channels/gomtv_en/follows
+          chat: https://api.twitch.tv/kraken/chat/gomtv_en
+          stream_key: https://api.twitch.tv/kraken/channels/gomtv_en/stream_key
+          self: https://api.twitch.tv/kraken/channels/gomtv_en
+          editors: https://api.twitch.tv/kraken/channels/gomtv_en/editors
+          subscriptions: https://api.twitch.tv/kraken/channels/gomtv_en/subscriptions
+          features: https://api.twitch.tv/kraken/channels/gomtv_en/features
+        name: gomtv_en
+        url: http://www.twitch.tv/gomtv_en
+        created_at: '2012-08-03T09:28:24Z'
+      game: ! 'StarCraft II: Heart of the Swarm'
+      viewers: 10187
+      preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_gomtv_en-320x200.jpg
+      _links:
+        self: https://api.twitch.tv/kraken/streams/gomtv_en
+      _id: 6206642128
+      name: live_user_gomtv_en
+      broadcaster: unknown_rtmp
+    text: ! '<p>GSTL is back with new teams that are hungry for a championship! Which
+      one will take the bragging rights at the end of this season?</p>
+  
+  
+      <br>
+  
+  
+  
+      <p><a href="/gomtv_en">Click here</a> to watch and chat live!</p>
+  
+  '
+    image: http://s.jtvnw.net/jtv_user_pictures/hosted_images/gstl_twitchpromo.png
+  - stream:
+      channel:
+        game: Metal Gear Solid
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ludendi-profile_image-7ffbedb6144c27bb-300x300.png
+        updated_at: '2013-07-19T09:14:44Z'
+        status: Ludendi presents European Speedster Assembly 2013! July 15-21! Go to
+          http://europeanspeedsterassembly.com
+        background: 
+        teams:
+        - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-sda-team_logo_image-0d1c05b2eca8ce86-300x300.png
+          updated_at: '2013-05-24T00:17:30Z'
+          background: 
+          display_name: Speed Demos Archive
+          info: ! 'Speed Demos Archive (SDA) is the premier community for video game
+            speedruns (completing games as quickly as possible through extensive planning,
+            practice, and knowledge of game mechanics/glitches).  Check out our library
+            of over 700 speedruns, forum, and knowledge base at <a rel="nofollow" href="http://speeddemosarchive.com"
+            target="_blank">http://speeddemosarchive.com</a><br /><br />
+  
+            Also check out SDA''s live stream listing (which allows multiple streams
+            to be played on the same page) at <a rel="nofollow" href="http://www.w00ty.com/sda/stream"
+            target="_blank">http://www.w00ty.com/sda/stream</a>.
+  
+  
+  
+  '
+          banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-sda-banner_image-bb152abe16530df2-640x125.png
+          _id: 180
+          _links:
+            self: https://api.twitch.tv/kraken/teams/sda
+          name: sda
+          created_at: '2012-02-09T23:10:15Z'
+        - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ludendi-team_logo_image-eb78749452f3a3dc-300x300.png
+          updated_at: '2013-06-28T10:12:04Z'
+          background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ludendi-background_image-68c16f4866e85936.jpeg
+          display_name: Team Ludendi
+          info: ! '<a rel="nofollow" href="http://www.twitter.com/teamludendi" target="_blank">
+  
+            <img src="http://img9.imageshack.us/img9/1410/00newebteammemberstwitt.png"
+            border="0" alt="00newebteammemberstwitt.png" /></a>
+  
+  '
+          banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ludendi-banner_image-c3212ef526dd732e-640x125.png
+          _id: 431
+          _links:
+            self: https://api.twitch.tv/kraken/teams/ludendi
+          name: ludendi
+          created_at: '2012-10-11T19:23:27Z'
+        - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-srl-team_logo_image-eed2eed579966c19-300x300.jpeg
+          updated_at: '2013-05-24T00:17:18Z'
+          background: 
+          display_name: SpeedRunsLive
+          info: ! 'Check out <a rel="nofollow" href="http://speedrunslive.com" target="_blank">SpeedRunsLive.com!</a>
+  
+  '
+          banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-srl-banner_image-af620c8f039bdd48-640x125.jpeg
+          _id: 145
+          _links:
+            self: https://api.twitch.tv/kraken/teams/srl
+          name: srl
+          created_at: '2012-01-06T08:16:10Z'
+        video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ludendi-channel_offline_image-b6afb4910b50ed00-640x360.jpeg
+        display_name: Ludendi
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ludendi-channel_header_image-f33cb42afafa213c-640x125.jpeg
+        mature: 
+        _id: 28673774
+        _links:
+          videos: https://api.twitch.tv/kraken/channels/ludendi/videos
+          commercial: https://api.twitch.tv/kraken/channels/ludendi/commercial
+          follows: https://api.twitch.tv/kraken/channels/ludendi/follows
+          chat: https://api.twitch.tv/kraken/chat/ludendi
+          stream_key: https://api.twitch.tv/kraken/channels/ludendi/stream_key
+          self: https://api.twitch.tv/kraken/channels/ludendi
+          editors: https://api.twitch.tv/kraken/channels/ludendi/editors
+          subscriptions: https://api.twitch.tv/kraken/channels/ludendi/subscriptions
+          features: https://api.twitch.tv/kraken/channels/ludendi/features
+        name: ludendi
+        url: http://www.twitch.tv/ludendi
+        created_at: '2012-03-03T13:23:16Z'
+      game: Metal Gear Solid
+      viewers: 6135
+      preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ludendi-320x200.jpg
+      _links:
+        self: https://api.twitch.tv/kraken/streams/ludendi
+      _id: 6184337488
+      name: live_user_ludendi
+      broadcaster: xsplit
+    text: ! '<p>European Speedster Assembly is the largest gathering of speedrunners
+      in Europe ever.
+  
+      Over 6 days we will bring you lovely european accents, over 130 games beaten in
+      record time, live interviews with your favorite european speedrunners. And much
+      much more! All in favor for Doctors without Borders.</p>
+  
+  '
+    image: http://s.jtvnw.net/jtv_user_pictures/hosted_images/esa_thumb.png
+  - stream:
+      channel:
+        game: League of Legends
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/itshafu-profile_image-1c424631f99d8f02-300x300.jpeg
+        updated_at: '2013-07-19T07:25:46Z'
+        status: ! 'itshafu.com || DIAMOND 1 RAGE QUEUEIN'' --  sub stuff all week //
+          RAFFLE: Bastion // itshafu.com/points'
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/itshafu-channel_background_image-2e861ad688bf4b5b.png
+        teams: []
+        video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/itshafu-channel_offline_image-80907f0ed07e2178-640x360.jpeg
+        display_name: itsHafu
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/itshafu-channel_header_image-570bbd1074674e16-640x125.png
+        mature: false
+        _id: 30777889
+        _links:
+          videos: https://api.twitch.tv/kraken/channels/itshafu/videos
+          commercial: https://api.twitch.tv/kraken/channels/itshafu/commercial
+          follows: https://api.twitch.tv/kraken/channels/itshafu/follows
+          chat: https://api.twitch.tv/kraken/chat/itshafu
+          stream_key: https://api.twitch.tv/kraken/channels/itshafu/stream_key
+          self: https://api.twitch.tv/kraken/channels/itshafu
+          editors: https://api.twitch.tv/kraken/channels/itshafu/editors
+          subscriptions: https://api.twitch.tv/kraken/channels/itshafu/subscriptions
+          features: https://api.twitch.tv/kraken/channels/itshafu/features
+        name: itshafu
+        url: http://www.twitch.tv/itshafu
+        created_at: '2012-05-24T19:36:36Z'
+      game: League of Legends
+      viewers: 2522
+      preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_itshafu-320x200.jpg
+      _links:
+        self: https://api.twitch.tv/kraken/streams/itshafu
+      _id: 6206162928
+      name: live_user_itshafu
+      broadcaster: obs
+    text: ! '<p>Well-renowned for her skillful play and innate gaming ability, Hafu
+      has become a dominant force within the competitive scene. With multiple first
+      place finishes in games, such as WoW and Bloodline Champions, she has proven time
+      and time again that she is able to keep up with the best of ''em. Come join her
+      as she takes her talents to League of Legends!</p>
+  
+  
+      <br>
+  
+  
+  
+      <p><a href="/itshafu">Click here to watch and chat live.</a></p>
+  
+  '
+    image: http://s.jtvnw.net/jtv_user_pictures/hosted_images/QMGDU.png
+  - stream:
+      channel:
+        game: Dota 2
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/feardarkness-profile_image-3506ec69418398cc-300x300.jpeg
+        updated_at: '2013-07-19T08:19:27Z'
+        status: EG.Fear [RC] 1080p Dota 2 IXDL-O.
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/feardarkness-channel_background_image-fbf2b30ff6b777ac.jpeg
+        teams:
+        - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-team_logo_image-9107b874d4c3fc3b-300x300.jpeg
+          updated_at: '2013-05-24T00:17:11Z'
+          background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-background_image-da36973b6d829ac6.png
+          display_name: Evil Geniuses
+          info: ! 'Team Info
+  
+  '
+          banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-banner_image-1ad9c4738f4698b1-640x125.png
+          _id: 2
+          _links:
+            self: https://api.twitch.tv/kraken/teams/eg
+          name: eg
+          created_at: '2011-10-11T23:59:43Z'
+        video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/feardarkness-channel_offline_image-8aa891f83dcce972-640x360.jpeg
+        display_name: FearDarkness
+        banner: 
+        mature: 
+        _id: 25095238
+        _links:
+          videos: https://api.twitch.tv/kraken/channels/feardarkness/videos
+          commercial: https://api.twitch.tv/kraken/channels/feardarkness/commercial
+          follows: https://api.twitch.tv/kraken/channels/feardarkness/follows
+          chat: https://api.twitch.tv/kraken/chat/feardarkness
+          stream_key: https://api.twitch.tv/kraken/channels/feardarkness/stream_key
+          self: https://api.twitch.tv/kraken/channels/feardarkness
+          editors: https://api.twitch.tv/kraken/channels/feardarkness/editors
+          subscriptions: https://api.twitch.tv/kraken/channels/feardarkness/subscriptions
+          features: https://api.twitch.tv/kraken/channels/feardarkness/features
+        name: feardarkness
+        url: http://www.twitch.tv/feardarkness
+        created_at: '2011-09-26T21:36:09Z'
+      game: Dota 2
+      viewers: 3038
+      preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_feardarkness-320x200.jpg
+      _links:
+        self: https://api.twitch.tv/kraken/streams/feardarkness
+      _id: 6206471296
+      name: live_user_feardarkness
+      broadcaster: obs
+    text: ! '<p>Clinton ''Fear'' Loomis has been a high profile member of the DotA community
+      for the last half decade.  Known for his near perfect farm and prowess as his
+      team''s carry, Fear is the perfect streamer to watch if you''re looking for someone
+      who will be making big play.</p>
+  
+  
+      <br>
+  
+  
+  
+      <p><a href="/feardarkness">Click here</a> to watch and chat live!</p>
+  
+  '
+    image: http://s.jtvnw.net/jtv_user_pictures/hosted_images/icon_feardarkness.jpg
+  - stream:
+      channel:
+        game: The Binding of Isaac
+        logo: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-profile_image-050adf252718823b-300x300.png
+        updated_at: '2013-07-19T05:28:18Z'
+        status: (Day 561/731) | Random Child in Basement | 2 Year Livestream Challenge
+          |
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_background_image-833a4324bc698c9b.jpeg
+        teams:
+        - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-yeousch-team_logo_image-aefa3a5d3d431535-300x300.png
+          updated_at: '2013-05-24T00:18:17Z'
+          background: 
+          display_name: The Yeousch Network
+          info: ! "<div style=\"clear:both;margin:5px 0;\"><a rel=\"nofollow\" href=\"http://www.gamefanshop.com/partner-Yeousch/?ret=www.twitch.tv/yeousch_live\"
+            target=\"_blank\"><img src=\"http://www.gamefanshop.com/StoreFiles/Styles/vip/banner1.jpg\"
+            alt=\"gamefanshop.com banner\" /></a></div>\n<div style=\"width:638px;color:#CCC;background:#004;border:1px
+            solid #003;\">\n            \n                    <div style=\"font-size:10px;background:#003;\">\n
+            \                   \t\t<b><i>Stream Information</i></b>\n\t\t\t\t\t</div>\n
+            \           \n            <div style=\"width:638px;color:#CCC;background:#004;border:1px
+            solid #003;margin:0;height:220px;\">\n                    <p style=\"font-size:14px;padding-left:5px;\">Welcome
+            to the <b>Yeousch Network Team Page.</b>  This Team Page serves as Yeousch's
+            Central Hub for our Twitch.TV Operations. Our goal is to to connect our
+            partners from YouTube and Twitch.TV with each other, as well as bringing
+            their viewers a great variety of content from an amazing network of broadcasters
+            in the process. Make sure to check out each of our broadcaster as they bring
+            their entertaining and high quality streams to viewers everywhere.</p>\n
+            \                   <p style=\"font-size:16px;color:#CCC;\" align=\"center\"><b><i>Follow
+            Us Around the Web</i></b></p>\n           <div align=\"center\">\n                            <a
+            rel=\"nofollow\" href=\"http://facebook.com/yeousch2\" target=\"_blank\"><img
+            src=\"http://cyanideepic.com/twitch/images/1319653012_Facebook.png\" height=\"40\"
+            alt=\"1319653012_Facebook.png\" /></a>\n                            <a rel=\"nofollow\"
+            href=\"http://twitter.com/yeousch\" target=\"_blank\"><img src=\"http://cyanideepic.com/twitch/images/1319653018_Twitter.png\"
+            style=\"margin-left:5px;\" height=\"40\" alt=\"1319653018_Twitter.png\"
+            /></a>\n                            <a rel=\"nofollow\" href=\"http://youtube.com/yeousch\"
+            target=\"_blank\"><img src=\"http://cyanideepic.com/twitch/images/1319653004_YouTube.png\"
+            style=\"margin-left:5px;\" height=\"40\" alt=\"1319653004_YouTube.png\"
+            /></a>\n                            <a rel=\"nofollow\" href=\"http://yeousch.com/\"
+            target=\"_blank\"><img src=\"http://eliasranzschleifer.com/yeousch/YeouschMainLogo.png\"
+            width=\"37\" style=\"margin-bottom:3px;\" alt=\"YeouschMainLogo.png\" /></a>\n
+            \                   </div>\n</div>\n</div>\n\n\n"
+          banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-yeousch-banner_image-c836700ee8a6df28-640x125.png
+          _id: 230
+          _links:
+            self: https://api.twitch.tv/kraken/teams/yeousch
+          name: yeousch
+          created_at: '2012-03-27T20:54:53Z'
+        - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-team_logo_image-86ae62cac99f0d5c-300x300.jpeg
+          updated_at: '2013-05-24T00:17:31Z'
+          background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-background_image-a5fad4523a64de21.jpeg
+          display_name: LAMG
+          info: ! "<a rel=\"nofollow\" href=\"http://twitter.com/LookAtMyGaming\" target=\"_blank\">
+            \n<img src=\"http://portcityplayhouse.org/images/PCP_2011_2012/twitterLogoANimated.gif\"
+            border=\"1\" alt=\"twitterLogoANimated.gif\" /></a>\n\n\n"
+          banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-banner_image-44b35bd8b404a240-640x125.png
+          _id: 181
+          _links:
+            self: https://api.twitch.tv/kraken/teams/lookatmygaming
+          name: lookatmygaming
+          created_at: '2012-02-10T01:21:52Z'
+        video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_offline_image-3b801b2ccc11830b-640x360.jpeg
+        display_name: Lethalfrag
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_header_image-463a4670c91c2b61-640x125.jpeg
+        mature: true
+        _id: 23460970
+        _links:
+          videos: https://api.twitch.tv/kraken/channels/lethalfrag/videos
+          commercial: https://api.twitch.tv/kraken/channels/lethalfrag/commercial
+          follows: https://api.twitch.tv/kraken/channels/lethalfrag/follows
+          chat: https://api.twitch.tv/kraken/chat/lethalfrag
+          stream_key: https://api.twitch.tv/kraken/channels/lethalfrag/stream_key
+          self: https://api.twitch.tv/kraken/channels/lethalfrag
+          editors: https://api.twitch.tv/kraken/channels/lethalfrag/editors
+          subscriptions: https://api.twitch.tv/kraken/channels/lethalfrag/subscriptions
+          features: https://api.twitch.tv/kraken/channels/lethalfrag/features
+        name: lethalfrag
+        url: http://www.twitch.tv/lethalfrag
+        created_at: '2011-07-15T07:53:58Z'
+      game: The Binding of Isaac
+      viewers: 3620
+      preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_lethalfrag-320x200.jpg
+      _links:
+        self: https://api.twitch.tv/kraken/streams/lethalfrag
+      _id: 6205431968
+      name: live_user_lethalfrag
+      broadcaster: obs
+    text: ! '<p>731 straight days of streaming, can it be done? LethalFrag puts his
+      life through the ultimate test!</p>
+  
+  
+      <br>
+  
+  
+  
+      <p><a href="/lethalfrag">Click here</a> to watch and chat live!</p>
+  
+  '
+    image: http://s.jtvnw.net/jtv_user_pictures/hosted_images/lethalfrag.png
+  _links:
+    next: https://api.twitch.tv/kraken/streams/featured?hls=true&limit=5&offset=5
+    self: https://api.twitch.tv/kraken/streams/featured?hls=true&limit=5&offset=0

@@ -1,4 +1,4 @@
-module Twitch::V2
+module Twitch::V5
   # A group of URLs pointing to variously-sized versions of the same image.
   class Images
     # @private

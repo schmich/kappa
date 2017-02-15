@@ -26,19 +26,17 @@ module Twitch
         'Kappa-Version' => Twitch::VERSION
       }.merge(headers())
 
-      response = self.class.get(request_url, :headers => all_headers, :query => query)
+      response = self.class.get(request_url, headers: all_headers, query: query)
 
       url = response.request.last_uri.to_s
       status = response.code
       body = response.body
 
       case status
-        when 400...500
-          raise Error::ClientError.new("HTTP client error, status #{status}.", url, status, body)
-        when 500...600
-          raise Error::ServerError.new("HTTP server error, status #{status}.", url, status, body)
-        else
-          # Ignore, assume success.
+      when 400...500
+        raise Error::ClientError.new("HTTP client error, status #{status}.", url, status, body)
+      when 500...600
+        raise Error::ServerError.new("HTTP server error, status #{status}.", url, status, body)
       end
 
       begin
@@ -125,15 +123,15 @@ module Twitch
     end
 
   private
-    DEFAULT_BASE_URL = 'https://api.twitch.tv/kraken/'
+    DEFAULT_BASE_URL = 'https://api.twitch.tv/kraken/'.freeze
   end
 end
 
-module Twitch::V2
+module Twitch::V5
   # @private
   class Connection < Twitch::Connection
     def headers
-      { 'Accept' => 'application/vnd.twitchtv.v2+json' }
+      { 'Accept' => 'application/vnd.twitchtv.v5+json' }
     end
   end
 end

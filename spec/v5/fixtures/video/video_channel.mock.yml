@@ -1,0 +1,97 @@
+https://api.twitch.tv/kraken/videos/a413663426:
+  recorded_at: '2013-06-07T06:04:17Z'
+  preview: http://static-cdn.jtvnw.net/jtv.thumbs/archive-413663426-320x240.jpg
+  title: 2013 WCS S1 Finals - Day 1, Round of 16 Groups A/C
+  url: http://www.twitch.tv/wcs_osl/b/413663426
+  _id: a413663426
+  game: ! 'StarCraft II: Heart of the Swarm'
+  channel:
+    name: wcs_osl
+    display_name: WCS Korea - OSL
+  length: 20012
+  views: 4777
+  _links:
+    channel: https://api.twitch.tv/kraken/channels/wcs_osl
+    self: https://api.twitch.tv/kraken/videos/a413663426
+  embed: ! '<object bgcolor=''#000000'' data=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+    height=''300'' id=''clip_embed_player_flash'' type=''application/x-shockwave-flash''
+    width=''400''>
+  
+    <param name=''movie'' value=''http://www.twitch.tv/widgets/archive_embed_player.swf''
+    />
+  
+    <param name=''allowScriptAccess'' value=''always'' />
+  
+    <param name=''allowNetworking'' value=''all'' />
+  
+    <param name=''allowFullScreen'' value=''true'' />
+  
+    <param name=''flashvars'' value=''title=2013%2BWCS%2BS1%2BFinals%2B-%2BDay%2B1%252C%2BRound%2Bof%2B16%2BGroups%2BA%252FC&channel=wcs_osl&start_volume=25&archive_id=413663426&auto_play=false''
+    />
+  
+    </object>
+  
+  '
+  description: 
+https://api.twitch.tv/kraken/channels/wcs_osl:
+  created_at: '2013-04-04T07:38:20Z'
+  updated_at: '2013-06-08T18:39:06Z'
+  video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/wcs_osl-channel_offline_image-231da432b88b107e-640x360.jpeg
+  url: http://www.twitch.tv/wcs_osl
+  status: 2013 WCS S1 Finals - Day 2, Round of 8
+  teams:
+  - created_at: '2013-06-03T23:30:20Z'
+    updated_at: '2013-06-08T06:43:56Z'
+    _id: 690
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wcs_finals-banner_image-e0a7ddbb98b76836-640x125.jpeg
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wcs_finals-team_logo_image-9ff4b92c9f5ed879-300x300.png
+    info: ! '<center><a rel="nofollow" href="http://wcs.battle.net/sc2/en/brackets"
+      title="Portal:Brackets" target="_blank"><img alt="" width="630" src="http://i.imgur.com/lFeHgAT.jpg"
+      title="WCS Brackets" /></a></center>
+  
+  
+  
+  '
+    name: wcs_finals
+    display_name: WCS S1 Finals
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wcs_finals-background_image-4409b5e719698448.jpeg
+    _links:
+      self: https://api.twitch.tv/kraken/teams/wcs_finals
+  - created_at: '2012-07-26T23:18:06Z'
+    updated_at: '2013-06-04T00:05:54Z'
+    _id: 363
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wcs-banner_image-604726ea3b15c53f-640x125.jpeg
+    logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wcs-team_logo_image-e8bd14693a200a47-300x300.jpeg
+    info: ! '<a rel="nofollow" href="https://bnetcmsus-a.akamaihd.net/cms/gallery/R35VBBI4S54S1370295085225.jpg"
+      target="_blank"><img src="http://i.imgur.com/AJ2GR4j.jpg?1" alt="WCS_Schedule
+      EDT.jpg" /></a> <br /><center><i>Click the above image for a full resolution schedule</i></center>
+  
+      <br /><a rel="nofollow" href="http://us.battle.net/sc2/en/blog/9355170/StarCraft_II_World_Championship_Series_2013-4_2_2013"
+      target="_blank"><img src="http://i.imgur.com/37H4qOI.jpg" alt="37H4qOI.jpg" /></a>
+  
+      <br />
+  
+  '
+    name: wcs
+    display_name: StarCraft II - World Championship Series
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-wcs-background_image-d8f37e2cb2218d60.jpeg
+    _links:
+      self: https://api.twitch.tv/kraken/teams/wcs
+  _id: 42062105
+  game: ! 'StarCraft II: Heart of the Swarm'
+  banner: http://static-cdn.jtvnw.net/jtv_user_pictures/wcs_osl-channel_header_image-57ffbdbb4a72bb50-640x125.jpeg
+  logo: http://static-cdn.jtvnw.net/jtv_user_pictures/wcs_osl-profile_image-3459a4b03fe8caac-300x300.jpeg
+  mature: 
+  display_name: WCS Korea - OSL
+  name: wcs_osl
+  _links:
+    editors: https://api.twitch.tv/kraken/channels/wcs_osl/editors
+    subscriptions: https://api.twitch.tv/kraken/channels/wcs_osl/subscriptions
+    commercial: https://api.twitch.tv/kraken/channels/wcs_osl/commercial
+    features: https://api.twitch.tv/kraken/channels/wcs_osl/features
+    videos: https://api.twitch.tv/kraken/channels/wcs_osl/videos
+    self: https://api.twitch.tv/kraken/channels/wcs_osl
+    follows: https://api.twitch.tv/kraken/channels/wcs_osl/follows
+    chat: https://api.twitch.tv/kraken/chat/wcs_osl
+    stream_key: https://api.twitch.tv/kraken/channels/wcs_osl/stream_key
+  background: http://static-cdn.jtvnw.net/jtv_user_pictures/wcs_osl-channel_background_image-d7dbfc2e4d205a3a.jpeg

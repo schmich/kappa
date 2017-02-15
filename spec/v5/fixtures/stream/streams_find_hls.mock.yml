@@ -1,0 +1,619 @@
+https://api.twitch.tv/kraken/streams?hls=true&limit=10&offset=0:
+  streams:
+  - game: League of Legends
+    viewers: 16332
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_chaoxlol-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/chaoxlol
+    _id: 6205211216
+    channel:
+      game: League of Legends
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/chaoxlol-profile_image-90283d863e89c412-300x300.jpeg
+      updated_at: '2013-07-19T07:43:18Z'
+      status: Chaox - Lets Learn Jungle
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/chaoxlol-channel_background_image-2cd4395333c93380.jpeg
+      teams:
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-solomid-team_logo_image-2c7087c64d6c6f51-300x300.jpeg
+        updated_at: '2013-05-24T00:17:33Z'
+        background: 
+        display_name: SoloMid
+        info: ! '
+  
+  '
+        banner: 
+        _links:
+          self: https://api.twitch.tv/kraken/teams/solomid
+        _id: 272
+        name: solomid
+        created_at: '2012-04-28T23:02:22Z'
+      display_name: chaoxlol
+      banner: 
+      mature: false
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/chaoxlol/videos
+        commercial: https://api.twitch.tv/kraken/channels/chaoxlol/commercial
+        follows: https://api.twitch.tv/kraken/channels/chaoxlol/follows
+        chat: https://api.twitch.tv/kraken/chat/chaoxlol
+        stream_key: https://api.twitch.tv/kraken/channels/chaoxlol/stream_key
+        self: https://api.twitch.tv/kraken/channels/chaoxlol
+        editors: https://api.twitch.tv/kraken/channels/chaoxlol/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/chaoxlol/subscriptions
+        features: https://api.twitch.tv/kraken/channels/chaoxlol/features
+      _id: 30080685
+      name: chaoxlol
+      url: http://www.twitch.tv/chaoxlol
+      created_at: '2012-04-27T01:32:28Z'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/chaoxlol-channel_offline_image-3d2574532c458777-640x360.jpeg
+    name: live_user_chaoxlol
+    broadcaster: xsplit
+  - game: ! 'StarCraft II: Heart of the Swarm'
+    viewers: 10469
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_gomtv_en-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/gomtv_en
+    _id: 6206642128
+    name: live_user_gomtv_en
+    channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/gomtv_en-profile_image-94e78553215820d4-300x300.jpeg
+      game: ! 'StarCraft II: Heart of the Swarm'
+      updated_at: '2013-07-19T08:57:29Z'
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/gomtv_en-channel_background_image-b40a7fd0a987b80f.jpeg
+      status: 2013 BenQ GSTL Season 1 Playoffs Round3 - AxiomAcer vs LG-IM
+      teams: []
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/gomtv_en-channel_header_image-d31cd4b7b1a52113-640x125.jpeg
+      display_name: GOMTV
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/gomtv_en/videos
+        follows: https://api.twitch.tv/kraken/channels/gomtv_en/follows
+        commercial: https://api.twitch.tv/kraken/channels/gomtv_en/commercial
+        chat: https://api.twitch.tv/kraken/chat/gomtv_en
+        self: https://api.twitch.tv/kraken/channels/gomtv_en
+        stream_key: https://api.twitch.tv/kraken/channels/gomtv_en/stream_key
+        editors: https://api.twitch.tv/kraken/channels/gomtv_en/editors
+        features: https://api.twitch.tv/kraken/channels/gomtv_en/features
+        subscriptions: https://api.twitch.tv/kraken/channels/gomtv_en/subscriptions
+      mature: false
+      _id: 32659069
+      url: http://www.twitch.tv/gomtv_en
+      name: gomtv_en
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/gomtv_en-channel_offline_image-a56f0868418184c6-640x360.png
+      created_at: '2012-08-03T09:28:24Z'
+    broadcaster: unknown_rtmp
+  - game: Metal Gear Solid
+    viewers: 5998
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_ludendi-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/ludendi
+    _id: 6184337488
+    name: live_user_ludendi
+    channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/ludendi-profile_image-7ffbedb6144c27bb-300x300.png
+      game: Metal Gear Solid
+      updated_at: '2013-07-19T09:14:44Z'
+      background: 
+      status: Ludendi presents European Speedster Assembly 2013! July 15-21! Go to http://europeanspeedsterassembly.com
+      teams:
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-sda-team_logo_image-0d1c05b2eca8ce86-300x300.png
+        updated_at: '2013-05-24T00:17:30Z'
+        background: 
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-sda-banner_image-bb152abe16530df2-640x125.png
+        info: ! 'Speed Demos Archive (SDA) is the premier community for video game speedruns
+          (completing games as quickly as possible through extensive planning, practice,
+          and knowledge of game mechanics/glitches).  Check out our library of over
+          700 speedruns, forum, and knowledge base at <a rel="nofollow" href="http://speeddemosarchive.com"
+          target="_blank">http://speeddemosarchive.com</a><br /><br />
+  
+          Also check out SDA''s live stream listing (which allows multiple streams to
+          be played on the same page) at <a rel="nofollow" href="http://www.w00ty.com/sda/stream"
+          target="_blank">http://www.w00ty.com/sda/stream</a>.
+  
+  
+  
+  '
+        display_name: Speed Demos Archive
+        _links:
+          self: https://api.twitch.tv/kraken/teams/sda
+        _id: 180
+        name: sda
+        created_at: '2012-02-09T23:10:15Z'
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ludendi-team_logo_image-eb78749452f3a3dc-300x300.png
+        updated_at: '2013-06-28T10:12:04Z'
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ludendi-background_image-68c16f4866e85936.jpeg
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-ludendi-banner_image-c3212ef526dd732e-640x125.png
+        info: ! '<a rel="nofollow" href="http://www.twitter.com/teamludendi" target="_blank">
+  
+          <img src="http://img9.imageshack.us/img9/1410/00newebteammemberstwitt.png"
+          border="0" alt="00newebteammemberstwitt.png" /></a>
+  
+  '
+        display_name: Team Ludendi
+        _links:
+          self: https://api.twitch.tv/kraken/teams/ludendi
+        _id: 431
+        name: ludendi
+        created_at: '2012-10-11T19:23:27Z'
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-srl-team_logo_image-eed2eed579966c19-300x300.jpeg
+        updated_at: '2013-05-24T00:17:18Z'
+        background: 
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-srl-banner_image-af620c8f039bdd48-640x125.jpeg
+        info: ! 'Check out <a rel="nofollow" href="http://speedrunslive.com" target="_blank">SpeedRunsLive.com!</a>
+  
+  '
+        display_name: SpeedRunsLive
+        _links:
+          self: https://api.twitch.tv/kraken/teams/srl
+        _id: 145
+        name: srl
+        created_at: '2012-01-06T08:16:10Z'
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ludendi-channel_header_image-f33cb42afafa213c-640x125.jpeg
+      display_name: Ludendi
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/ludendi/videos
+        follows: https://api.twitch.tv/kraken/channels/ludendi/follows
+        commercial: https://api.twitch.tv/kraken/channels/ludendi/commercial
+        chat: https://api.twitch.tv/kraken/chat/ludendi
+        self: https://api.twitch.tv/kraken/channels/ludendi
+        stream_key: https://api.twitch.tv/kraken/channels/ludendi/stream_key
+        editors: https://api.twitch.tv/kraken/channels/ludendi/editors
+        features: https://api.twitch.tv/kraken/channels/ludendi/features
+        subscriptions: https://api.twitch.tv/kraken/channels/ludendi/subscriptions
+      mature: 
+      _id: 28673774
+      url: http://www.twitch.tv/ludendi
+      name: ludendi
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/ludendi-channel_offline_image-b6afb4910b50ed00-640x360.jpeg
+      created_at: '2012-03-03T13:23:16Z'
+    broadcaster: xsplit
+  - game: League of Legends
+    viewers: 5710
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_onlyrengar-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/onlyrengar
+    _id: 6206022144
+    channel:
+      game: League of Legends
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/onlyrengar-profile_image-5172892a47f043c8-300x300.jpeg
+      updated_at: '2013-07-19T07:02:26Z'
+      status: Only Rengar - new computer real soon
+      background: 
+      teams: []
+      display_name: OnlyRengar
+      banner: 
+      mature: 
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/onlyrengar/videos
+        commercial: https://api.twitch.tv/kraken/channels/onlyrengar/commercial
+        follows: https://api.twitch.tv/kraken/channels/onlyrengar/follows
+        chat: https://api.twitch.tv/kraken/chat/onlyrengar
+        stream_key: https://api.twitch.tv/kraken/channels/onlyrengar/stream_key
+        self: https://api.twitch.tv/kraken/channels/onlyrengar
+        editors: https://api.twitch.tv/kraken/channels/onlyrengar/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/onlyrengar/subscriptions
+        features: https://api.twitch.tv/kraken/channels/onlyrengar/features
+      _id: 44854645
+      name: onlyrengar
+      url: http://www.twitch.tv/onlyrengar
+      created_at: '2013-06-17T00:38:11Z'
+      video_banner: 
+    name: live_user_onlyrengar
+    broadcaster: obs
+  - game: The Binding of Isaac
+    viewers: 3608
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_lethalfrag-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/lethalfrag
+    _id: 6205431968
+    channel:
+      game: The Binding of Isaac
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-profile_image-050adf252718823b-300x300.png
+      updated_at: '2013-07-19T05:28:18Z'
+      status: (Day 561/731) | Random Child in Basement | 2 Year Livestream Challenge
+        |
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_background_image-833a4324bc698c9b.jpeg
+      teams:
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-yeousch-team_logo_image-aefa3a5d3d431535-300x300.png
+        updated_at: '2013-05-24T00:18:17Z'
+        background: 
+        display_name: The Yeousch Network
+        info: ! "<div style=\"clear:both;margin:5px 0;\"><a rel=\"nofollow\" href=\"http://www.gamefanshop.com/partner-Yeousch/?ret=www.twitch.tv/yeousch_live\"
+          target=\"_blank\"><img src=\"http://www.gamefanshop.com/StoreFiles/Styles/vip/banner1.jpg\"
+          alt=\"gamefanshop.com banner\" /></a></div>\n<div style=\"width:638px;color:#CCC;background:#004;border:1px
+          solid #003;\">\n            \n                    <div style=\"font-size:10px;background:#003;\">\n
+          \                   \t\t<b><i>Stream Information</i></b>\n\t\t\t\t\t</div>\n
+          \           \n            <div style=\"width:638px;color:#CCC;background:#004;border:1px
+          solid #003;margin:0;height:220px;\">\n                    <p style=\"font-size:14px;padding-left:5px;\">Welcome
+          to the <b>Yeousch Network Team Page.</b>  This Team Page serves as Yeousch's
+          Central Hub for our Twitch.TV Operations. Our goal is to to connect our partners
+          from YouTube and Twitch.TV with each other, as well as bringing their viewers
+          a great variety of content from an amazing network of broadcasters in the
+          process. Make sure to check out each of our broadcaster as they bring their
+          entertaining and high quality streams to viewers everywhere.</p>\n                    <p
+          style=\"font-size:16px;color:#CCC;\" align=\"center\"><b><i>Follow Us Around
+          the Web</i></b></p>\n           <div align=\"center\">\n                            <a
+          rel=\"nofollow\" href=\"http://facebook.com/yeousch2\" target=\"_blank\"><img
+          src=\"http://cyanideepic.com/twitch/images/1319653012_Facebook.png\" height=\"40\"
+          alt=\"1319653012_Facebook.png\" /></a>\n                            <a rel=\"nofollow\"
+          href=\"http://twitter.com/yeousch\" target=\"_blank\"><img src=\"http://cyanideepic.com/twitch/images/1319653018_Twitter.png\"
+          style=\"margin-left:5px;\" height=\"40\" alt=\"1319653018_Twitter.png\" /></a>\n
+          \                           <a rel=\"nofollow\" href=\"http://youtube.com/yeousch\"
+          target=\"_blank\"><img src=\"http://cyanideepic.com/twitch/images/1319653004_YouTube.png\"
+          style=\"margin-left:5px;\" height=\"40\" alt=\"1319653004_YouTube.png\" /></a>\n
+          \                           <a rel=\"nofollow\" href=\"http://yeousch.com/\"
+          target=\"_blank\"><img src=\"http://eliasranzschleifer.com/yeousch/YeouschMainLogo.png\"
+          width=\"37\" style=\"margin-bottom:3px;\" alt=\"YeouschMainLogo.png\" /></a>\n
+          \                   </div>\n</div>\n</div>\n\n\n"
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-yeousch-banner_image-c836700ee8a6df28-640x125.png
+        _links:
+          self: https://api.twitch.tv/kraken/teams/yeousch
+        _id: 230
+        name: yeousch
+        created_at: '2012-03-27T20:54:53Z'
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-team_logo_image-86ae62cac99f0d5c-300x300.jpeg
+        updated_at: '2013-05-24T00:17:31Z'
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-background_image-a5fad4523a64de21.jpeg
+        display_name: LAMG
+        info: ! "<a rel=\"nofollow\" href=\"http://twitter.com/LookAtMyGaming\" target=\"_blank\">
+          \n<img src=\"http://portcityplayhouse.org/images/PCP_2011_2012/twitterLogoANimated.gif\"
+          border=\"1\" alt=\"twitterLogoANimated.gif\" /></a>\n\n\n"
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-lookatmygaming-banner_image-44b35bd8b404a240-640x125.png
+        _links:
+          self: https://api.twitch.tv/kraken/teams/lookatmygaming
+        _id: 181
+        name: lookatmygaming
+        created_at: '2012-02-10T01:21:52Z'
+      display_name: Lethalfrag
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_header_image-463a4670c91c2b61-640x125.jpeg
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/lethalfrag/videos
+        commercial: https://api.twitch.tv/kraken/channels/lethalfrag/commercial
+        follows: https://api.twitch.tv/kraken/channels/lethalfrag/follows
+        chat: https://api.twitch.tv/kraken/chat/lethalfrag
+        stream_key: https://api.twitch.tv/kraken/channels/lethalfrag/stream_key
+        self: https://api.twitch.tv/kraken/channels/lethalfrag
+        editors: https://api.twitch.tv/kraken/channels/lethalfrag/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/lethalfrag/subscriptions
+        features: https://api.twitch.tv/kraken/channels/lethalfrag/features
+      mature: true
+      _id: 23460970
+      name: lethalfrag
+      url: http://www.twitch.tv/lethalfrag
+      created_at: '2011-07-15T07:53:58Z'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_offline_image-3b801b2ccc11830b-640x360.jpeg
+    name: live_user_lethalfrag
+    broadcaster: obs
+  - game: Dota 2
+    viewers: 3019
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_feardarkness-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/feardarkness
+    _id: 6206471296
+    name: live_user_feardarkness
+    channel:
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/feardarkness-profile_image-3506ec69418398cc-300x300.jpeg
+      game: Dota 2
+      updated_at: '2013-07-19T08:19:27Z'
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/feardarkness-channel_background_image-fbf2b30ff6b777ac.jpeg
+      status: EG.Fear [RC] 1080p Dota 2 IXDL-O.
+      teams:
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-team_logo_image-9107b874d4c3fc3b-300x300.jpeg
+        updated_at: '2013-05-24T00:17:11Z'
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-background_image-da36973b6d829ac6.png
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-banner_image-1ad9c4738f4698b1-640x125.png
+        info: ! 'Team Info
+  
+  '
+        display_name: Evil Geniuses
+        _links:
+          self: https://api.twitch.tv/kraken/teams/eg
+        _id: 2
+        name: eg
+        created_at: '2011-10-11T23:59:43Z'
+      banner: 
+      display_name: FearDarkness
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/feardarkness/videos
+        follows: https://api.twitch.tv/kraken/channels/feardarkness/follows
+        commercial: https://api.twitch.tv/kraken/channels/feardarkness/commercial
+        chat: https://api.twitch.tv/kraken/chat/feardarkness
+        self: https://api.twitch.tv/kraken/channels/feardarkness
+        stream_key: https://api.twitch.tv/kraken/channels/feardarkness/stream_key
+        editors: https://api.twitch.tv/kraken/channels/feardarkness/editors
+        features: https://api.twitch.tv/kraken/channels/feardarkness/features
+        subscriptions: https://api.twitch.tv/kraken/channels/feardarkness/subscriptions
+      mature: 
+      _id: 25095238
+      url: http://www.twitch.tv/feardarkness
+      name: feardarkness
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/feardarkness-channel_offline_image-8aa891f83dcce972-640x360.jpeg
+      created_at: '2011-09-26T21:36:09Z'
+    broadcaster: obs
+  - game: League of Legends
+    viewers: 2835
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_rhux-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/rhux
+    _id: 6204103328
+    channel:
+      game: League of Legends
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/rhux-profile_image-52a56fc157a2723c-300x300.png
+      updated_at: '2013-07-19T08:00:25Z'
+      status: ! "Crs Rhux <Ranked 5's>\r\n"
+      background: 
+      teams:
+      - logo: 
+        updated_at: '2013-05-24T00:18:08Z'
+        background: 
+        display_name: Curse Academy
+        info: ! '
+  
+  '
+        banner: 
+        _links:
+          self: https://api.twitch.tv/kraken/teams/curseacademy
+        _id: 555
+        name: curseacademy
+        created_at: '2013-01-28T20:29:52Z'
+      - logo: 
+        updated_at: '2013-05-24T00:18:07Z'
+        background: 
+        display_name: Curse
+        info: ! '
+  
+  '
+        banner: 
+        _links:
+          self: https://api.twitch.tv/kraken/teams/teamcurse
+        _id: 554
+        name: teamcurse
+        created_at: '2013-01-28T19:25:24Z'
+      display_name: Rhux
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/rhux-channel_header_image-7d3205e8f3da077b-640x125.jpeg
+      mature: 
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/rhux/videos
+        commercial: https://api.twitch.tv/kraken/channels/rhux/commercial
+        follows: https://api.twitch.tv/kraken/channels/rhux/follows
+        chat: https://api.twitch.tv/kraken/chat/rhux
+        stream_key: https://api.twitch.tv/kraken/channels/rhux/stream_key
+        self: https://api.twitch.tv/kraken/channels/rhux
+        editors: https://api.twitch.tv/kraken/channels/rhux/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/rhux/subscriptions
+        features: https://api.twitch.tv/kraken/channels/rhux/features
+      _id: 19012782
+      name: rhux
+      url: http://www.twitch.tv/rhux
+      created_at: '2010-12-26T09:43:40Z'
+      video_banner: 
+    name: live_user_rhux
+    broadcaster: xsplit
+  - game: League of Legends
+    viewers: 2678
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_itshafu-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/itshafu
+    _id: 6206162928
+    channel:
+      game: League of Legends
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/itshafu-profile_image-1c424631f99d8f02-300x300.jpeg
+      updated_at: '2013-07-19T07:25:46Z'
+      status: ! 'itshafu.com || DIAMOND 1 RAGE QUEUEIN'' --  sub stuff all week // RAFFLE:
+        Bastion // itshafu.com/points'
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/itshafu-channel_background_image-2e861ad688bf4b5b.png
+      teams: []
+      display_name: itsHafu
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/itshafu-channel_header_image-570bbd1074674e16-640x125.png
+      mature: false
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/itshafu/videos
+        commercial: https://api.twitch.tv/kraken/channels/itshafu/commercial
+        follows: https://api.twitch.tv/kraken/channels/itshafu/follows
+        chat: https://api.twitch.tv/kraken/chat/itshafu
+        stream_key: https://api.twitch.tv/kraken/channels/itshafu/stream_key
+        self: https://api.twitch.tv/kraken/channels/itshafu
+        editors: https://api.twitch.tv/kraken/channels/itshafu/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/itshafu/subscriptions
+        features: https://api.twitch.tv/kraken/channels/itshafu/features
+      _id: 30777889
+      name: itshafu
+      url: http://www.twitch.tv/itshafu
+      created_at: '2012-05-24T19:36:36Z'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/itshafu-channel_offline_image-80907f0ed07e2178-640x360.jpeg
+    name: live_user_itshafu
+    broadcaster: obs
+  - game: League of Legends
+    viewers: 2548
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_dandinh-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/dandinh
+    _id: 6205210336
+    channel:
+      game: League of Legends
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/dandinh-profile_image-8636e08b97c831fd-300x300.png
+      updated_at: '2013-07-19T04:56:10Z'
+      status: Dan Dinh
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/dandinh-channel_background_image-f8a8da5760b3dc07.jpeg
+      teams:
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-solomid-team_logo_image-2c7087c64d6c6f51-300x300.jpeg
+        updated_at: '2013-05-24T00:17:33Z'
+        background: 
+        display_name: SoloMid
+        info: ! '
+  
+  '
+        banner: 
+        _links:
+          self: https://api.twitch.tv/kraken/teams/solomid
+        _id: 272
+        name: solomid
+        created_at: '2012-04-28T23:02:22Z'
+      display_name: DanDinh
+      banner: http://static-cdn.jtvnw.net/jtv_user_pictures/dandinh-channel_header_image-6ed84a95b530665c-640x125.png
+      mature: 
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/dandinh/videos
+        commercial: https://api.twitch.tv/kraken/channels/dandinh/commercial
+        follows: https://api.twitch.tv/kraken/channels/dandinh/follows
+        chat: https://api.twitch.tv/kraken/chat/dandinh
+        stream_key: https://api.twitch.tv/kraken/channels/dandinh/stream_key
+        self: https://api.twitch.tv/kraken/channels/dandinh
+        editors: https://api.twitch.tv/kraken/channels/dandinh/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/dandinh/subscriptions
+        features: https://api.twitch.tv/kraken/channels/dandinh/features
+      _id: 30080660
+      name: dandinh
+      url: http://www.twitch.tv/dandinh
+      created_at: '2012-04-27T01:30:37Z'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/dandinh-channel_offline_image-7718dd4f5fab6871-640x360.png
+    name: live_user_dandinh
+    broadcaster: xsplit
+  - game: Dota 2
+    viewers: 1978
+    preview: http://static-cdn.jtvnw.net/previews-ttv/live_user_starladder1-320x200.jpg
+    _links:
+      self: https://api.twitch.tv/kraken/streams/starladder1
+    _id: 6201444576
+    channel:
+      game: Dota 2
+      logo: http://static-cdn.jtvnw.net/jtv_user_pictures/starladder1-profile_image-4c9ce58020c26df1-300x300.jpeg
+      updated_at: '2013-07-18T21:10:03Z'
+      status: ! 'Empire vs EG, iCCup vs Liquid: REBROADCAST The Defense 4 '
+      background: http://static-cdn.jtvnw.net/jtv_user_pictures/starladder1-channel_background_image-585f83c15cd0742c.jpeg
+      teams:
+      - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-starladder-team_logo_image-bb59d0e76a90fda4-300x300.jpeg
+        updated_at: '2013-05-24T00:17:58Z'
+        background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-starladder-background_image-d5dd52f9693bceb4.jpeg
+        display_name: Starladder.tv
+        info: ! "<div style=\"width:641px;\">\n<div style=\"height:28px;\"><p style=\"float:left;margin:8px
+          0 0 20px;\"></p><span style=\"float:right;width:41px;height:18px;margin:3px
+          20px 0 0;\"></span><br style=\"clear:both;\" /></div>\n<div style=\"background:#e6e6e6
+          no-repeat left top;\">\n\t<div style=\"padding:20px 30px;\">\n    \t<a rel=\"nofollow\"
+          href=\"http://www.facebook.com/starladder.tv\" style=\"width:204px;height:54px;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but_big.png);float:left;background-position:0px
+          0px;\" target=\"_blank\"></a>\n        <a rel=\"nofollow\" href=\"https://twitter.com/#!/starladder_tv\"
+          style=\"width:204px;height:54px;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but_big.png);float:left;background-position:0px
+          -54px;margin-left:-14px;\" target=\"_blank\"></a>\n        <a rel=\"nofollow\"
+          href=\"http://www.youtube.com/starladdertv/\" style=\"width:204px;height:54px;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but_big.png);float:left;background-position:0px
+          -108px;margin-left:-18px;\" target=\"_blank\"></a>\n        <br style=\"clear:both;\"
+          /></div>\n    <embed src=\"http://www.youtube.com/v/ao6zzAI4YLI?hl=ru_RU&amp;version=3\"
+          type=\"application/x-shockwave-flash\" width=\"640\" height=\"360\" allowscriptaccess=\"never\"
+          allownetworking=\"internal\" enablejsurls=\"false\" enablehref=\"false\" /></div>\n\n\n<div
+          style=\"background:#e6e6e6 no-repeat left top;\">\n<div style=\"height:28px;background:url(http://static.starladder.tv/style/images/sltv_images/sl_h_bg_dota.jpg);\"><p
+          style=\"float:left;margin:8px 0 0 20px;\"><img src=\"http://static.starladder.tv/style/images/sltv_images/leading_text.png\"
+          alt=\"leading_text.png\" /></p><span style=\"float:right;background:url(http://static.starladder.tv/style/images/sltv_images/sl_h_icon.png);width:41px;height:18px;margin:3px
+          20px 0 0;\"></span><br style=\"clear:both;\" /></div>\n<div style=\"background:no-repeat
+          left top;\">\n\t<div style=\"padding:20px;\">\n    \t<div style=\"margin-bottom:20px;\">\n
+          \   \t\t<div style=\"float:left;\"><img src=\"http://static.starladder.tv/style/images/sltv_images/lead4.png\"
+          alt=\"lead4.png\" /></div>\n    \t\t<div style=\"float:left;\">\n            \t<div
+          style=\"width:435px;\">\n                     <div style=\"color:#000000;font-size:14px;font-family:Arial,
+          Helvetica, sans-serif;width:300px;float:left;font-weight:bold;\">Виталий <span
+          style=\"color:#990000;\">«v1lat»</span> Волочай <br /><span style=\"color:#444;font-size:12px;font-weight:normal;\">Комментатор
+          StarLadder.tv</span></div>\n                    <div style=\"float:right;margin-right:-10px;\">\n
+          \                       <a rel=\"nofollow\" href=\"http://www.facebook.com/DTSv1lat\"
+          style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:0px
+          0px;\" target=\"_blank\"></a>\n                        <a rel=\"nofollow\"
+          href=\"https://twitter.com/#!/v1lat\" style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:-45px
+          0px;\" target=\"_blank\"></a>\n                        <a rel=\"nofollow\"
+          href=\"http://vk.com/v1latfans\" style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:-90px
+          0px;\" target=\"_blank\"></a>\n                        <br style=\"clear:both;\"
+          /></div>\n                    <br style=\"clear:both;\" /></div>\n                <div
+          style=\"margin-top:20px;font-size:12px;font-family:Arial, Helvetica, sans-serif;width:435px;\">Виталий
+          'v1lat' Волочай — киберспортивный коментатор. Один из самых популярных комментаторов
+          в СНГ, начал комментировать в 2007 году турниры по Доте, после этого стал
+          основным комментатором таких событий как ASUS Series, Intel Challenge, Intel
+          Extreme Masters, The International.\nКроме Доты, комментирует LOL, SC2, World
+          Of Tanks, BLC</div>\n            </div>\n            <br style=\"clear:both;\"
+          /></div>\n        \n    \t<div style=\"margin-bottom:20px;\">\n    \t\t<div
+          style=\"float:left;\"><img src=\"http://static.starladder.tv/style/images/sltv_images/lead5.png\"
+          alt=\"lead5.png\" /></div>\n    \t\t<div style=\"float:left;\">\n            \t<div
+          style=\"width:435px;\">\n                   <div style=\"color:#000000;font-size:14px;font-family:Arial,
+          Helvetica, sans-serif;width:300px;float:left;font-weight:bold;\">Роман<span
+          style=\"color:#990000;\"> «CASPER» </span>Лепёхин<br /><span style=\"color:#444;font-size:12px;font-weight:normal;\">Комментатор
+          StarLadder.tv</span></div>\n                    <div style=\"float:right;margin-right:-10px;\">\n
+          \                       <a rel=\"nofollow\" href=\"http://www.facebook.com/casperrrtv\"
+          style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:0px
+          0px;\" target=\"_blank\"></a>\n                        <a rel=\"nofollow\"
+          href=\"https://twitter.com/#!/Casperenush\" style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:-45px
+          0px;\" target=\"_blank\"></a>\n                        <a rel=\"nofollow\"
+          href=\"http://vk.com/casperrrtv\" style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:-90px
+          0px;\" target=\"_blank\"></a>\n                        <br style=\"clear:both;\"
+          /></div>\n                    <br style=\"clear:both;\" /></div>\n                <div
+          style=\"margin-top:20px;font-size:12px;font-family:Arial, Helvetica, sans-serif;width:435px;\">Начал
+          свою карьеру комментатора в 2010 году. Начальной дисциплиной был Counter-Strike
+          1.6. Спустя год перешёл на Defence of the Ancients и вот с недавних пор является
+          официальным комменатором StarLadder в дисциплинах Dota2 и BloodLine Champions</div>\n
+          \   \t\t</div>\n            <br style=\"clear:both;\" /></div>    \n       \t\t<div
+          style=\"float:left;\"><a rel=\"nofollow\" href=\"http://www.facebook.com/sL4Mtv\"
+          target=\"_blank\"><img src=\"http://static.starladder.tv/style/images/sltv_images/lead3.png\"
+          alt=\"lead3.png\" /></a></div>\n    \t\t<div style=\"float:left;\">\n            \t<div
+          style=\"width:435px;\">\n                    <div style=\"color:#000000;font-size:14px;font-family:Arial,
+          Helvetica, sans-serif;width:300px;float:left;font-weight:bold;\">Игорь <span
+          style=\"color:#990000;\">«sL4M»</span> Сопов<br /><span style=\"color:#444;font-size:12px;font-weight:normal;\">Комментатор
+          дисциплины</span></div>\n                    <div style=\"float:right;margin-right:-10px;\">\n
+          \                       <a rel=\"nofollow\" href=\"http://www.facebook.com/sL4Mtv\"
+          style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:0px
+          0px;\" target=\"_blank\"></a>\n                        <a rel=\"nofollow\"
+          href=\"https://twitter.com/#!/sl4mtv\" style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:-45px
+          0px;\" target=\"_blank\"></a>\n                        <a rel=\"nofollow\"
+          href=\"http://vk.com/sl4mtv\" style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:-90px
+          0px;\" target=\"_blank\"></a>\n                        <br style=\"clear:both;\"
+          /></div>\n                    <br style=\"clear:both;\" /></div>\n                <div
+          style=\"margin-top:20px;font-size:12px;font-family:Arial, Helvetica, sans-serif;width:435px;\">Киберспортивный
+          комментатор из России. Начал свою деятельность в 2008 году, по началу выпускал
+          видео материалы в паре с w1Cked. Чуть позже продолжил карьеру в виде &quot;live&quot;
+          комментатора. Работал на таких ресурсах как igamecentral, npcl, gamesworld,
+          place2play, разумеется посвященных киберспорту. В данное время работает в
+          проекте StarLadder.tv, так же проводит трансляции на cyberarena.tv .</div>\n
+          \   \t\t\n            <br style=\"clear:both;\" /></div>        \t\n<div style=\"margin-bottom:20px;\">\n
+          \   \t\t<div style=\"float:left;\"><img src=\"http://static.starladder.tv/style/images/sltv_images/lead1.png\"
+          alt=\"lead1.png\" /></div>\n    \t\t<div style=\"float:left;\">\n            \t<div
+          style=\"width:435px;\">\n                    <div style=\"color:#000000;font-size:14px;font-family:Arial,
+          Helvetica, sans-serif;width:300px;float:left;font-weight:bold;\">Тауфик <span
+          style=\"color:#990000;\">«TaFa»</span> Хидри.<br /><span style=\"color:#444;font-size:12px;font-weight:normal;\">Комментатор
+          StarLadder.tv</span></div>\n                    <div style=\"float:right;margin-right:-10px;\">\n
+          \                       <a rel=\"nofollow\" href=\"http://www.facebook.com/tafatv\"
+          style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:0px
+          0px;\" target=\"_blank\"></a>\n                        <a rel=\"nofollow\"
+          href=\"https://twitter.com/#!/tafaua\" style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:-45px
+          0px;\" target=\"_blank\"></a>\n                        <a rel=\"nofollow\"
+          href=\"http://vk.com/tafasl4mpage\" style=\"width:45px;height:45px;float:left;background:url(http://static.starladder.tv/style/images/sltv_images/sl_share_but.png);background-position:-90px
+          0px;\" target=\"_blank\"></a>\n                        <br style=\"clear:both;\"
+          /></div>\n                    <br style=\"clear:both;\" /></div>\n                  <div
+          style=\"margin-top:20px;font-size:12px;font-family:Arial, Helvetica, sans-serif;width:435px;\">Первый
+          киберспортивный комментатор СНГ который начал свою работу еще в 2004 году.
+          Годом ранее начал свою работу в cyberarena.tv проводившей в то время ЛКИ.
+          Первые эфиры были еще на радио, а уже с 2007 года с появлением хорошего интернета
+          начал первые стрим эфиры.\nКомментирует: Counter-strike 1.6, source, WoT,
+          Bloodline Champions, Call of duty, PES, Soul Calibur, Point Blank, Dibalo
+          и другие игры.</div>\n            </div>\n            </div>\n    \n                   \n
+          \          </div>\n</div>\n</div></div>\n\n"
+        banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-starladder-banner_image-a32d3e3cccd7b32a-640x125.jpeg
+        _links:
+          self: https://api.twitch.tv/kraken/teams/starladder
+        _id: 210
+        name: starladder
+        created_at: '2012-02-28T22:46:51Z'
+      display_name: starladder1
+      banner: 
+      _links:
+        videos: https://api.twitch.tv/kraken/channels/starladder1/videos
+        commercial: https://api.twitch.tv/kraken/channels/starladder1/commercial
+        follows: https://api.twitch.tv/kraken/channels/starladder1/follows
+        chat: https://api.twitch.tv/kraken/chat/starladder1
+        stream_key: https://api.twitch.tv/kraken/channels/starladder1/stream_key
+        self: https://api.twitch.tv/kraken/channels/starladder1
+        editors: https://api.twitch.tv/kraken/channels/starladder1/editors
+        subscriptions: https://api.twitch.tv/kraken/channels/starladder1/subscriptions
+        features: https://api.twitch.tv/kraken/channels/starladder1/features
+      mature: 
+      _id: 28633177
+      name: starladder1
+      url: http://www.twitch.tv/starladder1
+      created_at: '2012-03-01T18:05:14Z'
+      video_banner: http://static-cdn.jtvnw.net/jtv_user_pictures/starladder1-channel_offline_image-89e949875d5fd857-640x360.jpeg
+    name: live_user_starladder1
+    broadcaster: rebroadcast
+  _links:
+    followed: https://api.twitch.tv/kraken/streams/followed
+    next: https://api.twitch.tv/kraken/streams?hls=true&limit=10&offset=10
+    featured: https://api.twitch.tv/kraken/streams/featured
+    self: https://api.twitch.tv/kraken/streams?hls=true&limit=10&offset=0
+    summary: https://api.twitch.tv/kraken/streams/summary

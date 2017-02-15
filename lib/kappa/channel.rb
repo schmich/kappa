@@ -1,7 +1,7 @@
 require 'cgi'
 require 'time'
 
-module Twitch::V2
+module Twitch::V5
   # Channels serve as the home location for a user's content. Channels have a stream, can run
   # commercials, store videos, display information and status, and have a customized page including
   # banners and backgrounds.
@@ -16,30 +16,37 @@ module Twitch::V2
     def initialize(hash, query)
       @query = query
       @id = hash['_id']
-      @background_url = hash['background']
-      @banner_url = hash['banner']
+      @broadcaster_language = hash['broadcaster_language']
       @created_at = Time.parse(hash['created_at']).utc
       @display_name = hash['display_name']
+      @email = hash['email']
+      @follower_amount = hash['followers']
       @game_name = hash['game']
+      @language = hash['language']
       @logo_url = hash['logo']
       @mature = hash['mature'] || false
       @name = hash['name']
+      @partner = hash['partner']
+      @profile_banner = hash['profile_banner']
+      @profile_banner_background_color = hash['profile_banner_background_color']
       @status = hash['status']
+      @stream_key = hash['stream_key']
       @updated_at = Time.parse(hash['updated_at']).utc
       @url = hash['url']
       @video_banner_url = hash['video_banner']
-
-      @teams = []
-      teams = hash['teams']
-      teams.each do |team_json|
-        @teams << Team.new(team_json)
-      end
+      @views = hash['views']
     end
 
     # Does this channel have mature content? This flag is specified by the owner of the channel.
     # @return [Boolean] `true` if the channel has mature content, `false` otherwise.
     def mature?
       @mature
+    end
+
+    # Is this channel a partner program channel?
+    # @return [Boolean] `true` if the channel is part of the partner program, `false` otherwise.
+    def partner?
+      @partner
     end
 
     # Get the live stream associated with this channel.
@@ -83,9 +90,9 @@ module Twitch::V2
     # @return [Array<User>] Users following this channel, if no block is given.
     # @return [nil] If a block is given.
     def followers(options = {}, &block)
-      name = CGI.escape(@name)
+      name = CGI.escape(@id)
       return @query.connection.accumulate(
-        :path => "channels/#{name}/follows",
+        :path => "channels/#{id}/follows",
         :json => 'follows',
         :sub_json => 'user',
         :create => -> hash { User.new(hash, @query) },
@@ -104,7 +111,7 @@ module Twitch::V2
     #   channel.videos(:type => :highlights) do |video|
     #     next if video.view_count < 10000
     #     puts video.url
-    #   end 
+    #   end
     # @param options [Hash] Filter criteria.
     # @option options [Symbol] :type (:highlights) The type of videos to return. Valid values are `:broadcasts`, `:highlights`.
     # @option options [Fixnum] :limit (nil) Limit on the number of results returned.
@@ -118,7 +125,7 @@ module Twitch::V2
     # @return [Array<Video>] Videos for the channel, if no block is given.
     # @return [nil] If a block is given.
     def videos(options = {}, &block)
-      @query.videos.for_channel(@name, options, &block)
+      @query.videos.for_channel(@id, options, &block)
     end
 
     # @example
@@ -127,14 +134,9 @@ module Twitch::V2
     attr_reader :id
 
     # @example
-    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_background_image-833a4324bc698c9b.jpeg"
-    # @return [String] URL for background image.
-    attr_reader :background_url
-
-    # @example
-    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_header_image-463a4670c91c2b61-640x125.jpeg"
-    # @return [String] URL for banner image.
-    attr_reader :banner_url
+    #   "en"
+    # @return [String] The broadcaster's language.
+    attr_reader :broadcaster_language
 
     # @example
     #   2011-07-15 07:53:58 UTC
@@ -148,9 +150,24 @@ module Twitch::V2
     attr_reader :display_name
 
     # @example
+    #   "example@example.com"
+    # @return [String] Email address for the channel.
+    attr_reader :email
+
+    # @example
+    #   350
+    # @return [Integer] User-friendly display name. This name is used for the channel's page title.
+    attr_reader :follower_amount
+
+    # @example
     #   "Super Meat Boy"
     # @return [String] Name of the primary game for this channel.
     attr_reader :game_name
+
+    # @example
+    #   "en"
+    # @return [String] Language of the primary game for this channel.
+    attr_reader :language
 
     # @example
     #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-profile_image-050adf252718823b-300x300.png"
@@ -164,9 +181,24 @@ module Twitch::V2
     attr_reader :name
 
     # @example
+    #   "https://genericimagehost.com/image.png"
+    # @return [String] Channel profile banner url.
+    attr_reader :profile_banner
+
+    # @example
+    #   ""
+    # @return [String] Channel profile banner background color.
+    attr_reader :profile_banner_background_color
+
+    # @example
     #   "(Day 563/731) | Dinner and a Game (Cooking at http://twitch.tv/lookatmychicken)"
     # @return [String] Current status set by the channel's owner.
     attr_reader :status
+
+    # @example
+    #   "live_44322889_nCGwsCl38pt21oj4UJJZbFQ9nrVIU5"
+    # @return [String] The current channel's stream key.
+    attr_reader :stream_key
 
     # @example
     #   2013-07-21 05:27:58 UTC
@@ -183,9 +215,10 @@ module Twitch::V2
     # @return [String] URL for the image shown when the stream is offline.
     attr_reader :video_banner_url
 
-    # @see Team
-    # @return [Array<Team>] The list of teams that this channel is associated with. Not all channels have associated teams.
-    attr_reader :teams
+    # @example
+    #   "http://static-cdn.jtvnw.net/jtv_user_pictures/lethalfrag-channel_offline_image-3b801b2ccc11830b-640x360.jpeg"
+    # @return [Integer] Number of channel views.
+    attr_reader :views
   end
 
   # Query class for finding channels.
@@ -203,10 +236,13 @@ module Twitch::V2
     # @return [Channel] A valid `Channel` object if the channel exists, `nil` otherwise.
     def get(channel_name)
       name = CGI.escape(channel_name)
-
+      query = { login: name }
+      user_json = @query.connection.get('users', query)
+      userhash = user_json['users'][0]
+      id = userhash['_id']
       # HTTP 422 can happen if the channel is associated with a Justin.tv account.
       Twitch::Status.map(404 => nil, 422 => nil) do
-        json = @query.connection.get("channels/#{name}")
+        json = @query.connection.get("channels/#{id}")
         Channel.new(json, @query)
       end
     end

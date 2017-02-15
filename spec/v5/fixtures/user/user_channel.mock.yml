@@ -1,0 +1,46 @@
+https://api.twitch.tv/kraken/users/colthestc:
+  updated_at: '2013-05-31T20:18:16Z'
+  created_at: '2013-01-21T03:16:05Z'
+  _links:
+    self: https://api.twitch.tv/kraken/users/colthestc
+  _id: 39544328
+  logo: http://static-cdn.jtvnw.net/jtv_user_pictures/colthestc-profile_image-78a06ba6ea5fc144-300x300.png
+  name: colthestc
+  display_name: coLTheStC
+  staff: false
+https://api.twitch.tv/kraken/channels/colthestc:
+  created_at: '2013-01-21T03:16:05Z'
+  updated_at: '2013-05-31T20:18:16Z'
+  _links:
+    stream_key: https://api.twitch.tv/kraken/channels/colthestc/stream_key
+    commercial: https://api.twitch.tv/kraken/channels/colthestc/commercial
+    subscriptions: https://api.twitch.tv/kraken/channels/colthestc/subscriptions
+    features: https://api.twitch.tv/kraken/channels/colthestc/features
+    videos: https://api.twitch.tv/kraken/channels/colthestc/videos
+    self: https://api.twitch.tv/kraken/channels/colthestc
+    editors: https://api.twitch.tv/kraken/channels/colthestc/editors
+    follows: https://api.twitch.tv/kraken/channels/colthestc/follows
+    chat: https://api.twitch.tv/kraken/chat/colthestc
+  url: http://www.twitch.tv/colthestc
+  status: coL.TheStC Streaming StarCraft II!
+  _id: 39544328
+  banner: http://static-cdn.jtvnw.net/jtv_user_pictures/colthestc-channel_header_image-be28d85f840f97cd-640x125.jpeg
+  logo: http://static-cdn.jtvnw.net/jtv_user_pictures/colthestc-profile_image-78a06ba6ea5fc144-300x300.png
+  mature: 
+  display_name: coLTheStC
+  name: colthestc
+  background: http://static-cdn.jtvnw.net/jtv_user_pictures/colthestc-channel_background_image-a8d98ac15a946948.jpeg
+  game: ! 'StarCraft II: Heart of the Swarm'
+  video_banner: 
+  teams:
+  - _links:
+      self: https://api.twitch.tv/kraken/teams/complexity
+    created_at: '2011-11-17T01:00:09Z'
+    updated_at: '2013-05-24T00:17:12Z'
+    _id: 88
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-complexity-banner_image-ad949f15307bd7a2-640x125.jpeg
+    logo: 
+    info: ''
+    name: complexity
+    display_name: compLexity
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-complexity-background_image-0c5559d45e194368.png

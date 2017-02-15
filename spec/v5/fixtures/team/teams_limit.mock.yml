@@ -1,0 +1,126 @@
+https://api.twitch.tv/kraken/teams?limit=10&offset=0:
+  teams:
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-testteam-team_logo_image-46943237490be5e7-300x300.jpeg
+    display_name: test
+    _links:
+      self: https://api.twitch.tv/kraken/teams/testteam
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-testteam-background_image-c72e038f428c9c7d.png
+    updated_at: '2013-04-03T23:25:44Z'
+    created_at: '2011-10-11T22:49:05Z'
+    info: ! 'I love working for Twitch!
+
+
+
+
+  '
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-testteam-banner_image-cc318b0f084cb67c-640x125.jpeg
+    name: testteam
+    _id: 1
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-team_logo_image-9107b874d4c3fc3b-300x300.jpeg
+    display_name: Evil Geniuses
+    _links:
+      self: https://api.twitch.tv/kraken/teams/eg
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-background_image-da36973b6d829ac6.png
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-10-11T23:59:43Z'
+    info: ! 'Team Info
+
+  '
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-banner_image-1ad9c4738f4698b1-640x125.png
+    name: eg
+    _id: 2
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-betagamers-team_logo_image-0dd971652eab2f69-300x300.png
+    display_name: BETAgamers
+    _links:
+      self: https://api.twitch.tv/kraken/teams/betagamers
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-betagamers-background_image-f9e4b3590e76f8dc.png
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-10-25T23:28:33Z'
+    info: ! "<img src=\"http://i.imgur.com/O19hf.png\" />\r\n\r\n"
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-betagamers-banner_image-88ba1fa47e65ba78-640x125.png
+    name: betagamers
+    _id: 5
+  - logo: 
+    display_name: Carbon
+    _links:
+      self: https://api.twitch.tv/kraken/teams/carbon
+    background: 
+    updated_at: '2012-10-03T01:48:24Z'
+    created_at: '2011-10-25T23:32:49Z'
+    info: Team Carbon - Gears of War 3
+    banner: 
+    name: carbon
+    _id: 7
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-boundbyhonor-team_logo_image-5ec520281a5fe6e1-300x300.png
+    display_name: Bound by Honor
+    _links:
+      self: https://api.twitch.tv/kraken/teams/boundbyhonor
+    background: http://static-cdn.jtvnw.net/jtv_user_pictures/team-boundbyhonor-background_image-387ed140242da61c.jpeg
+    updated_at: '2012-10-03T01:48:25Z'
+    created_at: '2011-10-25T23:34:14Z'
+    info: http://www.bbhgaming.com
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-boundbyhonor-banner_image-5ee2cd2fac212614-640x125.jpeg
+    name: boundbyhonor
+    _id: 8
+  - logo: 
+    display_name: LordKaT Mafia
+    _links:
+      self: https://api.twitch.tv/kraken/teams/mafia
+    background: 
+    updated_at: '2012-10-03T01:48:24Z'
+    created_at: '2011-10-25T23:35:07Z'
+    info: The Mafia is live 24/7 @ http://live.lordkat.com
+    banner: 
+    name: mafia
+    _id: 9
+  - logo: http://static-cdn.jtvnw.net/jtv_user_pictures/team-staff-team_logo_image-e26f89ac4f424216-300x300.png
+    display_name: Twitch Staff
+    _links:
+      self: https://api.twitch.tv/kraken/teams/staff
+    background: 
+    updated_at: '2013-03-18T20:32:37Z'
+    created_at: '2011-10-25T23:55:47Z'
+    info: ! 'We save the world..
+
+
+
+  '
+    banner: http://static-cdn.jtvnw.net/jtv_user_pictures/team-staff-banner_image-c81e25b281c06e8f-640x125.png
+    name: staff
+    _id: 10
+  - logo: 
+    display_name: Channel Awesome
+    _links:
+      self: https://api.twitch.tv/kraken/teams/channelawesome
+    background: 
+    updated_at: '2012-10-03T01:48:24Z'
+    created_at: '2011-10-26T16:34:17Z'
+    info: ! ' Streamers from Thatguywiththeglasses.com and BlisteredThumbs.net!'
+    banner: 
+    name: channelawesome
+    _id: 11
+  - logo: 
+    display_name: TeamLiquid
+    _links:
+      self: https://api.twitch.tv/kraken/teams/teamliquid
+    background: 
+    updated_at: '2013-04-27T16:58:55Z'
+    created_at: '2011-10-27T01:00:44Z'
+    info: ! "TeamLiquid is awesome. and esports. video games. \n\n"
+    banner: 
+    name: teamliquid
+    _id: 12
+  - logo: 
+    display_name: LividLobster
+    _links:
+      self: https://api.twitch.tv/kraken/teams/lividlobster
+    background: 
+    updated_at: '2012-10-03T01:48:24Z'
+    created_at: '2011-10-27T18:50:49Z'
+    info: ''
+    banner: 
+    name: lividlobster
+    _id: 13
+  _links:
+    next: https://api.twitch.tv/kraken/teams?limit=10&offset=10
+    self: https://api.twitch.tv/kraken/teams?limit=10&offset=0

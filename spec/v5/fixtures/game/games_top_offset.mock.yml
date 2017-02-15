@@ -1,0 +1,92 @@
+https://api.twitch.tv/kraken/games/top?limit=5&offset=5:
+  _links:
+    prev: https://api.twitch.tv/kraken/games/top?limit=5&offset=0
+    next: https://api.twitch.tv/kraken/games/top?limit=5&offset=10
+    self: https://api.twitch.tv/kraken/games/top?limit=5&offset=5
+  top:
+  - channels: 112
+    viewers: 4625
+    game:
+      giantbomb_id: 24078
+      _id: 21818
+      _links: {}
+      box:
+        large: http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II%3A%20Heart%20of%20the%20Swarm-272x380.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II%3A%20Heart%20of%20the%20Swarm-136x190.jpg
+        small: http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II%3A%20Heart%20of%20the%20Swarm-52x72.jpg
+        template: http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II%3A%20Heart%20of%20the%20Swarm-{width}x{height}.jpg
+      name: ! 'StarCraft II: Heart of the Swarm'
+      logo:
+        large: http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II%3A%20Heart%20of%20the%20Swarm-240x144.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II%3A%20Heart%20of%20the%20Swarm-120x72.jpg
+        small: http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II%3A%20Heart%20of%20the%20Swarm-60x36.jpg
+        template: http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II%3A%20Heart%20of%20the%20Swarm-{width}x{height}.jpg
+  - channels: 360
+    viewers: 4144
+    game:
+      giantbomb_id: 38039
+      _id: 34134
+      _links: {}
+      box:
+        large: http://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty%3A%20Black%20Ops%20II-272x380.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty%3A%20Black%20Ops%20II-136x190.jpg
+        small: http://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty%3A%20Black%20Ops%20II-52x72.jpg
+        template: http://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty%3A%20Black%20Ops%20II-{width}x{height}.jpg
+      name: ! 'Call of Duty: Black Ops II'
+      logo:
+        large: http://static-cdn.jtvnw.net/ttv-logoart/Call%20of%20Duty%3A%20Black%20Ops%20II-240x144.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-logoart/Call%20of%20Duty%3A%20Black%20Ops%20II-120x72.jpg
+        small: http://static-cdn.jtvnw.net/ttv-logoart/Call%20of%20Duty%3A%20Black%20Ops%20II-60x36.jpg
+        template: http://static-cdn.jtvnw.net/ttv-logoart/Call%20of%20Duty%3A%20Black%20Ops%20II-{width}x{height}.jpg
+  - channels: 159
+    viewers: 3457
+    game:
+      giantbomb_id: 30475
+      _id: 27471
+      _links: {}
+      box:
+        large: http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-272x380.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-136x190.jpg
+        small: http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-52x72.jpg
+        template: http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-{width}x{height}.jpg
+      name: Minecraft
+      logo:
+        large: http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-240x144.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-120x72.jpg
+        small: http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-60x36.jpg
+        template: http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-{width}x{height}.jpg
+  - channels: 2
+    viewers: 2917
+    game:
+      giantbomb_id: 16140
+      _id: 14805
+      _links: {}
+      box:
+        large: http://static-cdn.jtvnw.net/ttv-boxart/Metal%20Gear%20Solid-272x380.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-boxart/Metal%20Gear%20Solid-136x190.jpg
+        small: http://static-cdn.jtvnw.net/ttv-boxart/Metal%20Gear%20Solid-52x72.jpg
+        template: http://static-cdn.jtvnw.net/ttv-boxart/Metal%20Gear%20Solid-{width}x{height}.jpg
+      name: Metal Gear Solid
+      logo:
+        large: http://static-cdn.jtvnw.net/ttv-logoart/Metal%20Gear%20Solid-240x144.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-logoart/Metal%20Gear%20Solid-120x72.jpg
+        small: http://static-cdn.jtvnw.net/ttv-logoart/Metal%20Gear%20Solid-60x36.jpg
+        template: http://static-cdn.jtvnw.net/ttv-logoart/Metal%20Gear%20Solid-{width}x{height}.jpg
+  - channels: 11
+    viewers: 2647
+    game:
+      giantbomb_id: 36989
+      _id: 33180
+      _links: {}
+      box:
+        large: http://static-cdn.jtvnw.net/ttv-boxart/The%20Last%20of%20Us-272x380.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-boxart/The%20Last%20of%20Us-136x190.jpg
+        small: http://static-cdn.jtvnw.net/ttv-boxart/The%20Last%20of%20Us-52x72.jpg
+        template: http://static-cdn.jtvnw.net/ttv-boxart/The%20Last%20of%20Us-{width}x{height}.jpg
+      name: The Last of Us
+      logo:
+        large: http://static-cdn.jtvnw.net/ttv-logoart/The%20Last%20of%20Us-240x144.jpg
+        medium: http://static-cdn.jtvnw.net/ttv-logoart/The%20Last%20of%20Us-120x72.jpg
+        small: http://static-cdn.jtvnw.net/ttv-logoart/The%20Last%20of%20Us-60x36.jpg
+        template: http://static-cdn.jtvnw.net/ttv-logoart/The%20Last%20of%20Us-{width}x{height}.jpg
+  _total: 540

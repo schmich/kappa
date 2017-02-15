@@ -61,7 +61,7 @@ module Twitch
   # @private
   class Configuration
     def initialize
-      @api = Twitch::V2
+      @api = Twitch::V5
     end
 
     def client_id

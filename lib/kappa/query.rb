@@ -1,4 +1,4 @@
-module Twitch::V2
+module Twitch::V5
   # @private
   class Query
     def initialize(connection)

@@ -1,0 +1,45 @@
+viewers: 85146
+preview: 'http://static-cdn.jtvnw.net/previews-ttv/live_user_riotgames-320x200.jpg'
+game: League of Legends
+broadcaster: xsplit
+name: live_user_riotgames
+_id: 5594167120
+_links:
+  self: 'https://api.twitch.tv/kraken/streams/riotgames'
+channel:
+  updated_at: '2013-05-06T17:59:17Z'
+  game: League of Legends
+  _id: 36029255
+  status: LCS 2013 EU Summer Promotion Tournament D3 (English)
+  display_name: Riot Games
+  video_banner: 'http://static-cdn.jtvnw.net/jtv_user_pictures/riotgames-channel_offline_image-5ed81ff7559198a7-640x360.jpeg'
+  url: 'http://www.twitch.tv/riotgames'
+  mature: null,
+  logo: 'http://static-cdn.jtvnw.net/jtv_user_pictures/riotgames-profile_image-4be3ad99629ac9ba-300x300.jpeg'
+  name: riotgames
+  banner: null
+  created_at: '2012-09-08T06:53:10Z'
+  background: 'http://static-cdn.jtvnw.net/jtv_user_pictures/riotgames-channel_background_image-9089f9f67eacdf1c.jpeg'
+  teams:
+    -
+      updated_at: '2013-02-02T18:53:04Z'
+      _id: 417
+      display_name: Riot Games
+      info: "http://www.lolesports.com\n"
+      logo: 'http://static-cdn.jtvnw.net/jtv_user_pictures/team-riotgames-team_logo_image-0e709d1f4da393ec-300x300.png'
+      _links:
+          self: 'https://api.twitch.tv/kraken/teams/riotgames'
+      name: riotgames
+      banner: null
+      created_at: '2012-09-29T02:36:37Z'
+      background: 'http://static-cdn.jtvnw.net/jtv_user_pictures/team-riotgames-background_image-6cd687b2405d9ee2.jpeg'
+  _links:
+    subscriptions: 'https://api.twitch.tv/kraken/channels/riotgames/subscriptions'
+    follows: 'https://api.twitch.tv/kraken/channels/riotgames/follows'
+    editors: 'https://api.twitch.tv/kraken/channels/riotgames/editors'
+    chat: 'https://api.twitch.tv/kraken/chat/riotgames'
+    stream_key: 'https://api.twitch.tv/kraken/channels/riotgames/stream_key'
+    commercial: 'https://api.twitch.tv/kraken/channels/riotgames/commercial'
+    features: 'https://api.twitch.tv/kraken/channels/riotgames/features'
+    videos: 'https://api.twitch.tv/kraken/channels/riotgames/videos'
+    self: 'https://api.twitch.tv/kraken/channels/riotgames'

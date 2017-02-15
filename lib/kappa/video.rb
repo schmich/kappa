@@ -1,7 +1,7 @@
 require 'cgi'
 require 'time'
 
-module Twitch::V2
+module Twitch::V5
   # @private
   class ChannelProxy
     def initialize(name, display_name, query)
@@ -41,7 +41,6 @@ module Twitch::V2
       @length = hash['length']
       @game_name = hash['game']
       @preview_url = hash['preview']
-      @embed_html = hash['embed']
 
       @channel = ChannelProxy.new(
         hash['channel']['name'],
@@ -96,11 +95,6 @@ module Twitch::V2
 
     # @return [Channel] The channel on which this video was originally streamed.
     attr_reader :channel
-
-    # @example
-    #   "<object data='http://www.twitch.tv/widgets/archive_embed_player.swf'>...</object>"
-    # @return [String] HTML code for embedding this video on a web page.
-    attr_reader :embed_html
   end
 
   # Query class for finding videos.
@@ -166,12 +160,12 @@ module Twitch::V2
       params[:period] = period.to_s
 
       return @query.connection.accumulate(
-        :path => 'videos/top',
-        :params => params,
-        :json => 'videos',
-        :create => -> hash { Video.new(hash, @query) },
-        :limit => options[:limit],
-        :offset => options[:offset],
+        path: 'videos/top',
+        params: params,
+        json: 'videos',
+        create: -> hash { Video.new(hash, @query) },
+        limit: options[:limit],
+        offset: options[:offset],
         &block
       )
     end
@@ -198,11 +192,7 @@ module Twitch::V2
     # @return [Array<Video>] Videos for the channel, if no block is given.
     # @return [nil] If a block is given.
     def for_channel(channel, options = {})
-      if channel.respond_to?(:name)
-        channel_name = channel.name
-      else
-        channel_name = channel.to_s
-      end
+      channel_id = channel.id
 
       params = {}
 
@@ -215,14 +205,14 @@ module Twitch::V2
         params[:broadcasts] = (type == :broadcasts)
       end
 
-      name = CGI.escape(channel_name)
+      id = CGI.escape(channel_id)
       return @query.connection.accumulate(
-        :path => "channels/#{name}/videos",
-        :params => params,
-        :json => 'videos',
-        :create => -> hash { Video.new(hash, @query) },
-        :limit => options[:limit],
-        :offset => options[:offset]
+        path: "channels/#{id}/videos",
+        params: params,
+        json: 'videos',
+        create: -> hash { Video.new(hash, @query) },
+        limit: options[:limit],
+        offset: options[:offset]
       )
     end
   end

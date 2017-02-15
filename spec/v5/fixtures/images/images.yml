@@ -1,0 +1,4 @@
+medium: "http://static-cdn.jtvnw.net/ttv-boxart/Neverwinter-136x190.jpg"
+large: "http://static-cdn.jtvnw.net/ttv-boxart/Neverwinter-272x380.jpg"
+small: "http://static-cdn.jtvnw.net/ttv-boxart/Neverwinter-52x72.jpg"
+template: "http://static-cdn.jtvnw.net/ttv-boxart/Neverwinter-{width}x{height}.jpg"
