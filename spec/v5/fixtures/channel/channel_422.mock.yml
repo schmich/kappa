@@ -1,6 +1,0 @@
-https://api.twitch.tv/kraken/channels/desrow:
-  status: 422
-  body:
-    status: 422
-    message: Channel 'desrow' is not available on Twitch
-    error: Unprocessable Entity

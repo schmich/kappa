@@ -1,5 +1,0 @@
-https://api.twitch.tv/kraken/streams/summary:
-  _links:
-    self: https://api.twitch.tv/kraken/streams/summary
-  channels: 3575
-  viewers: 116606

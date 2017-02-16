@@ -1,9 +1,0 @@
-staff: false
-_id: 23945610
-created_at: '2011-08-08T21:03:44Z'
-updated_at: '2013-05-06T18:03:19Z'
-logo: 'http://static-cdn.jtvnw.net/jtv_user_pictures/lagtvmaximusblack-profile_image-4b77a2305f5d85c8-300x300.png'
-name: lagtvmaximusblack
-display_name: LAGTVMaximusBlack
-_links:
-    self: 'https://api.twitch.tv/kraken/users/lagtvmaximusblack'
