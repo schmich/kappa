@@ -1,4 +1,4 @@
-module Twitch::V2
+module Twitch::V5
   # Games are categories (e.g. League of Legends, Diablo 3) used by streams and channels.
   # Games can be searched for by query.
   # @see Games#top Games#top
@@ -15,10 +15,11 @@ module Twitch::V2
 
       game = hash['game']
       @id = game['_id']
-      @name = game['name']
-      @giantbomb_id = game['giantbomb_id']
       @box_images = Images.new(game['box'])
+      @giantbomb_id = game['giantbomb_id']
       @logo_images = Images.new(game['logo'])
+      @name = game['name']
+      @popularity = game['popularity']
     end
 
     # Get streams for this game.
@@ -55,22 +56,6 @@ module Twitch::V2
     attr_reader :id
 
     # @example
-    #   "League of Legends"
-    # @return [String] User-friendly game name.
-    attr_reader :name
-
-    # @example
-    #   24024
-    # @return [Fixnum] Unique game ID for GiantBomb.com. 
-    attr_reader :giantbomb_id
-
-    # @return [Images] Set of images for the game's box art.
-    attr_reader :box_images
-
-    # @return [Images] Set of images for the game's logo.
-    attr_reader :logo_images
-
-    # @example
     #   802
     # @return [Fixnum] Total number of channels currently streaming this game on Twitch.
     attr_reader :channel_count
@@ -79,6 +64,27 @@ module Twitch::V2
     #   68592
     # @return [Fixnum] Total number of viewers across all channels currently watching this game on Twitch.
     attr_reader :viewer_count
+
+    # @return [Images] Set of images for the game's box art.
+    attr_reader :box_images
+
+    # @example
+    #   24024
+    # @return [Fixnum] Unique game ID for GiantBomb.com.
+    attr_reader :giantbomb_id
+
+    # @return [Images] Set of images for the game's logo.
+    attr_reader :logo_images
+
+    # @example
+    #   "League of Legends"
+    # @return [String] User-friendly game name.
+    attr_reader :name
+
+    # @example
+    #   "League of Legends"
+    # @return [String] Popularity of the game.
+    attr_reader :popularity
   end
 
   # A game suggestion returned by Twitch when searching for games via `Twitch.games.find`.
@@ -108,7 +114,7 @@ module Twitch::V2
 
     # @example
     #   32697
-    # @return [Fixnum] Unique game ID for GiantBomb.com. 
+    # @return [Fixnum] Unique game ID for GiantBomb.com.
     attr_reader :giantbomb_id
 
     # @example
@@ -169,7 +175,7 @@ module Twitch::V2
         &block
       )
     end
-    
+
     # Get a list of games with names similar to the specified name.
     # @example
     #   Twitch.games.find(:name => 'diablo')

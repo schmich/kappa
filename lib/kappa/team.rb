@@ -1,7 +1,7 @@
 require 'cgi'
 require 'time'
 
-module Twitch::V2
+module Twitch::V5
   # Teams are an organization of channels.
   # @see Teams#get Teams#get
   # @see Teams#all Teams#all
@@ -9,19 +9,18 @@ module Twitch::V2
   # @see Channel
   class Team
     include Twitch::IdEquality
-    
+
     # @private
     def initialize(hash)
       @id = hash['_id']
-      @info = hash['info']
       @background_url = hash['background']
       @banner_url = hash['banner']
+      @created_at = Time.parse(hash['created_at']).utc
+      @display_name = hash['display_name']
+      @info = hash['info']
       @logo_url = hash['logo']
       @name = hash['name']
-      @display_name = hash['display_name']
       @updated_at = Time.parse(hash['updated_at']).utc
-      @created_at = Time.parse(hash['created_at']).utc
-
       name = CGI.escape(@name)
       @url = "http://www.twitch.tv/team/#{name}"
     end
@@ -32,11 +31,6 @@ module Twitch::V2
     attr_reader :id
 
     # @example
-    #   "TeamLiquid is awesome. and esports. video games. \n\n"
-    # @return [String] Info about the team. This is displayed on the team's page and can contain HTML.
-    attr_reader :info
-
-    # @example
     #   "http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-background_image-da36973b6d829ac6.png"
     # @return [String] URL for background image.
     attr_reader :background_url
@@ -45,6 +39,22 @@ module Twitch::V2
     #   "http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-banner_image-1ad9c4738f4698b1-640x125.png"
     # @return [String] URL for banner image.
     attr_reader :banner_url
+
+    # @example
+    #   2011-10-27 01:00:44 UTC
+    # @return [Time] When the team was created (UTC).
+    attr_reader :created_at
+
+    # @example
+    #   "TeamLiquid"
+    # @see #name
+    # @return [String] User-friendly display name. This name is used for the team's page title.
+    attr_reader :display_name
+
+    # @example
+    #   "TeamLiquid is awesome. and esports. video games. \n\n"
+    # @return [String] Info about the team. This is displayed on the team's page and can contain HTML.
+    attr_reader :info
 
     # @example
     #   "http://static-cdn.jtvnw.net/jtv_user_pictures/team-eg-team_logo_image-9107b874d4c3fc3b-300x300.jpeg"
@@ -58,20 +68,9 @@ module Twitch::V2
     attr_reader :name
 
     # @example
-    #   "TeamLiquid"
-    # @see #name
-    # @return [String] User-friendly display name. This name is used for the team's page title.
-    attr_reader :display_name
-
-    # @example
     #   2013-05-24 00:17:10 UTC
     # @return [Time] When the team was last updated (UTC).
     attr_reader :updated_at
-
-    # @example
-    #   2011-10-27 01:00:44 UTC
-    # @return [Time] When the team was created (UTC).
-    attr_reader :created_at
 
     # @example
     #   "http://www.twitch.tv/team/teamliquid"

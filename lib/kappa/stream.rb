@@ -1,6 +1,6 @@
 require 'cgi'
 
-module Twitch::V2
+module Twitch::V5
   # Streams are video broadcasts that are currently live. They belong to a user and are part of a channel.
   # @see Streams#get Streams#get
   # @see Streams#find Streams#find
@@ -14,13 +14,23 @@ module Twitch::V2
     def initialize(hash, query)
       @query = query
       @id = hash['_id']
-      @broadcaster = hash['broadcaster']
       @game_name = hash['game']
-      @name = hash['name']
       @viewer_count = hash['viewers']
+      @video_height = hash['video_height']
+      @average_fps = hash['average_fps']
+      @delay = hash['delay']
+      @created_at = hash['created_at']
+      @is_playlist = hash['is_playlist']
       @preview_url = hash['preview']
       @channel = Channel.new(hash['channel'], @query)
+      @name = @channel.name
       @url = @channel.url
+    end
+
+    # Whether the stream is a playlist or not.
+    # @return [Boolean] `true` if the stream is a playlist, `false` otherwise.
+    def playlist?
+      @playlist
     end
 
     # Get the owner of this stream.
@@ -36,25 +46,34 @@ module Twitch::V2
     attr_reader :id
 
     # @example
-    #   "fme", "xsplit", "obs", "rebroadcast", "delay", "unknown rtmp"
-    # @deprecated This attribute is not present in the V3 API.
-    # @return [String] The broadcasting software used for this stream.
-    attr_reader :broadcaster
-    
-    # @example
     #   "Super Meat Boy"
     # @return [String] The name of the game currently being streamed.
     attr_reader :game_name
 
     # @example
-    #   "live_user_lethalfrag"
-    # @return [String] The unique Twitch name for this stream.
-    attr_reader :name
-
-    # @example
     #   2342
     # @return [Fixnum] The number of viewers currently watching the stream.
     attr_reader :viewer_count
+
+    # @example
+    #   720
+    # @return [Fixnum] The height of the video.
+    attr_reader :video_height
+
+    # @example
+    #   60
+    # @return [Fixnum] The average FPS of the stream.
+    attr_reader :average_fps
+
+    # @example
+    #   0
+    # @return [Fixnum] The delay of the stream.
+    attr_reader :delay
+
+    # @example
+    #   "2016-12-14T22:49:56Z"
+    # @return [Time] The date and time the stream was created.
+    attr_reader :created_at
 
     # @example
     #   "http://static-cdn.jtvnw.net/previews-ttv/live_user_lethalfrag-320x200.jpg"
@@ -66,7 +85,12 @@ module Twitch::V2
     attr_reader :channel
 
     # @example
-    #   "http://www.twitch.tv/lethalfrag" 
+    #   "live_user_lethalfrag"
+    # @return [String] The unique Twitch name for this stream.
+    attr_reader :name
+
+    # @example
+    #   "http://www.twitch.tv/lethalfrag"
     # @return [String] The URL for this stream.
     attr_reader :url
   end
@@ -115,10 +139,13 @@ module Twitch::V2
     # @return [nil] If the stream does not exist or is not live.
     def get(stream_name)
       name = CGI.escape(stream_name)
-
+      query = { login: name }
+      user_json = @query.connection.get('users', query)
+      userhash = user_json['users'][0]
+      id = userhash['_id']
       # HTTP 422 can happen if the stream is associated with a Justin.tv account.
       Twitch::Status.map(404 => nil, 422 => nil) do
-        json = @query.connection.get("streams/#{name}")
+        json = @query.connection.get("streams/#{id}")
         stream = json['stream']
         stream.nil? ? nil : Stream.new(stream, @query)
       end
