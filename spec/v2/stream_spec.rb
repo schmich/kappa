@@ -1,6 +1,6 @@
 require 'rspec'
 require 'kappa'
-require 'common'
+require_relative 'common'
 
 include Twitch::V2
 
@@ -34,7 +34,7 @@ describe Twitch::V2::Stream do
       expect(c).not_to be_nil
     end
   end
-  
+
   describe '#user' do
     it 'returns the user owning the stream' do
       s = Twitch.streams.get('nathanias')

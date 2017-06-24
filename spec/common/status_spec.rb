@@ -1,6 +1,6 @@
 require 'rspec'
 require 'kappa'
-require 'common'
+require_relative '../v2/common'
 
 describe Twitch::Status do
   describe '.map' do

@@ -1,7 +1,7 @@
 require 'rspec'
 require 'yaml'
 require 'kappa'
-require 'common'
+require_relative 'common'
 require 'uri'
 
 include Twitch::V2
@@ -55,7 +55,7 @@ describe Twitch::V2::Teams do
   after do
     WebMock.reset!
   end
-  
+
   describe '#get' do
     it 'creates a Team from team name' do
       t = Twitch.teams.get('teamliquid')

@@ -1,7 +1,7 @@
 require 'rspec'
 require 'yaml'
 require 'kappa'
-require 'common'
+require_relative 'common'
 
 include Twitch::V2
 
@@ -126,7 +126,7 @@ describe Twitch::V2::Channels do
   after do
     WebMock.reset!
   end
- 
+
   describe '#get' do
     it 'creates a Channel from channel name' do
       c = Twitch.channels.get('colminigun')

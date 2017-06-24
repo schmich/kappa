@@ -1,7 +1,7 @@
 require 'rspec'
 require 'yaml'
 require 'kappa'
-require 'common'
+require_relative '../v2/common'
 
 class Real
   def real

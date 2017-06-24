@@ -3,9 +3,6 @@ require 'addressable/uri'
 require 'json'
 require 'yaml'
 
-# Force YAML to use newer parsing engine.
-YAML::ENGINE.yamler = 'psych'
-
 def fixture(path)
   File.join(File.dirname(__FILE__), 'fixtures', path)
 end
