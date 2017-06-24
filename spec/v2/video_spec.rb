@@ -1,7 +1,7 @@
 require 'rspec'
 require 'webmock/rspec'
 require 'kappa'
-require 'common'
+require_relative 'common'
 
 include Twitch::V2
 

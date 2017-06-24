@@ -1,6 +1,6 @@
 require 'rspec'
 require 'kappa'
-require 'common'
+require_relative 'common'
 
 describe Twitch::Connection do
   after do
@@ -38,7 +38,7 @@ describe Twitch::Connection do
         json = c.get('/test')
       rescue Twitch::Error::FormatError => e
         error = true
-        expect(e.url).to match(/test/) 
+        expect(e.url).to match(/test/)
         expect(e.status).to eq(status)
         expect(e.body).to eq(body)
       end
