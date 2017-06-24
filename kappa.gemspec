@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
   s.required_ruby_version = '>= 1.9.3'
   s.add_runtime_dependency 'httparty', '~> 0.13'
-  s.add_runtime_dependency 'addressable', '~> 2.3'
+  s.add_runtime_dependency 'addressable', '~> 2.5'
   s.add_development_dependency 'rake', '~> 10.4'
   s.add_development_dependency 'webmock', '~> 1.20'
   s.add_development_dependency 'rspec', '~> 3.1'
